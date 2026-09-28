@@ -109,6 +109,13 @@ only when it asks for more frames than the parsers found, and it becomes a frame
 only if a bounded slot parser can recover the required values from the proposed
 claim. A high proposal score by itself never becomes state.
 
+In alpha.2, proposed kinds are matched against every available clause instead
+of being assigned by list position. One kind can bind several separate claims.
+Overlapping incompatible interpretations abstain, as does a cardinality that
+cannot cover all unambiguous matches. The enclosing clause's negation, kind
+cues, and modality still constrain a narrow proposed span. These runtime rules
+are measured separately from model weights in [the v7 experiment](COMPOSITION_V7.md).
+
 Example:
 
 ```text
@@ -142,8 +149,9 @@ weights remain external and frozen. A deterministic source manifest also binds
 the sentence trainer, encoder runtime, and shared semantic target/loss source;
 the closed evolution gate independently re-hashes those files.
 
-That interface has now been exercised in one bounded, preregistered v6
-experiment. Three independently seeded challengers improved fresh and aggregate
+The first bounded, preregistered experiment used v6; the subsequent v7 run is
+documented in [Composition v7](COMPOSITION_V7.md).
+In v6, three independently seeded challengers improved fresh and aggregate
 OOV exact match, but all three tied the incumbent on composition and regressed
 the `held-out-vocabulary:ameliorate` audit family. All were rejected. This is a
 negative experimental result, not evidence that the encoder has broader state
@@ -299,22 +307,22 @@ general intelligence, and its scores are explicitly uncalibrated.
 |---|---|
 | Active model registry | [`models/registry.json`](../models/registry.json) |
 | Incumbent manifest | [`models/public/incumbent-manifest.json`](../models/public/incumbent-manifest.json) |
-| Incumbent evidence manifest | [`models/public/incumbent-evidence-v10.json`](../models/public/incumbent-evidence-v10.json) |
-| Frozen v6 artifact manifest | [`evals/frozen/manifest-v6.json`](../evals/frozen/manifest-v6.json) |
-| Current 260-item promotion suite | [`evals/frozen/public-audit-v6-260.json`](../evals/frozen/public-audit-v6-260.json) |
+| Incumbent evidence manifest | [`models/public/incumbent-evidence-v11.json`](../models/public/incumbent-evidence-v11.json) |
+| Frozen v7 artifact manifest | [`evals/frozen/manifest-v7.json`](../evals/frozen/manifest-v7.json) |
+| Current 260-item promotion suite | [`evals/frozen/public-audit-v7-260.json`](../evals/frozen/public-audit-v7-260.json) |
 | Separate calibration-fit slice | [`evals/frozen/calibration-fit-v2.jsonl`](../evals/frozen/calibration-fit-v2.jsonl) |
 | Held-out vocabulary | [`evals/frozen/held-out-vocabulary-v2.txt`](../evals/frozen/held-out-vocabulary-v2.txt) |
 | Development-only parser failures | [`evals/frozen/frame-parser-known-failures-v1.json`](../evals/frozen/frame-parser-known-failures-v1.json) |
-| Public genesis baseline | [`evals/evidence/v6-genesis-baseline.json`](../evals/evidence/v6-genesis-baseline.json) |
+| Public genesis baseline | [`evals/evidence/v7-genesis-baseline.json`](../evals/evidence/v7-genesis-baseline.json) |
 | Frozen-encoder experiment plan | [`experiments/frozen-encoder-v6-20260928-plan.json`](../experiments/frozen-encoder-v6-20260928-plan.json) |
 | Frozen-encoder aggregate evidence | [`experiments/frozen-encoder-v6-20260928-evidence/aggregate-evidence.json`](../experiments/frozen-encoder-v6-20260928-evidence/aggregate-evidence.json) |
 | Historical 190/260 tie replay | [`evals/frozen/historical-190-260-replay.json`](../evals/frozen/historical-190-260-replay.json) |
 
 The registry pins the current public genesis checkpoint to SHA-256
 `8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6`.
-The current `incumbent-evidence-v10.json` has SHA-256
+The preserved `incumbent-evidence-v10.json` has SHA-256
 `69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21`.
-The current v6 manifest has SHA-256
+The preserved v6 manifest has SHA-256
 `07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce`.
 It pins promotion-suite file SHA-256
 `a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029`

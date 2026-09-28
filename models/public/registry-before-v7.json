@@ -1,0 +1,22 @@
+{
+  "activation_receipt": "GENESIS_PUBLIC_REFERENCE",
+  "active": {
+    "artifact_status": "INCUMBENT",
+    "claim_boundary": "untrained bootstrap artifact; v6 baseline is not a capability claim",
+    "eval_card_path": "evals/evidence/v6-genesis-baseline.json",
+    "eval_card_sha256": "881e1f6911379f9bc158fde300147f1d41416b8076fbc1a972786c6ddc9915e4",
+    "evidence_manifest_path": "models/public/incumbent-evidence-v10.json",
+    "evidence_manifest_sha256": "69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21",
+    "name": "v0.52 public genesis reference",
+    "parameters": 285092,
+    "parent_sha256": null,
+    "path": "models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+    "schema": "kev.model-manifest.v1",
+    "score_status": "UNCALIBRATED",
+    "sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+    "training_data": null,
+    "training_steps": 0
+  },
+  "history": [],
+  "schema": "kev.model-registry.v1"
+}

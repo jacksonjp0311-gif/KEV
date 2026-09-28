@@ -309,8 +309,12 @@ reports. Training loss is never read by the gate.
 
 The current suite, canonical hash, byte hash, calibration slice, and held-out
 vocabulary are pinned by
-[`evals/frozen/manifest-v6.json`](../evals/frozen/manifest-v6.json), whose file
-SHA-256 is
+[`evals/frozen/manifest-v7.json`](../evals/frozen/manifest-v7.json). Current
+scores, source identities, and the baseline are in
+[the v7 report](COMPOSITION_V7.md). The equations and strict gates above did
+not change for this experiment.
+
+The preceding v6 manifest has file SHA-256
 `07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce`.
 The suite file SHA-256 is
 `a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029`

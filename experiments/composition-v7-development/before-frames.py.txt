@@ -1,0 +1,1425 @@
+"""Parser-first compositional frames for KEV.
+
+This module deliberately has no dependency on the neural semantic front-end.  A
+front-end may *propose* frame kinds and cardinality, but it is never allowed to
+invent slot values: slot values are copied by the constrained parsers from an
+exact claim span in the utterance.
+
+The public entry point is :func:`extract_frames`.  It returns a set-valued list
+of :class:`Frame` objects in source order.  ``Frame.to_dict()`` is the stable,
+JSON-serialisable storage form.
+"""
+
+from __future__ import annotations
+
+from collections.abc import Callable, Iterable, Mapping, Sequence
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
+import hashlib
+import json
+import re
+from typing import Any, TypeAlias
+
+
+BASE_RELATIONS = (
+    "COPY_VALUE",
+    "SUPERSEDES",
+    "MAGNITUDE",
+    "NEGATE",
+    "REFERENCE",
+    "ACTIVE_SELECTION",
+    "RUN_STATUS",
+    "RECEIPT_VALUE",
+    "EVIDENCE_CONSISTENCY",
+)
+COGNITIVE_KINDS = ("GOAL", "CONSTRAINT", "OBSERVATION", "PREDICTION")
+FRAME_KINDS = BASE_RELATIONS + COGNITIVE_KINDS
+
+Scalar: TypeAlias = str | int | float | bool | None
+ProposalCallback: TypeAlias = Callable[[str], Any]
+
+_NUMBER = r"[-+]?(?:\d+(?:\.\d+)?|\.\d+)"
+_UNIT = (
+    r"milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|"
+    r"percent|%|requests?(?:\s+per\s+second)?|rps|bytes?|kb|mb|gb"
+)
+_COMPARATOR = (
+    r"at\s+most|no\s+more\s+than|not\s+above|not\s+exceed(?:ing)?|"
+    r"less\s+than|below|under|at\s+least|no\s+less\s+than|"
+    r"not\s+below|more\s+than|greater\s+than|above|over|"
+    r"exactly|equal\s+to|<=|>=|<|>|="
+)
+
+_RELATION_FOR_KIND = {
+    "GOAL": "TARGET",
+    "CONSTRAINT": "REQUIREMENT",
+    "OBSERVATION": "MEASUREMENT",
+    "PREDICTION": "FORECAST",
+}
+
+_UNIT_ALIASES = {
+    "millisecond": "ms",
+    "milliseconds": "ms",
+    "msec": "ms",
+    "msecs": "ms",
+    "second": "s",
+    "seconds": "s",
+    "sec": "s",
+    "secs": "s",
+    "minute": "min",
+    "minutes": "min",
+    "mins": "min",
+    "percent": "%",
+    "request per second": "rps",
+    "requests per second": "rps",
+}
+
+_SUBJECT_ALIASES = {
+    "response_time": "latency",
+    "response_latency": "latency",
+    "request_latency": "latency",
+    "production_environment": "production",
+    "prod": "production",
+}
+
+_ACTION_ALIASES = {
+    "changed": "modify",
+    "change": "modify",
+    "changing": "modify",
+    "modified": "modify",
+    "modifies": "modify",
+    "modification": "modify",
+    "modifications": "modify",
+    "modify": "modify",
+    "modifying": "modify",
+    "mutate": "modify",
+    "mutated": "modify",
+    "mutates": "modify",
+    "mutating": "modify",
+    "mutation": "modify",
+    "mutations": "modify",
+    "updated": "update",
+    "updating": "update",
+    "writes": "write",
+    "writing": "write",
+}
+
+
+def _utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+
+
+def _normalise_timestamp(value: str | datetime | None) -> str:
+    if value is None:
+        return _utc_now()
+    if isinstance(value, datetime):
+        if value.tzinfo is None:
+            value = value.replace(tzinfo=timezone.utc)
+        return value.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError("timestamp must be a non-empty ISO-8601 string or datetime")
+    return value
+
+
+@dataclass(frozen=True, slots=True)
+class TypedSlot:
+    """A typed value copied from one claim.
+
+    ``value`` is canonical enough for state comparisons.  ``raw`` preserves
+    the source spelling so a skeptic can replay the parse without guessing.
+    """
+
+    value: Scalar
+    slot_type: str
+    raw: str | None = None
+
+    def __post_init__(self) -> None:
+        if not self.slot_type or not isinstance(self.slot_type, str):
+            raise ValueError("slot_type must be a non-empty string")
+
+    def to_dict(self) -> dict[str, Scalar]:
+        result: dict[str, Scalar] = {"type": self.slot_type, "value": self.value}
+        if self.raw is not None:
+            result["raw"] = self.raw
+        return result
+
+
+@dataclass(frozen=True, slots=True)
+class ClaimBoundary:
+    """The exact half-open source range supporting one frame."""
+
+    text: str
+    start: int
+    end: int
+
+    def __post_init__(self) -> None:
+        if self.start < 0 or self.end < self.start:
+            raise ValueError("claim boundary must be a valid half-open range")
+
+    def to_dict(self) -> dict[str, str | int]:
+        return {"text": self.text, "start": self.start, "end": self.end}
+
+
+@dataclass(frozen=True, slots=True)
+class Provenance:
+    """Origin metadata shared by all frames extracted from an utterance."""
+
+    source_type: str
+    source_id: str
+    utterance_sha256: str
+    actor: str
+    timestamp: str
+    model_hash: str | None = None
+    receipt_hash: str | None = None
+
+    def __post_init__(self) -> None:
+        for name in ("source_type", "source_id", "actor", "timestamp"):
+            value = getattr(self, name)
+            if not isinstance(value, str) or not value.strip():
+                raise ValueError(f"{name} must be a non-empty string")
+        if not re.fullmatch(r"[0-9a-f]{64}", self.utterance_sha256):
+            raise ValueError("utterance_sha256 must be a lowercase SHA-256 digest")
+
+    def to_dict(self) -> dict[str, str]:
+        result = {
+            "source_type": self.source_type,
+            "source_id": self.source_id,
+            "utterance_sha256": self.utterance_sha256,
+            "actor": self.actor,
+            "timestamp": self.timestamp,
+        }
+        if self.model_hash is not None:
+            result["model_hash"] = self.model_hash
+        if self.receipt_hash is not None:
+            result["receipt_hash"] = self.receipt_hash
+        return result
+
+
+@dataclass(frozen=True, slots=True)
+class ProposalSpan:
+    """Optional source-span hint emitted by a neural proposal head."""
+
+    kind: str
+    start: int | None = None
+    end: int | None = None
+    score: float | None = None
+
+    def __post_init__(self) -> None:
+        if self.kind not in FRAME_KINDS:
+            raise ValueError(f"unknown proposed frame kind: {self.kind}")
+        if (self.start is None) != (self.end is None):
+            raise ValueError("proposal start and end must be supplied together")
+        if self.start is not None and (
+            self.start < 0 or self.end is None or self.end <= self.start
+        ):
+            raise ValueError("proposal span must be a non-empty half-open range")
+        if self.score is not None and not 0.0 <= self.score <= 1.0:
+            raise ValueError("proposal score must be between zero and one")
+
+
+@dataclass(frozen=True, slots=True)
+class ProposalHeadResult:
+    """Constrained result accepted from an optional neural proposal head.
+
+    ``cardinality`` is advisory.  It can cause parser-backed fallbacks to be
+    considered, but it never deletes deterministic parser results.
+    """
+
+    kinds: tuple[str, ...]
+    cardinality: int
+    scores: Mapping[str, float] = field(default_factory=dict)
+    spans: tuple[ProposalSpan, ...] = ()
+
+    def __post_init__(self) -> None:
+        if self.cardinality < 0:
+            raise ValueError("proposal cardinality cannot be negative")
+        if any(kind not in FRAME_KINDS for kind in self.kinds):
+            raise ValueError("proposal contains an unknown frame kind")
+        if any(not 0.0 <= score <= 1.0 for score in self.scores.values()):
+            raise ValueError("proposal scores must be between zero and one")
+
+
+@dataclass(frozen=True, slots=True)
+class Frame:
+    """One typed semantic/state proposal backed by an exact language claim."""
+
+    frame_id: str
+    kind: str
+    relation: str
+    slots: Mapping[str, TypedSlot]
+    provenance: Provenance
+    claim: ClaimBoundary
+    status: str
+    derivation: str = "PARSER"
+    proposal_score: float | None = None
+
+    def __post_init__(self) -> None:
+        if self.kind not in FRAME_KINDS:
+            raise ValueError(f"unknown frame kind: {self.kind}")
+        if not self.relation:
+            raise ValueError("relation must be non-empty")
+        if not self.slots:
+            raise ValueError("a frame must contain at least one typed slot")
+
+    def to_dict(self) -> dict[str, Any]:
+        result: dict[str, Any] = {
+            "schema": "kev.frame.v1",
+            "id": self.frame_id,
+            "kind": self.kind,
+            "relation": self.relation,
+            "slots": {name: slot.to_dict() for name, slot in self.slots.items()},
+            "status": self.status,
+            "claim": self.claim.to_dict(),
+            "provenance": self.provenance.to_dict(),
+            "derivation": self.derivation,
+        }
+        if self.proposal_score is not None:
+            result["proposal_score"] = self.proposal_score
+        return result
+
+    def semantic_key(self) -> tuple[str, str, tuple[tuple[str, str, Scalar], ...]]:
+        """Return a surface/provenance-independent comparison key."""
+
+        slots = tuple(
+            sorted(
+                (name, slot.slot_type, slot.value) for name, slot in self.slots.items()
+            )
+        )
+        return self.kind, self.relation, slots
+
+
+@dataclass(slots=True)
+class _Candidate:
+    kind: str
+    relation: str
+    slots: dict[str, TypedSlot]
+    start: int
+    end: int
+    derivation: str = "PARSER"
+    proposal_score: float | None = None
+
+
+def _slot(value: Scalar, slot_type: str, raw: str | None = None) -> TypedSlot:
+    return TypedSlot(value=value, slot_type=slot_type, raw=raw)
+
+
+def _number(raw: str) -> int | float:
+    value = raw.strip()
+    return float(value) if "." in value else int(value)
+
+
+def _literal_slot(raw: str) -> TypedSlot:
+    value = raw.strip()
+    if re.fullmatch(_NUMBER, value):
+        return _slot(_number(value), "number", raw)
+    if value.casefold() in {"true", "false"}:
+        return _slot(value.casefold() == "true", "boolean", raw)
+    return _slot(value, "value", raw)
+
+
+def _unit(raw: str | None) -> str | None:
+    if raw is None:
+        return None
+    compact = re.sub(r"\s+", " ", raw.strip().casefold())
+    return _UNIT_ALIASES.get(compact, compact)
+
+
+def _symbol(raw: str) -> str:
+    value = raw.casefold().strip(" \t\r\n.,;:!?\"'")
+    value = re.sub(r"^(?:the|a|an|our|this|that)\s+", "", value)
+    value = re.sub(r"\s+", "_", value.replace("-", " "))
+    return _SUBJECT_ALIASES.get(value, value)
+
+
+def _action(raw: str) -> str:
+    value = _symbol(raw)
+    return _ACTION_ALIASES.get(value, value)
+
+
+def _operator(raw: str) -> str:
+    value = re.sub(r"\s+", " ", raw.casefold().strip())
+    if value in {"<", "below", "under", "less than"}:
+        return "LT"
+    if value in {
+        "<=",
+        "at most",
+        "no more than",
+        "not above",
+        "not exceed",
+        "not exceeding",
+    }:
+        return "LTE"
+    if value in {">", "above", "over", "more than", "greater than"}:
+        return "GT"
+    if value in {">=", "at least", "no less than", "not below"}:
+        return "GTE"
+    return "EQ"
+
+
+def _bounded(text: str, start: int, end: int) -> tuple[int, int]:
+    while start < end and text[start].isspace():
+        start += 1
+    while end > start and (text[end - 1].isspace() or text[end - 1] in ",;.!?"):
+        end -= 1
+    return start, end
+
+
+def _claim_ranges(text: str) -> list[tuple[int, int]]:
+    """Split only at explicit claim separators and retain exact offsets."""
+
+    # A full stop is a separator unless it is the decimal point in a number.
+    separators = re.compile(
+        r"[,;!?]+|(?<!\d)\.+|\.+(?!\d)|\b(?:and|but|while)\b",
+        re.IGNORECASE,
+    )
+    ranges: list[tuple[int, int]] = []
+    cursor = 0
+    for match in separators.finditer(text):
+        start, end = _bounded(text, cursor, match.start())
+        if start < end:
+            ranges.append((start, end))
+        cursor = match.end()
+    start, end = _bounded(text, cursor, len(text))
+    if start < end:
+        ranges.append((start, end))
+    return ranges or ([(0, len(text))] if text else [])
+
+
+_NEGATING_AUXILIARY = re.compile(
+    r"\b(?:"
+    r"(?:do|does|did|is|are|was|were|will|would|should|must|shall|can|could)\s+not|"
+    r"don't|doesn't|didn't|isn't|aren't|wasn't|weren't|won't|wouldn't|"
+    r"shouldn't|mustn't|shan't|can't|couldn't|cannot|never"
+    r")\s+(?:ever\s+)?[a-z]",
+    re.IGNORECASE,
+)
+_NEGATED_ASSERTION = re.compile(
+    r"\b(?:it\s+(?:is|was)\s+not\s+(?:true|the\s+case)|"
+    r"it\s+(?:isn't|wasn't)\s+(?:true|the\s+case)|"
+    r"not\s+(?:true|the\s+case))\s+that\b",
+    re.IGNORECASE,
+)
+
+
+def _is_negated_positive_candidate(text: str, candidate: _Candidate) -> bool:
+    """Return whether a positive candidate sits inside explicit negation.
+
+    Negative ``CONSTRAINT`` frames are retained: they are the typed
+    representation of imperatives such as ``do not copy``.  The companion
+    positive goal, forecast, observation, or base relation must not survive.
+    Matching is bounded to the same claim range, so a negation in a preceding
+    comma/semicolon/sentence-separated claim cannot leak into a later claim.
+    """
+
+    if candidate.kind == "CONSTRAINT":
+        return False
+    claim_start, claim_end = candidate.start, candidate.end
+    for start, end in _claim_ranges(text):
+        if start <= candidate.start < end:
+            claim_start, claim_end = start, end
+            break
+    support = text[claim_start : max(candidate.end, claim_end)]
+    return bool(
+        _NEGATING_AUXILIARY.search(support) or _NEGATED_ASSERTION.search(support)
+    )
+
+
+def _without_negated_positive_candidates(
+    text: str,
+    candidates: Sequence[_Candidate],
+) -> list[_Candidate]:
+    return [
+        candidate
+        for candidate in candidates
+        if not _is_negated_positive_candidate(text, candidate)
+    ]
+
+
+def _threshold_slots(match: re.Match[str]) -> dict[str, TypedSlot]:
+    subject_raw = match.group("subject")
+    operator_raw = match.group("operator")
+    value_raw = match.group("value")
+    unit_raw = match.groupdict().get("unit")
+    slots = {
+        "subject": _slot(_symbol(subject_raw), "entity", subject_raw),
+        "operator": _slot(_operator(operator_raw), "operator", operator_raw),
+        "value": _slot(_number(value_raw), "number", value_raw),
+    }
+    canonical_unit = _unit(unit_raw)
+    if canonical_unit is not None:
+        slots["unit"] = _slot(canonical_unit, "unit", unit_raw)
+    return slots
+
+
+def _parse_goals(claim: str, offset: int) -> list[_Candidate]:
+    candidates: list[_Candidate] = []
+    threshold = re.compile(
+        rf"\b(?:reduce|lower|keep|bring|get|target|maintain|hold|make|set)\s+"
+        rf"(?:the\s+)?(?P<subject>[a-z][a-z0-9 _-]{{0,45}}?)\s+"
+        rf"(?:to\s+)?(?P<operator>{_COMPARATOR})\s*(?P<value>{_NUMBER})"
+        rf"(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+        re.IGNORECASE,
+    )
+    stated_threshold = re.compile(
+        rf"\b(?:(?:my|our|the)\s+)?(?:goal|objective|aim|target)\s+"
+        rf"(?:is|:)?\s*(?:to\s+)?(?:reduce|lower|keep|get|bring|maintain|hold|set)?\s*"
+        rf"(?P<subject>[a-z][a-z0-9 _-]{{0,45}}?)\s+"
+        rf"(?P<operator>{_COMPARATOR})\s*(?P<value>{_NUMBER})"
+        rf"(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+        re.IGNORECASE,
+    )
+    desired_threshold = re.compile(
+        rf"\b(?:i|we)\s+(?:want|aim|intend|plan)\s+(?:to\s+)?"
+        rf"(?:reduce|lower|keep|get|bring|maintain|hold|set)?\s*"
+        rf"(?P<subject>[a-z][a-z0-9 _-]{{0,45}}?)\s+"
+        rf"(?:to\s+)?(?P<operator>{_COMPARATOR})\s*(?P<value>{_NUMBER})"
+        rf"(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+        re.IGNORECASE,
+    )
+    seen: list[tuple[int, int]] = []
+    for pattern in (threshold, stated_threshold, desired_threshold):
+        for match in pattern.finditer(claim):
+            span = (match.start(), match.end())
+            if any(span[0] < end and start < span[1] for start, end in seen):
+                continue
+            seen.append(span)
+            candidates.append(
+                _Candidate(
+                    "GOAL",
+                    "THRESHOLD",
+                    _threshold_slots(match),
+                    offset + match.start(),
+                    offset + match.end(),
+                )
+            )
+
+    # A non-threshold directive still has a constrained action/object schema.
+    directive = re.compile(
+        r"\b(?:could\s+you\s+)?(?:please\s+)?"
+        r"(?P<action>optimize|improve|build|create|deploy|increase|decrease)\s+"
+        r"(?P<object>[a-z][a-z0-9 _-]*?)(?=\s+without\b|$)",
+        re.IGNORECASE,
+    )
+    for match in directive.finditer(claim):
+        if any(
+            match.start() < candidate.end - offset
+            and candidate.start - offset < match.end()
+            for candidate in candidates
+            if candidate.relation == "THRESHOLD"
+        ):
+            continue
+        action_raw = match.group("action")
+        object_raw = match.group("object")
+        candidates.append(
+            _Candidate(
+                "GOAL",
+                "DIRECTIVE",
+                {
+                    "action": _slot(_action(action_raw), "action", action_raw),
+                    "object": _slot(_symbol(object_raw), "entity", object_raw),
+                },
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+    return candidates
+
+
+def _constraint_slots(
+    action_raw: str,
+    object_raw: str,
+    *,
+    polarity: bool,
+) -> dict[str, TypedSlot]:
+    return {
+        "action": _slot(_action(action_raw), "action", action_raw),
+        "object": _slot(_symbol(object_raw), "entity", object_raw),
+        "polarity": _slot(polarity, "boolean", str(polarity).lower()),
+        "modality": _slot("REQUIRED" if polarity else "FORBIDDEN", "modality"),
+    }
+
+
+def _parse_constraints(claim: str, offset: int) -> list[_Candidate]:
+    candidates: list[_Candidate] = []
+    occupied: set[tuple[int, int, bool]] = set()
+
+    patterns: tuple[tuple[re.Pattern[str], bool], ...] = (
+        (
+            re.compile(
+                r"\b(?:please\s+)?(?:do\s+not|don't|never|must\s+not|shall\s+not|"
+                r"cannot|can't|should\s+not)\s+(?:ever\s+)?"
+                r"(?P<action>[a-z][a-z0-9_-]*)\s+"
+                r"(?P<object>[a-z][a-z0-9 _-]*?)(?=\s+without\b|$)",
+                re.IGNORECASE,
+            ),
+            False,
+        ),
+        (
+            re.compile(
+                r"\bwithout\s+(?:ever\s+)?"
+                r"(?P<action>modifying|changing|mutating|updating|writing)\s+"
+                r"(?P<object>[a-z][a-z0-9 _-]*)$",
+                re.IGNORECASE,
+            ),
+            False,
+        ),
+        (
+            re.compile(
+                r"\b(?:leave|leaving|keep|keeping)\s+"
+                r"(?P<object>[a-z][a-z0-9 _-]*?)\s+unchanged\b",
+                re.IGNORECASE,
+            ),
+            False,
+        ),
+        (
+            re.compile(
+                r"\b(?P<object>[a-z][a-z0-9 _-]*?)\s+"
+                r"(?:must\s+)?(?:remain|stays?)\s+unchanged\b",
+                re.IGNORECASE,
+            ),
+            False,
+        ),
+        (
+            re.compile(
+                r"\bavoid\s+(?P<action>modifying|changing|mutating|updating|writing)\s+"
+                r"(?P<object>[a-z][a-z0-9 _-]*)$",
+                re.IGNORECASE,
+            ),
+            False,
+        ),
+        (
+            re.compile(
+                r"\b(?P<object>[a-z][a-z0-9 _-]*?)\s+"
+                r"(?:must|shall|should|is|are)\s+(?:not|never)\s+"
+                r"(?:be\s+)?(?P<action>modified|changed|mutated|updated|written)\b",
+                re.IGNORECASE,
+            ),
+            False,
+        ),
+        (
+            re.compile(
+                r"\bno\s+(?P<object>[a-z][a-z0-9 _-]*?)\s+"
+                r"(?P<action>mutation|mutations|modification|modifications|changes?)\b",
+                re.IGNORECASE,
+            ),
+            False,
+        ),
+        (
+            re.compile(
+                r"\b(?P<object>[a-z][a-z0-9 _-]*?)\s+"
+                r"(?:must|shall|is\s+required\s+to)\s+(?:be\s+)?"
+                r"(?P<action>modified|changed|mutated|updated|written)\b",
+                re.IGNORECASE,
+            ),
+            True,
+        ),
+        (
+            re.compile(
+                r"\b(?:(?:must|shall)(?!\s+not\b)|required\s+to)\s+"
+                r"(?P<action>[a-z][a-z0-9_-]*)\s+"
+                r"(?P<object>[a-z][a-z0-9 _-]*)$",
+                re.IGNORECASE,
+            ),
+            True,
+        ),
+    )
+
+    for pattern, polarity in patterns:
+        for match in pattern.finditer(claim):
+            action_raw = match.groupdict().get("action") or "modify"
+            # "keep X unchanged" denotes forbidden modification, not forbidden keeping.
+            if not polarity and _action(action_raw) == "be":
+                continue
+            if polarity and _action(action_raw) in {"be", "remain", "stay"}:
+                continue
+            if "unchanged" in match.group(0).casefold():
+                action_raw = "modify"
+            object_raw = match.group("object")
+            key = (match.start(), match.end(), polarity)
+            if key in occupied:
+                continue
+            if any(
+                polarity == prior_polarity
+                and match.start() < prior_end
+                and prior_start < match.end()
+                for prior_start, prior_end, prior_polarity in occupied
+            ):
+                continue
+            occupied.add(key)
+            candidates.append(
+                _Candidate(
+                    "CONSTRAINT",
+                    "ACTION_POLICY",
+                    _constraint_slots(action_raw, object_raw, polarity=polarity),
+                    offset + match.start(),
+                    offset + match.end(),
+                )
+            )
+
+    threshold = re.compile(
+        rf"\b(?P<subject>[a-z][a-z0-9 _-]{{0,45}}?)\s+(?:must|shall)\s+"
+        rf"(?:be\s+)?"
+        rf"(?P<operator>{_COMPARATOR})\s*(?P<value>{_NUMBER})"
+        rf"(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+        re.IGNORECASE,
+    )
+    for match in threshold.finditer(claim):
+        candidates.append(
+            _Candidate(
+                "CONSTRAINT",
+                "THRESHOLD",
+                _threshold_slots(match),
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+    return candidates
+
+
+def _parse_observations(claim: str, offset: int) -> list[_Candidate]:
+    candidates: list[_Candidate] = []
+    patterns = (
+        re.compile(
+            rf"\b(?:the\s+)?(?:last\s+)?(?:measured|observed|recorded|actual)\s+"
+            rf"(?P<subject>[a-z][a-z0-9 _-]{{0,40}}?)\s+"
+            rf"(?:was|is|at|=|:)?\s*(?P<value>{_NUMBER})"
+            rf"(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+            re.IGNORECASE,
+        ),
+        re.compile(
+            rf"\b(?P<subject>[a-z][a-z0-9 _-]{{0,40}}?)\s+"
+            rf"(?:was|is|has\s+been)\s+(?:measured|observed|recorded)\s+"
+            rf"(?:at|as|to)?\s*(?P<value>{_NUMBER})"
+            rf"(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+            re.IGNORECASE,
+        ),
+    )
+    seen: set[tuple[int, int]] = set()
+    for pattern in patterns:
+        for match in pattern.finditer(claim):
+            span = (match.start(), match.end())
+            if span in seen:
+                continue
+            seen.add(span)
+            subject_raw = match.group("subject")
+            value_raw = match.group("value")
+            unit_raw = match.groupdict().get("unit")
+            slots = {
+                "subject": _slot(_symbol(subject_raw), "entity", subject_raw),
+                "value": _slot(_number(value_raw), "number", value_raw),
+            }
+            canonical_unit = _unit(unit_raw)
+            if canonical_unit is not None:
+                slots["unit"] = _slot(canonical_unit, "unit", unit_raw)
+            candidates.append(
+                _Candidate(
+                    "OBSERVATION",
+                    "MEASUREMENT",
+                    slots,
+                    offset + match.start(),
+                    offset + match.end(),
+                )
+            )
+    return candidates
+
+
+def _parse_elliptical_observations(
+    text: str,
+    existing: Sequence[_Candidate],
+) -> list[_Candidate]:
+    """Bind ``measured 73`` to the nearest local explicit subject.
+
+    The value and its boundary still come from the observation claim.  The
+    subject slot retains the neighboring claim's raw spelling, making the
+    binding replayable rather than silently treating the number as
+    self-describing.  A sentence boundary blocks the binding; within one
+    sentence, source order does not change whether the ellipsis can resolve.
+    """
+
+    output: list[_Candidate] = []
+    pattern = re.compile(
+        rf"\b(?:the\s+)?(?:last\s+)?(?:measured|observed|recorded)\s+"
+        rf"(?:was\s+)?(?P<value>{_NUMBER})(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+        re.IGNORECASE,
+    )
+    for claim_start, claim_end in _claim_ranges(text):
+        if any(
+            candidate.kind == "OBSERVATION"
+            and claim_start < candidate.end
+            and candidate.start < claim_end
+            for candidate in existing
+        ):
+            continue
+        claim = text[claim_start:claim_end]
+        for match in pattern.finditer(claim):
+            match_start = claim_start + match.start()
+            match_end = claim_start + match.end()
+            bindings: list[tuple[int, int, _Candidate]] = []
+            for candidate in existing:
+                if "subject" not in candidate.slots:
+                    continue
+                if candidate.end <= match_start:
+                    gap = text[candidate.end : match_start]
+                    direction = 0  # Prefer an equally close preceding subject.
+                elif candidate.start >= match_end:
+                    gap = text[match_end : candidate.start]
+                    direction = 1
+                else:
+                    continue
+                if re.search(r"[.!?]", gap):
+                    continue
+                bindings.append((len(gap), direction, candidate))
+            if not bindings:
+                continue
+            subject = min(
+                bindings,
+                key=lambda item: (item[0], item[1], item[2].start),
+            )[2].slots["subject"]
+            value_raw = match.group("value")
+            unit_raw = match.groupdict().get("unit")
+            slots = {
+                "subject": subject,
+                "value": _slot(_number(value_raw), "number", value_raw),
+            }
+            canonical_unit = _unit(unit_raw)
+            if canonical_unit is not None:
+                slots["unit"] = _slot(canonical_unit, "unit", unit_raw)
+            output.append(
+                _Candidate(
+                    "OBSERVATION",
+                    "MEASUREMENT",
+                    slots,
+                    match_start,
+                    match_end,
+                )
+            )
+    return output
+
+
+def _parse_predictions(claim: str, offset: int) -> list[_Candidate]:
+    candidates: list[_Candidate] = []
+    pattern = re.compile(
+        rf"\b(?:we\s+)?(?:predict|expect|forecast|anticipate)\s+(?:that\s+)?"
+        rf"(?P<subject>[a-z][a-z0-9 _-]{{0,40}}?)\s+"
+        rf"(?:will\s+)?(?:be|reach|at|=|:)?\s*"
+        rf"(?:(?P<operator>{_COMPARATOR})\s*)?(?P<value>{_NUMBER})"
+        rf"(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+        re.IGNORECASE,
+    )
+    future = re.compile(
+        rf"\b(?P<subject>[a-z][a-z0-9 _-]{{0,40}}?)\s+"
+        rf"(?:will|is\s+likely\s+to|is\s+expected\s+to)\s+"
+        rf"(?:be|reach|remain|stay|fall|rise)\s+"
+        rf"(?:(?P<operator>{_COMPARATOR})\s*)?(?P<value>{_NUMBER})"
+        rf"(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+        re.IGNORECASE,
+    )
+    seen: list[tuple[int, int]] = []
+    for regex in (pattern, future):
+        for match in regex.finditer(claim):
+            if any(
+                match.start() < prior_end and prior_start < match.end()
+                for prior_start, prior_end in seen
+            ):
+                continue
+            seen.append((match.start(), match.end()))
+            subject_raw = match.group("subject")
+            value_raw = match.group("value")
+            operator_raw = match.groupdict().get("operator") or "="
+            unit_raw = match.groupdict().get("unit")
+            slots = {
+                "subject": _slot(_symbol(subject_raw), "entity", subject_raw),
+                "operator": _slot(_operator(operator_raw), "operator", operator_raw),
+                "value": _slot(_number(value_raw), "number", value_raw),
+            }
+            canonical_unit = _unit(unit_raw)
+            if canonical_unit is not None:
+                slots["unit"] = _slot(canonical_unit, "unit", unit_raw)
+            candidates.append(
+                _Candidate(
+                    "PREDICTION",
+                    "FORECAST",
+                    slots,
+                    offset + match.start(),
+                    offset + match.end(),
+                )
+            )
+    return candidates
+
+
+def _parse_base_claim(claim: str, offset: int) -> list[_Candidate]:
+    candidates: list[_Candidate] = []
+
+    copy_pattern = re.compile(
+        r"\bcopy\s+(?P<source>[^,;]+?)\s+(?:to|into)\s+(?P<destination>[^,;]+)$",
+        re.IGNORECASE,
+    )
+    for match in copy_pattern.finditer(claim):
+        source_raw, destination_raw = match.group("source"), match.group("destination")
+        candidates.append(
+            _Candidate(
+                "COPY_VALUE",
+                "COPY_VALUE",
+                {
+                    "source": _slot(_symbol(source_raw), "value", source_raw),
+                    "destination": _slot(
+                        _symbol(destination_raw), "reference", destination_raw
+                    ),
+                },
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+
+    magnitude = re.compile(
+        rf"\b(?:absolute\s+value|magnitude|unsigned\s+value|distance\s+from\s+zero)"
+        rf"(?:\s+of)?\s+(?P<input>{_NUMBER})(?:\s+(?:is|=)\s+(?P<result>{_NUMBER}))?\b",
+        re.IGNORECASE,
+    )
+    for match in magnitude.finditer(claim):
+        input_raw = match.group("input")
+        slots = {"input": _slot(_number(input_raw), "number", input_raw)}
+        if match.group("result") is not None:
+            result_raw = match.group("result")
+            slots["result"] = _slot(_number(result_raw), "number", result_raw)
+        candidates.append(
+            _Candidate(
+                "MAGNITUDE",
+                "MAGNITUDE",
+                slots,
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+
+    negate = re.compile(
+        rf"\b(?:negate|negation\s+of|opposite\s+of|sign[- ]reversed|inverse\s+of)\s+"
+        rf"(?P<input>{_NUMBER})\b",
+        re.IGNORECASE,
+    )
+    for match in negate.finditer(claim):
+        raw = match.group("input")
+        candidates.append(
+            _Candidate(
+                "NEGATE",
+                "NEGATE",
+                {"input": _slot(_number(raw), "number", raw)},
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+
+    reference = re.compile(
+        r"\b(?:refer(?:ence)?\s+to|reference)\s+(?P<target>[a-z0-9][a-z0-9 _.:/-]*)$",
+        re.IGNORECASE,
+    )
+    for match in reference.finditer(claim):
+        raw = match.group("target")
+        candidates.append(
+            _Candidate(
+                "REFERENCE",
+                "REFERENCE",
+                {"target": _slot(_symbol(raw), "reference", raw)},
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+
+    active = re.compile(
+        r"\b(?P<selection>[a-z0-9][a-z0-9_.:/-]*)\s+is\s+"
+        r"(?:the\s+)?(?P<state>active|serving|selected|deployed|live)\b",
+        re.IGNORECASE,
+    )
+    for match in active.finditer(claim):
+        raw = match.group("selection")
+        candidates.append(
+            _Candidate(
+                "ACTIVE_SELECTION",
+                "ACTIVE_SELECTION",
+                {
+                    "selection": _slot(_symbol(raw), "identifier", raw),
+                    "active": _slot(True, "boolean", match.group("state")),
+                },
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+
+    run_status = re.compile(
+        r"\brun\s+(?P<run_id>[a-z0-9_.:/-]+)\s+(?:status\s+(?:is|=)\s+)?"
+        r"(?P<status>completed|interrupted|failed|pending|succeeded|running)\b",
+        re.IGNORECASE,
+    )
+    for match in run_status.finditer(claim):
+        run_raw, status_raw = match.group("run_id"), match.group("status")
+        candidates.append(
+            _Candidate(
+                "RUN_STATUS",
+                "RUN_STATUS",
+                {
+                    "run_id": _slot(run_raw, "identifier", run_raw),
+                    "status": _slot(status_raw.upper(), "status", status_raw),
+                },
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+
+    receipt = re.compile(
+        r"\breceipt\s+(?P<receipt_id>[a-z0-9_.:/-]+)\s+"
+        r"(?:returned|produced|records?|has\s+(?:value|result))\s+"
+        r"(?P<value>[^,;]+)$",
+        re.IGNORECASE,
+    )
+    for match in receipt.finditer(claim):
+        receipt_raw, value_raw = match.group("receipt_id"), match.group("value")
+        candidates.append(
+            _Candidate(
+                "RECEIPT_VALUE",
+                "RECEIPT_VALUE",
+                {
+                    "receipt_id": _slot(receipt_raw, "identifier", receipt_raw),
+                    "value": _literal_slot(value_raw),
+                },
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+
+    consistency = re.compile(
+        r"\b(?:the\s+)?evidence(?:\s+items?)?\s+(?:is|are|shows?|indicates?)?\s*"
+        r"(?P<status>consistent|in\s+agreement|conflicting|in\s+conflict|disagrees?)\b",
+        re.IGNORECASE,
+    )
+    for match in consistency.finditer(claim):
+        raw = match.group("status")
+        status = (
+            "CONSISTENT"
+            if raw.casefold() in {"consistent", "in agreement"}
+            else "CONFLICT"
+        )
+        candidates.append(
+            _Candidate(
+                "EVIDENCE_CONSISTENCY",
+                "EVIDENCE_CONSISTENCY",
+                {"status": _slot(status, "status", raw)},
+                offset + match.start(),
+                offset + match.end(),
+            )
+        )
+    return candidates
+
+
+def _parse_supersedes(text: str) -> list[_Candidate]:
+    candidates: list[_Candidate] = []
+    replace = re.compile(
+        r"\breplace\s+(?P<old>[a-z0-9_.:/-]+)\s+with\s+(?P<current>[a-z0-9_.:/-]+)\b",
+        re.IGNORECASE,
+    )
+    contrast = re.compile(
+        r"\b(?P<old>[a-z0-9_.:/-]+)\s+is\s+(?:old|obsolete|former|retired|superseded)"
+        r"\s*[,;]\s*(?P<current>[a-z0-9_.:/-]+)\s+"
+        r"(?:applies\s+now|is\s+(?:now\s+)?current|is\s+(?:now\s+)?active)\b",
+        re.IGNORECASE,
+    )
+    direct = re.compile(
+        r"\b(?P<current>[a-z0-9_.:/-]+)\s+"
+        r"(?:supersedes|replaces|retires)\s+(?P<old>[a-z0-9_.:/-]+)\b",
+        re.IGNORECASE,
+    )
+    for pattern in (replace, contrast, direct):
+        for match in pattern.finditer(text):
+            old_raw, current_raw = match.group("old"), match.group("current")
+            candidates.append(
+                _Candidate(
+                    "SUPERSEDES",
+                    "SUPERSEDES",
+                    {
+                        "old_value": _slot(_symbol(old_raw), "value", old_raw),
+                        "current_value": _slot(
+                            _symbol(current_raw), "value", current_raw
+                        ),
+                    },
+                    match.start(),
+                    match.end(),
+                )
+            )
+    return candidates
+
+
+def _coerce_proposal(value: Any, text_length: int) -> ProposalHeadResult | None:
+    if value is None:
+        return None
+    if isinstance(value, ProposalHeadResult):
+        result = value
+    elif isinstance(value, str):
+        result = ProposalHeadResult((value.upper(),), 1)
+    elif isinstance(value, Mapping):
+        if "intent" in value or "kind" in value:
+            kind = str(value.get("kind", value.get("intent"))).upper()
+            score_value = value.get("score")
+            score = float(score_value) if score_value is not None else None
+            start = int(value["start"]) if "start" in value else None
+            end = int(value["end"]) if "end" in value else None
+            # Relation identity is deliberately not accepted from a proposal.
+            # It is assigned only by the constrained slot parser below.
+            span = ProposalSpan(kind, start, end, score)
+            result = ProposalHeadResult(
+                (kind,),
+                int(value.get("cardinality", 1)),
+                {kind: score} if score is not None else {},
+                (span,),
+            )
+        else:
+            raw_kinds = value.get("kinds", value.get("frame_kinds", ()))
+            if isinstance(raw_kinds, str):
+                raw_kinds = (raw_kinds,)
+            kinds = tuple(str(kind).upper() for kind in raw_kinds)
+            raw_scores = value.get("scores", {})
+            scores = {
+                str(kind).upper(): float(score) for kind, score in raw_scores.items()
+            }
+            mapping_spans = tuple(
+                ProposalSpan(
+                    str(item["kind"]).upper(),
+                    int(item["start"]) if item.get("start") is not None else None,
+                    int(item["end"]) if item.get("end") is not None else None,
+                    float(item["score"]) if item.get("score") is not None else None,
+                )
+                for item in value.get("spans", ())
+            )
+            result = ProposalHeadResult(
+                kinds,
+                int(value.get("cardinality", len(kinds))),
+                scores,
+                mapping_spans,
+            )
+    elif isinstance(value, Sequence):
+        sequence_spans: list[ProposalSpan] = []
+        for item in value:
+            if isinstance(item, str):
+                sequence_spans.append(ProposalSpan(item.upper()))
+            elif isinstance(item, Mapping):
+                sequence_spans.append(
+                    ProposalSpan(
+                        str(item.get("kind", item.get("intent"))).upper(),
+                        int(item["start"]) if item.get("start") is not None else None,
+                        int(item["end"]) if item.get("end") is not None else None,
+                        float(item["score"]) if item.get("score") is not None else None,
+                    )
+                )
+            else:
+                raise TypeError("proposal sequence entries must be strings or mappings")
+        result = ProposalHeadResult(
+            tuple(span.kind for span in sequence_spans),
+            len(sequence_spans),
+            spans=tuple(sequence_spans),
+        )
+    else:
+        raise TypeError(
+            "proposal result must be a mapping, sequence, string, or ProposalHeadResult"
+        )
+
+    for span in result.spans:
+        if span.end is not None and span.end > text_length:
+            raise ValueError("proposal span extends beyond the utterance")
+    return result
+
+
+def _proposal_candidates(
+    text: str,
+    proposal: ProposalHeadResult | None,
+    parsed: Sequence[_Candidate],
+) -> list[_Candidate]:
+    if proposal is None or proposal.cardinality <= len(parsed):
+        return []
+
+    claims = _claim_ranges(text)
+    occupied = [(candidate.start, candidate.end) for candidate in parsed]
+    hints = list(proposal.spans)
+    if not hints:
+        hints = [
+            ProposalSpan(kind, score=proposal.scores.get(kind))
+            for kind in proposal.kinds
+        ]
+
+    output: list[_Candidate] = []
+    for index, hint in enumerate(hints):
+        if len(parsed) + len(output) >= proposal.cardinality:
+            break
+        if hint.start is not None and hint.end is not None:
+            start, end = _bounded(text, hint.start, hint.end)
+            if any(
+                candidate.kind == hint.kind
+                and start < candidate.end
+                and candidate.start < end
+                for candidate in (*parsed, *output)
+            ):
+                continue
+        else:
+            available = [
+                claim
+                for claim in claims
+                if not any(
+                    claim[0] < right and left < claim[1] for left, right in occupied
+                )
+            ]
+            if not available:
+                continue
+            start, end = available[min(index, len(available) - 1)]
+        if start >= end:
+            continue
+        raw = text[start:end]
+        filled = _fill_proposed_slots(raw, hint.kind)
+        if filled is None:
+            # A kind/cardinality prediction is not permission to store raw
+            # language as cognition.  Without parser-backed slots there is no
+            # frame; a future learned NER may replace this bounded filler.
+            continue
+        relation, slots, filled_start, filled_end = filled
+        output.append(
+            _Candidate(
+                hint.kind,
+                relation,
+                slots,
+                start + filled_start,
+                start + filled_end,
+                derivation="NEURAL_PROPOSAL+SLOT_PARSER",
+                proposal_score=hint.score
+                if hint.score is not None
+                else proposal.scores.get(hint.kind),
+            )
+        )
+        occupied.append((start, end))
+    return output
+
+
+def _fill_proposed_slots(
+    claim: str,
+    kind: str,
+) -> tuple[str, dict[str, TypedSlot], int, int] | None:
+    """Fill slots without allowing a neural proposal to supply values."""
+
+    threshold = re.search(
+        rf"\b(?P<subject>[a-z][a-z0-9 _-]{{0,45}}?)\s+"
+        rf"(?P<operator>{_COMPARATOR})\s*(?P<value>{_NUMBER})"
+        rf"(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+        claim,
+        re.IGNORECASE,
+    )
+    if threshold is not None and kind in {"GOAL", "CONSTRAINT", "PREDICTION"}:
+        return (
+            "THRESHOLD" if kind != "PREDICTION" else "FORECAST",
+            _threshold_slots(threshold),
+            threshold.start(),
+            threshold.end(),
+        )
+
+    scalar = re.search(
+        rf"\b(?P<subject>[a-z][a-z0-9 _-]{{0,45}}?)\s+(?:is|=|at)\s*"
+        rf"(?P<value>{_NUMBER})(?:\s*(?P<unit>{_UNIT}))?(?=$|\W)",
+        claim,
+        re.IGNORECASE,
+    )
+    if scalar is not None and kind in {"OBSERVATION", "PREDICTION"}:
+        subject_raw = scalar.group("subject")
+        value_raw = scalar.group("value")
+        unit_raw = scalar.groupdict().get("unit")
+        slots = {
+            "subject": _slot(_symbol(subject_raw), "entity", subject_raw),
+            "value": _slot(_number(value_raw), "number", value_raw),
+        }
+        if kind == "PREDICTION":
+            slots["operator"] = _slot("EQ", "operator", "=")
+        canonical_unit = _unit(unit_raw)
+        if canonical_unit is not None:
+            slots["unit"] = _slot(canonical_unit, "unit", unit_raw)
+        return _RELATION_FOR_KIND[kind], slots, scalar.start(), scalar.end()
+
+    action = re.fullmatch(
+        r"\s*(?P<action>optimize|improve|build|create|deploy|increase|decrease|"
+        r"reduce|lower|measure|check|modify|change|mutate|update|write)\s+"
+        r"(?P<object>[a-z][a-z0-9 _-]*)\s*",
+        claim,
+        re.IGNORECASE,
+    )
+    if action is not None and kind in {"GOAL", "CONSTRAINT"}:
+        action_raw, object_raw = action.group("action"), action.group("object")
+        if kind == "CONSTRAINT":
+            return (
+                "ACTION_POLICY",
+                _constraint_slots(action_raw, object_raw, polarity=True),
+                action.start(),
+                action.end(),
+            )
+        return (
+            "DIRECTIVE",
+            {
+                "action": _slot(_action(action_raw), "action", action_raw),
+                "object": _slot(_symbol(object_raw), "entity", object_raw),
+            },
+            action.start(),
+            action.end(),
+        )
+    return None
+
+
+def _candidate_key(candidate: _Candidate) -> tuple[Any, ...]:
+    slot_key = tuple(
+        sorted(
+            (name, slot.slot_type, slot.value) for name, slot in candidate.slots.items()
+        )
+    )
+    return candidate.kind, candidate.relation, candidate.start, candidate.end, slot_key
+
+
+def _frame_id(candidate: _Candidate, provenance: Provenance) -> str:
+    material = {
+        "kind": candidate.kind,
+        "relation": candidate.relation,
+        "slots": {
+            name: {"type": slot.slot_type, "value": slot.value}
+            for name, slot in sorted(candidate.slots.items())
+        },
+        "claim": [candidate.start, candidate.end],
+        "source": [
+            provenance.source_type,
+            provenance.source_id,
+            provenance.utterance_sha256,
+        ],
+    }
+    encoded = json.dumps(
+        material, sort_keys=True, separators=(",", ":"), ensure_ascii=False
+    )
+    return "frame-" + hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def extract_frames(
+    utterance: str,
+    *,
+    source_type: str = "language",
+    source_id: str | None = None,
+    actor: str = "user",
+    timestamp: str | datetime | None = None,
+    model_hash: str | None = None,
+    receipt_hash: str | None = None,
+    proposal_head: ProposalCallback | None = None,
+    proposal_result: Any = None,
+) -> list[Frame]:
+    """Extract zero or more typed frames from ``utterance``.
+
+    Parser results always win over optional neural proposals.  A proposal can
+    supply only kind/cardinality/span hints.  A frame is emitted only when the
+    constrained slot parser can bind values from that span.  Passing both
+    ``proposal_head`` and ``proposal_result`` is an error because it would
+    obscure which proposal influenced the parse.
+
+    Language observations are always ``REPORTED``.  An observation becomes
+    ``VERIFIED`` only when ``source_type='tool'`` and a receipt hash is supplied.
+    """
+
+    if not isinstance(utterance, str):
+        raise TypeError("utterance must be a string")
+    if not utterance.strip():
+        return []
+    if proposal_head is not None and proposal_result is not None:
+        raise ValueError("pass either proposal_head or proposal_result, not both")
+
+    utterance_hash = hashlib.sha256(utterance.encode("utf-8")).hexdigest()
+    provenance = Provenance(
+        source_type=source_type,
+        source_id=source_id or f"utterance:{utterance_hash[:16]}",
+        utterance_sha256=utterance_hash,
+        actor=actor,
+        timestamp=_normalise_timestamp(timestamp),
+        model_hash=model_hash,
+        receipt_hash=receipt_hash,
+    )
+
+    candidates = _parse_supersedes(utterance)
+    for start, end in _claim_ranges(utterance):
+        claim = utterance[start:end]
+        candidates.extend(_parse_goals(claim, start))
+        candidates.extend(_parse_constraints(claim, start))
+        candidates.extend(_parse_observations(claim, start))
+        candidates.extend(_parse_predictions(claim, start))
+        candidates.extend(_parse_base_claim(claim, start))
+    candidates = _without_negated_positive_candidates(utterance, candidates)
+    candidates.extend(_parse_elliptical_observations(utterance, candidates))
+
+    proposal_value = (
+        proposal_head(utterance) if proposal_head is not None else proposal_result
+    )
+    proposal = _coerce_proposal(proposal_value, len(utterance))
+    candidates.extend(_proposal_candidates(utterance, proposal, candidates))
+    candidates = _without_negated_positive_candidates(utterance, candidates)
+
+    deduplicated: dict[tuple[Any, ...], _Candidate] = {}
+    for candidate in candidates:
+        deduplicated.setdefault(_candidate_key(candidate), candidate)
+    ordered = sorted(
+        deduplicated.values(),
+        key=lambda candidate: (
+            candidate.start,
+            candidate.end,
+            FRAME_KINDS.index(candidate.kind),
+        ),
+    )
+
+    frames: list[Frame] = []
+    for candidate in ordered:
+        start, end = _bounded(utterance, candidate.start, candidate.end)
+        if start >= end:
+            continue
+        candidate.start, candidate.end = start, end
+        status = "REPORTED"
+        receipt_is_sha256 = bool(
+            receipt_hash and re.fullmatch(r"(?:sha256:)?[0-9a-fA-F]{64}", receipt_hash)
+        )
+        if (
+            candidate.kind == "OBSERVATION"
+            and source_type.casefold() == "tool"
+            and receipt_is_sha256
+        ):
+            status = "VERIFIED"
+        frame = Frame(
+            frame_id=_frame_id(candidate, provenance),
+            kind=candidate.kind,
+            relation=candidate.relation,
+            slots=dict(candidate.slots),
+            provenance=provenance,
+            claim=ClaimBoundary(utterance[start:end], start, end),
+            status=status,
+            derivation=candidate.derivation,
+            proposal_score=candidate.proposal_score,
+        )
+        frames.append(frame)
+    return frames
+
+
+def frame_set_signature(
+    frames: Iterable[Frame],
+) -> tuple[tuple[str, str, tuple[tuple[str, str, Scalar], ...]], ...]:
+    """Canonical surface-independent signature for composition evaluation."""
+
+    return tuple(sorted((frame.semantic_key() for frame in frames), key=repr))
+
+
+# Readable alias for callers that prefer parser terminology.
+parse_frames = extract_frames
+
+
+__all__ = [
+    "BASE_RELATIONS",
+    "COGNITIVE_KINDS",
+    "FRAME_KINDS",
+    "ClaimBoundary",
+    "Frame",
+    "ProposalHeadResult",
+    "ProposalSpan",
+    "Provenance",
+    "TypedSlot",
+    "extract_frames",
+    "frame_set_signature",
+    "parse_frames",
+]

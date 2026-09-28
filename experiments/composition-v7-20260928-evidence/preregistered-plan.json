@@ -1,0 +1,449 @@
+{
+  "artifacts": {
+    "baseline": {
+      "path": "../evals/evidence/v7-genesis-baseline.json",
+      "role": "baseline",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "b124cae0447847225f4c7edc54e38f97517e24ae13ce809708ad0f1dd84ca4a0",
+      "size_bytes": 828710
+    },
+    "calibration_fit": {
+      "path": "../evals/frozen/calibration-fit-v2.jsonl",
+      "role": "calibration_fit",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "d0e7d4fcffef2c3ccd376acb2c77a1fb90289224caa046cddc88c9656ace101c",
+      "size_bytes": 14516
+    },
+    "corpus_builder": {
+      "path": "../scripts/build_reviewed_training_corpus_v8.py",
+      "role": "corpus_builder",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "a96753a33858eb070ffdd94b94f1ef6a2e97a44eb560519623070530d431a978",
+      "size_bytes": 10970
+    },
+    "corpus_manifest": {
+      "path": "../training/reviewed/semantic-frame-paraphrases-v8-manifest.json",
+      "role": "corpus_manifest",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "bc6698f7d64ea61ae9ddf0522ec94c9cb813809366fdaa0ab32b57aa36615242",
+      "size_bytes": 9006
+    },
+    "development_probes": {
+      "path": "composition-v7-development/probes.json",
+      "role": "development_probes",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "e6912d420bf1107218cd59a7783011ccdd2357f853ee39f3c9d7f2f74bc51369",
+      "size_bytes": 35804
+    },
+    "encoder_manifest": {
+      "path": "../models/local/encoders/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/encoder-manifest.json",
+      "role": "encoder_manifest",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "cfd8f8bc3413f31ab927ad7d78eb380c3359fdb2893061075d2369dfec81ea57",
+      "size_bytes": 3417
+    },
+    "encoder_source": {
+      "path": "../models/encoder-sources/all-MiniLM-L6-v2-1110a243fdf4706b3f48f1d95db1a4f5529b4d41.json",
+      "role": "encoder_source",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "a46078dd1c13d9114bff07a891a1a903c1281681cf6dd3002e8d9e5ea8da03e9",
+      "size_bytes": 4765
+    },
+    "executable_source__kev___init___py__1a4f1b1cdc2a": {
+      "path": "../kev/__init__.py",
+      "role": "executable_source__kev___init___py__1a4f1b1cdc2a",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "f3b3c754f507afdf27e4efee32644f384f09bccb011639f9a0fb71e3ee8e5d6a",
+      "size_bytes": 240
+    },
+    "executable_source__kev_actions_py__01a5a7b509ee": {
+      "path": "../kev/actions.py",
+      "role": "executable_source__kev_actions_py__01a5a7b509ee",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "d7f4add51e3cb47d7432ef9c789526aafc1ee502eb3fcafc184516f6f70c8a50",
+      "size_bytes": 29874
+    },
+    "executable_source__kev_artifacts_py__d23d26ab3f14": {
+      "path": "../kev/artifacts.py",
+      "role": "executable_source__kev_artifacts_py__d23d26ab3f14",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "47f025c46cee6761b09331268d3f94e84014d715d56b3dfa6d66fe4f44b21a67",
+      "size_bytes": 4706
+    },
+    "executable_source__kev_calibration_evidence_py__bd66e390cd42": {
+      "path": "../kev/calibration_evidence.py",
+      "role": "executable_source__kev_calibration_evidence_py__bd66e390cd42",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "6c0c1c49ba0106c031d5b5e6a93593dd2763dfae4ce8e91b6a39d100b53d600e",
+      "size_bytes": 24491
+    },
+    "executable_source__kev_calibration_py__bf1676ec1c18": {
+      "path": "../kev/calibration.py",
+      "role": "executable_source__kev_calibration_py__bf1676ec1c18",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "aab6dc15689fd170472b7545acc01817491cb616c4a74e8066369a49a9350a8f",
+      "size_bytes": 9723
+    },
+    "executable_source__kev_cli_py__d07776ff958e": {
+      "path": "../kev/cli.py",
+      "role": "executable_source__kev_cli_py__d07776ff958e",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "26401f95b87f8218ecebe92a13aafe6019ee6c4e2a3c20661b53bcd5cfe879a5",
+      "size_bytes": 18512
+    },
+    "executable_source__kev_encoders_py__5349fe37566b": {
+      "path": "../kev/encoders.py",
+      "role": "executable_source__kev_encoders_py__5349fe37566b",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9",
+      "size_bytes": 26022
+    },
+    "executable_source__kev_evaluation_py__11611607c0d4": {
+      "path": "../kev/evaluation.py",
+      "role": "executable_source__kev_evaluation_py__11611607c0d4",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "d0670e5ca634883377690d2190008f062d6d3d06b20a15e39f9dd92baf0ed334",
+      "size_bytes": 48887
+    },
+    "executable_source__kev_evolution_py__1e6c18f47ca7": {
+      "path": "../kev/evolution.py",
+      "role": "executable_source__kev_evolution_py__1e6c18f47ca7",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "c3a2a7e38f6053ba067b568fa49baa76b71f0a266fd25b6e789b90742feafbed",
+      "size_bytes": 57401
+    },
+    "executable_source__kev_frames_py__0580bd3b1c64": {
+      "path": "../kev/frames.py",
+      "role": "executable_source__kev_frames_py__0580bd3b1c64",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "8bfb6afcccd15e2ba668ab56999ce381932ca507eb1a4185f9caabf0bb9b2497",
+      "size_bytes": 54809
+    },
+    "executable_source__kev_model_runtime_py__58a4b4e699cf": {
+      "path": "../kev/model_runtime.py",
+      "role": "executable_source__kev_model_runtime_py__58a4b4e699cf",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "bacf4e2e922f8c780cd97c37b61756b9028ef10962205af4b0c3136b9ff9f6e9",
+      "size_bytes": 8803
+    },
+    "executable_source__kev_sentence_training_py__ee3d3410b65a": {
+      "path": "../kev/sentence_training.py",
+      "role": "executable_source__kev_sentence_training_py__ee3d3410b65a",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59",
+      "size_bytes": 21933
+    },
+    "executable_source__kev_uc51___init___py__34a1f3329676": {
+      "path": "../kev/uc51/__init__.py",
+      "role": "executable_source__kev_uc51___init___py__34a1f3329676",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "9a8682142d97fe218bc8d5bbc5843efa1c1ebdb931285170b1be1f1a87aabdd5",
+      "size_bytes": 32
+    },
+    "executable_source__kev_uc51_cli_py__54a3c5e2434b": {
+      "path": "../kev/uc51/cli.py",
+      "role": "executable_source__kev_uc51_cli_py__54a3c5e2434b",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "f16963cf4c0e5d8127cd1b4a868b7ed4d1c66948eef44d947f959184c50097ec",
+      "size_bytes": 2141
+    },
+    "executable_source__kev_uc51_semantic_core_py__5bd6bf4be294": {
+      "path": "../kev/uc51/semantic_core.py",
+      "role": "executable_source__kev_uc51_semantic_core_py__5bd6bf4be294",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "99f386526b6b8bafb6c20820d293e736a889fd45e27f0d5978c54dd47c1647cb",
+      "size_bytes": 6036
+    },
+    "executable_source__kev_uc51a2___init___py__9a117418c104": {
+      "path": "../kev/uc51a2/__init__.py",
+      "role": "executable_source__kev_uc51a2___init___py__9a117418c104",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "5f128113c8dca4925312133f4b4a7386f6d4cf2a774ac26cd4bef7489ed3de7a",
+      "size_bytes": 32
+    },
+    "executable_source__kev_uc51a2_cli_py__e5f32f4228da": {
+      "path": "../kev/uc51a2/cli.py",
+      "role": "executable_source__kev_uc51a2_cli_py__e5f32f4228da",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "7e3f3d3ecf9e4d2858bbe1aa089a28db79fc5fc0417f505f95612f2ec4f07171",
+      "size_bytes": 2051
+    },
+    "executable_source__kev_uc51a2_semantic_breadth_py__60701180c319": {
+      "path": "../kev/uc51a2/semantic_breadth.py",
+      "role": "executable_source__kev_uc51a2_semantic_breadth_py__60701180c319",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "dec06491bc5bbfadf9c501929614ae3ea21cfb4d2b0c0edf94dce58b273eda12",
+      "size_bytes": 44581
+    },
+    "executable_source__kev_uc51a3___init___py__c839ce805420": {
+      "path": "../kev/uc51a3/__init__.py",
+      "role": "executable_source__kev_uc51a3___init___py__c839ce805420",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "09a94dce90af841708708fc309a1616ac1c1505ed25d491e805cbdd7f99dd49e",
+      "size_bytes": 31
+    },
+    "executable_source__kev_uc51a3_alive_py__077958be4a61": {
+      "path": "../kev/uc51a3/alive.py",
+      "role": "executable_source__kev_uc51a3_alive_py__077958be4a61",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "55d5d1d38decfabbf654cc2111f0aaa76a512a5079950ac65f41a35672c0dfb2",
+      "size_bytes": 50844
+    },
+    "executable_source__kev_uc51a3_cli_py__8b701942f4cc": {
+      "path": "../kev/uc51a3/cli.py",
+      "role": "executable_source__kev_uc51a3_cli_py__8b701942f4cc",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "bc407347fe619e7e9760b1d9a0294a7c8e6d9f123d0cdb173208d54bf1e85676",
+      "size_bytes": 4202
+    },
+    "executable_source__kev_uc51a3_server_py__9c0fc7638d96": {
+      "path": "../kev/uc51a3/server.py",
+      "role": "executable_source__kev_uc51a3_server_py__9c0fc7638d96",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "a670b9c1c9e2a1f033ba0f99105731d3540226e2d145a0abbe648324fc105670",
+      "size_bytes": 7469
+    },
+    "executable_source__scripts_run_preregistered_experiment_py__1e6ce77eeb86": {
+      "path": "../scripts/run_preregistered_experiment.py",
+      "role": "executable_source__scripts_run_preregistered_experiment_py__1e6ce77eeb86",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "f01b4148813a9ea779d8ce19251cbdcbf6b35cb3a10f7e89a23b5aaf67c26745",
+      "size_bytes": 87619
+    },
+    "held_out_vocabulary": {
+      "path": "../evals/frozen/held-out-vocabulary-v2.txt",
+      "role": "held_out_vocabulary",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "087da62e8129dd259c1b2662f0439eb7d6387714528af14444a4575c66e76798",
+      "size_bytes": 91
+    },
+    "incumbent_checkpoint": {
+      "path": "../models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+      "role": "incumbent_checkpoint",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+      "size_bytes": 1144120
+    },
+    "incumbent_evidence": {
+      "path": "../models/public/incumbent-evidence-v11.json",
+      "role": "incumbent_evidence",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "146bd0ed36728df46566d33002b9b253b4fb7d06d6f41a031c2dfba5dd2de770",
+      "size_bytes": 4526
+    },
+    "input_separation": {
+      "path": "../evals/evidence/v7-input-separation-v8-corpus.json",
+      "role": "input_separation",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "f00563c656abe15e9e05cb02a93dc04f764f5e510cd556fe338d1119b67192e7",
+      "size_bytes": 6056
+    },
+    "predecessor_corpus": {
+      "path": "../training/reviewed/semantic-frame-paraphrases-v7-reviewed.jsonl",
+      "role": "predecessor_corpus",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "2515fc2fd940c18d1bc0188d1ae5e108c966ddb7bf391ae66c1c248ad6879b29",
+      "size_bytes": 820853
+    },
+    "predecessor_corpus_manifest": {
+      "path": "../training/reviewed/semantic-frame-paraphrases-v7-manifest.json",
+      "role": "predecessor_corpus_manifest",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "f0e45c4f224c8dcfef0e1e7c0b5132bc33f45821458d36608001f4f900ce3511",
+      "size_bytes": 7916
+    },
+    "pretraining_input_rejection": {
+      "path": "../evals/evidence/v7-input-separation.json",
+      "role": "pretraining_input_rejection",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "d8e4374ee79e77b1a9279b238f97444023cb823e65266b109cf7e4461a37988c",
+      "size_bytes": 5752
+    },
+    "promotion_suite": {
+      "canonical_sha256": "d3590d6f9eda20a3510df94f7473aeed45c5d616aadfe4ee7fb5f452f0036f28",
+      "path": "../evals/frozen/public-audit-v7-260.json",
+      "role": "promotion_suite",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "e22bdbea5f07c8b44cf5a1684a2b8433be6b252d74ddf86ef0252b736dbe9c76",
+      "size_bytes": 203808
+    },
+    "protocol": {
+      "path": "composition-v7-20260928-protocol.md",
+      "role": "protocol",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "842e8aef6c6f67638ed9ee0b6da42d2321849a6b40c1eaf150cf99b3f453293a",
+      "size_bytes": 4006
+    },
+    "public_registry": {
+      "path": "../models/registry.json",
+      "role": "public_registry",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "748043e39230947180733596b0d1b8cf830a9267c7a90219739f3ca277bbb074",
+      "size_bytes": 1049
+    },
+    "research_constraints": {
+      "path": "../constraints-research.txt",
+      "role": "research_constraints",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "c87c37f6174215b60eae05874169b9939d0d8db343cb1088e1a50f5781638288",
+      "size_bytes": 301
+    },
+    "reviewed_corpus": {
+      "path": "../training/reviewed/semantic-frame-paraphrases-v8-reviewed.jsonl",
+      "role": "reviewed_corpus",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "c78eeb1b91d22eea88177f003971a884e5f519212acf140a6343f7b912f15a09",
+      "size_bytes": 1288387
+    },
+    "trainer_input__evals_frozen_calibration_fit_v1_jsonl__5ed9b9ee4c8a": {
+      "path": "../evals/frozen/calibration-fit-v1.jsonl",
+      "role": "trainer_input__evals_frozen_calibration_fit_v1_jsonl__5ed9b9ee4c8a",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "5734adb2045fa9d192888a2932c2821842833f6a17d9bc27db8bd5defe37e94c",
+      "size_bytes": 6758
+    },
+    "trainer_input__evals_frozen_frame_parser_known_failures_v1_json__7edf5930730b": {
+      "path": "../evals/frozen/frame-parser-known-failures-v1.json",
+      "role": "trainer_input__evals_frozen_frame_parser_known_failures_v1_json__7edf5930730b",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901",
+      "size_bytes": 5924
+    },
+    "trainer_input__evals_frozen_held_out_vocabulary_v1_txt__c0bb6ed34d11": {
+      "path": "../evals/frozen/held-out-vocabulary-v1.txt",
+      "role": "trainer_input__evals_frozen_held_out_vocabulary_v1_txt__c0bb6ed34d11",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+      "size_bytes": 82
+    },
+    "trainer_input__evals_frozen_manifest_v1_json__03e7703f7c17": {
+      "path": "../evals/frozen/manifest-v1.json",
+      "role": "trainer_input__evals_frozen_manifest_v1_json__03e7703f7c17",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "4932737e243a5d9286b824090992023792aedeaba9d1dfc0e808d73ccf73ba29",
+      "size_bytes": 1068
+    },
+    "trainer_input__evals_frozen_manifest_v2_json__3e614656adb7": {
+      "path": "../evals/frozen/manifest-v2.json",
+      "role": "trainer_input__evals_frozen_manifest_v2_json__3e614656adb7",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "a2b1adfc937d4c31c0f28339d83f64583fc23fabd8575ae7c29e1372ef0d386d",
+      "size_bytes": 1671
+    },
+    "trainer_input__evals_frozen_manifest_v3_json__3d096594ac8b": {
+      "path": "../evals/frozen/manifest-v3.json",
+      "role": "trainer_input__evals_frozen_manifest_v3_json__3d096594ac8b",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "492a5f636c42e2fac45a4fc87cfe01990f0907240da50f0d2f1f7ee61670759c",
+      "size_bytes": 2271
+    },
+    "trainer_input__evals_frozen_manifest_v4_json__2101883dc188": {
+      "path": "../evals/frozen/manifest-v4.json",
+      "role": "trainer_input__evals_frozen_manifest_v4_json__2101883dc188",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "21ae7711e3f3ad5323bc6a8a5669a5f073f7dedb646a61320dabfe487041888d",
+      "size_bytes": 3427
+    },
+    "trainer_input__evals_frozen_manifest_v5_json__9705678cbce2": {
+      "path": "../evals/frozen/manifest-v5.json",
+      "role": "trainer_input__evals_frozen_manifest_v5_json__9705678cbce2",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "4b2cb72aa1a891e1673225be4ff9c5989cc1165ad79203938ffdbe4f794e3e94",
+      "size_bytes": 5283
+    },
+    "trainer_input__evals_frozen_manifest_v6_json__b46d20c36de7": {
+      "path": "../evals/frozen/manifest-v6.json",
+      "role": "trainer_input__evals_frozen_manifest_v6_json__b46d20c36de7",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce",
+      "size_bytes": 7113
+    },
+    "trainer_input__evals_frozen_manifest_v7_json__ac2e8ad502d0": {
+      "path": "../evals/frozen/manifest-v7.json",
+      "role": "trainer_input__evals_frozen_manifest_v7_json__ac2e8ad502d0",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "f8784d55629f86377ca80aadf52c838e40b20c497c28653b8605d5e505f6a036",
+      "size_bytes": 8205
+    },
+    "trainer_input__evals_frozen_public_audit_v1_260_json__e10149a8e8f8": {
+      "path": "../evals/frozen/public-audit-v1-260.json",
+      "role": "trainer_input__evals_frozen_public_audit_v1_260_json__e10149a8e8f8",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0",
+      "size_bytes": 129427
+    },
+    "trainer_input__evals_frozen_public_audit_v2_260_json__9a37649bb1d0": {
+      "path": "../evals/frozen/public-audit-v2-260.json",
+      "role": "trainer_input__evals_frozen_public_audit_v2_260_json__9a37649bb1d0",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "ef9ff61967f8716e541ccdef3adea887da99dc988799098a9faf47e2ea3dd3c4",
+      "size_bytes": 114471
+    },
+    "trainer_input__evals_frozen_public_audit_v3_260_json__9c26af3580d0": {
+      "path": "../evals/frozen/public-audit-v3-260.json",
+      "role": "trainer_input__evals_frozen_public_audit_v3_260_json__9c26af3580d0",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "1bce1b6c1123336e30531b3cf54c1d01ff4aa420cfec0cb078eaca7f40f3b2d8",
+      "size_bytes": 118634
+    },
+    "trainer_input__evals_frozen_public_audit_v4_260_json__d2a90079b8df": {
+      "path": "../evals/frozen/public-audit-v4-260.json",
+      "role": "trainer_input__evals_frozen_public_audit_v4_260_json__d2a90079b8df",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322",
+      "size_bytes": 144574
+    },
+    "trainer_input__evals_frozen_public_audit_v5_260_json__f52613ead275": {
+      "path": "../evals/frozen/public-audit-v5-260.json",
+      "role": "trainer_input__evals_frozen_public_audit_v5_260_json__f52613ead275",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "e913f483bdce2e3ea1a435f0c139a846874a73660665c69b8723a9670348451c",
+      "size_bytes": 146580
+    },
+    "trainer_input__evals_frozen_public_audit_v6_260_json__40430eafc3b6": {
+      "path": "../evals/frozen/public-audit-v6-260.json",
+      "role": "trainer_input__evals_frozen_public_audit_v6_260_json__40430eafc3b6",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029",
+      "size_bytes": 147296
+    }
+  },
+  "execution": {
+    "ordered_seeds": [
+      52031,
+      52047,
+      52069
+    ],
+    "retention_epsilon": 0.0,
+    "steps": 800
+  },
+  "experiment_id": "composition-v7-20260928",
+  "frozen": true,
+  "output_root": "composition-v7-20260928-evidence",
+  "runtime_environment": {
+    "byteorder": "little",
+    "packages": {
+      "huggingface-hub": "1.3.4",
+      "numpy": "2.5.1",
+      "safetensors": "0.7.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.5.1+cu121",
+      "transformers": "5.0.0"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.2",
+    "python_implementation": "CPython",
+    "schema": "kev.preregistered-runtime-environment.v1"
+  },
+  "schema": "kev.preregistered-experiment-plan.v1",
+  "selection_policy": {
+    "kind": "PREDECLARED_PRIMARY_ONLY",
+    "primary_seed": 52031,
+    "requires_all_seed_receipts": true,
+    "robustness_only_seeds": [
+      52047,
+      52069
+    ],
+    "training_loss_is_criterion": false
+  }
+}

@@ -13,6 +13,7 @@ state/
 *.safetensors
 *.bin
 !experiments/frozen-encoder-v6-20260928-evidence/**/*.pt
+!experiments/composition-v7-20260928-evidence/**/*.pt
 models/**
 !models/public/
 !models/public/**

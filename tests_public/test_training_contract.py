@@ -124,7 +124,7 @@ def test_training_exclusion_inventory_is_closed_by_pinned_manifest(
     copied_root = tmp_path / "repository"
     copied_frozen = copied_root / "evals" / "frozen"
     shutil.copytree(ROOT / "evals" / "frozen", copied_frozen)
-    manifest = copied_frozen / "manifest-v6.json"
+    manifest = copied_frozen / semantic_breadth.PINNED_EVALUATION_MANIFEST.name
     held_out = copied_frozen / "held-out-vocabulary-v1.txt"
     monkeypatch.setattr(semantic_breadth, "REPOSITORY_ROOT", copied_root)
     monkeypatch.setattr(semantic_breadth, "FROZEN_EVAL_DIRECTORY", copied_frozen)
@@ -140,7 +140,7 @@ def test_training_exclusion_inventory_is_closed_by_pinned_manifest(
         (copied_frozen / "public-audit-v5-260.json").unlink()
         match = "missing"
     else:
-        (copied_frozen / "public-audit-v7-260.json").write_text(
+        (copied_frozen / "public-audit-v999-260.json").write_text(
             "{}\n", encoding="utf-8"
         )
         match = "unpinned"

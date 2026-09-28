@@ -37,22 +37,35 @@ Read, in order:
 
 - Active checkpoint pointer and hash: `models/registry.json`
 - Checkpoint provenance: `models/public/incumbent-manifest.json`
-- Current incumbent evidence: `models/public/incumbent-evidence-v10.json`
-- Frozen artifact manifest: `evals/frozen/manifest-v6.json`
-- Current promotion suite: `evals/frozen/public-audit-v6-260.json`
+- Current incumbent evidence: `models/public/incumbent-evidence-v11.json`
+- Frozen artifact manifest: `evals/frozen/manifest-v7.json`
+- Current promotion suite: `evals/frozen/public-audit-v7-260.json`
 - Current calibration-fit slice: `evals/frozen/calibration-fit-v2.jsonl`
 - Current held-out vocabulary: `evals/frozen/held-out-vocabulary-v2.txt`
-- Current raw baseline: `evals/evidence/v6-genesis-baseline.json`
+- Current raw baseline: `evals/evidence/v7-genesis-baseline.json`
 - Development-only parser failures: `evals/frozen/frame-parser-known-failures-v1.json`
 - Historical aggregate replay: `evals/frozen/historical-190-260-replay.json`
 - Preregistered frozen-encoder plan: `experiments/frozen-encoder-v6-20260928-plan.json`
 - Completed frozen-encoder evidence: `experiments/frozen-encoder-v6-20260928-evidence/aggregate-evidence.json`
+- Composition protocol: `experiments/composition-v7-20260928-protocol.md`
+- Composition experiment: `experiments/composition-v7-20260928-plan.json`
+- Composition result and replay: `docs/COMPOSITION_V7.md`
 
-V1 through v5 evaluation artifacts are preserved development evidence, not
+V1 through v6 evaluation artifacts are preserved development evidence, not
 current fresh suites. Do not regenerate or patch them. The parser-failure file
 is development-influenced and explicitly ineligible for promotion scoring.
 
-## Current preregistered result
+## Current v7 result
+
+The [v7 report](docs/COMPOSITION_V7.md) records the completed alpha.2 experiment.
+All three candidates were rejected for a composition tie at 75/80. Primary seed
+52031 improved fresh from 26/80 to 39/80 but also regressed a held-out vocabulary
+audit. The incumbent weights remain unchanged. The controlled runtime repair
+improved eight developer-proposal probes from 1/8 to 8/8; that is not evidence
+of learned composition improvement. V7 results have now influenced interpretation;
+do not tune against them and present a rerun as fresh evidence.
+
+## Preserved v6 preregistered result
 
 The plan SHA-256 is
 `c39f830ea787d87b8e19dd52dfb2c65565ad1f2bd384cec2997ffa2c402d78ca`.

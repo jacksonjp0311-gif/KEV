@@ -1,20 +1,22 @@
 # Reproducing KEV v0.52 Evidence
 
-Run these commands from a clean repository root with Python 3.11–3.13. The
-verification and replay steps in sections 1–3 do not train or activate a
-model; the isolated evolution exercise in section 4 does train a challenger
-and may activate it only inside the named replay state directory.
+Use Python 3.12 for the published CPU research environment. The package also
+supports Python 3.11–3.13, but that compatibility is not a claim of identical
+numerical results. Verification and evaluation do not train or activate a
+model. A new isolated evolution run trains a challenger and may activate it
+only inside its named state directory.
 
 ## 1. Verify shipped bytes
 
 ```text
-python -m pip install -e ".[dev]"
+python -m pip install torch==2.5.1+cpu --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -c constraints-research.txt -e ".[dev,semantic-encoder]"
 python -m kev.cli doctor
 python -m pytest -q -p no:cacheprovider tests_public
 ```
 
 `doctor` uses `models/registry.json` as its local root of trust. It verifies the
-pinned v10 evidence bytes before trusting that evidence's manifest path or
+pinned v11 evidence bytes before trusting that evidence's manifest path or
 contents, then checks the checkpoint, manifest hash, suite byte and canonical
 hashes, eval-card byte and canonical report hashes, development-only known
 failures, predecessor links, calibration slice, held-out vocabulary, and every
@@ -24,38 +26,45 @@ The repository's `.gitattributes` marks `evals/`, `models/public/`, and the
 public model registry as byte-preserved (`-text`). This prevents Git line-ending
 conversion from changing content-addressed evidence on Windows or Linux.
 
+The [research constraints](../constraints-research.txt) pin package versions,
+not wheel hashes or every hardware property. Byte-for-byte numerical replay
+requires the recorded experiment runtime, CPU backend, source versions, and
+artifact bindings. Other builds or hardware may produce different floating-
+point values; record those differences rather than claiming universal byte
+equality.
+
 ## 2. Replay the current public baseline
 
 Choose a new output path; eval reports are immutable and refuse replacement.
 
 ```text
-python -m kev.cli eval --incumbent models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt --challenger models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt --suite evals/frozen/public-audit-v6-260.json --output replay-v6.json
+python -m kev.cli eval --incumbent models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt --challenger models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt --suite evals/frozen/public-audit-v7-260.json --output replay-v7.json
 ```
 
 Expected evidence:
 
 - output file SHA-256:
-  `881e1f6911379f9bc158fde300147f1d41416b8076fbc1a972786c6ddc9915e4`;
+  `b124cae0447847225f4c7edc54e38f97517e24ae13ce809708ad0f1dd84ca4a0`;
 - canonical `report_sha256`:
-  `e6c768c496048afbdcf56554700ac2cc19e9c09d013139e2c7c53cdb3a9f658e`;
+  `b0b9a10f727a9c5c7849a6b2c570b0d7064c10f8ce03f4212c67e490ead3decf`;
 - decision: `REJECT`, because fresh and composition tie;
-- audit policy: all 28 reported families are checked independently for
+- audit policy: all 25 reported families are checked independently for
   no regression; missing or size-mismatched family metrics reject;
-- exact match: fresh 48/80, retention 40/40, OOV 3/40,
-  composition 50/80, calibration 0/20; and
-- raw incumbent failures: 119.
+- exact match: fresh 26/80, retention 40/40, OOV 2/40,
+  composition 75/80, calibration 1/20; and
+- raw incumbent failures: 116.
 
 The reference copy is
-[`evals/evidence/v6-genesis-baseline.json`](../evals/evidence/v6-genesis-baseline.json).
+[`evals/evidence/v7-genesis-baseline.json`](../evals/evidence/v7-genesis-baseline.json).
 It is bound by
-[`models/public/incumbent-evidence-v10.json`](../models/public/incumbent-evidence-v10.json).
-The v10 evidence file SHA-256 is
-`69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21`.
+[`models/public/incumbent-evidence-v11.json`](../models/public/incumbent-evidence-v11.json).
+The v11 evidence file SHA-256 is
+`146bd0ed36728df46566d33002b9b253b4fb7d06d6f41a031c2dfba5dd2de770`.
 The frozen manifest SHA-256 is
-`07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce`;
+`f8784d55629f86377ca80aadf52c838e40b20c497c28653b8605d5e505f6a036`;
 the suite file and canonical hashes are
-`a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029`
-and `3d53b4b981c9ebb7ad6f4d6e73b82e56c19a275fdbd76922a865256c43ad334c`.
+`e22bdbea5f07c8b44cf5a1684a2b8433be6b252d74ddf86ef0252b736dbe9c76`
+and `d3590d6f9eda20a3510df94f7473aeed45c5d616aadfe4ee7fb5f452f0036f28`.
 Repository artifact paths
 and newline serialization are stable across supported platforms.
 
@@ -69,7 +78,56 @@ This reproduces only what was published: parent 190/260, challenger 190/260,
 and `REJECT` on a strict fresh tie. The output explicitly marks the original
 item texts, raw failures, and checkpoint hashes unavailable.
 
-## 4. Verify the completed frozen-encoder experiment
+## 4. Current composition experiment
+
+[Composition v7](COMPOSITION_V7.md) is the authoritative protocol and result
+record for `composition-v7-20260928`. It identifies the frozen plan, candidate
+paths, receipts, score cards, decisions, and replay instructions. The input is
+the immutable 497-row v8 corpus; the rejected 500-row v7 corpus remains
+preserved with its pretraining separation audit. No evaluation prompt was
+edited to resolve the three training-template overlaps.
+
+The developer-proposal runtime probes at
+[`experiments/composition-v7-development/probes.json`](../experiments/composition-v7-development/probes.json)
+improved from 1/8 to 8/8. They are development evidence, not promotion evidence
+or a trained-model measurement. The current baseline uses unchanged genesis
+weights with the new runtime, so its scores must not be compared directly with
+v6 as evidence of weight improvement.
+
+The completed [plan](../experiments/composition-v7-20260928-plan.json) has
+SHA-256 `7e51fe4ab1928e6805dda6443c2c8a8fb0d4ca0e796f2b6fca9ef0c1ad688d0c`.
+Its [aggregate evidence](../experiments/composition-v7-20260928-evidence/aggregate-evidence.json)
+has file SHA-256
+`50cff3716b62d0c06e9b0aec2ffa3d6e49e0dee3a7dd27b92620d0ea1b625f0f`
+and canonical integrity SHA-256
+`5fff30454c7aca1dd1a0e32e6bdaa7c92658f802fb93ce620fc48e416bccd798`.
+All three seed bundles are `COMPLETE` and rejected for `COMPOSITION_TIE`.
+The primary seed scores fresh 39/80, retention 40/40, OOV 5/40, composition
+75/80, calibration 10/20; its 91 failures are preserved. The outcome is
+`PRIMARY_REJECTED_NO_RECOMMENDATION`. No weights qualified.
+
+The one-shot plan's output root already exists; `verify` and `run` deliberately
+refuse to overwrite it. Preserve those bytes. To replay the primary checkpoint
+in the original recorded runtime to a new report, use:
+
+```text
+python -m kev.cli eval --incumbent models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt --challenger experiments/composition-v7-20260928-evidence/seed-results/seed-52031/candidates/20260928-135231-c78eeb1b91-bf84a45f/calibrated/semantic-breadth.calibrated.pt --suite evals/frozen/public-audit-v7-260.json --challenger-temperature experiments/composition-v7-20260928-evidence/seed-results/seed-52031/candidates/20260928-135231-c78eeb1b91-bf84a45f/calibrated/calibration-receipt.json --challenger-encoder-manifest models/local/encoders/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/encoder-manifest.json --output replay-v7-seed-52031.json
+```
+
+The original primary eval-card file SHA-256 is
+`0806f35c8e3801873ec0cfe1e80fda0e3de061e8872176166ef9ddf068596afb`.
+Absolute provenance paths in generated calibration/run receipts currently
+limit relocation. A different workspace or runtime must validate its bindings
+and report derivative hashes rather than asserting original outer byte equality.
+All three stored checkpoint replays passed during the recorded experiment.
+
+## 5. Verify the previous v6 frozen-encoder experiment
+
+The following scores are preserved historical results. Exact replay needs the
+v6 source/runtime recorded in its plan (the prior source commit is
+`1f5d9f322876d3e9ad7500b543521a64a3de5be1`), in a separate checkout, plus its
+recorded CPU backend. Running old checkpoints through the current v7 runtime
+is a new measurement and is not expected to reproduce the old card bytes.
 
 Acquire and verify the external encoder bytes first by following
 [Frozen Encoder](FROZEN_ENCODER.md). Before execution, the immutable plan was
@@ -168,7 +226,7 @@ and calibration receipts, evaluation cards, evolution results, state, and
 ledger files. Each seed ledger contains one `MODEL_REJECTED`; no model
 generation or active pointer changed.
 
-## 5. Exercise a new closed evolution run
+## 6. Exercise a new closed evolution run
 
 For a separate, non-public exercise, create lessons through the `DRAFT` →
 `REVIEWED` flow, export them, and choose new state and output directories:

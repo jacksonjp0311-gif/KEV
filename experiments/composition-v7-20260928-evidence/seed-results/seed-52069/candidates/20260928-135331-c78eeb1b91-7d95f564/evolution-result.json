@@ -1,0 +1,29 @@
+{
+  "candidate_preserved": true,
+  "challenger": {
+    "eval_card": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\composition-v7-20260928-evidence\\seed-results\\seed-52069\\candidates\\20260928-135331-c78eeb1b91-7d95f564\\eval-card.json",
+    "eval_card_sha256": "6cf6c9c65d4d9853c57a8f623fb1000b1f735c17c44375bd5b1ae0db49e91697",
+    "parent_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+    "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\composition-v7-20260928-evidence\\seed-results\\seed-52069\\candidates\\20260928-135331-c78eeb1b91-7d95f564\\calibrated\\semantic-breadth.calibrated.pt",
+    "score_status": "CALIBRATED",
+    "sha256": "efdfe8944fa0a926ae33f9f8cd31a3ee352c162b65869e74ea8f27c43f9e56a8"
+  },
+  "decision": "REJECT",
+  "eval_card": {
+    "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\composition-v7-20260928-evidence\\seed-results\\seed-52069\\candidates\\20260928-135331-c78eeb1b91-7d95f564\\eval-card.json",
+    "sha256": "6cf6c9c65d4d9853c57a8f623fb1000b1f735c17c44375bd5b1ae0db49e91697"
+  },
+  "incumbent": {
+    "generation": 0,
+    "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\public\\semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+    "sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+    "source": "state"
+  },
+  "ledger_event": "2036d7ce5b4c0903424cad6d55a92aba53bd6ee5884e49614eab15ce3ef1f94b",
+  "local_registry": null,
+  "old_incumbent_preserved": true,
+  "result_sha256": "39004b19d8e19db2c63c9fb556e956ffe5cc954549f774b596e19848e9aa8db1",
+  "run_id": "20260928-135331-c78eeb1b91-7d95f564",
+  "schema": "kev.evolution-result.v1",
+  "training_loss_used_for_promotion": false
+}

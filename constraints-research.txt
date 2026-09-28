@@ -1,0 +1,11 @@
+# Versions used for the published CPU research runs. Platform wheel/build
+# identities remain recorded in each experiment plan; this is not a wheel lock.
+torch==2.5.1
+numpy==2.5.1
+transformers==5.0.0
+huggingface-hub==1.3.4
+safetensors==0.7.0
+tokenizers==0.22.2
+ruff==0.15.18
+mypy==2.1.0
+pytest==8.4.2

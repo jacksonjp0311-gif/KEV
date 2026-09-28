@@ -68,8 +68,9 @@ def _verify_copied_chain(target: Path) -> dict:
     return cli_module._verify_public_evidence_chain(
         root=target,
         registry_path=target / "models/registry.json",
-        expected_manifest_path=target / "evals/frozen/manifest-v6.json",
-        expected_suite_path=target / "evals/frozen/public-audit-v6-260.json",
+        expected_manifest_path=target
+        / cli_module.DEFAULT_EVAL_MANIFEST.relative_to(ROOT),
+        expected_suite_path=target / cli_module.DEFAULT_SUITE.relative_to(ROOT),
     )
 
 
@@ -115,36 +116,42 @@ def test_published_model_registry_and_evaluation_manifest_match_current_bytes():
         file_sha256(ROOT / evidence["held_out_vocabulary_path"])
         == evidence["held_out_vocabulary_sha256"]
     )
-    assert (
-        file_sha256(ROOT / evidence["freshness_audit_finding_path"])
-        == evidence["freshness_audit_finding_sha256"]
-    )
-    assert evidence["audit_family_gate_count"] == 28
+    suite = _json(evidence["suite_path"])
+    audit_names = {
+        item["audit"]
+        for rows in suite["splits"].values()
+        for item in rows
+        if item.get("audit") is not None
+    }
+    assert evidence["audit_family_gate_count"] == len(audit_names)
     assert (ROOT / "models/public/incumbent-evidence-v1.json").is_file()
     eval_card = _json(evidence["eval_card_path"])
     claimed_report_hash = eval_card.pop("report_sha256")
     assert canonical_json_sha256(eval_card) == claimed_report_hash
     assert claimed_report_hash == evidence["report_sha256"]
-    assert eval_card["decision"]["policy"]["audit_family_count"] == 28
+    assert eval_card["decision"]["policy"]["audit_family_count"] == len(audit_names)
     audit_gates = [
         gate
         for gate in eval_card["decision"]["gates"]
         if gate["name"].startswith("audit:")
     ]
-    assert len(audit_gates) == 28
-    assert all(gate["passed"] for gate in audit_gates)
-    assert eval_card["incumbent"]["audit_metrics"]["order-swap"] == {
-        "accuracy": 1.0,
-        "correct": 8,
-        "failures": 0,
-        "total": 8,
+    assert {gate["name"] for gate in audit_gates} == {
+        f"audit:{name}" for name in audit_names
     }
+    assert all(gate["passed"] for gate in audit_gates)
+    for name in audit_names:
+        expected_total = sum(
+            item.get("audit") == name
+            for rows in suite["splits"].values()
+            for item in rows
+        )
+        assert eval_card["incumbent"]["audit_metrics"][name]["total"] == expected_total
     assert all(
         "audit" in failure
         for failure in eval_card["incumbent"]["raw_failures"]["items"]
     )
 
-    frozen_manifest = _json("evals/frozen/manifest-v6.json")
+    frozen_manifest = _json(evidence["eval_manifest_path"])
     assert frozen_manifest["frozen"] is True
     for artifact in frozen_manifest["artifacts"].values():
         path = ROOT / artifact["path"]
@@ -162,15 +169,14 @@ def test_doctor_verifies_the_registry_rooted_evidence_chain(capsys):
     report = json.loads(capsys.readouterr().out)
     assert report["ok"] is True
     incumbent = report["checks"][0]
-    assert incumbent["evidence_manifest_sha256"] == (
-        "69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21"
+    registry = _json("models/registry.json")
+    evidence = _json(registry["active"]["evidence_manifest_path"])
+    assert (
+        incumbent["evidence_manifest_sha256"]
+        == registry["active"]["evidence_manifest_sha256"]
     )
-    assert incumbent["eval_manifest_sha256"] == (
-        "07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce"
-    )
-    assert incumbent["eval_report_sha256"] == (
-        "e6c768c496048afbdcf56554700ac2cc19e9c09d013139e2c7c53cdb3a9f658e"
-    )
+    assert incumbent["eval_manifest_sha256"] == evidence["eval_manifest_sha256"]
+    assert incumbent["eval_report_sha256"] == evidence["report_sha256"]
     assert incumbent["known_failures_sha256"] == (
         "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901"
     )
@@ -180,7 +186,7 @@ def test_doctor_rejects_a_mutable_manifest_not_pinned_by_active_evidence(
     tmp_path: Path,
 ):
     _copy_current_evidence_chain(tmp_path)
-    manifest = tmp_path / "evals/frozen/manifest-v6.json"
+    manifest = tmp_path / cli_module.DEFAULT_EVAL_MANIFEST.relative_to(ROOT)
     manifest.write_bytes(manifest.read_bytes() + b"\n")
 
     with pytest.raises(ValueError, match="evaluation manifest SHA-256 mismatch"):

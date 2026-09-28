@@ -4,4 +4,4 @@ KEV is experimental research software.  The package deliberately separates
 language, symbolic state, model artifacts, and execution receipts.
 """
 
-__version__ = "0.52.0-alpha.1"
+__version__ = "0.52.0-alpha.2"

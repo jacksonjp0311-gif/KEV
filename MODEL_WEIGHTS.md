@@ -25,36 +25,37 @@ Registry: `models/registry.json`
 
 Artifact manifest: `models/public/incumbent-manifest.json`
 
-Evidence manifest: `models/public/incumbent-evidence-v10.json`
-(`69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21`)
+Evidence manifest: `models/public/incumbent-evidence-v11.json`
+(`146bd0ed36728df46566d33002b9b253b4fb7d06d6f41a031c2dfba5dd2de770`)
 
-Its current frozen v6 baseline is preserved at
-`evals/evidence/v6-genesis-baseline.json`
-(`881e1f6911379f9bc158fde300147f1d41416b8076fbc1a972786c6ddc9915e4`).
+Its current frozen v7 baseline is preserved at
+`evals/evidence/v7-genesis-baseline.json`
+(`b124cae0447847225f4c7edc54e38f97517e24ae13ce809708ad0f1dd84ca4a0`).
 Its canonical report hash is
-`e6c768c496048afbdcf56554700ac2cc19e9c09d013139e2c7c53cdb3a9f658e`.
-Measured exact-match scores are fresh 0.60, retention 1.00, OOV 0.075,
-composition 0.625, and calibration split 0.00, with all 119 raw failures
-retained. These are literal baseline measurements, not capability claims.
+`b0b9a10f727a9c5c7849a6b2c570b0d7064c10f8ce03f4212c67e490ead3decf`.
+Measured exact-match scores are fresh 26/80, retention 40/40, OOV 2/40,
+composition 75/80, and calibration 1/20, with all 116 raw failures retained.
+These measure unchanged genesis weights with the v7 runtime. Runtime changes,
+different evaluation suites, and weight improvement are separate claims.
 
 ## Frozen promotion evidence
 
 Current promotion suite:
 
-- Path: `evals/frozen/public-audit-v6-260.json`
-- File SHA-256: `a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029`
-- Canonical JSON SHA-256: `3d53b4b981c9ebb7ad6f4d6e73b82e56c19a275fdbd76922a865256c43ad334c`
-- Manifest: `evals/frozen/manifest-v6.json`
-- Manifest SHA-256: `07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce`
+- Path: `evals/frozen/public-audit-v7-260.json`
+- File SHA-256: `e22bdbea5f07c8b44cf5a1684a2b8433be6b252d74ddf86ef0252b736dbe9c76`
+- Canonical JSON SHA-256: `d3590d6f9eda20a3510df94f7473aeed45c5d616aadfe4ee7fb5f452f0036f28`
+- Manifest: `evals/frozen/manifest-v7.json`
+- Manifest SHA-256: `f8784d55629f86377ca80aadf52c838e40b20c497c28653b8605d5e505f6a036`
 - Splits: fresh 80, retention 40, OOV 40, composition 80, calibration 20
 - Robustness audits: single and multiple frames, buried and polite constraints,
   paraphrase equivalence, conflicting constraints, negation, number change, and
   clause-order swap
-- Independence boundary: v5 was preserved after an independent audit found
-  six number-only fresh-template repetitions. Only those six surfaces were
-  replaced before challenger training, without reading a lesson corpus. V6
-  rejects exact and digit-normalized template overlap with v1-v5 and the
-  calibration fit, plus complete expected-label names.
+- Independence boundary: v7 retains 40 frozen retention items and adds 220
+  newly authored surfaces, excluding exact and digit-normalized historical
+  overlaps. All composition targets require exact semantic frames. The suite
+  author did not read the new training corpus; review remains same-party
+  synthetic review, not independent external evaluation.
 
 Separate calibration-fit slice:
 
@@ -158,7 +159,50 @@ A tie on a strict gate rejects. Training loss is logged but is never a
 promotion feature. Rejected checkpoint bytes, raw failures, training receipts,
 and eval cards stay on disk.
 
-## Completed preregistered frozen-encoder experiment
+## Current composition experiment
+
+The `composition-v7-20260928` protocol and authoritative result are recorded in
+[Composition v7](docs/COMPOSITION_V7.md). Its final training input is
+[`training/reviewed/semantic-frame-paraphrases-v8-reviewed.jsonl`](training/reviewed/semantic-frame-paraphrases-v8-reviewed.jsonl),
+497 rows, SHA-256
+`c78eeb1b91d22eea88177f003971a884e5f519212acf140a6343f7b912f15a09`.
+Its manifest is
+[`training/reviewed/semantic-frame-paraphrases-v8-manifest.json`](training/reviewed/semantic-frame-paraphrases-v8-manifest.json),
+SHA-256 `bc6698f7d64ea61ae9ddf0522ec94c9cb813809366fdaa0ab32b57aa36615242`.
+The preserved 500-row v7 predecessor was rejected before training for three
+digit-normalized template overlaps. V8 removes only those three lesson IDs;
+the unchanged evaluation suite and surviving lesson texts remain frozen.
+The corpus and its review are synthetic and same-party, not independent human
+review. Training completion does not qualify a checkpoint.
+
+The immutable [plan](experiments/composition-v7-20260928-plan.json) has SHA-256
+`7e51fe4ab1928e6805dda6443c2c8a8fb0d4ca0e796f2b6fca9ef0c1ad688d0c`.
+The [aggregate evidence](experiments/composition-v7-20260928-evidence/aggregate-evidence.json)
+has file SHA-256
+`50cff3716b62d0c06e9b0aec2ffa3d6e49e0dee3a7dd27b92620d0ea1b625f0f`
+and canonical integrity SHA-256
+`5fff30454c7aca1dd1a0e32e6bdaa7c92658f802fb93ce620fc48e416bccd798`.
+Outcome: `PRIMARY_REJECTED_NO_RECOMMENDATION`. Every seed has `COMPLETE`
+integrity and a `MODEL_REJECTED` terminal event. Scores below are exact-match
+counts in fresh / retention / OOV / composition / calibration order.
+
+| Seed | Scores | Calibrated checkpoint SHA-256 | Eval-card file SHA-256 | Terminal event SHA-256 |
+|---:|---|---|---|---|
+| [52031](experiments/composition-v7-20260928-evidence/seed-results/seed-52031/) | 39/80; 40/40; 5/40; 75/80; 10/20 | `8a7587f08f5e27c1dca589af7402f5798bce3b663253e6d0c2d54eb861307cf8` | `0806f35c8e3801873ec0cfe1e80fda0e3de061e8872176166ef9ddf068596afb` | `70ff7146384a0cde725cc0e615d9b18de4c11a15375c4ecbecc27d8df0615cab` |
+| [52047](experiments/composition-v7-20260928-evidence/seed-results/seed-52047/) | 41/80; 40/40; 10/40; 75/80; 8/20 | `30a8257eb5b061544d04e15e36974af5bde776478056f78c92f3b63ccf8e544f` | `a80c5ca0fc6926ef97bb223b3c64914a0553057f6432026decb0f4ad7f074bb5` | `5a12195598b1d05618316583b67f022e300e3f3573c92d06d5926722812e2d22` |
+| [52069](experiments/composition-v7-20260928-evidence/seed-results/seed-52069/) | 41/80; 40/40; 8/40; 75/80; 11/20 | `efdfe8944fa0a926ae33f9f8cd31a3ee352c162b65869e74ea8f27c43f9e56a8` | `6cf6c9c65d4d9853c57a8f623fb1000b1f735c17c44375bd5b1ae0db49e91697` | `2036d7ce5b4c0903424cad6d55a92aba53bd6ee5884e49614eab15ce3ef1f94b` |
+
+The unchanged incumbent scored 26/80; 40/40; 2/40; 75/80; 1/20 under the
+same runtime. All challengers reject for `COMPOSITION_TIE`; 52031 and 52047
+also reject for `AUDIT_HELD_OUT_VOCABULARY_AMELIORATE_REGRESSED` (2/4 to 1/4).
+Seed 52069 has no audit regression but still fails the strict composition gate.
+Raw failure counts are 91, 86, and 85. Final input, cross-seed, ledger, and
+independent replay checks passed. The evidence pointer was updated to v11
+before training; neither the registry nor the incumbent changed during the run.
+Developer-proposal probes improved from 1/8 to 8/8, but those development cases
+are promotion-ineligible and do not establish learned composition improvement.
+
+## Previous completed v6 frozen-encoder experiment
 
 The bounded v6 experiment is complete. Its immutable plan is
 [`experiments/frozen-encoder-v6-20260928-plan.json`](experiments/frozen-encoder-v6-20260928-plan.json)

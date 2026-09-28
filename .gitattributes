@@ -6,3 +6,14 @@
 /models/encoder-sources/** -text
 /training/reviewed/** -text
 /experiments/** -text
+# Executable sources are also pinned by experiment plans. Check out the same
+# bytes on Windows and Linux so source hashes remain replayable.
+/kev/**/*.py text eol=lf
+/scripts/*.py text eol=lf
+# These legacy CRLF sources were frozen in the v7 experiment plan. Preserve
+# their original bytes instead of normalizing them after observing results.
+/kev/uc51/__init__.py -text
+/kev/uc51/cli.py -text
+/kev/uc51a2/__init__.py -text
+/kev/uc51a2/cli.py -text
+/constraints-research.txt text eol=lf

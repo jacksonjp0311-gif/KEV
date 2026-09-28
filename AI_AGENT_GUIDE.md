@@ -44,7 +44,21 @@ the old suite and report forward as development evidence. Do not merge Cortex,
 auto-train on chat, build a local RAG chatbot, or describe KEV as AGI or
 superintelligence.
 
-## Current v6 result boundary
+## Current v7 boundary
+
+The v7 composition runtime matches kinds against all available clauses and
+permits repeated kinds. Ambiguous matches and insufficient cardinality abstain;
+enclosing negation and modality constrain even narrow span hints. Exact slots
+and deterministic parser authority remain unchanged.
+
+Current evidence is `models/public/incumbent-evidence-v11.json`,
+`evals/frozen/manifest-v7.json`, and `evals/evidence/v7-genesis-baseline.json`.
+Read `docs/COMPOSITION_V7.md` for the next experiment's actual decisions and
+input-rejection lineage. Do not equate a runtime fix with learned improvement.
+V6 is preserved development evidence. Any changes informed by v7 results also
+require a new evaluation boundary; never patch those frozen items.
+
+## Preserved v6 result boundary
 
 Use `models/public/incumbent-evidence-v10.json`,
 `evals/frozen/manifest-v6.json`, `evals/frozen/public-audit-v6-260.json`, and

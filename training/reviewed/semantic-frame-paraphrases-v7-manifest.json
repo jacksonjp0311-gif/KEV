@@ -1,0 +1,223 @@
+{
+  "builder": {
+    "path": "scripts/build_reviewed_training_corpus_v7.py",
+    "schema": "kev.artifact-ref.v1",
+    "sha256": "3b410a20d5009c59f6447851896c9b9a63843259e6147be9de7b4137b2e134e6",
+    "size_bytes": 27803
+  },
+  "builder_dependencies": [
+    {
+      "path": "scripts/build_reviewed_training_corpus_v5.py",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "7b63bdb809becfde07641affc7ba4ee22387486ed5bb9d5ac9f51004aeea3a32",
+      "size_bytes": 50138
+    }
+  ],
+  "corpus": {
+    "canonical_rows_sha256": "d67400c65a8b5acd41c491eee8b3c32c97958403a7619de1ec2cf6cdfbd1a6e3",
+    "path": "training/reviewed/semantic-frame-paraphrases-v7-reviewed.jsonl",
+    "semantic_targets_sha256": "6fd4d6d6767f15cc0527e665c612c840163a1930c384d2a2a2aea603d949bc41",
+    "sha256": "2515fc2fd940c18d1bc0188d1ae5e108c966ddb7bf391ae66c1c248ad6879b29",
+    "size_bytes": 820853
+  },
+  "created_at": "2026-09-28T13:43:00Z",
+  "frozen": true,
+  "id": "kev-v7-reviewed-semantic-frame-corpus",
+  "limitations": [
+    "Synthetic bounded templates do not establish natural-language breadth.",
+    "Same-party agent review is not independent human or external review.",
+    "Exact surface and held-out-token separation do not prove semantic independence.",
+    "Existing v6 lessons are retained training data, never fresh evaluation data.",
+    "Training completion and loss are not promotion evidence."
+  ],
+  "metrics": {
+    "cardinality_rows": {
+      "1": 201,
+      "2": 174,
+      "3": 84,
+      "4": 41
+    },
+    "contrastive_positive_pair_count": 576,
+    "kind_occurrences": {
+      "ACTIVE_SELECTION": 57,
+      "CONSTRAINT": 130,
+      "COPY_VALUE": 63,
+      "EVIDENCE_CONSISTENCY": 36,
+      "GOAL": 128,
+      "MAGNITUDE": 60,
+      "NEGATE": 60,
+      "OBSERVATION": 102,
+      "PREDICTION": 83,
+      "RECEIPT_VALUE": 57,
+      "REFERENCE": 63,
+      "RUN_STATUS": 63,
+      "SUPERSEDES": 63
+    },
+    "paraphrase_group_count": 157,
+    "row_count": 500,
+    "row_kind_presence": {
+      "ACTIVE_SELECTION": 51,
+      "CONSTRAINT": 107,
+      "COPY_VALUE": 54,
+      "EVIDENCE_CONSISTENCY": 36,
+      "GOAL": 111,
+      "MAGNITUDE": 51,
+      "NEGATE": 51,
+      "OBSERVATION": 96,
+      "PREDICTION": 74,
+      "RECEIPT_VALUE": 48,
+      "REFERENCE": 54,
+      "RUN_STATUS": 54,
+      "SUPERSEDES": 54
+    },
+    "training_tag_rows": {
+      "cardinality-2": 114,
+      "cardinality-3": 72,
+      "cardinality-4": 33,
+      "conflict": 3,
+      "conflicting-constraints": 14,
+      "multi-frame": 299,
+      "negation": 92,
+      "new-v7": 303,
+      "number-change": 26,
+      "number-control": 97,
+      "order-swap": 299,
+      "paraphrase": 411,
+      "polite": 36,
+      "polite-buried-constraint": 78,
+      "positive-policy": 3,
+      "repeated-kind": 91,
+      "retained-v6": 197,
+      "revision": 9,
+      "single-frame": 201
+    }
+  },
+  "mutation_policy": "exclusive writes; preserve artifacts and create a new version for any later change",
+  "provenance": {
+    "authorship": "REPOSITORY_AUTHORED_SYNTHETIC",
+    "independent_human_review": false,
+    "new_row_count": 303,
+    "ordinary_chat_training_data": false,
+    "permission": "repository-authored synthetic text; user-authorized KEV v7 evolution; no third-party text or chat; same-party agent review, not human review",
+    "retained_row_count": 197,
+    "review_type": "SAME_PARTY_AGENT_REVIEW",
+    "reviewed_by": "openai-codex-agent:lessons-v7",
+    "target_authorship": "DIRECT_TYPED_SEMANTIC_AUTHORING_NOT_PARSER_OUTPUT",
+    "third_party_text": false
+  },
+  "purpose": "bounded compositional frame-kind and cardinality proposal training",
+  "retained_sources": [
+    {
+      "path": "training/reviewed/semantic-frame-paraphrases-v6-reviewed.jsonl",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "c626da3350d873c1ccf62007b6a4c670b86c90840abbf3868db85c8aeae685ed",
+      "size_bytes": 271890
+    },
+    {
+      "path": "training/reviewed/semantic-frame-paraphrases-v6-manifest.json",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "185ea3efcfe5a8083faa11c2a8dfc0a4df63d5844fe2fa640873a3730d850c4e",
+      "size_bytes": 7721
+    }
+  ],
+  "schema": "kev.reviewed-training-corpus-manifest.v1",
+  "semantic_audit": {
+    "group_policy": "EXACTLY_ONE_PARAPHRASE_GROUP_PER_TARGET",
+    "labels_generated_from_runtime_parser": false,
+    "new_composition_group_count": 73,
+    "new_composition_renderings_per_group": 3,
+    "new_semantic_atom_count": 28,
+    "numeric_and_polarity_slots_authored_explicitly": true,
+    "single_frame_share_bounds": [
+      0.35,
+      0.5
+    ],
+    "target_identity": "CANONICAL_ORDER_INDEPENDENT_MULTISET_WITH_MULTIPLICITY"
+  },
+  "separation": {
+    "distinct_forbidden_surface_count": 795,
+    "final_training_boundary": "trainer and independent experiment owner must verify every frozen suite including v7 before optimization",
+    "held_out_vocabularies": [
+      {
+        "path": "evals/frozen/held-out-vocabulary-v1.txt",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+        "size_bytes": 82
+      },
+      {
+        "path": "evals/frozen/held-out-vocabulary-v2.txt",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "087da62e8129dd259c1b2662f0439eb7d6387714528af14444a4575c66e76798",
+        "size_bytes": 91
+      }
+    ],
+    "preserved_surface_exclusions": [
+      {
+        "path": "evals/frozen/public-audit-v1-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0",
+        "size_bytes": 129427
+      },
+      {
+        "path": "evals/frozen/public-audit-v2-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "ef9ff61967f8716e541ccdef3adea887da99dc988799098a9faf47e2ea3dd3c4",
+        "size_bytes": 114471
+      },
+      {
+        "path": "evals/frozen/public-audit-v3-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "1bce1b6c1123336e30531b3cf54c1d01ff4aa420cfec0cb078eaca7f40f3b2d8",
+        "size_bytes": 118634
+      },
+      {
+        "path": "evals/frozen/public-audit-v4-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322",
+        "size_bytes": 144574
+      },
+      {
+        "path": "evals/frozen/calibration-fit-v1.jsonl",
+        "role": "CALIBRATION_FIT",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "5734adb2045fa9d192888a2932c2821842833f6a17d9bc27db8bd5defe37e94c",
+        "size_bytes": 6758
+      },
+      {
+        "path": "evals/frozen/frame-parser-known-failures-v1.json",
+        "role": "DEVELOPMENT_INFLUENCED_FAILURES",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901",
+        "size_bytes": 5924
+      },
+      {
+        "path": "evals/frozen/public-audit-v5-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "e913f483bdce2e3ea1a435f0c139a846874a73660665c69b8723a9670348451c",
+        "size_bytes": 146580
+      },
+      {
+        "path": "evals/frozen/public-audit-v6-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029",
+        "size_bytes": 147296
+      },
+      {
+        "path": "evals/frozen/calibration-fit-v2.jsonl",
+        "role": "CALIBRATION_FIT",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "d0e7d4fcffef2c3ccd376acb2c77a1fb90289224caa046cddc88c9656ace101c",
+        "size_bytes": 14516
+      }
+    ],
+    "v7_evaluation_builder_read": false,
+    "v7_evaluation_prompts_read": false
+  },
+  "version": 7
+}

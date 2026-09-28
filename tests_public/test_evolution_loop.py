@@ -636,12 +636,12 @@ def test_evolve_rejects_challenger_swapped_after_evaluation(
 
 
 def test_evolution_qualification_rejects_noncanonical_suite(tmp_path: Path) -> None:
-    with pytest.raises(ValueError, match="canonical manifest-v6"):
+    with pytest.raises(ValueError, match="canonical manifest"):
         evolution._verified_default_suite(tmp_path / "caller-suite.json")
 
 
 def test_evolution_qualification_requires_canonical_calibration() -> None:
-    with pytest.raises(ValueError, match="canonical manifest-v6 calibration"):
+    with pytest.raises(ValueError, match="canonical manifest calibration"):
         evolution._verified_gate_artifacts(
             suite_path=evolution.DEFAULT_SUITE,
             calibration_path=None,

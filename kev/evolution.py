@@ -42,8 +42,8 @@ from kev.uc51a3.alive import AliveStore, IncumbentCompareAndSwapError
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = ROOT / "models" / "registry.json"
-DEFAULT_EVAL_MANIFEST = ROOT / "evals" / "frozen" / "manifest-v6.json"
-DEFAULT_SUITE = ROOT / "evals" / "frozen" / "public-audit-v6-260.json"
+DEFAULT_EVAL_MANIFEST = ROOT / "evals" / "frozen" / "manifest-v7.json"
+DEFAULT_SUITE = ROOT / "evals" / "frozen" / "public-audit-v7-260.json"
 DEFAULT_CALIBRATION = ROOT / "evals" / "frozen" / "calibration-fit-v2.jsonl"
 DEFAULT_HELD_OUT = ROOT / "evals" / "frozen" / "held-out-vocabulary-v2.txt"
 _TERMINAL_MODEL_EVENTS = frozenset({"MODEL_REJECTED", "MODEL_QUALIFIED"})
@@ -136,7 +136,7 @@ def _trusted_eval_manifest(registry_path: str | Path) -> dict[str, Any]:
     evidence = json.loads(evidence_payload.decode("utf-8"))
     manifest_path = _resolve_artifact(str(evidence.get("eval_manifest_path", "")))
     if manifest_path != DEFAULT_EVAL_MANIFEST.resolve():
-        raise ValueError("incumbent evidence does not anchor canonical manifest-v6")
+        raise ValueError("incumbent evidence does not anchor the canonical manifest")
     manifest_hash = validate_sha256(
         str(evidence.get("eval_manifest_sha256", "")),
         field="incumbent evidence eval_manifest_sha256",
@@ -211,7 +211,7 @@ def _verified_default_suite(
     suite = Path(suite_path).resolve()
     if suite != DEFAULT_SUITE.resolve():
         raise ValueError(
-            "MODEL_QUALIFIED requires the canonical manifest-v6 promotion suite"
+            "MODEL_QUALIFIED requires the canonical manifest promotion suite"
         )
     reference = _manifest_artifact("promotion_suite", registry_path)
     return load_frozen_suite(
@@ -234,11 +234,11 @@ def _verified_gate_artifacts(
         DEFAULT_CALIBRATION.resolve()
     ):
         raise ValueError(
-            "MODEL_QUALIFIED requires the canonical manifest-v6 calibration fit"
+            "MODEL_QUALIFIED requires the canonical manifest calibration fit"
         )
     if Path(held_out_vocabulary_path).resolve() != DEFAULT_HELD_OUT.resolve():
         raise ValueError(
-            "MODEL_QUALIFIED requires the canonical manifest-v6 held-out vocabulary"
+            "MODEL_QUALIFIED requires the canonical manifest held-out vocabulary"
         )
     frozen = _verified_default_suite(suite_path, registry_path)
     _manifest_artifact("calibration_fit", registry_path)

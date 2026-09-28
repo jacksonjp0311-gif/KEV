@@ -83,19 +83,19 @@ models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e0665
 
 Its SHA-256 is pinned in `models/registry.json`. The checkpoint has 285,092 parameters, no training data or training steps, and an `UNCALIBRATED` score status. It is a reproducible bootstrap artifact, not evidence of learning.
 
-The current public evidence chain is `models/public/incumbent-evidence-v10.json` (file SHA-256 `69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21`), `evals/frozen/manifest-v6.json` (file SHA-256 `07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce`), and `evals/frozen/public-audit-v6-260.json` (file SHA-256 `a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029`; canonical JSON SHA-256 `3d53b4b981c9ebb7ad6f4d6e73b82e56c19a275fdbd76922a865256c43ad334c`). The v6 pack was authored and hash-frozen before the preregistered frozen-encoder challenger training, without reading its lesson corpus. Its fresh, retention, held-out-vocabulary, composition, and calibration splits contain distinct natural-language surfaces, plus single-frame, multi-frame, buried and polite constraints, paraphrase equivalence, conflicting constraints, negation, number-change, and order-swap audits. A separate label-clean 52-row temperature-fit slice and ten-term held-out vocabulary are also frozen. V1–v5 and every earlier result remain unchanged development evidence. The untouched public genesis baseline, including all 28 audit-family gates and all 119 raw failures, is preserved in `evals/evidence/v6-genesis-baseline.json` (file SHA-256 `881e1f6911379f9bc158fde300147f1d41416b8076fbc1a972786c6ddc9915e4`):
+The current public evidence chain is `models/public/incumbent-evidence-v11.json` (file SHA-256 `146bd0ed36728df46566d33002b9b253b4fb7d06d6f41a031c2dfba5dd2de770`), `evals/frozen/manifest-v7.json` (file SHA-256 `f8784d55629f86377ca80aadf52c838e40b20c497c28653b8605d5e505f6a036`), and `evals/frozen/public-audit-v7-260.json` (file SHA-256 `e22bdbea5f07c8b44cf5a1684a2b8433be6b252d74ddf86ef0252b736dbe9c76`; canonical JSON SHA-256 `d3590d6f9eda20a3510df94f7473aeed45c5d616aadfe4ee7fb5f452f0036f28`). V7 preserves the 40-item retention split and introduces 220 independently authored surfaces; all 80 composition items require exact semantic frames. A separate label-clean 52-row temperature-fit slice and ten-term held-out vocabulary remain frozen. V1–v6 and every earlier result remain unchanged development evidence. The current genesis baseline, measured with the v7 composition runtime and unchanged weights, is preserved in `evals/evidence/v7-genesis-baseline.json` (file SHA-256 `b124cae0447847225f4c7edc54e38f97517e24ae13ce809708ad0f1dd84ca4a0`), with 25 audit-family gates and 116 raw failures:
 
 | Split | Exact match |
 |---|---:|
-| Fresh | 48/80 |
+| Fresh | 26/80 |
 | Retention | 40/40 |
-| Held-out vocabulary | 3/40 |
-| Composition | 50/80 |
-| Calibration | 0/20 |
+| Held-out vocabulary | 2/40 |
+| Composition | 75/80 |
+| Calibration | 1/20 |
 
 These literal baseline measurements expose substantial limitations, especially on unfamiliar vocabulary. They are not general-intelligence claims.
 
-Earlier v1 through v5 suites and baseline cards remain unchanged. The v3 lineage documents the discovered label leakage instead of being silently corrected; v4 preserves the label-clean repair and its audit-gated baseline; and v5 preserves the freshness-audit finding that preceded v6. Six parser failures that influenced the accompanying parser repair are separately frozen in `evals/frozen/frame-parser-known-failures-v1.json`, explicitly marked `promotion_eligible: false`, and never counted in the v6 score.
+Earlier v1 through v6 suites and baseline cards remain unchanged. The v3 lineage documents discovered label leakage; v4 preserves the label-clean repair; v5 preserves the freshness audit that preceded v6; and v6 retains its rejected three-seed experiment. Development parser probes are excluded from promotion. Scores across different suites or runtime versions are not a controlled measure of weight improvement.
 
 ### Measured model evolution
 
@@ -121,7 +121,24 @@ A challenger qualifies only if every applicable gate passes:
 
 A tie on a strict gate rejects. Training loss is recorded but is never a promotion feature. Qualification updates only the local active-model pointer; it does not overwrite the old checkpoint.
 
-#### Completed preregistered frozen-encoder experiment
+#### Current composition experiment
+
+[Composition v7](docs/COMPOSITION_V7.md) records the `composition-v7-20260928` protocol and its authoritative result. Its reviewed training input is the 497-row v8 corpus, SHA-256 `c78eeb1b91d22eea88177f003971a884e5f519212acf140a6343f7b912f15a09`. The 500-row v7 corpus remains preserved with its pretraining rejection: three digit-normalized template overlaps were removed before any optimizer step. Review is explicitly same-party agent review, not independent human review.
+
+The runtime development probes improved from 1/8 to 8/8 with developer-supplied proposals. Their [raw evidence](experiments/composition-v7-development/probes.json) is promotion-ineligible and does not measure trained model quality. The frozen suite is evaluated separately through the strict gate.
+
+The completed v7 run rejected all three challengers:
+
+| Model | Fresh | Retention | OOV | Composition | Calibration | Decision |
+|---|---:|---:|---:|---:|---:|---|
+| Genesis with v7 runtime | 26/80 | 40/40 | 2/40 | 75/80 | 1/20 | Reference |
+| Primary / 52031 | 39/80 | 40/40 | 5/40 | 75/80 | 10/20 | `REJECT` |
+| Robustness / 52047 | 41/80 | 40/40 | 10/40 | 75/80 | 8/20 | `REJECT` |
+| Robustness / 52069 | 41/80 | 40/40 | 8/40 | 75/80 | 11/20 | `REJECT` |
+
+Every seed failed `COMPOSITION_TIE`; seeds 52031 and 52047 also regressed the `ameliorate` audit from 2/4 to 1/4. The runtime repair therefore has development evidence, while training produced no learned composition improvement on v7. [Aggregate evidence](experiments/composition-v7-20260928-evidence/aggregate-evidence.json), SHA-256 `50cff3716b62d0c06e9b0aec2ffa3d6e49e0dee3a7dd27b92620d0ea1b625f0f`, records `PRIMARY_REJECTED_NO_RECOMMENDATION` with complete seed integrity and successful final checks. All candidates remain preserved; the incumbent weights remain unchanged.
+
+#### Previous completed v6 frozen-encoder experiment
 
 The frozen-encoder v6 experiment was preregistered in `experiments/frozen-encoder-v6-20260928-plan.json` (file SHA-256 `c39f830ea787d87b8e19dd52dfb2c65565ad1f2bd384cec2997ffa2c402d78ca`). Its retained aggregate is `experiments/frozen-encoder-v6-20260928-evidence/aggregate-evidence.json` (file SHA-256 `c45a30577d5022e77d44540ff0476c2629f0be33f6ff19f33423562998e08a77`; canonical integrity SHA-256 `82654683003cd1255ca7c2b6039df42121acca9ccb2dbce45016c7de68ddc59a`). All three seed bundles are `COMPLETE`, and all three decisions are `REJECT`:
 
@@ -145,6 +162,8 @@ This is a programmatic research API, not an autonomous agent product. The defaul
 ## Quick start
 
 KEV requires Python 3.11–3.13. The repository provides a PowerShell entry point and creates `.kev-venv` locally.
+
+For the published CPU research environment, use Python 3.12 and the versions in [constraints-research.txt](constraints-research.txt). See [Reproducibility](docs/REPRODUCIBILITY.md) for installation and backend requirements; supported Python versions do not imply identical floating-point results across hardware.
 
 ```powershell
 .\KEV.ps1 -Mode Install
@@ -206,7 +225,7 @@ Evaluate two existing checkpoints without activation:
 .\KEV.ps1 -Mode Eval `
   -Incumbent .\path\to\incumbent.pt `
   -Challenger .\path\to\challenger.pt `
-  -Suite .\evals\frozen\public-audit-v6-260.json
+  -Suite .\evals\frozen\public-audit-v7-260.json
 ```
 
 Replay the historical aggregate tie:
@@ -228,15 +247,16 @@ The public source-of-truth artifacts are:
 
 - model registry: `models/registry.json`;
 - incumbent manifest: `models/public/incumbent-manifest.json`;
-- incumbent evidence: `models/public/incumbent-evidence-v10.json`;
-- frozen evaluation manifest: `evals/frozen/manifest-v6.json`;
-- current promotion suite: `evals/frozen/public-audit-v6-260.json`;
+- incumbent evidence: `models/public/incumbent-evidence-v11.json`;
+- frozen evaluation manifest: `evals/frozen/manifest-v7.json`;
+- current promotion suite: `evals/frozen/public-audit-v7-260.json`;
 - separate calibration-fit data: `evals/frozen/calibration-fit-v2.jsonl`;
 - held-out vocabulary: `evals/frozen/held-out-vocabulary-v2.txt`;
 - development-only parser failures: `evals/frozen/frame-parser-known-failures-v1.json`; and
-- public baseline report: `evals/evidence/v6-genesis-baseline.json`;
-- preregistered frozen-encoder plan: `experiments/frozen-encoder-v6-20260928-plan.json`; and
-- completed rejected-run evidence: `experiments/frozen-encoder-v6-20260928-evidence/aggregate-evidence.json`.
+- public baseline report: `evals/evidence/v7-genesis-baseline.json`;
+- current composition protocol and result: [Composition v7](docs/COMPOSITION_V7.md);
+- previous frozen-encoder plan: `experiments/frozen-encoder-v6-20260928-plan.json`; and
+- previous rejected-run evidence: `experiments/frozen-encoder-v6-20260928-evidence/aggregate-evidence.json`.
 
 Runtime state defaults to `%LOCALAPPDATA%\KEV\alive` on Windows and `~/.kev/alive` elsewhere. A default evolution run writes immutable artifacts beneath:
 
@@ -296,7 +316,7 @@ Start with [AGENT_START_HERE.md](AGENT_START_HERE.md), [AI_AGENT_GUIDE.md](AI_AG
 
 ## Repository policy
 
-Small public reference and evaluation artifacts are committed so the current research path is replayable. The bounded v6 experiment also retains its small rejected candidate heads and evidence bundle in Git. Large encoder weights, unrelated generated candidates, historical/private checkpoints, private runtime state, conversations, caches, and archives remain outside ordinary Git history. Never silently substitute different weights or publish private lesson/session data.
+Repository policy keeps small public reference artifacts, frozen evaluations, and the bounded v6/v7 experiments' rejected candidate heads and evidence bundles in Git. Large encoder weights, unrelated generated candidates, historical/private checkpoints, private runtime state, conversations, caches, and archives remain outside ordinary Git history. Never silently substitute different weights or publish private lesson/session data.
 
 ## Project status
 

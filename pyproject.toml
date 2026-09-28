@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kev-cognitive-runtime"
-version = "0.52.0a1"
+version = "0.52.0a2"
 description = "KEV persistent, teachable, evidence-grounded cognitive runtime research"
 requires-python = ">=3.11,<3.14"
 dependencies = ["numpy>=1.24", "torch>=2.0"]
@@ -23,3 +23,11 @@ semantic-encoder = [
   "tokenizers>=0.19,<1",
   "transformers>=4.41,<6",
 ]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint]
+# Preserve the checks used for this source/evidence generation across Ruff
+# versions; broad new stylistic defaults must not rewrite hash-pinned sources.
+select = ["E4", "E7", "E9", "F"]

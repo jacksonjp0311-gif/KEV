@@ -6,6 +6,31 @@ KEV is experimental research software, not AGI or superintelligence. This roadma
 
 The following exists in the repository now.
 
+### Alpha.2 composition update
+
+- Global neural kinds now match all available clauses. Repeated kinds can bind
+  separate frames; incompatible interpretations or insufficient cardinality
+  abstain without deleting deterministic parser results.
+- Enclosing negation, kind cues, and modality constrain narrow span hints.
+  Source-bound subjects exclude supported discourse prefixes. Compound action
+  text cannot be hidden inside a fallback object slot.
+- Eight preserved development probes improve from 1/8 to 8/8 expected outcomes
+  with developer-supplied proposals. They are not learned-model measurements or
+  promotion evidence; both source snapshots and raw outputs are replayable.
+- Current public measurement uses `manifest-v7.json`, `incumbent-evidence-v11.json`,
+  and `evals/evidence/v7-genesis-baseline.json`: unchanged genesis weights score
+  26/80 fresh, 40/40 retention, 2/40 OOV, 75/80 composition, and 1/20 calibration.
+- The completed bounded experiment used 497 reviewed synthetic lessons. The prior
+  500-row corpus and its input rejection remain preserved; three retained
+  number-template overlaps were removed in a new corpus version before training.
+- See [the v7 report](COMPOSITION_V7.md) for the actual model decisions and
+  complete evidence. A runtime repair does not establish weight improvement.
+- Primary seed 52031 scored 39/80 fresh, 40/40 retention, 5/40 OOV, 75/80
+  composition, and 10/20 calibration. All three seeds tied composition and
+  were rejected; two also regressed the held-out `ameliorate` audit. The public
+  incumbent remains unchanged. A next research step is clause-local proposal
+  learning, evaluated under a new untouched boundary.
+
 ### Compositional state
 
 - Parser-first extraction can emit zero or more `GOAL`, `CONSTRAINT`, `OBSERVATION`, `PREDICTION`, or base-relation frames from one utterance.
@@ -20,11 +45,11 @@ The following exists in the repository now.
 - Lesson entry creates `DRAFT` records. Explicit review adds reviewer, time, and permission provenance; only `REVIEWED` lessons are exported for training.
 - The basic local desktop supports chat, session reset, lesson drafting, and explicit lesson review; it does not expose tools, evaluation, or model activation.
 
-### Reproducible public baseline
+### Preserved v6 public baseline
 
 - The repository includes an untrained, deterministic, `UNCALIBRATED` 285,092-parameter genesis checkpoint under `models/public/`.
-- `models/registry.json`, `models/public/incumbent-manifest.json`, and `models/public/incumbent-evidence-v10.json` pin its identity and current evidence; the v10 evidence file SHA-256 is `69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21`.
-- `evals/frozen/manifest-v6.json` pins the current 260-item promotion pack with fresh, retention, held-out-vocabulary, composition, and calibration splits. Its SHA-256 is `07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce`; the suite file and canonical hashes are `a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029` and `3d53b4b981c9ebb7ad6f4d6e73b82e56c19a275fdbd76922a865256c43ad334c`.
+- `models/public/incumbent-manifest.json` and the preserved `models/public/incumbent-evidence-v10.json` pin its identity and preceding v6 evidence; the v10 evidence file SHA-256 is `69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21`.
+- `evals/frozen/manifest-v6.json` pins the preceding 260-item promotion pack with fresh, retention, held-out-vocabulary, composition, and calibration splits. Its SHA-256 is `07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce`; the suite file and canonical hashes are `a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029` and `3d53b4b981c9ebb7ad6f4d6e73b82e56c19a275fdbd76922a865256c43ad334c`.
 - The manifest retains the ten-term held-out list and separate label-clean, balanced 52-row calibration-fit slice. Both are forbidden weight-training inputs.
 - `evals/evidence/v6-genesis-baseline.json` preserves the untouched genesis result, all 28 audit-family gates, and all 119 raw failures: fresh 48/80, retention 40/40, OOV 3/40, composition 50/80, and calibration 0/20. Its file SHA-256 is `881e1f6911379f9bc158fde300147f1d41416b8076fbc1a972786c6ddc9915e4`.
 - V1–v5 remain preserved development evidence. V6 replaced six v5 fresh items after a template-overlap audit, before any challenger training. The v5 audit finding and original suite remain immutable and non-current. Six parser probes that influenced repairs are also frozen separately with their literal pre-fix outputs and `promotion_eligible: false`.
@@ -72,7 +97,7 @@ Release gate: a new user can install a clean clone, verify all shipped hashes, r
 
 1. Expand parser coverage and adversarial paraphrase tests while preserving exact-value binding and negation/order sensitivity.
 2. Treat the first frozen local sentence-encoder benchmark as complete and negative. Do not promote any of its challengers or reinterpret fresh/OOV gains as success.
-3. Preregister any next experiment against a newly frozen, untouched suite and a newly versioned corpus boundary. V6 items and failures have influenced development and must never be patched, relabeled, or reused as fresh promotion evidence.
+3. Preregister any next experiment against a newly frozen, untouched suite and a newly versioned corpus boundary. V6 and v7 items and failures have influenced development and must never be patched, relabeled, or reused as fresh promotion evidence.
 4. Target the observed deficiencies directly: multi-frame/composition quality and robust handling of `ameliorate`, while keeping parser-grounded slots and generated text outside state authority.
 5. Train and calibrate future public challengers only from provenance-bearing reviewed data, and measure multi-frame exact match, slot accuracy, calibration, held-out vocabulary, composition, retention, and false state writes.
 6. Version frozen packs instead of editing an audit after it influences development.

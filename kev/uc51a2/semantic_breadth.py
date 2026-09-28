@@ -41,9 +41,9 @@ PINNED_HELD_OUT_VOCABULARY_FILE_SHA256 = (
     "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a"
 )
 FROZEN_EVAL_DIRECTORY = REPOSITORY_ROOT / "evals" / "frozen"
-PINNED_EVALUATION_MANIFEST = FROZEN_EVAL_DIRECTORY / "manifest-v6.json"
+PINNED_EVALUATION_MANIFEST = FROZEN_EVAL_DIRECTORY / "manifest-v7.json"
 PINNED_EVALUATION_MANIFEST_FILE_SHA256 = (
-    "07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce"
+    "f8784d55629f86377ca80aadf52c838e40b20c497c28653b8605d5e505f6a036"
 )
 
 CANON = {
@@ -135,10 +135,10 @@ def _pinned_evaluation_manifest() -> tuple[dict[str, Any], dict[str, Any]]:
         not isinstance(value, dict)
         or value.get("schema") != "kev.eval-manifest.v1"
         or value.get("frozen") is not True
-        or value.get("version") != 6
+        or value.get("version") != 7
         or not isinstance(value.get("artifacts"), Mapping)
     ):
-        raise ValueError("invalid pinned evaluation manifest-v6")
+        raise ValueError("invalid pinned evaluation manifest-v7")
     return value, {
         "path": PINNED_EVALUATION_MANIFEST.relative_to(REPOSITORY_ROOT).as_posix(),
         "sha256": actual,
@@ -196,7 +196,7 @@ def required_held_out_vocabulary() -> tuple[set[str], list[dict[str, Any]], str]
         target = _manifest_target(raw_reference, role=str(role))
         expected = str(raw_reference.get("sha256", ""))
         if not re.fullmatch(r"[0-9a-f]{64}", expected):
-            raise ValueError("invalid held-out vocabulary hash in manifest-v6")
+            raise ValueError("invalid held-out vocabulary hash in manifest-v7")
         record = declarations.setdefault(
             target,
             {"sha256": expected, "declared_by": []},
@@ -508,7 +508,7 @@ def _frozen_evaluation_exclusions() -> tuple[set[str], list[dict[str, Any]]]:
         target = _manifest_target(reference, role=str(role))
         expected = str(reference.get("sha256", ""))
         if not re.fullmatch(r"[0-9a-f]{64}", expected):
-            raise ValueError("invalid artifact hash in pinned manifest-v6")
+            raise ValueError("invalid artifact hash in pinned manifest-v7")
         prior = references.get(target)
         if prior is not None and prior != expected:
             raise ValueError(f"conflicting frozen hashes for {target}")

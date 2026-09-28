@@ -27,7 +27,7 @@ from kev.uc51a2.semantic_breadth import (
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY_PATH = ROOT / "models" / "registry.json"
-VERSION = "0.52.0-alpha.1"
+VERSION = "0.52.0-alpha.2"
 STATE_GROUPS = {
     "GOAL": "goals",
     "CONSTRAINT": "constraints",

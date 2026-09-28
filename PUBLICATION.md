@@ -3,8 +3,8 @@
 This repository is the replayable public KEV v0.52 research snapshot. It
 includes source, tests, documentation, frozen evaluation packs, raw public
 baseline failures, manifests, one deterministic untrained genesis checkpoint,
-and the complete evidence from one bounded preregistered frozen-encoder
-experiment. KEV is experimental research software, not AGI or
+and preserved evidence from bounded preregistered evolution experiments.
+KEV is experimental research software, not AGI or
 superintelligence.
 
 ## Current public evidence boundary
@@ -13,36 +13,77 @@ The active public incumbent remains the untrained genesis checkpoint
 [`models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt`](models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt),
 SHA-256
 `8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6`.
-The registry was not changed by the experiment.
+The registry's evidence pointer now references v11; this metadata update does
+not change the incumbent checkpoint or its weights.
 
 The current frozen evaluation chain is:
 
-- v6 manifest
-  [`evals/frozen/manifest-v6.json`](evals/frozen/manifest-v6.json), SHA-256
-  `07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce`;
-- v6 promotion suite
-  [`evals/frozen/public-audit-v6-260.json`](evals/frozen/public-audit-v6-260.json),
+- v7 manifest
+  [`evals/frozen/manifest-v7.json`](evals/frozen/manifest-v7.json), SHA-256
+  `f8784d55629f86377ca80aadf52c838e40b20c497c28653b8605d5e505f6a036`;
+- v7 promotion suite
+  [`evals/frozen/public-audit-v7-260.json`](evals/frozen/public-audit-v7-260.json),
   file SHA-256
-  `a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029`
+  `e22bdbea5f07c8b44cf5a1684a2b8433be6b252d74ddf86ef0252b736dbe9c76`
   and canonical SHA-256
-  `3d53b4b981c9ebb7ad6f4d6e73b82e56c19a275fdbd76922a865256c43ad334c`;
-- genesis v6 baseline
-  [`evals/evidence/v6-genesis-baseline.json`](evals/evidence/v6-genesis-baseline.json),
+  `d3590d6f9eda20a3510df94f7473aeed45c5d616aadfe4ee7fb5f452f0036f28`;
+- genesis v7 baseline
+  [`evals/evidence/v7-genesis-baseline.json`](evals/evidence/v7-genesis-baseline.json),
   file SHA-256
-  `881e1f6911379f9bc158fde300147f1d41416b8076fbc1a972786c6ddc9915e4`;
+  `b124cae0447847225f4c7edc54e38f97517e24ae13ce809708ad0f1dd84ca4a0`;
   and
-- incumbent evidence v10
-  [`models/public/incumbent-evidence-v10.json`](models/public/incumbent-evidence-v10.json),
+- incumbent evidence v11
+  [`models/public/incumbent-evidence-v11.json`](models/public/incumbent-evidence-v11.json),
   SHA-256
-  `69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21`.
+  `146bd0ed36728df46566d33002b9b253b4fb7d06d6f41a031c2dfba5dd2de770`.
 
-V1-v5 suites, their baseline evidence, and incumbent evidence v1-v9 remain in
-the repository as immutable historical lineage. V6/v10 supersede those files
+V1-v6 suites, their baseline evidence, and incumbent evidence v1-v10 remain in
+the repository as immutable historical lineage. V7/v11 supersede those files
 as the current references; they do not overwrite them. The historical 190/260
 tie remains aggregate-only because its item texts and checkpoint hashes are
-unavailable and are not fabricated.
+unavailable and are not fabricated. The current baseline is fresh 26/80,
+retention 40/40, OOV 2/40, composition 75/80, and calibration 1/20. Its 116
+failures are retained. These are unchanged genesis weights measured with the
+v7 runtime; differences from v6 do not establish weight improvement.
 
-## Completed preregistered experiment
+## Current composition experiment
+
+[Composition v7](docs/COMPOSITION_V7.md) records the authoritative protocol,
+outcome, and artifact links for `composition-v7-20260928`. The final reviewed
+input is the 497-row v8 corpus, SHA-256
+`c78eeb1b91d22eea88177f003971a884e5f519212acf140a6343f7b912f15a09`.
+Its 500-row v7 predecessor and
+[pretraining rejection receipt](evals/evidence/v7-input-separation.json) are
+preserved. Three digit-normalized template overlaps were removed before any
+optimizer step; no evaluation item changed. Review is synthetic and same-party.
+
+Developer-supplied proposal probes improved from 1/8 to 8/8, with raw evidence
+at [development probes](experiments/composition-v7-development/probes.json).
+Those probes influenced the runtime change, are promotion-ineligible, and do
+not demonstrate trained model improvement.
+
+The completed run has outcome `PRIMARY_REJECTED_NO_RECOMMENDATION`.
+Primary seed 52031 scored 39/80 fresh, 40/40 retention, 5/40 OOV, 75/80
+composition, and 10/20 calibration. Robustness seeds 52047 and 52069 scored
+41/80, 40/40, 10/40, 75/80, 8/20 and 41/80, 40/40, 8/40, 75/80, 11/20.
+Every seed tied composition and was rejected. Seeds 52031 and 52047 also
+regressed the held-out `ameliorate` audit from 2/4 to 1/4. The incumbent
+checkpoint remains unchanged; the runtime fix did not yield learned
+composition improvement on this suite.
+
+The [plan](experiments/composition-v7-20260928-plan.json) SHA-256 is
+`7e51fe4ab1928e6805dda6443c2c8a8fb0d4ca0e796f2b6fca9ef0c1ad688d0c`.
+The [aggregate](experiments/composition-v7-20260928-evidence/aggregate-evidence.json)
+file SHA-256 is
+`50cff3716b62d0c06e9b0aec2ffa3d6e49e0dee3a7dd27b92620d0ea1b625f0f`;
+canonical integrity SHA-256 is
+`5fff30454c7aca1dd1a0e32e6bdaa7c92658f802fb93ce620fc48e416bccd798`.
+Every seed's integrity is `COMPLETE`. Final input, cross-seed, ledger, and
+independent checkpoint replay checks passed. All rejected candidates and raw
+failures remain preserved; [MODEL_WEIGHTS.md](MODEL_WEIGHTS.md) lists their
+checkpoint, evaluation-card, and terminal-event hashes.
+
+## Previous completed v6 experiment
 
 The immutable experiment plan is
 [`experiments/frozen-encoder-v6-20260928-plan.json`](experiments/frozen-encoder-v6-20260928-plan.json),
@@ -55,7 +96,7 @@ file SHA-256
 and canonical SHA-256
 `82654683003cd1255ca7c2b6039df42121acca9ccb2dbce45016c7de68ddc59a`.
 
-The only reviewed lesson corpus supplied to weight training was the 197-row
+For that v6 experiment, the only weight-training input was the 197-row
 repository-authored synthetic corpus
 [`training/reviewed/semantic-frame-paraphrases-v6-reviewed.jsonl`](training/reviewed/semantic-frame-paraphrases-v6-reviewed.jsonl),
 SHA-256
@@ -82,7 +123,7 @@ raw failures, and terminal events are preserved under
 
 ## Publication and claim policy
 
-The experiment is a negative result: `PRIMARY_REJECTED_NO_RECOMMENDATION`.
+The previous v6 experiment is a negative result: `PRIMARY_REJECTED_NO_RECOMMENDATION`.
 Higher fresh or aggregate OOV counts do not override a strict composition tie
 or an audit-family regression. No candidate qualified, no checkpoint was
 promoted, and the public registry still names the genesis incumbent.
