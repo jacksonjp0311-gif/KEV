@@ -1,0 +1,79 @@
+{
+  "artifacts": {
+    "calibration_fit": {
+      "path": "evals/frozen/calibration-fit-v1.jsonl",
+      "sha256": "5734adb2045fa9d192888a2932c2821842833f6a17d9bc27db8bd5defe37e94c",
+      "size_bytes": 6758
+    },
+    "frame_parser_known_failures_v1": {
+      "canonical_sha256": "0b1786309a10e9c61734032800a58e77332f1c89181e6d6904ce6fdf4fbb2d26",
+      "path": "evals/frozen/frame-parser-known-failures-v1.json",
+      "promotion_eligible": false,
+      "sha256": "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901",
+      "size_bytes": 5924,
+      "status": "DEVELOPMENT_INFLUENCED_KNOWN_FAILURES_NOT_PROMOTION_DATA"
+    },
+    "held_out_vocabulary": {
+      "path": "evals/frozen/held-out-vocabulary-v1.txt",
+      "sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+      "size_bytes": 82
+    },
+    "historical_aggregate_replay": {
+      "path": "evals/frozen/historical-190-260-replay.json",
+      "sha256": "4c7109721436b6d2f854c2a89449667d98a4b0f74161e1f26a869b75311890cb",
+      "size_bytes": 1423
+    },
+    "preserved_promotion_suite_v2": {
+      "canonical_sha256": "c239ab2382c5eabc798094fc75cee5adfd34ede5282c70b066e2006de4be2326",
+      "path": "evals/frozen/public-audit-v2-260.json",
+      "sha256": "ef9ff61967f8716e541ccdef3adea887da99dc988799098a9faf47e2ea3dd3c4",
+      "size_bytes": 114471,
+      "status": "PRESERVED_DEVELOPMENT_EVIDENCE_NOT_CURRENT_PROMOTION_SUITE"
+    },
+    "preserved_promotion_suite_v3": {
+      "canonical_sha256": "25153929122a1d76e51e0f866a70d57fbbf1d179599d4ed383d35662cf44c888",
+      "path": "evals/frozen/public-audit-v3-260.json",
+      "sha256": "1bce1b6c1123336e30531b3cf54c1d01ff4aa420cfec0cb078eaca7f40f3b2d8",
+      "size_bytes": 118634,
+      "status": "PRESERVED_DEVELOPMENT_EVIDENCE_NOT_CURRENT_PROMOTION_SUITE"
+    },
+    "promotion_suite": {
+      "canonical_sha256": "826cf80e56e500877e9402202acf410370e9ef10e00830750282c24f57eb038d",
+      "path": "evals/frozen/public-audit-v4-260.json",
+      "sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322",
+      "size_bytes": 144574
+    },
+    "superseded_development_suite": {
+      "canonical_sha256": "81699bfee8cb66e3c7922f90fdf7152d4998fd2e46d739bb18116350e39f3111",
+      "path": "evals/frozen/public-audit-v1-260.json",
+      "sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0",
+      "size_bytes": 129427,
+      "status": "PRESERVED_DEVELOPMENT_EVIDENCE_NOT_CURRENT_PROMOTION_SUITE"
+    },
+    "v1_baseline_self_evaluation": {
+      "path": "evals/evidence/v1-baseline-self-eval.json",
+      "sha256": "d8338e14763c091ea67ae556e8e2d306db6487abaf9faa92653cdb5300de644f",
+      "size_bytes": 567845
+    },
+    "v2_baseline_self_evaluation": {
+      "path": "evals/evidence/v2-genesis-baseline.json",
+      "sha256": "f8282ddd540c0903f1219996f085ad39574fa4d0ef912ab20507328c6d7ce3ac",
+      "size_bytes": 660861
+    },
+    "v3_baseline_self_evaluation": {
+      "path": "evals/evidence/v3-genesis-baseline-portable-v4.json",
+      "sha256": "10287ceef18424cae710abfc1fee6a6b4febe301e0015a2614b5c8087a6b4051",
+      "size_bytes": 712577,
+      "status": "PRESERVED_LABEL_LEAKAGE_DEVELOPMENT_EVIDENCE"
+    }
+  },
+  "frozen": true,
+  "mutation_policy": "create a new version; never refresh v1, v2, v3, or v4 in place",
+  "preserved_generations": [
+    1,
+    2,
+    3
+  ],
+  "schema": "kev.eval-manifest.v1",
+  "version": 4
+}

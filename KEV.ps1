@@ -6,8 +6,16 @@ param(
  [string]$Intent='',
  [string]$Text='',
  [string]$Lessons='',
+ [string]$LessonId='',
+ [string]$ReviewedBy='',
+ [string]$Permission='',
+ [string]$Challenger='',
+ [string]$Incumbent='',
+ [string]$Suite='',
+ [string]$EncoderManifest='',
  [int]$Steps=400,
- [int]$Seed=51310,
+ [int]$Seed=52021,
+ [double]$RetentionEpsilon=0.0,
  [int]$Port=39061,
  [string]$PythonExecutable=''
 )
@@ -33,7 +41,27 @@ if ($Mode -eq 'AliveStatus') { & $Py @Base 'status'; exit $LASTEXITCODE }
 if ($Mode -eq 'AliveVerifyLedger') { & $Py @Base 'verify-ledger'; exit $LASTEXITCODE }
 if ($Mode -eq 'AliveChat') { & $Py @Base 'chat' '--message' $Message; exit $LASTEXITCODE }
 if ($Mode -eq 'AliveTeach') { & $Py @Base 'teach' '--intent' $Intent '--text' $Text; exit $LASTEXITCODE }
-if ($Mode -eq 'AliveTrain') { & $Py @Base 'train-candidate' '--output' $Output '--steps' $Steps '--seed' $Seed; exit $LASTEXITCODE }
+if ($Mode -eq 'AliveReview') { & $Py @Base 'review' '--lesson-id' $LessonId '--reviewed-by' $ReviewedBy '--permission' $Permission; exit $LASTEXITCODE }
+if ($Mode -eq 'AliveTrain') {
+ $Args=@('train-candidate','--output',$Output,'--steps',[string]$Steps,'--seed',[string]$Seed)
+ if (-not [string]::IsNullOrWhiteSpace($EncoderManifest)) { $Args+=@('--encoder-manifest',$EncoderManifest) }
+ & $Py @Base @Args
+ exit $LASTEXITCODE
+}
+if ($Mode -eq 'Eval') {
+ $Args=@('-m','kev.cli','eval','--challenger',$Challenger,'--incumbent',$Incumbent,'--suite',$Suite,'--retention-epsilon',[string]$RetentionEpsilon)
+ if (-not [string]::IsNullOrWhiteSpace($Output)) { $Args+=@('--output',$Output) }
+ & $Py @Args
+ exit $LASTEXITCODE
+}
+if ($Mode -eq 'Evolve') {
+ $Args=@('-m','kev.cli','evolve','--lessons',$Lessons,'--steps',[string]$Steps,'--seed',[string]$Seed,'--retention-epsilon',[string]$RetentionEpsilon)
+ if (-not [string]::IsNullOrWhiteSpace($StateDir)) { $Args+=@('--state-dir',$StateDir) }
+ if (-not [string]::IsNullOrWhiteSpace($EncoderManifest)) { $Args+=@('--encoder-manifest',$EncoderManifest) }
+ & $Py @Args
+ exit $LASTEXITCODE
+}
+if ($Mode -eq 'Doctor') { & $Py -m kev.cli doctor; exit $LASTEXITCODE }
 if ($Mode -eq 'AliveDesktop') {
  $Args=@('-m','kev.uc51a3.server','--port',[string]$Port)
  if (-not [string]::IsNullOrWhiteSpace($StateDir)) { $Args+=@('--state-dir',$StateDir) }

@@ -1,0 +1,4679 @@
+{
+  "frozen": true,
+  "id": "kev-public-audit-v6-260",
+  "provenance": {
+    "audit_families": [
+      "buried-constraint",
+      "conflicting-constraints",
+      "multi-frame",
+      "negation-composition",
+      "number-change-composition",
+      "order-swap-composition",
+      "paraphrase-equivalence",
+      "polite-buried-constraint"
+    ],
+    "authored_without_training_corpus_access": true,
+    "calibration_fit_sha256": "d0e7d4fcffef2c3ccd376acb2c77a1fb90289224caa046cddc88c9656ace101c",
+    "created_for": "challenger decisions made only after the v6 boundary was frozen",
+    "held_out_vocabulary_sha256": "087da62e8129dd259c1b2662f0439eb7d6387714528af14444a4575c66e76798",
+    "independence_policy": "v5 was preserved after an independent audit found six number-only fresh-template repetitions; only those surfaces were replaced before challenger training, without reading a lesson or training corpus",
+    "item_count": 260,
+    "label_leakage_policy": "input text must not contain any complete expected frame-kind label",
+    "predecessor_suite_canonical_sha256": "1cb5431b83e93f284bb1277ceea4c6e27ad1249f6a5c6fb24df4e22371e42698",
+    "predecessor_suite_sha256": "e913f483bdce2e3ea1a435f0c139a846874a73660665c69b8723a9670348451c",
+    "preserved_generations": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "prior_current_suite_sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322",
+    "replacement_count": 6,
+    "replacement_overlap_policy": "zero exact or digit-normalized template overlap with v1-v5 suites and calibration-fit-v2",
+    "status": "FROZEN; create v7 rather than changing any byte",
+    "training_exclusion": "every item, the calibration-fit slice, and held-out terms are forbidden inputs to train()",
+    "v5_audit_finding_path": "evals/evidence/v5-fresh-template-audit.json",
+    "v5_audit_finding_sha256": "b307dfafbe7d15c27a0b3d9d63a928aab05c1d99125877b8d0db74737b23ee65"
+  },
+  "schema": "kev.eval-suite.v1",
+  "splits": {
+    "calibration": [
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-calibration-eval-000",
+        "input": "Bring worker delay below 110 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-calibration-eval-001",
+        "input": "Billing records-711 must remain untouched during this check.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-calibration-eval-002",
+        "input": "The latest instrument reading put worker delay at 112 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-calibration-eval-003",
+        "input": "Next week worker delay will reach 113 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-calibration-eval-004",
+        "input": "Bring worker delay below 114 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-calibration-eval-005",
+        "input": "Billing records-715 must remain untouched during this check.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-calibration-eval-006",
+        "input": "The latest instrument reading put worker delay at 116 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-calibration-eval-007",
+        "input": "Next week worker delay will reach 117 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-calibration-eval-008",
+        "input": "Bring worker delay below 118 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-calibration-eval-009",
+        "input": "Billing records-719 must remain untouched during this check.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-calibration-eval-010",
+        "input": "The latest instrument reading put worker delay at 120 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-calibration-eval-011",
+        "input": "Next week worker delay will reach 121 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-calibration-eval-012",
+        "input": "Bring worker delay below 122 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-calibration-eval-013",
+        "input": "Billing records-723 must remain untouched during this check.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-calibration-eval-014",
+        "input": "The latest instrument reading put worker delay at 124 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-calibration-eval-015",
+        "input": "Next week worker delay will reach 125 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-calibration-eval-016",
+        "input": "Bring worker delay below 126 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-calibration-eval-017",
+        "input": "Billing records-727 must remain untouched during this check.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-calibration-eval-018",
+        "input": "The latest instrument reading put worker delay at 128 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "calibration-semantic",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-calibration-eval-019",
+        "input": "Next week worker delay will reach 129 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      }
+    ],
+    "composition": [
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT"
+        ],
+        "id": "v5-composition-multi-000",
+        "input": "Bring queue delay below 45 ms, while leaving production-610 untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v5-composition-multi-001",
+        "input": "The latest reading was 46 ms, and tomorrow service delay will reach 86 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "ACTIVE_SELECTION",
+          "RUN_STATUS"
+        ],
+        "id": "v5-composition-multi-002",
+        "input": "Candidate blue-612 is serving traffic; batch-612 finished successfully.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE",
+          "MAGNITUDE"
+        ],
+        "id": "v5-composition-multi-003",
+        "input": "Reverse the sign of 48, then find how far -88 is from zero.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "COPY_VALUE",
+          "SUPERSEDES",
+          "REFERENCE"
+        ],
+        "id": "v5-composition-multi-004",
+        "input": "Transfer source-614 into destination-614; build cobalt-614 replaces amber-614; cite ticket-614.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT",
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v5-composition-multi-005",
+        "input": "Bring queue delay below 50 ms; production-615 stays untouched; the instrument read 90 ms; tomorrow it will reach 50 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT"
+        ],
+        "id": "v5-composition-multi-006",
+        "input": "Bring queue delay below 51 ms, while leaving production-616 untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v5-composition-multi-007",
+        "input": "The latest reading was 52 ms, and tomorrow service delay will reach 92 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "ACTIVE_SELECTION",
+          "RUN_STATUS"
+        ],
+        "id": "v5-composition-multi-008",
+        "input": "Candidate blue-618 is serving traffic; batch-618 finished successfully.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE",
+          "MAGNITUDE"
+        ],
+        "id": "v5-composition-multi-009",
+        "input": "Reverse the sign of 54, then find how far -94 is from zero.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "COPY_VALUE",
+          "SUPERSEDES",
+          "REFERENCE"
+        ],
+        "id": "v5-composition-multi-010",
+        "input": "Transfer source-620 into destination-620; build cobalt-620 replaces amber-620; cite ticket-620.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT",
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v5-composition-multi-011",
+        "input": "Bring queue delay below 56 ms; production-621 stays untouched; the instrument read 96 ms; tomorrow it will reach 56 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT"
+        ],
+        "id": "v5-composition-multi-012",
+        "input": "Bring queue delay below 57 ms, while leaving production-622 untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v5-composition-multi-013",
+        "input": "The latest reading was 58 ms, and tomorrow service delay will reach 98 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "ACTIVE_SELECTION",
+          "RUN_STATUS"
+        ],
+        "id": "v5-composition-multi-014",
+        "input": "Candidate blue-624 is serving traffic; batch-624 finished successfully.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE",
+          "MAGNITUDE"
+        ],
+        "id": "v5-composition-multi-015",
+        "input": "Reverse the sign of 60, then find how far -100 is from zero.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "DIRECTIVE",
+            "slots": {
+              "action": "build",
+              "object": "dashboard_620"
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production_620",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-polite-000",
+        "input": "Could you build dashboard-620 without ever modifying production-620?",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "DIRECTIVE",
+            "slots": {
+              "action": "create",
+              "object": "index_621"
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "catalog_621",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-polite-001",
+        "input": "Please create index-621 while keeping catalog-621 unchanged.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "DIRECTIVE",
+            "slots": {
+              "action": "build",
+              "object": "dashboard_622"
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production_622",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-polite-002",
+        "input": "Could you build dashboard-622 without ever modifying production-622?",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "DIRECTIVE",
+            "slots": {
+              "action": "create",
+              "object": "index_623"
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "catalog_623",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-polite-003",
+        "input": "Please create index-623 while keeping catalog-623 unchanged.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "DIRECTIVE",
+            "slots": {
+              "action": "build",
+              "object": "dashboard_624"
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production_624",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-polite-004",
+        "input": "Could you build dashboard-624 without ever modifying production-624?",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "DIRECTIVE",
+            "slots": {
+              "action": "create",
+              "object": "index_625"
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "catalog_625",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-polite-005",
+        "input": "Please create index-625 while keeping catalog-625 unchanged.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT"
+        ],
+        "id": "v5-composition-buried-000",
+        "input": "Prepare launch notes for release-630; deep in the rollout plan, production-630 must remain untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT"
+        ],
+        "id": "v5-composition-buried-001",
+        "input": "Improve service-631; among the fine print, never update archive-631.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT"
+        ],
+        "id": "v5-composition-buried-002",
+        "input": "Build index-632, with the proviso that customer records-632 stay untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT"
+        ],
+        "id": "v5-composition-buried-003",
+        "input": "Prepare launch notes for release-633; deep in the rollout plan, production-633 must remain untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT"
+        ],
+        "id": "v5-composition-buried-004",
+        "input": "Improve service-634; among the fine print, never update archive-634.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL",
+          "CONSTRAINT"
+        ],
+        "id": "v5-composition-buried-005",
+        "input": "Build index-635, with the proviso that customer records-635 stay untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 54
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-00-0",
+        "input": "Lower response latency under 54 milliseconds; production must not be changed.",
+        "pair_id": "v5-composition-paraphrase-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 54
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-00-1",
+        "input": "Keep latency below 54 ms and never modify production.",
+        "pair_id": "v5-composition-paraphrase-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 55
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-01-0",
+        "input": "Lower response latency under 55 milliseconds; production must not be changed.",
+        "pair_id": "v5-composition-paraphrase-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 55
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-01-1",
+        "input": "Keep latency below 55 ms and never modify production.",
+        "pair_id": "v5-composition-paraphrase-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 56
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-02-0",
+        "input": "Lower response latency under 56 milliseconds; production must not be changed.",
+        "pair_id": "v5-composition-paraphrase-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 56
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-02-1",
+        "input": "Keep latency below 56 ms and never modify production.",
+        "pair_id": "v5-composition-paraphrase-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 57
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-03-0",
+        "input": "Lower response latency under 57 milliseconds; production must not be changed.",
+        "pair_id": "v5-composition-paraphrase-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 57
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-03-1",
+        "input": "Keep latency below 57 ms and never modify production.",
+        "pair_id": "v5-composition-paraphrase-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 58
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-04-0",
+        "input": "Lower response latency under 58 milliseconds; production must not be changed.",
+        "pair_id": "v5-composition-paraphrase-pair-04",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 58
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-04-1",
+        "input": "Keep latency below 58 ms and never modify production.",
+        "pair_id": "v5-composition-paraphrase-pair-04",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 59
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-05-0",
+        "input": "Lower response latency under 59 milliseconds; production must not be changed.",
+        "pair_id": "v5-composition-paraphrase-pair-05",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 59
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-05-1",
+        "input": "Keep latency below 59 ms and never modify production.",
+        "pair_id": "v5-composition-paraphrase-pair-05",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 60
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-06-0",
+        "input": "Lower response latency under 60 milliseconds; production must not be changed.",
+        "pair_id": "v5-composition-paraphrase-pair-06",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 60
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-06-1",
+        "input": "Keep latency below 60 ms and never modify production.",
+        "pair_id": "v5-composition-paraphrase-pair-06",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 61
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-07-0",
+        "input": "Lower response latency under 61 milliseconds; production must not be changed.",
+        "pair_id": "v5-composition-paraphrase-pair-07",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "paraphrase-equivalence",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 61
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-composition-paraphrase-07-1",
+        "input": "Keep latency below 61 ms and never modify production.",
+        "pair_id": "v5-composition-paraphrase-pair-07",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_650",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_650",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-000",
+        "input": "Never update cache-650, but cache-650 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_651",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_651",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-001",
+        "input": "Never update cache-651, but cache-651 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_652",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_652",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-002",
+        "input": "Never update cache-652, but cache-652 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_653",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_653",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-003",
+        "input": "Never update cache-653, but cache-653 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_654",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_654",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-004",
+        "input": "Never update cache-654, but cache-654 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_655",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_655",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-005",
+        "input": "Never update cache-655, but cache-655 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_656",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_656",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-006",
+        "input": "Never update cache-656, but cache-656 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_657",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_657",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-007",
+        "input": "Never update cache-657, but cache-657 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_658",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_658",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-008",
+        "input": "Never update cache-658, but cache-658 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_659",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_659",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-009",
+        "input": "Never update cache-659, but cache-659 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_660",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_660",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-010",
+        "input": "Never update cache-660, but cache-660 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "cache_661",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "REQUIRED",
+              "object": "cache_661",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v5-composition-conflict-011",
+        "input": "Never update cache-661, but cache-661 must be updated.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation-composition",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "OBSERVATION"
+        ],
+        "id": "v5-composition-negation-000",
+        "input": "Please do not lower service delay below 40 ms; the instrument recorded service delay 80 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation-composition",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "RUN_STATUS"
+        ],
+        "id": "v5-composition-negation-001",
+        "input": "Do not copy cache-1 into replica-1; run batch-671 completed.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation-composition",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "OBSERVATION"
+        ],
+        "id": "v5-composition-negation-002",
+        "input": "Please do not lower service delay below 42 ms; the instrument recorded service delay 82 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation-composition",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "RUN_STATUS"
+        ],
+        "id": "v5-composition-negation-003",
+        "input": "Do not copy cache-3 into replica-3; run batch-673 completed.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation-composition",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "OBSERVATION"
+        ],
+        "id": "v5-composition-negation-004",
+        "input": "Please do not lower service delay below 44 ms; the instrument recorded service delay 84 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation-composition",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "RUN_STATUS"
+        ],
+        "id": "v5-composition-negation-005",
+        "input": "Do not copy cache-5 into replica-5; run batch-675 completed.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation-composition",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "OBSERVATION"
+        ],
+        "id": "v5-composition-negation-006",
+        "input": "Please do not lower service delay below 46 ms; the instrument recorded service delay 86 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation-composition",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "RUN_STATUS"
+        ],
+        "id": "v5-composition-negation-007",
+        "input": "Do not copy cache-7 into replica-7; run batch-677 completed.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 66
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 96
+            }
+          }
+        ],
+        "id": "v5-composition-order-00-0",
+        "input": "Maintain queue depth under 66 requests; recorded queue depth was 96 requests.",
+        "pair_id": "v5-composition-order-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 66
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 96
+            }
+          }
+        ],
+        "id": "v5-composition-order-00-1",
+        "input": "Recorded queue depth was 96 requests; maintain queue depth under 66 requests.",
+        "pair_id": "v5-composition-order-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 67
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 97
+            }
+          }
+        ],
+        "id": "v5-composition-order-01-0",
+        "input": "Maintain queue depth under 67 requests; recorded queue depth was 97 requests.",
+        "pair_id": "v5-composition-order-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 67
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 97
+            }
+          }
+        ],
+        "id": "v5-composition-order-01-1",
+        "input": "Recorded queue depth was 97 requests; maintain queue depth under 67 requests.",
+        "pair_id": "v5-composition-order-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 68
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 98
+            }
+          }
+        ],
+        "id": "v5-composition-order-02-0",
+        "input": "Maintain queue depth under 68 requests; recorded queue depth was 98 requests.",
+        "pair_id": "v5-composition-order-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 68
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 98
+            }
+          }
+        ],
+        "id": "v5-composition-order-02-1",
+        "input": "Recorded queue depth was 98 requests; maintain queue depth under 68 requests.",
+        "pair_id": "v5-composition-order-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 69
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 99
+            }
+          }
+        ],
+        "id": "v5-composition-order-03-0",
+        "input": "Maintain queue depth under 69 requests; recorded queue depth was 99 requests.",
+        "pair_id": "v5-composition-order-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 69
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 99
+            }
+          }
+        ],
+        "id": "v5-composition-order-03-1",
+        "input": "Recorded queue depth was 99 requests; maintain queue depth under 69 requests.",
+        "pair_id": "v5-composition-order-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 71
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 101
+            }
+          }
+        ],
+        "id": "v5-composition-number-00-0",
+        "input": "Keep request count below 71 requests; measured request count was 101 requests.",
+        "pair_id": "v5-composition-number-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 72
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 102
+            }
+          }
+        ],
+        "id": "v5-composition-number-00-1",
+        "input": "Keep request count below 72 requests; measured request count was 102 requests.",
+        "pair_id": "v5-composition-number-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 74
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 104
+            }
+          }
+        ],
+        "id": "v5-composition-number-01-0",
+        "input": "Keep request count below 74 requests; measured request count was 104 requests.",
+        "pair_id": "v5-composition-number-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 75
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 105
+            }
+          }
+        ],
+        "id": "v5-composition-number-01-1",
+        "input": "Keep request count below 75 requests; measured request count was 105 requests.",
+        "pair_id": "v5-composition-number-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 77
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 107
+            }
+          }
+        ],
+        "id": "v5-composition-number-02-0",
+        "input": "Keep request count below 77 requests; measured request count was 107 requests.",
+        "pair_id": "v5-composition-number-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 78
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 108
+            }
+          }
+        ],
+        "id": "v5-composition-number-02-1",
+        "input": "Keep request count below 78 requests; measured request count was 108 requests.",
+        "pair_id": "v5-composition-number-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 80
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 110
+            }
+          }
+        ],
+        "id": "v5-composition-number-03-0",
+        "input": "Keep request count below 80 requests; measured request count was 110 requests.",
+        "pair_id": "v5-composition-number-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change-composition",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 81
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "request_count",
+              "unit": "requests",
+              "value": 111
+            }
+          }
+        ],
+        "id": "v5-composition-number-03-1",
+        "input": "Keep request count below 81 requests; measured request count was 111 requests.",
+        "pair_id": "v5-composition-number-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      }
+    ],
+    "fresh": [
+      {
+        "audit": "single-frame:goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "request_delay",
+              "unit": "ms",
+              "value": 34
+            }
+          }
+        ],
+        "id": "v5-fresh-goal-000",
+        "input": "Keep request delay at most 34 ms.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_1",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-fresh-constraint-000",
+        "input": "Please do not modify archive-1.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:observation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 74
+            }
+          }
+        ],
+        "id": "v5-fresh-observation-000",
+        "input": "The measured queue depth was 74 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 144
+            }
+          }
+        ],
+        "id": "v5-fresh-prediction-000",
+        "input": "We expect throughput will be above 144 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "request_delay",
+              "unit": "ms",
+              "value": 35
+            }
+          }
+        ],
+        "id": "v5-fresh-goal-001",
+        "input": "Keep request delay at most 35 ms.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_2",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-fresh-constraint-001",
+        "input": "Please do not modify archive-2.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:observation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 75
+            }
+          }
+        ],
+        "id": "v5-fresh-observation-001",
+        "input": "The measured queue depth was 75 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 145
+            }
+          }
+        ],
+        "id": "v5-fresh-prediction-001",
+        "input": "We expect throughput will be above 145 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "request_delay",
+              "unit": "ms",
+              "value": 36
+            }
+          }
+        ],
+        "id": "v5-fresh-goal-002",
+        "input": "Keep request delay at most 36 ms.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_3",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-fresh-constraint-002",
+        "input": "Please do not modify archive-3.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:observation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 76
+            }
+          }
+        ],
+        "id": "v5-fresh-observation-002",
+        "input": "The measured queue depth was 76 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 146
+            }
+          }
+        ],
+        "id": "v5-fresh-prediction-002",
+        "input": "We expect throughput will be above 146 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "request_delay",
+              "unit": "ms",
+              "value": 37
+            }
+          }
+        ],
+        "id": "v5-fresh-goal-003",
+        "input": "Keep request delay at most 37 ms.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_4",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-fresh-constraint-003",
+        "input": "Please do not modify archive-4.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:observation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 77
+            }
+          }
+        ],
+        "id": "v5-fresh-observation-003",
+        "input": "The measured queue depth was 77 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 147
+            }
+          }
+        ],
+        "id": "v5-fresh-prediction-003",
+        "input": "We expect throughput will be above 147 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "request_delay",
+              "unit": "ms",
+              "value": 38
+            }
+          }
+        ],
+        "id": "v5-fresh-goal-004",
+        "input": "Keep request delay at most 38 ms.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_5",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-fresh-constraint-004",
+        "input": "Please do not modify archive-5.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:observation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 78
+            }
+          }
+        ],
+        "id": "v5-fresh-observation-004",
+        "input": "The measured queue depth was 78 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 148
+            }
+          }
+        ],
+        "id": "v5-fresh-prediction-004",
+        "input": "We expect throughput will be above 148 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "request_delay",
+              "unit": "ms",
+              "value": 39
+            }
+          }
+        ],
+        "id": "v5-fresh-goal-005",
+        "input": "Keep request delay at most 39 ms.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_6",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-fresh-constraint-005",
+        "input": "Please do not modify archive-6.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:observation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 79
+            }
+          }
+        ],
+        "id": "v5-fresh-observation-005",
+        "input": "The measured queue depth was 79 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 149
+            }
+          }
+        ],
+        "id": "v5-fresh-prediction-005",
+        "input": "We expect throughput will be above 149 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "request_delay",
+              "unit": "ms",
+              "value": 40
+            }
+          }
+        ],
+        "id": "v5-fresh-goal-006",
+        "input": "Keep request delay at most 40 ms.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_7",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-fresh-constraint-006",
+        "input": "Please do not modify archive-7.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:observation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 80
+            }
+          }
+        ],
+        "id": "v5-fresh-observation-006",
+        "input": "The measured queue depth was 80 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 150
+            }
+          }
+        ],
+        "id": "v5-fresh-prediction-006",
+        "input": "We expect throughput will be above 150 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "request_delay",
+              "unit": "ms",
+              "value": 41
+            }
+          }
+        ],
+        "id": "v5-fresh-goal-007",
+        "input": "Keep request delay at most 41 ms.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_8",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-fresh-constraint-007",
+        "input": "Please do not modify archive-8.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:observation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 81
+            }
+          }
+        ],
+        "id": "v5-fresh-observation-007",
+        "input": "The measured queue depth was 81 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame:prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 151
+            }
+          }
+        ],
+        "id": "v5-fresh-prediction-007",
+        "input": "We expect throughput will be above 151 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "COPY_VALUE"
+        ],
+        "id": "v5-fresh-kind-00-0",
+        "input": "Populate vault-901 using everything currently stored in depot-901.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "COPY_VALUE"
+        ],
+        "id": "v5-fresh-kind-00-1",
+        "input": "Let locker-902 receive the complete contents currently held by cabinet-902.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v5-fresh-kind-01-0",
+        "input": "Build cobalt-212 is now current, replacing amber-212.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v5-fresh-kind-01-1",
+        "input": "Build cobalt-213 is now current, replacing amber-213.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v5-fresh-kind-02-0",
+        "input": "Give the absolute size of negative 903.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v5-fresh-kind-02-1",
+        "input": "Report the nonnegative distance from -904 to zero.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v5-fresh-kind-03-0",
+        "input": "Change 905 to its additive opposite.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v5-fresh-kind-03-1",
+        "input": "Return the number that cancels 906 when added to it.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "REFERENCE"
+        ],
+        "id": "v5-fresh-kind-04-0",
+        "input": "Cite ticket-218 as the supporting record.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "REFERENCE"
+        ],
+        "id": "v5-fresh-kind-04-1",
+        "input": "Cite ticket-219 as the supporting record.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "ACTIVE_SELECTION"
+        ],
+        "id": "v5-fresh-kind-05-0",
+        "input": "Candidate blue-220 is serving live traffic now.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "ACTIVE_SELECTION"
+        ],
+        "id": "v5-fresh-kind-05-1",
+        "input": "Candidate blue-221 is serving live traffic now.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v5-fresh-kind-06-0",
+        "input": "Batch-222 finished successfully.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v5-fresh-kind-06-1",
+        "input": "Batch-223 finished successfully.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "RECEIPT_VALUE"
+        ],
+        "id": "v5-fresh-kind-07-0",
+        "input": "Operation rec-224 returned numeric code 644.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "RECEIPT_VALUE"
+        ],
+        "id": "v5-fresh-kind-07-1",
+        "input": "Operation rec-225 returned numeric code 645.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "EVIDENCE_CONSISTENCY"
+        ],
+        "id": "v5-fresh-kind-08-0",
+        "input": "The two measurements agree for sample-226.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "EVIDENCE_CONSISTENCY"
+        ],
+        "id": "v5-fresh-kind-08-1",
+        "input": "The two measurements agree for sample-227.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-fresh-kind-09-0",
+        "input": "Bring service delay below 648 milliseconds before launch.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-fresh-kind-09-1",
+        "input": "Bring service delay below 649 milliseconds before launch.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-fresh-kind-10-0",
+        "input": "Production-230 must remain untouched during rollout.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-fresh-kind-10-1",
+        "input": "Production-231 must remain untouched during rollout.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-fresh-kind-11-0",
+        "input": "The latest reading put service delay at 652 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-fresh-kind-11-1",
+        "input": "The latest reading put service delay at 653 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-fresh-kind-12-0",
+        "input": "Tomorrow service delay will reach 654 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "single-frame-kind",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-fresh-kind-12-1",
+        "input": "Tomorrow service delay will reach 655 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-fresh-negation-000",
+        "input": "Do not lower request delay below 31 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-fresh-negation-001",
+        "input": "I do not expect queue depth to be below 42 requests.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [],
+        "id": "v5-fresh-negation-002",
+        "input": "It is not true that the measured latency was 73 ms.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-fresh-negation-003",
+        "input": "Never copy cache-a into cache-b.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [],
+        "id": "v5-fresh-negation-004",
+        "input": "This does not mean candidate blue-9 is serving traffic.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [],
+        "id": "v5-fresh-negation-005",
+        "input": "Run beta-9 did not fail.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cache_latency",
+              "unit": "ms",
+              "value": 21
+            }
+          }
+        ],
+        "id": "v5-fresh-number-00-0",
+        "input": "Keep cache latency below 21 ms.",
+        "pair_id": "v5-fresh-number-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cache_latency",
+              "unit": "ms",
+              "value": 22
+            }
+          }
+        ],
+        "id": "v5-fresh-number-00-1",
+        "input": "Keep cache latency below 22 ms.",
+        "pair_id": "v5-fresh-number-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 91
+            }
+          }
+        ],
+        "id": "v5-fresh-number-01-0",
+        "input": "Recorded queue depth was 91 requests.",
+        "pair_id": "v5-fresh-number-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 92
+            }
+          }
+        ],
+        "id": "v5-fresh-number-01-1",
+        "input": "Recorded queue depth was 92 requests.",
+        "pair_id": "v5-fresh-number-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 161
+            }
+          }
+        ],
+        "id": "v5-fresh-number-02-0",
+        "input": "We forecast throughput will remain above 161 rps.",
+        "pair_id": "v5-fresh-number-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 162
+            }
+          }
+        ],
+        "id": "v5-fresh-number-02-1",
+        "input": "We forecast throughput will remain above 162 rps.",
+        "pair_id": "v5-fresh-number-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -17
+            }
+          }
+        ],
+        "id": "v5-fresh-number-03-0",
+        "input": "Absolute value of -17.",
+        "pair_id": "v5-fresh-number-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -18
+            }
+          }
+        ],
+        "id": "v5-fresh-number-03-1",
+        "input": "Absolute value of -18.",
+        "pair_id": "v5-fresh-number-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 61
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 91
+            }
+          }
+        ],
+        "id": "v5-fresh-order-00-0",
+        "input": "Keep queue depth below 61 requests; recorded queue depth was 91 requests.",
+        "pair_id": "v5-fresh-order-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 61
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 91
+            }
+          }
+        ],
+        "id": "v5-fresh-order-00-1",
+        "input": "Recorded queue depth was 91 requests; keep queue depth below 61 requests.",
+        "pair_id": "v5-fresh-order-pair-00",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_41",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 171
+            }
+          }
+        ],
+        "id": "v5-fresh-order-01-0",
+        "input": "Never update archive-41; throughput will remain above 171 rps.",
+        "pair_id": "v5-fresh-order-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_41",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 171
+            }
+          }
+        ],
+        "id": "v5-fresh-order-01-1",
+        "input": "Throughput will remain above 171 rps; never update archive-41.",
+        "pair_id": "v5-fresh-order-pair-01",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "blue_42"
+            }
+          },
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-42",
+              "status": "COMPLETED"
+            }
+          }
+        ],
+        "id": "v5-fresh-order-02-0",
+        "input": "Candidate blue-42 is live; run batch-42 completed.",
+        "pair_id": "v5-fresh-order-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "blue_42"
+            }
+          },
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-42",
+              "status": "COMPLETED"
+            }
+          }
+        ],
+        "id": "v5-fresh-order-02-1",
+        "input": "Run batch-42 completed; candidate blue-42 is live.",
+        "pair_id": "v5-fresh-order-pair-02",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_43"
+            }
+          },
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-43",
+              "value": 243
+            }
+          }
+        ],
+        "id": "v5-fresh-order-03-0",
+        "input": "Refer to ticket-43; receipt rec-43 returned 243.",
+        "pair_id": "v5-fresh-order-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_43"
+            }
+          },
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-43",
+              "value": 243
+            }
+          }
+        ],
+        "id": "v5-fresh-order-03-1",
+        "input": "Receipt rec-43 returned 243; refer to ticket-43.",
+        "pair_id": "v5-fresh-order-pair-03",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      }
+    ],
+    "oov": [
+      {
+        "audit": "held-out-vocabulary:ameliorate",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-oov-ameliorate-0",
+        "input": "Please ameliorate response handling for service-510 before launch.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:ameliorate",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-oov-ameliorate-1",
+        "input": "Please ameliorate response handling for service-511 before launch.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:ameliorate",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-oov-ameliorate-2",
+        "input": "Please ameliorate response handling for service-512 before launch.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:ameliorate",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v5-oov-ameliorate-3",
+        "input": "Please ameliorate response handling for service-513 before launch.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:sacrosanct",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-oov-sacrosanct-0",
+        "input": "The production-514 boundary is sacrosanct; leave it untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:sacrosanct",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-oov-sacrosanct-1",
+        "input": "The production-515 boundary is sacrosanct; leave it untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:sacrosanct",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-oov-sacrosanct-2",
+        "input": "The production-516 boundary is sacrosanct; leave it untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:sacrosanct",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v5-oov-sacrosanct-3",
+        "input": "The production-517 boundary is sacrosanct; leave it untouched.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:attested",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-oov-attested-0",
+        "input": "An attested reading places queue delay at 538 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:attested",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-oov-attested-1",
+        "input": "An attested reading places queue delay at 539 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:attested",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-oov-attested-2",
+        "input": "An attested reading places queue delay at 540 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:attested",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v5-oov-attested-3",
+        "input": "An attested reading places queue delay at 541 milliseconds.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:presage",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-oov-presage-0",
+        "input": "These signals presage queue delay reaching 542 milliseconds tomorrow.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:presage",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-oov-presage-1",
+        "input": "These signals presage queue delay reaching 543 milliseconds tomorrow.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:presage",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-oov-presage-2",
+        "input": "These signals presage queue delay reaching 544 milliseconds tomorrow.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:presage",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v5-oov-presage-3",
+        "input": "These signals presage queue delay reaching 545 milliseconds tomorrow.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:dormant",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v5-oov-dormant-0",
+        "input": "Run batch-526 is dormant after finishing its work.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:dormant",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v5-oov-dormant-1",
+        "input": "Run batch-527 is dormant after finishing its work.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:dormant",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v5-oov-dormant-2",
+        "input": "Run batch-528 is dormant after finishing its work.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:dormant",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v5-oov-dormant-3",
+        "input": "Run batch-529 is dormant after finishing its work.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:displaces",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v5-oov-displaces-0",
+        "input": "Build cobalt-530 displaces amber-530 as the current build.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:displaces",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v5-oov-displaces-1",
+        "input": "Build cobalt-531 displaces amber-531 as the current build.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:displaces",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v5-oov-displaces-2",
+        "input": "Build cobalt-532 displaces amber-532 as the current build.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:displaces",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v5-oov-displaces-3",
+        "input": "Build cobalt-533 displaces amber-533 as the current build.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:norm",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v5-oov-norm-0",
+        "input": "Return the norm of -554.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:norm",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v5-oov-norm-1",
+        "input": "Return the norm of -555.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:norm",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v5-oov-norm-2",
+        "input": "Return the norm of -556.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:norm",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v5-oov-norm-3",
+        "input": "Return the norm of -557.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:antipode",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v5-oov-antipode-0",
+        "input": "Give the additive antipode of 558.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:antipode",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v5-oov-antipode-1",
+        "input": "Give the additive antipode of 559.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:antipode",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v5-oov-antipode-2",
+        "input": "Give the additive antipode of 560.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:antipode",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v5-oov-antipode-3",
+        "input": "Give the additive antipode of 561.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:citation",
+        "comparison": "set_exact",
+        "expected": [
+          "REFERENCE"
+        ],
+        "id": "v5-oov-citation-0",
+        "input": "Use ticket-542 as the citation supporting this decision.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:citation",
+        "comparison": "set_exact",
+        "expected": [
+          "REFERENCE"
+        ],
+        "id": "v5-oov-citation-1",
+        "input": "Use ticket-543 as the citation supporting this decision.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:citation",
+        "comparison": "set_exact",
+        "expected": [
+          "REFERENCE"
+        ],
+        "id": "v5-oov-citation-2",
+        "input": "Use ticket-544 as the citation supporting this decision.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:citation",
+        "comparison": "set_exact",
+        "expected": [
+          "REFERENCE"
+        ],
+        "id": "v5-oov-citation-3",
+        "input": "Use ticket-545 as the citation supporting this decision.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:concordant",
+        "comparison": "set_exact",
+        "expected": [
+          "EVIDENCE_CONSISTENCY"
+        ],
+        "id": "v5-oov-concordant-0",
+        "input": "The two readings for sample-546 are concordant.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:concordant",
+        "comparison": "set_exact",
+        "expected": [
+          "EVIDENCE_CONSISTENCY"
+        ],
+        "id": "v5-oov-concordant-1",
+        "input": "The two readings for sample-547 are concordant.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:concordant",
+        "comparison": "set_exact",
+        "expected": [
+          "EVIDENCE_CONSISTENCY"
+        ],
+        "id": "v5-oov-concordant-2",
+        "input": "The two readings for sample-548 are concordant.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "held-out-vocabulary:concordant",
+        "comparison": "set_exact",
+        "expected": [
+          "EVIDENCE_CONSISTENCY"
+        ],
+        "id": "v5-oov-concordant-3",
+        "input": "The two readings for sample-549 are concordant.",
+        "projection": "kinds",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      }
+    ],
+    "retention": [
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "COPY_VALUE",
+            "relation": "COPY_VALUE",
+            "slots": {
+              "destination": "replica_310",
+              "source": "archive_310"
+            }
+          }
+        ],
+        "id": "v5-retention-copy-value-0",
+        "input": "Copy archive-310 into replica-310.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "COPY_VALUE",
+            "relation": "COPY_VALUE",
+            "slots": {
+              "destination": "replica_311",
+              "source": "archive_311"
+            }
+          }
+        ],
+        "id": "v5-retention-copy-value-1",
+        "input": "Copy archive-311 into replica-311.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "COPY_VALUE",
+            "relation": "COPY_VALUE",
+            "slots": {
+              "destination": "replica_312",
+              "source": "archive_312"
+            }
+          }
+        ],
+        "id": "v5-retention-copy-value-2",
+        "input": "Copy archive-312 into replica-312.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "release_313",
+              "old_value": "release_312"
+            }
+          }
+        ],
+        "id": "v5-retention-supersedes-0",
+        "input": "Release-313 replaces release-312.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "release_314",
+              "old_value": "release_313"
+            }
+          }
+        ],
+        "id": "v5-retention-supersedes-1",
+        "input": "Release-314 replaces release-313.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "release_315",
+              "old_value": "release_314"
+            }
+          }
+        ],
+        "id": "v5-retention-supersedes-2",
+        "input": "Release-315 replaces release-314.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -316
+            }
+          }
+        ],
+        "id": "v5-retention-magnitude-0",
+        "input": "Distance from zero of -316.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -317
+            }
+          }
+        ],
+        "id": "v5-retention-magnitude-1",
+        "input": "Distance from zero of -317.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -318
+            }
+          }
+        ],
+        "id": "v5-retention-magnitude-2",
+        "input": "Distance from zero of -318.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "NEGATE",
+            "relation": "NEGATE",
+            "slots": {
+              "input": 319
+            }
+          }
+        ],
+        "id": "v5-retention-negate-0",
+        "input": "Opposite of 319.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "NEGATE",
+            "relation": "NEGATE",
+            "slots": {
+              "input": 320
+            }
+          }
+        ],
+        "id": "v5-retention-negate-1",
+        "input": "Opposite of 320.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "NEGATE",
+            "relation": "NEGATE",
+            "slots": {
+              "input": 321
+            }
+          }
+        ],
+        "id": "v5-retention-negate-2",
+        "input": "Opposite of 321.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_322"
+            }
+          }
+        ],
+        "id": "v5-retention-reference-0",
+        "input": "Refer to ticket-322.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_323"
+            }
+          }
+        ],
+        "id": "v5-retention-reference-1",
+        "input": "Refer to ticket-323.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_324"
+            }
+          }
+        ],
+        "id": "v5-retention-reference-2",
+        "input": "Refer to ticket-324.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "candidate_325"
+            }
+          }
+        ],
+        "id": "v5-retention-active-selection-0",
+        "input": "candidate-325 is live.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "candidate_326"
+            }
+          }
+        ],
+        "id": "v5-retention-active-selection-1",
+        "input": "candidate-326 is live.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "candidate_327"
+            }
+          }
+        ],
+        "id": "v5-retention-active-selection-2",
+        "input": "candidate-327 is live.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-328",
+              "status": "COMPLETED"
+            }
+          }
+        ],
+        "id": "v5-retention-run-status-0",
+        "input": "Run batch-328 status is completed.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-329",
+              "status": "COMPLETED"
+            }
+          }
+        ],
+        "id": "v5-retention-run-status-1",
+        "input": "Run batch-329 status is completed.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-330",
+              "status": "COMPLETED"
+            }
+          }
+        ],
+        "id": "v5-retention-run-status-2",
+        "input": "Run batch-330 status is completed.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-331",
+              "value": 831
+            }
+          }
+        ],
+        "id": "v5-retention-receipt-value-0",
+        "input": "Receipt rec-331 returned 831.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-332",
+              "value": 832
+            }
+          }
+        ],
+        "id": "v5-retention-receipt-value-1",
+        "input": "Receipt rec-332 returned 832.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-333",
+              "value": 833
+            }
+          }
+        ],
+        "id": "v5-retention-receipt-value-2",
+        "input": "Receipt rec-333 returned 833.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "EVIDENCE_CONSISTENCY",
+            "relation": "EVIDENCE_CONSISTENCY",
+            "slots": {
+              "status": "CONSISTENT"
+            }
+          }
+        ],
+        "id": "v5-retention-evidence-consistency-0",
+        "input": "The evidence is consistent.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "EVIDENCE_CONSISTENCY",
+            "relation": "EVIDENCE_CONSISTENCY",
+            "slots": {
+              "status": "CONFLICT"
+            }
+          }
+        ],
+        "id": "v5-retention-evidence-consistency-1",
+        "input": "The evidence is conflicting.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "EVIDENCE_CONSISTENCY",
+            "relation": "EVIDENCE_CONSISTENCY",
+            "slots": {
+              "status": "CONSISTENT"
+            }
+          }
+        ],
+        "id": "v5-retention-evidence-consistency-2",
+        "input": "The evidence is in agreement.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 337
+            }
+          }
+        ],
+        "id": "v5-retention-goal-0",
+        "input": "Maintain queue depth under 337 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 338
+            }
+          }
+        ],
+        "id": "v5-retention-goal-1",
+        "input": "Maintain queue depth under 338 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 339
+            }
+          }
+        ],
+        "id": "v5-retention-goal-2",
+        "input": "Maintain queue depth under 339 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_340",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-retention-constraint-0",
+        "input": "Never update archive-340.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_341",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-retention-constraint-1",
+        "input": "Never update archive-341.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_342",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v5-retention-constraint-2",
+        "input": "Never update archive-342.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 343
+            }
+          }
+        ],
+        "id": "v5-retention-observation-0",
+        "input": "Recorded throughput was 343 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 344
+            }
+          }
+        ],
+        "id": "v5-retention-observation-1",
+        "input": "Recorded throughput was 344 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 345
+            }
+          }
+        ],
+        "id": "v5-retention-observation-2",
+        "input": "Recorded throughput was 345 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 346
+            }
+          }
+        ],
+        "id": "v5-retention-prediction-0",
+        "input": "Throughput will remain above 346 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 347
+            }
+          }
+        ],
+        "id": "v5-retention-prediction-1",
+        "input": "Throughput will remain above 347 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 348
+            }
+          }
+        ],
+        "id": "v5-retention-prediction-2",
+        "input": "Throughput will remain above 348 rps.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 399
+            }
+          }
+        ],
+        "id": "v5-retention-goal-3",
+        "input": "Maintain queue depth under 399 requests.",
+        "projection": "semantic_frames",
+        "surface_policy": "INDEPENDENT_NATURAL_LANGUAGE_NO_EXPECTED_LABELS"
+      }
+    ]
+  }
+}

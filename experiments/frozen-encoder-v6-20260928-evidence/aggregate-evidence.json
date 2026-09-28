@@ -1,0 +1,829 @@
+{
+  "aggregate_has_model_activation_authority": false,
+  "candidate_preservation_policy": "NO_DELETION_AND_HASH_INVENTORY",
+  "cross_seed_training_input_verification": {
+    "common_sha256": "66e5675d4c091fe208af73c948c36e2922ff681ad482d82417de6af9c339dd5a",
+    "comparison": "CANONICAL_TRAINING_INPUTS_WITH_SEED_REMOVED",
+    "per_seed_sha256": {
+      "52031": "66e5675d4c091fe208af73c948c36e2922ff681ad482d82417de6af9c339dd5a",
+      "52047": "66e5675d4c091fe208af73c948c36e2922ff681ad482d82417de6af9c339dd5a",
+      "52069": "66e5675d4c091fe208af73c948c36e2922ff681ad482d82417de6af9c339dd5a"
+    },
+    "valid": true
+  },
+  "decision_authority": "PER_SEED_LEDGER_TERMINAL_EVENT",
+  "execution": {
+    "ordered_seeds": [
+      52031,
+      52047,
+      52069
+    ],
+    "retention_epsilon": 0.0,
+    "steps": 800
+  },
+  "experiment_id": "frozen-encoder-v6-20260928",
+  "final_input_verification": {
+    "error": null,
+    "valid": true
+  },
+  "final_seed_revalidation": {
+    "per_seed": {
+      "52031": {
+        "error": null,
+        "performed": true,
+        "valid": true
+      },
+      "52047": {
+        "error": null,
+        "performed": true,
+        "valid": true
+      },
+      "52069": {
+        "error": null,
+        "performed": true,
+        "valid": true
+      }
+    },
+    "valid": true
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "scope": "canonical JSON of this object with integrity omitted",
+    "sha256": "82654683003cd1255ca7c2b6039df42121acca9ccb2dbce45016c7de68ddc59a"
+  },
+  "outcome": "PRIMARY_REJECTED_NO_RECOMMENDATION",
+  "plan": {
+    "preserved_copy_path": "preregistered-plan.json",
+    "preserved_copy_sha256": "c39f830ea787d87b8e19dd52dfb2c65565ad1f2bd384cec2997ffa2c402d78ca",
+    "source_path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\frozen-encoder-v6-20260928-plan.json",
+    "source_sha256": "c39f830ea787d87b8e19dd52dfb2c65565ad1f2bd384cec2997ffa2c402d78ca"
+  },
+  "promotion_recommendation": {
+    "checkpoint": null,
+    "eligible": false,
+    "robustness_seeds_can_substitute": false,
+    "seed": null
+  },
+  "schema": "kev.preregistered-experiment-evidence.v1",
+  "seed_runs": [
+    {
+      "authoritative_decision": "REJECT",
+      "content_chain": {
+        "calibration_receipt_canonical_sha256": "b42c02c14e07fa238f5387ed5c577d4a754f225c281d08464c9f52d999ddd498",
+        "calibration_receipt_sha256": "94eb717391122cbe81e24e4bf555c0b2bbdf20c3abc9242dd50c9d6b071b8f3d",
+        "challenger": {
+          "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\frozen-encoder-v6-20260928-evidence\\seed-results\\seed-52031\\candidates\\20260928-130706-c626da3350-68bddca7\\calibrated\\semantic-breadth.calibrated.pt",
+          "sha256": "d7ca702ff24333b952dbc4928e8aa1fd0bc2a4ab8b7a4ecf1c8f62254e570e84"
+        },
+        "decision": "REJECT",
+        "eval_card_report_sha256": "9fb938e52f02f065825e66faa73be56fbe7bcc9b7faa9e77df487e61e31d5629",
+        "eval_card_sha256": "363c6a076203a00a5868e439a0bcfdbd67855a4fc27d43b70537b90a425d2a1a",
+        "evolution_result_sha256": "0ef50775cdc6f70350002eb5e59edde8b3cab9a79fb517317f63e18f09e61853",
+        "non_seed_training_inputs_sha256": "66e5675d4c091fe208af73c948c36e2922ff681ad482d82417de6af9c339dd5a",
+        "run_id": "20260928-130706-c626da3350-68bddca7",
+        "terminal_event_sha256": "c980feb4ecf56f55418b3bdee66feefeb3c1de47653b3b8e0c7ef2d15701819f",
+        "training_inputs_sha256": "4ff483fee9a00b35b6bfbd7fa1667be5be9e7bba3e31c664dc1ffcb7fc92dfad",
+        "training_receipt_sha256": "237bdafa4b2c61c4a86ee452ce4fcfd713324a0e4da40b53b3728e538cbc6f86"
+      },
+      "evidence_files": [
+        {
+          "path": "seed-results/seed-52031/candidates/20260928-130706-c626da3350-68bddca7/calibrated/calibration-receipt.json",
+          "role": "calibration_receipt",
+          "sha256": "94eb717391122cbe81e24e4bf555c0b2bbdf20c3abc9242dd50c9d6b071b8f3d",
+          "size_bytes": 6873
+        },
+        {
+          "path": "seed-results/seed-52031/candidates/20260928-130706-c626da3350-68bddca7/calibrated/semantic-breadth.calibrated.pt",
+          "role": "candidate_checkpoint",
+          "sha256": "d7ca702ff24333b952dbc4928e8aa1fd0bc2a4ab8b7a4ecf1c8f62254e570e84",
+          "size_bytes": 137480
+        },
+        {
+          "path": "seed-results/seed-52031/candidates/20260928-130706-c626da3350-68bddca7/eval-card.json",
+          "role": "eval_card",
+          "sha256": "363c6a076203a00a5868e439a0bcfdbd67855a4fc27d43b70537b90a425d2a1a",
+          "size_bytes": 708492
+        },
+        {
+          "path": "seed-results/seed-52031/candidates/20260928-130706-c626da3350-68bddca7/evolution-result.json",
+          "role": "evolution_result",
+          "sha256": "0ef50775cdc6f70350002eb5e59edde8b3cab9a79fb517317f63e18f09e61853",
+          "size_bytes": 2006
+        },
+        {
+          "path": "seed-results/seed-52031/candidates/20260928-130706-c626da3350-68bddca7/trained/frozen-embeddings.pt",
+          "role": "candidate_checkpoint",
+          "sha256": "ffc749b2852aaff9ab71bb8c65bf163dce4412972a86a3f834ae0c6de28199b4",
+          "size_bytes": 304156
+        },
+        {
+          "path": "seed-results/seed-52031/candidates/20260928-130706-c626da3350-68bddca7/trained/semantic-breadth.pt",
+          "role": "candidate_checkpoint",
+          "sha256": "f9403cfe957e88adf94011bd90244651c5efa43aec44803d3026ef6c1238d8bb",
+          "size_bytes": 137096
+        },
+        {
+          "path": "seed-results/seed-52031/candidates/20260928-130706-c626da3350-68bddca7/trained/training-receipt.json",
+          "role": "training_receipt",
+          "sha256": "237bdafa4b2c61c4a86ee452ce4fcfd713324a0e4da40b53b3728e538cbc6f86",
+          "size_bytes": 190228
+        },
+        {
+          "path": "seed-results/seed-52031/run-state/.state.lock",
+          "role": "supporting_file",
+          "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+          "size_bytes": 1
+        },
+        {
+          "path": "seed-results/seed-52031/run-state/ledger-head.json",
+          "role": "ledger_head",
+          "sha256": "b60e1fa77c3a037da0a9ed179deee133bad5fddbfad42e6e50195bed847f71e9",
+          "size_bytes": 200
+        },
+        {
+          "path": "seed-results/seed-52031/run-state/ledger.jsonl",
+          "role": "ledger",
+          "sha256": "e819808d85bfa63854baf5dd05d28210d7f15f22bf7162a78c2931b25619b7eb",
+          "size_bytes": 3836
+        },
+        {
+          "path": "seed-results/seed-52031/run-state/state.json",
+          "role": "state",
+          "sha256": "7236166faf808f1ae1181e1bfee813fed1b7e4ba8c94bd79d566a377457eefa5",
+          "size_bytes": 882
+        }
+      ],
+      "evidence_integrity": "COMPLETE",
+      "execution_error": null,
+      "execution_status": "RETURNED",
+      "final_revalidation": {
+        "error": null,
+        "performed": true,
+        "valid": true
+      },
+      "integrity_errors": [],
+      "ledger_verification": {
+        "events": 1,
+        "head": "c980feb4ecf56f55418b3bdee66feefeb3c1de47653b3b8e0c7ef2d15701819f",
+        "valid": true
+      },
+      "paths": {
+        "candidate_root": "seed-results/seed-52031/candidates",
+        "seed_root": "seed-results/seed-52031",
+        "state_dir": "seed-results/seed-52031/run-state"
+      },
+      "promotion_recommendation_eligible": true,
+      "role": "PRIMARY",
+      "run_id": "20260928-130706-c626da3350-68bddca7",
+      "seed": 52031,
+      "terminal_ledger_receipt": {
+        "event_hash": "c980feb4ecf56f55418b3bdee66feefeb3c1de47653b3b8e0c7ef2d15701819f",
+        "kind": "MODEL_REJECTED",
+        "sequence": 1
+      }
+    },
+    {
+      "authoritative_decision": "REJECT",
+      "content_chain": {
+        "calibration_receipt_canonical_sha256": "9faa99107a440306dddbad275c8765041a4519b2e6de05cfe562c228e765e93e",
+        "calibration_receipt_sha256": "d9b3b37d33ecbabae4632fd0aa2c0423510a3e1ab6f13b856a731d179165ef80",
+        "challenger": {
+          "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\frozen-encoder-v6-20260928-evidence\\seed-results\\seed-52047\\candidates\\20260928-130734-c626da3350-6a4efdbc\\calibrated\\semantic-breadth.calibrated.pt",
+          "sha256": "081527c9cb50fb78a313e2fff2ef56e4231358e099f4a8fd72798d7bd030768f"
+        },
+        "decision": "REJECT",
+        "eval_card_report_sha256": "242e5960c8e794b22a88ee5d5d8d733c93aa244b7a0f90add8faac767f7de71d",
+        "eval_card_sha256": "a114be7dcd0565bc9901e2249e8513faae60420826b64d6274fbeab5a065db0e",
+        "evolution_result_sha256": "af6f4a3f0996f030e218a9f432a208feff2652cdd58b21473595db09a465ba49",
+        "non_seed_training_inputs_sha256": "66e5675d4c091fe208af73c948c36e2922ff681ad482d82417de6af9c339dd5a",
+        "run_id": "20260928-130734-c626da3350-6a4efdbc",
+        "terminal_event_sha256": "4eac00b851b36a5b793bb11d786dee16a824a7a76203b1b5218981b2e62ae6aa",
+        "training_inputs_sha256": "79494c154d142c0c9bfdf30f8666757fb82f97da6ea6223d65025c39d015a578",
+        "training_receipt_sha256": "f7bffeb95facb21bbf03e58fe70ade300b99e361d96636f788482d2aeff910fc"
+      },
+      "evidence_files": [
+        {
+          "path": "seed-results/seed-52047/candidates/20260928-130734-c626da3350-6a4efdbc/calibrated/calibration-receipt.json",
+          "role": "calibration_receipt",
+          "sha256": "d9b3b37d33ecbabae4632fd0aa2c0423510a3e1ab6f13b856a731d179165ef80",
+          "size_bytes": 6884
+        },
+        {
+          "path": "seed-results/seed-52047/candidates/20260928-130734-c626da3350-6a4efdbc/calibrated/semantic-breadth.calibrated.pt",
+          "role": "candidate_checkpoint",
+          "sha256": "081527c9cb50fb78a313e2fff2ef56e4231358e099f4a8fd72798d7bd030768f",
+          "size_bytes": 137480
+        },
+        {
+          "path": "seed-results/seed-52047/candidates/20260928-130734-c626da3350-6a4efdbc/eval-card.json",
+          "role": "eval_card",
+          "sha256": "a114be7dcd0565bc9901e2249e8513faae60420826b64d6274fbeab5a065db0e",
+          "size_bytes": 719206
+        },
+        {
+          "path": "seed-results/seed-52047/candidates/20260928-130734-c626da3350-6a4efdbc/evolution-result.json",
+          "role": "evolution_result",
+          "sha256": "af6f4a3f0996f030e218a9f432a208feff2652cdd58b21473595db09a465ba49",
+          "size_bytes": 2006
+        },
+        {
+          "path": "seed-results/seed-52047/candidates/20260928-130734-c626da3350-6a4efdbc/trained/frozen-embeddings.pt",
+          "role": "candidate_checkpoint",
+          "sha256": "ffc749b2852aaff9ab71bb8c65bf163dce4412972a86a3f834ae0c6de28199b4",
+          "size_bytes": 304156
+        },
+        {
+          "path": "seed-results/seed-52047/candidates/20260928-130734-c626da3350-6a4efdbc/trained/semantic-breadth.pt",
+          "role": "candidate_checkpoint",
+          "sha256": "83d00e2cc15bb14a721f0098613feefdc2b300659da13481fe28d51465e203b4",
+          "size_bytes": 137096
+        },
+        {
+          "path": "seed-results/seed-52047/candidates/20260928-130734-c626da3350-6a4efdbc/trained/training-receipt.json",
+          "role": "training_receipt",
+          "sha256": "f7bffeb95facb21bbf03e58fe70ade300b99e361d96636f788482d2aeff910fc",
+          "size_bytes": 190132
+        },
+        {
+          "path": "seed-results/seed-52047/run-state/.state.lock",
+          "role": "supporting_file",
+          "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+          "size_bytes": 1
+        },
+        {
+          "path": "seed-results/seed-52047/run-state/ledger-head.json",
+          "role": "ledger_head",
+          "sha256": "058e222981bffff27a425e3b4c88cc30cca86a63ef92c61b019f7ae6b3cf67a9",
+          "size_bytes": 200
+        },
+        {
+          "path": "seed-results/seed-52047/run-state/ledger.jsonl",
+          "role": "ledger",
+          "sha256": "2bd11f39dbdd620189f30279bd961fdeb89e940631af61885ecd6f25306255f7",
+          "size_bytes": 3836
+        },
+        {
+          "path": "seed-results/seed-52047/run-state/state.json",
+          "role": "state",
+          "sha256": "7873bc0e0e7cf2e89d7e6079ec5b5e1936554817477b28a275f2b697fab03668",
+          "size_bytes": 882
+        }
+      ],
+      "evidence_integrity": "COMPLETE",
+      "execution_error": null,
+      "execution_status": "RETURNED",
+      "final_revalidation": {
+        "error": null,
+        "performed": true,
+        "valid": true
+      },
+      "integrity_errors": [],
+      "ledger_verification": {
+        "events": 1,
+        "head": "4eac00b851b36a5b793bb11d786dee16a824a7a76203b1b5218981b2e62ae6aa",
+        "valid": true
+      },
+      "paths": {
+        "candidate_root": "seed-results/seed-52047/candidates",
+        "seed_root": "seed-results/seed-52047",
+        "state_dir": "seed-results/seed-52047/run-state"
+      },
+      "promotion_recommendation_eligible": false,
+      "role": "ROBUSTNESS_ONLY",
+      "run_id": "20260928-130734-c626da3350-6a4efdbc",
+      "seed": 52047,
+      "terminal_ledger_receipt": {
+        "event_hash": "4eac00b851b36a5b793bb11d786dee16a824a7a76203b1b5218981b2e62ae6aa",
+        "kind": "MODEL_REJECTED",
+        "sequence": 1
+      }
+    },
+    {
+      "authoritative_decision": "REJECT",
+      "content_chain": {
+        "calibration_receipt_canonical_sha256": "41693506a1ebfa5d8cd82682f4fabc5f4e8e51babf54e69cafeefe8f4180ff35",
+        "calibration_receipt_sha256": "01bc205616e6d284378f4cba92a93055afdc843ca718e02c25eab3203ec7a7e1",
+        "challenger": {
+          "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\frozen-encoder-v6-20260928-evidence\\seed-results\\seed-52069\\candidates\\20260928-130750-c626da3350-9f68c272\\calibrated\\semantic-breadth.calibrated.pt",
+          "sha256": "a1caae479b34bee670be566747c3491539ad3172d128f37629338f2b26f046e6"
+        },
+        "decision": "REJECT",
+        "eval_card_report_sha256": "a63019458de6d9360c1b7cfe14330c16e8fb65559082dd3f5cf6095329b7587b",
+        "eval_card_sha256": "ba9c8d94080ddc657917acedfdb60c023356d614cd39df2e16d67eb94c2471ba",
+        "evolution_result_sha256": "f2589a308efd4fbd630eb604f380f9d9257469b3d8f7e7fe7f0006ecc9a4f0bd",
+        "non_seed_training_inputs_sha256": "66e5675d4c091fe208af73c948c36e2922ff681ad482d82417de6af9c339dd5a",
+        "run_id": "20260928-130750-c626da3350-9f68c272",
+        "terminal_event_sha256": "3ce6d4516e58d3c1c3015fcaf84eee968bf36a1e1d2aad88dc1c4fdbaa518e21",
+        "training_inputs_sha256": "407149031e56a4f3aaebc6f1298e9140300e0868f308d94835f99880b4a68439",
+        "training_receipt_sha256": "5da0683e21f5649ff0c692f91d8ad40fcab2fb9ac8396b6a2114316ec3fe8e90"
+      },
+      "evidence_files": [
+        {
+          "path": "seed-results/seed-52069/candidates/20260928-130750-c626da3350-9f68c272/calibrated/calibration-receipt.json",
+          "role": "calibration_receipt",
+          "sha256": "01bc205616e6d284378f4cba92a93055afdc843ca718e02c25eab3203ec7a7e1",
+          "size_bytes": 6830
+        },
+        {
+          "path": "seed-results/seed-52069/candidates/20260928-130750-c626da3350-9f68c272/calibrated/semantic-breadth.calibrated.pt",
+          "role": "candidate_checkpoint",
+          "sha256": "a1caae479b34bee670be566747c3491539ad3172d128f37629338f2b26f046e6",
+          "size_bytes": 137480
+        },
+        {
+          "path": "seed-results/seed-52069/candidates/20260928-130750-c626da3350-9f68c272/eval-card.json",
+          "role": "eval_card",
+          "sha256": "ba9c8d94080ddc657917acedfdb60c023356d614cd39df2e16d67eb94c2471ba",
+          "size_bytes": 705022
+        },
+        {
+          "path": "seed-results/seed-52069/candidates/20260928-130750-c626da3350-9f68c272/evolution-result.json",
+          "role": "evolution_result",
+          "sha256": "f2589a308efd4fbd630eb604f380f9d9257469b3d8f7e7fe7f0006ecc9a4f0bd",
+          "size_bytes": 2006
+        },
+        {
+          "path": "seed-results/seed-52069/candidates/20260928-130750-c626da3350-9f68c272/trained/frozen-embeddings.pt",
+          "role": "candidate_checkpoint",
+          "sha256": "ffc749b2852aaff9ab71bb8c65bf163dce4412972a86a3f834ae0c6de28199b4",
+          "size_bytes": 304156
+        },
+        {
+          "path": "seed-results/seed-52069/candidates/20260928-130750-c626da3350-9f68c272/trained/semantic-breadth.pt",
+          "role": "candidate_checkpoint",
+          "sha256": "830a85aa07c9c98eb25a7a6076e81b628c1ec4a7a556fbf76870ffc79a6f2a4f",
+          "size_bytes": 137096
+        },
+        {
+          "path": "seed-results/seed-52069/candidates/20260928-130750-c626da3350-9f68c272/trained/training-receipt.json",
+          "role": "training_receipt",
+          "sha256": "5da0683e21f5649ff0c692f91d8ad40fcab2fb9ac8396b6a2114316ec3fe8e90",
+          "size_bytes": 190165
+        },
+        {
+          "path": "seed-results/seed-52069/run-state/.state.lock",
+          "role": "supporting_file",
+          "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+          "size_bytes": 1
+        },
+        {
+          "path": "seed-results/seed-52069/run-state/ledger-head.json",
+          "role": "ledger_head",
+          "sha256": "eaa5b13dc9121340ff1873abc90b060de2bda042839d50d20b5a33b2321e98ca",
+          "size_bytes": 200
+        },
+        {
+          "path": "seed-results/seed-52069/run-state/ledger.jsonl",
+          "role": "ledger",
+          "sha256": "8cddb09d4698a822bdbc7048ab556efb9364835599d1afea163d3f98a35b4053",
+          "size_bytes": 3836
+        },
+        {
+          "path": "seed-results/seed-52069/run-state/state.json",
+          "role": "state",
+          "sha256": "770611ccc78e783a28a4b417f7751fe03bcc3b9421689fed3da41e125d59b1cc",
+          "size_bytes": 882
+        }
+      ],
+      "evidence_integrity": "COMPLETE",
+      "execution_error": null,
+      "execution_status": "RETURNED",
+      "final_revalidation": {
+        "error": null,
+        "performed": true,
+        "valid": true
+      },
+      "integrity_errors": [],
+      "ledger_verification": {
+        "events": 1,
+        "head": "3ce6d4516e58d3c1c3015fcaf84eee968bf36a1e1d2aad88dc1c4fdbaa518e21",
+        "valid": true
+      },
+      "paths": {
+        "candidate_root": "seed-results/seed-52069/candidates",
+        "seed_root": "seed-results/seed-52069",
+        "state_dir": "seed-results/seed-52069/run-state"
+      },
+      "promotion_recommendation_eligible": false,
+      "role": "ROBUSTNESS_ONLY",
+      "run_id": "20260928-130750-c626da3350-9f68c272",
+      "seed": 52069,
+      "terminal_ledger_receipt": {
+        "event_hash": "3ce6d4516e58d3c1c3015fcaf84eee968bf36a1e1d2aad88dc1c4fdbaa518e21",
+        "kind": "MODEL_REJECTED",
+        "sequence": 1
+      }
+    }
+  ],
+  "selection_policy": {
+    "kind": "PREDECLARED_PRIMARY_ONLY",
+    "primary_seed": 52031,
+    "requires_all_seed_receipts": true,
+    "robustness_only_seeds": [
+      52047,
+      52069
+    ],
+    "training_loss_is_criterion": false
+  },
+  "training_loss_used_as_aggregate_criterion": false,
+  "verified_input_artifacts": {
+    "calibration_fit": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\calibration-fit-v2.jsonl",
+      "sha256": "d0e7d4fcffef2c3ccd376acb2c77a1fb90289224caa046cddc88c9656ace101c",
+      "size_bytes": 14516
+    },
+    "encoder_acquisition_receipt": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\local\\encoders\\all-MiniLM-L6-v2\\1110a243fdf4706b3f48f1d95db1a4f5529b4d41\\acquisition-receipt.json",
+      "sha256": "a9bf2c04260c78d8bf6795560fb64123aea13cb32e7e036caee9168537e07f38",
+      "size_bytes": 4703
+    },
+    "encoder_acquisition_script": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\scripts\\acquire_frozen_encoder.py",
+      "sha256": "0c7ef798ddc210f84e8aebcff401ecfedce3cc6872adc00e1e0f5e2421f6f563",
+      "size_bytes": 11760
+    },
+    "encoder_manifest": {
+      "bundle": {
+        "files": [
+          {
+            "path": "1_Pooling/config.json",
+            "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+            "size_bytes": 190
+          },
+          {
+            "path": "LICENSE-2.0.txt",
+            "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+            "size_bytes": 11358
+          },
+          {
+            "path": "README.md",
+            "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+            "size_bytes": 10502
+          },
+          {
+            "path": "config.json",
+            "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+            "size_bytes": 612
+          },
+          {
+            "path": "config_sentence_transformers.json",
+            "sha256": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+            "size_bytes": 116
+          },
+          {
+            "path": "model.safetensors",
+            "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+            "size_bytes": 90868376
+          },
+          {
+            "path": "modules.json",
+            "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+            "size_bytes": 349
+          },
+          {
+            "path": "sentence_bert_config.json",
+            "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+            "size_bytes": 53
+          },
+          {
+            "path": "special_tokens_map.json",
+            "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+            "size_bytes": 112
+          },
+          {
+            "path": "tokenizer.json",
+            "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+            "size_bytes": 466247
+          },
+          {
+            "path": "tokenizer_config.json",
+            "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+            "size_bytes": 350
+          },
+          {
+            "path": "vocab.txt",
+            "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+            "size_bytes": 231508
+          }
+        ],
+        "license": {
+          "identifier": "Apache-2.0",
+          "license_text_path": "LICENSE-2.0.txt",
+          "license_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "license_text_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+          "model_card_path": "README.md",
+          "model_card_sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+          "model_card_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/blob/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md"
+        },
+        "name": "sentence-transformers/all-MiniLM-L6-v2",
+        "network_policy": "LOCAL_ONLY",
+        "source": {
+          "api_url": "https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/revision/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+          "provider": "huggingface",
+          "repository": "sentence-transformers/all-MiniLM-L6-v2",
+          "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+          "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+        }
+      },
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\local\\encoders\\all-MiniLM-L6-v2\\1110a243fdf4706b3f48f1d95db1a4f5529b4d41\\encoder-manifest.json",
+      "sha256": "cfd8f8bc3413f31ab927ad7d78eb380c3359fdb2893061075d2369dfec81ea57",
+      "size_bytes": 3417
+    },
+    "encoder_source_record": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\encoder-sources\\all-MiniLM-L6-v2-1110a243fdf4706b3f48f1d95db1a4f5529b4d41.json",
+      "sha256": "a46078dd1c13d9114bff07a891a1a903c1281681cf6dd3002e8d9e5ea8da03e9",
+      "size_bytes": 4765
+    },
+    "eval_baseline_v6": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\evidence\\v6-genesis-baseline.json",
+      "sha256": "881e1f6911379f9bc158fde300147f1d41416b8076fbc1a972786c6ddc9915e4",
+      "size_bytes": 750064
+    },
+    "eval_builder_v6": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\scripts\\build_public_eval_pack_v6.py",
+      "sha256": "1092090456f26d2e78a272664d34031fb0550c595983db502117c0ba1b763a32",
+      "size_bytes": 17264
+    },
+    "eval_freshness_audit_v5": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\evidence\\v5-fresh-template-audit.json",
+      "sha256": "b307dfafbe7d15c27a0b3d9d63a928aab05c1d99125877b8d0db74737b23ee65",
+      "size_bytes": 6044
+    },
+    "executable_source__kev___init___py__1a4f1b1cdc2a": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\__init__.py",
+      "sha256": "425e76d71e2d6bee495a67e8a03b5f94c67a9b9b24135be6c97753ebf8dbe969",
+      "size_bytes": 240
+    },
+    "executable_source__kev_actions_py__01a5a7b509ee": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\actions.py",
+      "sha256": "d7f4add51e3cb47d7432ef9c789526aafc1ee502eb3fcafc184516f6f70c8a50",
+      "size_bytes": 29874
+    },
+    "executable_source__kev_artifacts_py__d23d26ab3f14": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\artifacts.py",
+      "sha256": "47f025c46cee6761b09331268d3f94e84014d715d56b3dfa6d66fe4f44b21a67",
+      "size_bytes": 4706
+    },
+    "executable_source__kev_calibration_evidence_py__bd66e390cd42": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\calibration_evidence.py",
+      "sha256": "6c0c1c49ba0106c031d5b5e6a93593dd2763dfae4ce8e91b6a39d100b53d600e",
+      "size_bytes": 24491
+    },
+    "executable_source__kev_calibration_py__bf1676ec1c18": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\calibration.py",
+      "sha256": "aab6dc15689fd170472b7545acc01817491cb616c4a74e8066369a49a9350a8f",
+      "size_bytes": 9723
+    },
+    "executable_source__kev_cli_py__d07776ff958e": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\cli.py",
+      "sha256": "26401f95b87f8218ecebe92a13aafe6019ee6c4e2a3c20661b53bcd5cfe879a5",
+      "size_bytes": 18512
+    },
+    "executable_source__kev_encoders_py__5349fe37566b": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\encoders.py",
+      "sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9",
+      "size_bytes": 26022
+    },
+    "executable_source__kev_evaluation_py__11611607c0d4": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\evaluation.py",
+      "sha256": "d0670e5ca634883377690d2190008f062d6d3d06b20a15e39f9dd92baf0ed334",
+      "size_bytes": 48887
+    },
+    "executable_source__kev_evolution_py__1e6c18f47ca7": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\evolution.py",
+      "sha256": "cff082349035c9ff314db06481e25bd339a04957566b0cf09da7f54fc228084d",
+      "size_bytes": 57409
+    },
+    "executable_source__kev_frames_py__0580bd3b1c64": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\frames.py",
+      "sha256": "3e8f583611effaab4d435dd70edb3f91d48384af682061370e98cbf57152884d",
+      "size_bytes": 50033
+    },
+    "executable_source__kev_model_runtime_py__58a4b4e699cf": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\model_runtime.py",
+      "sha256": "bacf4e2e922f8c780cd97c37b61756b9028ef10962205af4b0c3136b9ff9f6e9",
+      "size_bytes": 8803
+    },
+    "executable_source__kev_sentence_training_py__ee3d3410b65a": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\sentence_training.py",
+      "sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59",
+      "size_bytes": 21933
+    },
+    "executable_source__kev_uc51___init___py__34a1f3329676": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51\\__init__.py",
+      "sha256": "9a8682142d97fe218bc8d5bbc5843efa1c1ebdb931285170b1be1f1a87aabdd5",
+      "size_bytes": 32
+    },
+    "executable_source__kev_uc51_cli_py__54a3c5e2434b": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51\\cli.py",
+      "sha256": "f16963cf4c0e5d8127cd1b4a868b7ed4d1c66948eef44d947f959184c50097ec",
+      "size_bytes": 2141
+    },
+    "executable_source__kev_uc51_semantic_core_py__5bd6bf4be294": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51\\semantic_core.py",
+      "sha256": "99f386526b6b8bafb6c20820d293e736a889fd45e27f0d5978c54dd47c1647cb",
+      "size_bytes": 6036
+    },
+    "executable_source__kev_uc51a2___init___py__9a117418c104": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51a2\\__init__.py",
+      "sha256": "5f128113c8dca4925312133f4b4a7386f6d4cf2a774ac26cd4bef7489ed3de7a",
+      "size_bytes": 32
+    },
+    "executable_source__kev_uc51a2_cli_py__e5f32f4228da": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51a2\\cli.py",
+      "sha256": "7e3f3d3ecf9e4d2858bbe1aa089a28db79fc5fc0417f505f95612f2ec4f07171",
+      "size_bytes": 2051
+    },
+    "executable_source__kev_uc51a2_semantic_breadth_py__60701180c319": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51a2\\semantic_breadth.py",
+      "sha256": "8f5fe48a7a697ee3c9f87b52e76aa9e71a6e8c2058894d004ac768a5a6a61f95",
+      "size_bytes": 44581
+    },
+    "executable_source__kev_uc51a3___init___py__c839ce805420": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51a3\\__init__.py",
+      "sha256": "60dbcb8facce6ebcdb754512e78d7b8201b2dc102a124aedc8937251f7aeae32",
+      "size_bytes": 31
+    },
+    "executable_source__kev_uc51a3_alive_py__077958be4a61": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51a3\\alive.py",
+      "sha256": "fd2c96b2e51a1e628b2dbd95f2e5ea53bb437c9cec4a9486755dfd386d8f63df",
+      "size_bytes": 50844
+    },
+    "executable_source__kev_uc51a3_cli_py__8b701942f4cc": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51a3\\cli.py",
+      "sha256": "bc407347fe619e7e9760b1d9a0294a7c8e6d9f123d0cdb173208d54bf1e85676",
+      "size_bytes": 4202
+    },
+    "executable_source__kev_uc51a3_server_py__9c0fc7638d96": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\kev\\uc51a3\\server.py",
+      "sha256": "a670b9c1c9e2a1f033ba0f99105731d3540226e2d145a0abbe648324fc105670",
+      "size_bytes": 7469
+    },
+    "executable_source__scripts_run_preregistered_experiment_py__1e6ce77eeb86": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\scripts\\run_preregistered_experiment.py",
+      "sha256": "bac9bef2848e23ac1238cba235f1546cf0f6f17c005547a1f2b5259d2d8aa65a",
+      "size_bytes": 87619
+    },
+    "experiment_schema": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\preregistered-experiment-plan-v1.schema.json",
+      "sha256": "edc99b2cf0bf7236b08ae23ee2ae3b213ef7dc59733d47538f21d4fb5bb2663b",
+      "size_bytes": 4188
+    },
+    "held_out_vocabulary": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\held-out-vocabulary-v2.txt",
+      "sha256": "087da62e8129dd259c1b2662f0439eb7d6387714528af14444a4575c66e76798",
+      "size_bytes": 91
+    },
+    "historical_replay": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\historical-190-260-replay.json",
+      "sha256": "4c7109721436b6d2f854c2a89449667d98a4b0f74161e1f26a869b75311890cb",
+      "size_bytes": 1423
+    },
+    "incumbent_builder": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\scripts\\create_public_reference_incumbent.py",
+      "sha256": "cf4308878d7ef86fda28ef31cb9b821eb631b19e4fe7fbb1ec691c40f8359bb4",
+      "size_bytes": 3191
+    },
+    "incumbent_checkpoint": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\public\\semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+      "sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+      "size_bytes": 1144120
+    },
+    "incumbent_evidence": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\public\\incumbent-evidence-v10.json",
+      "sha256": "69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21",
+      "size_bytes": 2386
+    },
+    "project_metadata": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\pyproject.toml",
+      "sha256": "38442f628b50b4fa15312c834f3659cde29513aea2dd9b62ad08710af6eaa84c",
+      "size_bytes": 634
+    },
+    "promotion_suite": {
+      "canonical_sha256": "3d53b4b981c9ebb7ad6f4d6e73b82e56c19a275fdbd76922a865256c43ad334c",
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v6-260.json",
+      "sha256": "a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029",
+      "size_bytes": 147296
+    },
+    "public_incumbent_manifest": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\public\\incumbent-manifest.json",
+      "sha256": "e270a64864a1f6bb8ce25d464772364ad3793e342674ae7e501111b1d67767bf",
+      "size_bytes": 545
+    },
+    "public_registry": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\registry.json",
+      "sha256": "52a83c2b55f6d6fa5befb7804c50e2a4ee85100406aa709f58b3e21f898177ad",
+      "size_bytes": 1041
+    },
+    "rejected_corpus": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\training\\reviewed\\semantic-frame-paraphrases-v5-reviewed.jsonl",
+      "sha256": "91b49f47804120906537f2b3eafeef5ddf1df1663f114e5c91a1c9fa59ce5dd8",
+      "size_bytes": 247278
+    },
+    "rejected_corpus_builder": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\scripts\\build_reviewed_training_corpus_v5.py",
+      "sha256": "7b63bdb809becfde07641affc7ba4ee22387486ed5bb9d5ac9f51004aeea3a32",
+      "size_bytes": 50138
+    },
+    "rejected_corpus_manifest": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\training\\reviewed\\semantic-frame-paraphrases-v5-manifest.json",
+      "sha256": "e783ece3d8aa4ac3d104833345ef771d1aa67536060a81be5e793c9c4d9c3b3d",
+      "size_bytes": 6795
+    },
+    "rejected_corpus_receipt": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\training\\reviewed\\semantic-frame-paraphrases-v5-rejection.json",
+      "sha256": "7fac970160fd0039d863557cf2b562358c3f4322c92046e9d30d30323f52d85d",
+      "size_bytes": 2302
+    },
+    "reviewed_corpus": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\training\\reviewed\\semantic-frame-paraphrases-v6-reviewed.jsonl",
+      "sha256": "c626da3350d873c1ccf62007b6a4c670b86c90840abbf3868db85c8aeae685ed",
+      "size_bytes": 271890
+    },
+    "reviewed_corpus_builder": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\scripts\\build_reviewed_training_corpus_v6.py",
+      "sha256": "e6386160ac10ad4037d4d3c58a00d8994623e42f51ab69f3a8c17669f23aeb1a",
+      "size_bytes": 16282
+    },
+    "reviewed_corpus_manifest": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\training\\reviewed\\semantic-frame-paraphrases-v6-manifest.json",
+      "sha256": "185ea3efcfe5a8083faa11c2a8dfc0a4df63d5844fe2fa640873a3730d850c4e",
+      "size_bytes": 7721
+    },
+    "runtime_requirements": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\requirements.txt",
+      "sha256": "bac2db6dc553341c590ba23e3dc72f34305b4bc32c23de80adea231caa502b77",
+      "size_bytes": 23
+    },
+    "trainer_input__evals_frozen_calibration_fit_v1_jsonl__5ed9b9ee4c8a": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\calibration-fit-v1.jsonl",
+      "sha256": "5734adb2045fa9d192888a2932c2821842833f6a17d9bc27db8bd5defe37e94c",
+      "size_bytes": 6758
+    },
+    "trainer_input__evals_frozen_frame_parser_known_failures_v1_json__7edf5930730b": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\frame-parser-known-failures-v1.json",
+      "sha256": "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901",
+      "size_bytes": 5924
+    },
+    "trainer_input__evals_frozen_held_out_vocabulary_v1_txt__c0bb6ed34d11": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\held-out-vocabulary-v1.txt",
+      "sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+      "size_bytes": 82
+    },
+    "trainer_input__evals_frozen_manifest_v1_json__03e7703f7c17": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\manifest-v1.json",
+      "sha256": "4932737e243a5d9286b824090992023792aedeaba9d1dfc0e808d73ccf73ba29",
+      "size_bytes": 1068
+    },
+    "trainer_input__evals_frozen_manifest_v2_json__3e614656adb7": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\manifest-v2.json",
+      "sha256": "a2b1adfc937d4c31c0f28339d83f64583fc23fabd8575ae7c29e1372ef0d386d",
+      "size_bytes": 1671
+    },
+    "trainer_input__evals_frozen_manifest_v3_json__3d096594ac8b": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\manifest-v3.json",
+      "sha256": "492a5f636c42e2fac45a4fc87cfe01990f0907240da50f0d2f1f7ee61670759c",
+      "size_bytes": 2271
+    },
+    "trainer_input__evals_frozen_manifest_v4_json__2101883dc188": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\manifest-v4.json",
+      "sha256": "21ae7711e3f3ad5323bc6a8a5669a5f073f7dedb646a61320dabfe487041888d",
+      "size_bytes": 3427
+    },
+    "trainer_input__evals_frozen_manifest_v5_json__9705678cbce2": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\manifest-v5.json",
+      "sha256": "4b2cb72aa1a891e1673225be4ff9c5989cc1165ad79203938ffdbe4f794e3e94",
+      "size_bytes": 5283
+    },
+    "trainer_input__evals_frozen_manifest_v6_json__b46d20c36de7": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\manifest-v6.json",
+      "sha256": "07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce",
+      "size_bytes": 7113
+    },
+    "trainer_input__evals_frozen_public_audit_v1_260_json__e10149a8e8f8": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v1-260.json",
+      "sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0",
+      "size_bytes": 129427
+    },
+    "trainer_input__evals_frozen_public_audit_v2_260_json__9a37649bb1d0": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v2-260.json",
+      "sha256": "ef9ff61967f8716e541ccdef3adea887da99dc988799098a9faf47e2ea3dd3c4",
+      "size_bytes": 114471
+    },
+    "trainer_input__evals_frozen_public_audit_v3_260_json__9c26af3580d0": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v3-260.json",
+      "sha256": "1bce1b6c1123336e30531b3cf54c1d01ff4aa420cfec0cb078eaca7f40f3b2d8",
+      "size_bytes": 118634
+    },
+    "trainer_input__evals_frozen_public_audit_v4_260_json__d2a90079b8df": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v4-260.json",
+      "sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322",
+      "size_bytes": 144574
+    },
+    "trainer_input__evals_frozen_public_audit_v5_260_json__f52613ead275": {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v5-260.json",
+      "sha256": "e913f483bdce2e3ea1a435f0c139a846874a73660665c69b8723a9670348451c",
+      "size_bytes": 146580
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "artifacts_preserved": [
+    {
+      "path": "training/reviewed/semantic-frame-paraphrases-v5-reviewed.jsonl",
+      "role": "REJECTED_TRAINING_CORPUS",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "91b49f47804120906537f2b3eafeef5ddf1df1663f114e5c91a1c9fa59ce5dd8",
+      "size_bytes": 247278
+    },
+    {
+      "path": "training/reviewed/semantic-frame-paraphrases-v5-manifest.json",
+      "role": "REJECTED_CORPUS_MANIFEST",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "e783ece3d8aa4ac3d104833345ef771d1aa67536060a81be5e793c9c4d9c3b3d",
+      "size_bytes": 6795
+    },
+    {
+      "path": "scripts/build_reviewed_training_corpus_v5.py",
+      "role": "PRESERVED_CORPUS_BUILDER",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "7b63bdb809becfde07641affc7ba4ee22387486ed5bb9d5ac9f51004aeea3a32",
+      "size_bytes": 50138
+    }
+  ],
+  "collision": {
+    "canonical_frames_sha256": "2f66af091b9f28d73fcce6b8aae5679690c0041c172c9b50ebb85539d13134e1",
+    "lesson_ids": [
+      "v5-evidence-consistent-alpha-01",
+      "v5-evidence-consistent-alpha-02",
+      "v5-evidence-consistent-alpha-03",
+      "v5-evidence-consistent-gamma-01",
+      "v5-evidence-consistent-gamma-02",
+      "v5-evidence-consistent-gamma-03"
+    ],
+    "paraphrase_groups": [
+      "evidence-consistent-alpha",
+      "evidence-consistent-gamma"
+    ],
+    "row_count": 6
+  },
+  "created_at": "2026-09-28T11:18:33Z",
+  "decision": "REJECTED_BEFORE_TRAINING",
+  "id": "kev-v5-reviewed-semantic-frame-corpus-rejection",
+  "promotion": {
+    "decision": "NOT_APPLICABLE",
+    "eval_card": null,
+    "ledger_model_event": null
+  },
+  "reason": "one exact EVIDENCE_CONSISTENCY frame target appeared under two paraphrase group IDs; the contrastive objective would treat cross-group same-semantics pairs as negatives",
+  "reason_code": "SEMANTIC_TARGET_MULTIPLE_PARAPHRASE_GROUPS",
+  "rejection_canonical_sha256": "3e4d7d2aa2272fb2448677bdd0d9a88694593792f0eef3e1374336d2e35df133",
+  "resolution": "preserve v5 bytes and issue a separately versioned v6 corpus with a global one-target-to-one-group validation",
+  "schema": "kev.training-corpus-rejection.v1",
+  "training": {
+    "checkpoint_created": false,
+    "model_weights_touched": false,
+    "optimizer_steps": 0,
+    "training_receipt": null
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "artifact_status": "INCUMBENT",
+  "claim_boundary": "untrained bootstrap artifact; not a capability claim",
+  "name": "v0.52 public genesis reference",
+  "parameters": 285092,
+  "parent_sha256": null,
+  "path": "models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+  "schema": "kev.model-manifest.v1",
+  "score_status": "UNCALIBRATED",
+  "sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+  "training_data": null,
+  "training_steps": 0
+}

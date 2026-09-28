@@ -1,0 +1,23 @@
+{
+  "artifact_status": "INCUMBENT",
+  "checkpoint_path": "models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+  "checkpoint_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+  "claim_boundary": "untrained public genesis reference; scores are a baseline, not evidence of learning",
+  "eval_card_path": "evals/evidence/v3-genesis-baseline-portable-v4.json",
+  "eval_card_sha256": "10287ceef18424cae710abfc1fee6a6b4febe301e0015a2614b5c8087a6b4051",
+  "evaluated_at": "2026-09-28T08:37:09Z",
+  "metrics": {
+    "calibration_exact_match": 0.25,
+    "composition_exact_match": 0.5,
+    "fresh_exact_match": 0.62,
+    "oov_exact_match": 0.0,
+    "retention_exact_match": 1.0
+  },
+  "parent_sha256": null,
+  "report_sha256": "93688ff01a7e28f1b47a7ab33e8453561ad94f7db41e02acbc607bf401d60f10",
+  "schema": "kev.incumbent-evidence.v1",
+  "score_status": "UNCALIBRATED",
+  "suite_canonical_sha256": "25153929122a1d76e51e0f866a70d57fbbf1d179599d4ed383d35662cf44c888",
+  "suite_path": "evals/frozen/public-audit-v3-260.json",
+  "suite_sha256": "1bce1b6c1123336e30531b3cf54c1d01ff4aa420cfec0cb078eaca7f40f3b2d8"
+}

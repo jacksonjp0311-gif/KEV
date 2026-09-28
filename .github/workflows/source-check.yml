@@ -4,13 +4,35 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
-  compile:
-    runs-on: ubuntu-latest
+  test:
+    name: Python 3.12 · ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+      - name: Install package and test dependencies
+        run: python -m pip install -e ".[dev,semantic-encoder]"
       - name: Compile public Python source
-        run: python -m compileall -q kev
+        run: python -m compileall -q kev scripts tests_public
+      - name: Lint Python source
+        run: python -m ruff check kev scripts tests_public
+      - name: Type-check runtime source
+        run: python -m mypy kev
+      - name: Verify immutable public artifacts
+        run: python -m kev.cli doctor
+      - name: Replay the published aggregate rejection
+        run: python -m kev.cli historical-replay
+      - name: Run public test suite
+        run: python -m pytest -q tests_public

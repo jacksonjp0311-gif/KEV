@@ -1,5 +1,6 @@
 __pycache__/
 *.py[cod]
+*.egg-info/
 .venv/
 .kev-*-venv/
 runs/
@@ -11,7 +12,13 @@ state/
 *.pth
 *.safetensors
 *.bin
+!experiments/frozen-encoder-v6-20260928-evidence/**/*.pt
 models/**
+!models/public/
+!models/public/**
+!models/registry.json
+!models/encoder-sources/
+!models/encoder-sources/**
 !models/**/.gitkeep
 *.zip
 *.tar

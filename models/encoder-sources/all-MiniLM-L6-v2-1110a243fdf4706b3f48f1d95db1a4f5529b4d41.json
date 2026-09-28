@@ -1,0 +1,123 @@
+{
+  "schema": "kev.encoder-acquisition.v1",
+  "name": "sentence-transformers/all-MiniLM-L6-v2",
+  "selection_status": "APPROVED_FOR_LOCAL_FROZEN_FEATURE_EXTRACTION",
+  "source": {
+    "provider": "huggingface",
+    "repository": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "api_url": "https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/revision/1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+  },
+  "license": {
+    "identifier": "Apache-2.0",
+    "model_card_path": "README.md",
+    "model_card_sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+    "model_card_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/blob/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md",
+    "license_text_path": "LICENSE-2.0.txt",
+    "license_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "license_text_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+  },
+  "embedding_dim": 384,
+  "network_policy": "ACQUISITION_ONLY_RUNTIME_LOCAL_ONLY",
+  "local_directory": "models/local/encoders/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "local_manifest_name": "encoder-manifest.json",
+  "expected_local_manifest_sha256": "cfd8f8bc3413f31ab927ad7d78eb380c3359fdb2893061075d2369dfec81ea57",
+  "acquisition_receipt_name": "acquisition-receipt.json",
+  "loader": {
+    "id": "hf-bert-mean-pooling-normalize-v1",
+    "config_path": "config.json",
+    "model_path": "model.safetensors",
+    "tokenizer_path": "tokenizer.json",
+    "pooling_config_path": "1_Pooling/config.json",
+    "modules_path": "modules.json",
+    "max_length": 256,
+    "pooling": "MEAN",
+    "normalize": true,
+    "dynamic_remote_code": false,
+    "safetensors_only": true
+  },
+  "files": [
+    {
+      "origin": "huggingface",
+      "path": "1_Pooling/config.json",
+      "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+      "size_bytes": 190
+    },
+    {
+      "origin": "license_url",
+      "path": "LICENSE-2.0.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size_bytes": 11358
+    },
+    {
+      "origin": "huggingface",
+      "path": "README.md",
+      "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+      "size_bytes": 10502
+    },
+    {
+      "origin": "huggingface",
+      "path": "config.json",
+      "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+      "size_bytes": 612
+    },
+    {
+      "origin": "huggingface",
+      "path": "config_sentence_transformers.json",
+      "sha256": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+      "size_bytes": 116
+    },
+    {
+      "origin": "huggingface",
+      "path": "model.safetensors",
+      "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+      "size_bytes": 90868376
+    },
+    {
+      "origin": "huggingface",
+      "path": "modules.json",
+      "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "size_bytes": 349
+    },
+    {
+      "origin": "huggingface",
+      "path": "sentence_bert_config.json",
+      "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+      "size_bytes": 53
+    },
+    {
+      "origin": "huggingface",
+      "path": "special_tokens_map.json",
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "size_bytes": 112
+    },
+    {
+      "origin": "huggingface",
+      "path": "tokenizer.json",
+      "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+      "size_bytes": 466247
+    },
+    {
+      "origin": "huggingface",
+      "path": "tokenizer_config.json",
+      "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+      "size_bytes": 350
+    },
+    {
+      "origin": "huggingface",
+      "path": "vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "size_bytes": 231508
+    }
+  ],
+  "replay": {
+    "acquire_command": "python scripts/acquire_frozen_encoder.py --source-manifest models/encoder-sources/all-MiniLM-L6-v2-1110a243fdf4706b3f48f1d95db1a4f5529b4d41.json --reviewed-by \"KEV repository owner authorization recorded in task\" --reviewed-at 2026-09-28T11:21:02Z --accept-license Apache-2.0",
+    "offline_verify_command": "python scripts/acquire_frozen_encoder.py --verify-only",
+    "runtime_network_access": "FORBIDDEN",
+    "expected_outputs": [
+      "encoder-manifest.json",
+      "acquisition-receipt.json"
+    ]
+  }
+}

@@ -1,0 +1,6642 @@
+{
+  "activation": "NONE",
+  "architecture_transition": {
+    "copied_components": [
+      "head",
+      "cardinality_head"
+    ],
+    "from_schema": "kev.semantic-frames.v052",
+    "new_projection_initialization": "DETERMINISTIC_XAVIER_UNIFORM",
+    "to_schema": "kev.frozen-sentence-frames.v1"
+  },
+  "artifact_status": "CHALLENGER",
+  "challenger_path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\frozen-encoder-v6-20260928-evidence\\seed-results\\seed-52031\\candidates\\20260928-130706-c626da3350-68bddca7\\trained\\semantic-breadth.pt",
+  "challenger_sha256": "f9403cfe957e88adf94011bd90244651c5efa43aec44803d3026ef6c1238d8bb",
+  "contrastive_positive_pairs": 246,
+  "encoder_artifact": {
+    "files": [
+      {
+        "path": "1_Pooling/config.json",
+        "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+        "size_bytes": 190
+      },
+      {
+        "path": "LICENSE-2.0.txt",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size_bytes": 11358
+      },
+      {
+        "path": "README.md",
+        "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+        "size_bytes": 10502
+      },
+      {
+        "path": "config.json",
+        "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+        "size_bytes": 612
+      },
+      {
+        "path": "config_sentence_transformers.json",
+        "sha256": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+        "size_bytes": 116
+      },
+      {
+        "path": "model.safetensors",
+        "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+        "size_bytes": 90868376
+      },
+      {
+        "path": "modules.json",
+        "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "size_bytes": 349
+      },
+      {
+        "path": "sentence_bert_config.json",
+        "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+        "size_bytes": 53
+      },
+      {
+        "path": "special_tokens_map.json",
+        "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+        "size_bytes": 112
+      },
+      {
+        "path": "tokenizer.json",
+        "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+        "size_bytes": 466247
+      },
+      {
+        "path": "tokenizer_config.json",
+        "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+        "size_bytes": 350
+      },
+      {
+        "path": "vocab.txt",
+        "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+        "size_bytes": 231508
+      }
+    ],
+    "license": {
+      "identifier": "Apache-2.0",
+      "license_text_path": "LICENSE-2.0.txt",
+      "license_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "license_text_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "model_card_path": "README.md",
+      "model_card_sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+      "model_card_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/blob/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md"
+    },
+    "loader": {
+      "config_path": "config.json",
+      "dynamic_remote_code": false,
+      "id": "hf-bert-mean-pooling-normalize-v1",
+      "max_length": 256,
+      "model_path": "model.safetensors",
+      "modules_path": "modules.json",
+      "normalize": true,
+      "pooling": "MEAN",
+      "pooling_config_path": "1_Pooling/config.json",
+      "safetensors_only": true,
+      "tokenizer_path": "tokenizer.json"
+    },
+    "name": "sentence-transformers/all-MiniLM-L6-v2",
+    "network_policy": "LOCAL_ONLY",
+    "path": "models/local/encoders/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/encoder-manifest.json",
+    "permission": {
+      "reviewed_at": "2026-09-28T11:21:02Z",
+      "reviewed_by": "KEV repository owner authorization recorded in task",
+      "scope": "local KEV frozen feature extraction and proposal-head research under Apache-2.0; no redistribution claim beyond the license",
+      "status": "APPROVED"
+    },
+    "sha256": "cfd8f8bc3413f31ab927ad7d78eb380c3359fdb2893061075d2369dfec81ea57",
+    "source": {
+      "api_url": "https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/revision/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "provider": "huggingface",
+      "repository": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+    }
+  },
+  "encoder_runtime_source_sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9",
+  "environment": {
+    "python": "3.12.2",
+    "safetensors": "0.7.0",
+    "tokenizers": "0.22.2",
+    "torch": "2.5.1+cu121",
+    "transformers": "5.0.0"
+  },
+  "examples": 197,
+  "frozen_embedding_cache": {
+    "encoder_batch_size": 32,
+    "file_sha256": "ffc749b2852aaff9ab71bb8c65bf163dce4412972a86a3f834ae0c6de28199b4",
+    "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\frozen-encoder-v6-20260928-evidence\\seed-results\\seed-52031\\candidates\\20260928-130706-c626da3350-68bddca7\\trained\\frozen-embeddings.pt",
+    "shape": [
+      197,
+      384
+    ],
+    "values_sha256": "ca9a0d4d0721eee5c8b1bffe96f0bc241cc3e8a6d48b4e9665fcd257cc711711"
+  },
+  "held_out_vocabulary": [
+    "ameliorate",
+    "antedescedes",
+    "antipode",
+    "attested",
+    "celerity",
+    "citation",
+    "concordant",
+    "contrapose",
+    "displaces",
+    "dormant",
+    "empirically",
+    "inviolable",
+    "modulus",
+    "norm",
+    "portend",
+    "presage",
+    "quiescent",
+    "sacrosanct"
+  ],
+  "held_out_vocabulary_sha256": "e79ae8dace9a7c8bb3cfae86621146e1250a0ed10896061eea8deaa1ce4dc8ba",
+  "lessons_path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\training\\reviewed\\semantic-frame-paraphrases-v6-reviewed.jsonl",
+  "lessons_sha256": "c626da3350d873c1ccf62007b6a4c670b86c90840abbf3868db85c8aeae685ed",
+  "loss_history": [
+    {
+      "cardinality": 1.9262317419052124,
+      "contrastive": 0.12355401366949081,
+      "loss": 1.1001642942428589,
+      "relation": 0.6716740727424622,
+      "step": 1
+    },
+    {
+      "cardinality": 1.9107788801193237,
+      "contrastive": 0.12125196307897568,
+      "loss": 1.0936311483383179,
+      "relation": 0.6690372824668884,
+      "step": 2
+    },
+    {
+      "cardinality": 1.8955403566360474,
+      "contrastive": 0.11928024888038635,
+      "loss": 1.0873273611068726,
+      "relation": 0.6664712429046631,
+      "step": 3
+    },
+    {
+      "cardinality": 1.8805688619613647,
+      "contrastive": 0.11761865019798279,
+      "loss": 1.0812723636627197,
+      "relation": 0.6639919877052307,
+      "step": 4
+    },
+    {
+      "cardinality": 1.8659398555755615,
+      "contrastive": 0.1162429004907608,
+      "loss": 1.075484275817871,
+      "relation": 0.6616111993789673,
+      "step": 5
+    },
+    {
+      "cardinality": 1.8517032861709595,
+      "contrastive": 0.11513958871364594,
+      "loss": 1.0699784755706787,
+      "relation": 0.6593390107154846,
+      "step": 6
+    },
+    {
+      "cardinality": 1.8378936052322388,
+      "contrastive": 0.11428458988666534,
+      "loss": 1.0647629499435425,
+      "relation": 0.6571846008300781,
+      "step": 7
+    },
+    {
+      "cardinality": 1.8245331048965454,
+      "contrastive": 0.11364313960075378,
+      "loss": 1.0598338842391968,
+      "relation": 0.6551520824432373,
+      "step": 8
+    },
+    {
+      "cardinality": 1.8116357326507568,
+      "contrastive": 0.11319345235824585,
+      "loss": 1.0551857948303223,
+      "relation": 0.653240978717804,
+      "step": 9
+    },
+    {
+      "cardinality": 1.7992076873779297,
+      "contrastive": 0.11288732290267944,
+      "loss": 1.0508009195327759,
+      "relation": 0.6514487266540527,
+      "step": 10
+    },
+    {
+      "cardinality": 1.7872488498687744,
+      "contrastive": 0.11266982555389404,
+      "loss": 1.0466525554656982,
+      "relation": 0.6497683525085449,
+      "step": 11
+    },
+    {
+      "cardinality": 1.7757502794265747,
+      "contrastive": 0.11249355971813202,
+      "loss": 1.0427136421203613,
+      "relation": 0.6481907367706299,
+      "step": 12
+    },
+    {
+      "cardinality": 1.7646989822387695,
+      "contrastive": 0.1123114675283432,
+      "loss": 1.0389548540115356,
+      "relation": 0.6467060446739197,
+      "step": 13
+    },
+    {
+      "cardinality": 1.7540762424468994,
+      "contrastive": 0.1120932400226593,
+      "loss": 1.0353506803512573,
+      "relation": 0.6453027725219727,
+      "step": 14
+    },
+    {
+      "cardinality": 1.7438617944717407,
+      "contrastive": 0.11182457208633423,
+      "loss": 1.031880497932434,
+      "relation": 0.6439695954322815,
+      "step": 15
+    },
+    {
+      "cardinality": 1.7340352535247803,
+      "contrastive": 0.1115005761384964,
+      "loss": 1.0285288095474243,
+      "relation": 0.6426965594291687,
+      "step": 16
+    },
+    {
+      "cardinality": 1.7245736122131348,
+      "contrastive": 0.11113154888153076,
+      "loss": 1.0252825021743774,
+      "relation": 0.6414717435836792,
+      "step": 17
+    },
+    {
+      "cardinality": 1.715456247329712,
+      "contrastive": 0.11073733866214752,
+      "loss": 1.022133708000183,
+      "relation": 0.6402844190597534,
+      "step": 18
+    },
+    {
+      "cardinality": 1.7066633701324463,
+      "contrastive": 0.11034119129180908,
+      "loss": 1.0190757513046265,
+      "relation": 0.6391236782073975,
+      "step": 19
+    },
+    {
+      "cardinality": 1.6981728076934814,
+      "contrastive": 0.10996858775615692,
+      "loss": 1.0161017179489136,
+      "relation": 0.6379781365394592,
+      "step": 20
+    },
+    {
+      "cardinality": 1.689963698387146,
+      "contrastive": 0.10963968932628632,
+      "loss": 1.0132042169570923,
+      "relation": 0.6368375420570374,
+      "step": 21
+    },
+    {
+      "cardinality": 1.6820133924484253,
+      "contrastive": 0.10937070846557617,
+      "loss": 1.0103750228881836,
+      "relation": 0.6356925368309021,
+      "step": 22
+    },
+    {
+      "cardinality": 1.674299955368042,
+      "contrastive": 0.10917958617210388,
+      "loss": 1.0076072216033936,
+      "relation": 0.6345343589782715,
+      "step": 23
+    },
+    {
+      "cardinality": 1.6668027639389038,
+      "contrastive": 0.10907202959060669,
+      "loss": 1.0048928260803223,
+      "relation": 0.633357048034668,
+      "step": 24
+    },
+    {
+      "cardinality": 1.659501552581787,
+      "contrastive": 0.10905654728412628,
+      "loss": 1.0022255182266235,
+      "relation": 0.6321554183959961,
+      "step": 25
+    },
+    {
+      "cardinality": 1.6523789167404175,
+      "contrastive": 0.10912950336933136,
+      "loss": 0.9995982050895691,
+      "relation": 0.6309270858764648,
+      "step": 26
+    },
+    {
+      "cardinality": 1.6454194784164429,
+      "contrastive": 0.10929161310195923,
+      "loss": 0.997006356716156,
+      "relation": 0.6296704411506653,
+      "step": 27
+    },
+    {
+      "cardinality": 1.6386076211929321,
+      "contrastive": 0.10953374207019806,
+      "loss": 0.9944438338279724,
+      "relation": 0.6283854842185974,
+      "step": 28
+    },
+    {
+      "cardinality": 1.6319304704666138,
+      "contrastive": 0.10985526442527771,
+      "loss": 0.9919075965881348,
+      "relation": 0.6270721554756165,
+      "step": 29
+    },
+    {
+      "cardinality": 1.6253764629364014,
+      "contrastive": 0.11024370789527893,
+      "loss": 0.989395022392273,
+      "relation": 0.6257343888282776,
+      "step": 30
+    },
+    {
+      "cardinality": 1.6189342737197876,
+      "contrastive": 0.11068996787071228,
+      "loss": 0.9869046807289124,
+      "relation": 0.6243763566017151,
+      "step": 31
+    },
+    {
+      "cardinality": 1.612596035003662,
+      "contrastive": 0.111182302236557,
+      "loss": 0.9844359755516052,
+      "relation": 0.6230030059814453,
+      "step": 32
+    },
+    {
+      "cardinality": 1.6063557863235474,
+      "contrastive": 0.1117047667503357,
+      "loss": 0.9819877743721008,
+      "relation": 0.6216199994087219,
+      "step": 33
+    },
+    {
+      "cardinality": 1.6002063751220703,
+      "contrastive": 0.11224488914012909,
+      "loss": 0.9795584082603455,
+      "relation": 0.6202313899993896,
+      "step": 34
+    },
+    {
+      "cardinality": 1.5941425561904907,
+      "contrastive": 0.11279039084911346,
+      "loss": 0.9771462678909302,
+      "relation": 0.6188411116600037,
+      "step": 35
+    },
+    {
+      "cardinality": 1.5881578922271729,
+      "contrastive": 0.11332923173904419,
+      "loss": 0.9747496843338013,
+      "relation": 0.61745285987854,
+      "step": 36
+    },
+    {
+      "cardinality": 1.5822490453720093,
+      "contrastive": 0.11384934186935425,
+      "loss": 0.9723671674728394,
+      "relation": 0.6160700917243958,
+      "step": 37
+    },
+    {
+      "cardinality": 1.576409935951233,
+      "contrastive": 0.114342600107193,
+      "loss": 0.9699967503547668,
+      "relation": 0.6146948337554932,
+      "step": 38
+    },
+    {
+      "cardinality": 1.5706367492675781,
+      "contrastive": 0.11480718851089478,
+      "loss": 0.9676372408866882,
+      "relation": 0.6133273243904114,
+      "step": 39
+    },
+    {
+      "cardinality": 1.564924955368042,
+      "contrastive": 0.11524282395839691,
+      "loss": 0.965287446975708,
+      "relation": 0.6119674444198608,
+      "step": 40
+    },
+    {
+      "cardinality": 1.5592725276947021,
+      "contrastive": 0.11565116047859192,
+      "loss": 0.9629473090171814,
+      "relation": 0.6106148362159729,
+      "step": 41
+    },
+    {
+      "cardinality": 1.5536751747131348,
+      "contrastive": 0.11603187024593353,
+      "loss": 0.9606149196624756,
+      "relation": 0.6092687249183655,
+      "step": 42
+    },
+    {
+      "cardinality": 1.5481292009353638,
+      "contrastive": 0.11638923734426498,
+      "loss": 0.9582894444465637,
+      "relation": 0.6079273819923401,
+      "step": 43
+    },
+    {
+      "cardinality": 1.5426299571990967,
+      "contrastive": 0.11672885715961456,
+      "loss": 0.9559701085090637,
+      "relation": 0.6065889596939087,
+      "step": 44
+    },
+    {
+      "cardinality": 1.5371729135513306,
+      "contrastive": 0.11705814301967621,
+      "loss": 0.9536565542221069,
+      "relation": 0.605251669883728,
+      "step": 45
+    },
+    {
+      "cardinality": 1.5317543745040894,
+      "contrastive": 0.11738557368516922,
+      "loss": 0.9513486623764038,
+      "relation": 0.6039128303527832,
+      "step": 46
+    },
+    {
+      "cardinality": 1.5263690948486328,
+      "contrastive": 0.11771702766418457,
+      "loss": 0.9490453600883484,
+      "relation": 0.6025705933570862,
+      "step": 47
+    },
+    {
+      "cardinality": 1.5210120677947998,
+      "contrastive": 0.11805946379899979,
+      "loss": 0.9467459917068481,
+      "relation": 0.6012227535247803,
+      "step": 48
+    },
+    {
+      "cardinality": 1.5156773328781128,
+      "contrastive": 0.11841830611228943,
+      "loss": 0.9444498419761658,
+      "relation": 0.5998679995536804,
+      "step": 49
+    },
+    {
+      "cardinality": 1.510358452796936,
+      "contrastive": 0.11879979819059372,
+      "loss": 0.9421563744544983,
+      "relation": 0.5985047817230225,
+      "step": 50
+    },
+    {
+      "cardinality": 1.5050500631332397,
+      "contrastive": 0.1192069798707962,
+      "loss": 0.9398652911186218,
+      "relation": 0.5971328616142273,
+      "step": 51
+    },
+    {
+      "cardinality": 1.499747633934021,
+      "contrastive": 0.11964340507984161,
+      "loss": 0.937576413154602,
+      "relation": 0.5957517027854919,
+      "step": 52
+    },
+    {
+      "cardinality": 1.4944453239440918,
+      "contrastive": 0.12010730057954788,
+      "loss": 0.9352890849113464,
+      "relation": 0.5943624973297119,
+      "step": 53
+    },
+    {
+      "cardinality": 1.489139437675476,
+      "contrastive": 0.12059733271598816,
+      "loss": 0.9330030083656311,
+      "relation": 0.5929660201072693,
+      "step": 54
+    },
+    {
+      "cardinality": 1.4838250875473022,
+      "contrastive": 0.12110988795757294,
+      "loss": 0.9307178258895874,
+      "relation": 0.5915643572807312,
+      "step": 55
+    },
+    {
+      "cardinality": 1.4784990549087524,
+      "contrastive": 0.12164418399333954,
+      "loss": 0.9284340143203735,
+      "relation": 0.5901587009429932,
+      "step": 56
+    },
+    {
+      "cardinality": 1.4731594324111938,
+      "contrastive": 0.12219853699207306,
+      "loss": 0.9261515736579895,
+      "relation": 0.5887501835823059,
+      "step": 57
+    },
+    {
+      "cardinality": 1.4678043127059937,
+      "contrastive": 0.12276681512594223,
+      "loss": 0.923870325088501,
+      "relation": 0.5873410701751709,
+      "step": 58
+    },
+    {
+      "cardinality": 1.4624329805374146,
+      "contrastive": 0.12334708869457245,
+      "loss": 0.9215907454490662,
+      "relation": 0.5859326720237732,
+      "step": 59
+    },
+    {
+      "cardinality": 1.457045078277588,
+      "contrastive": 0.12393409013748169,
+      "loss": 0.9193122386932373,
+      "relation": 0.5845263004302979,
+      "step": 60
+    },
+    {
+      "cardinality": 1.4516394138336182,
+      "contrastive": 0.12452638894319534,
+      "loss": 0.917034387588501,
+      "relation": 0.5831223130226135,
+      "step": 61
+    },
+    {
+      "cardinality": 1.4462155103683472,
+      "contrastive": 0.12512224912643433,
+      "loss": 0.914757490158081,
+      "relation": 0.5817216038703918,
+      "step": 62
+    },
+    {
+      "cardinality": 1.4407726526260376,
+      "contrastive": 0.12572269141674042,
+      "loss": 0.9124811887741089,
+      "relation": 0.5803236961364746,
+      "step": 63
+    },
+    {
+      "cardinality": 1.4353126287460327,
+      "contrastive": 0.1263299286365509,
+      "loss": 0.9102059006690979,
+      "relation": 0.5789278745651245,
+      "step": 64
+    },
+    {
+      "cardinality": 1.4298350811004639,
+      "contrastive": 0.12694305181503296,
+      "loss": 0.907931387424469,
+      "relation": 0.5775342583656311,
+      "step": 65
+    },
+    {
+      "cardinality": 1.424342155456543,
+      "contrastive": 0.12756547331809998,
+      "loss": 0.9056576490402222,
+      "relation": 0.5761412978172302,
+      "step": 66
+    },
+    {
+      "cardinality": 1.4188350439071655,
+      "contrastive": 0.12820123136043549,
+      "loss": 0.9033848643302917,
+      "relation": 0.5747473835945129,
+      "step": 67
+    },
+    {
+      "cardinality": 1.4133161306381226,
+      "contrastive": 0.12885360419750214,
+      "loss": 0.9011130332946777,
+      "relation": 0.5733510255813599,
+      "step": 68
+    },
+    {
+      "cardinality": 1.4077867269515991,
+      "contrastive": 0.12952375411987305,
+      "loss": 0.8988422751426697,
+      "relation": 0.5719516277313232,
+      "step": 69
+    },
+    {
+      "cardinality": 1.402248501777649,
+      "contrastive": 0.13021542131900787,
+      "loss": 0.8965727090835571,
+      "relation": 0.5705476403236389,
+      "step": 70
+    },
+    {
+      "cardinality": 1.3967022895812988,
+      "contrastive": 0.13092996180057526,
+      "loss": 0.894304633140564,
+      "relation": 0.5691387057304382,
+      "step": 71
+    },
+    {
+      "cardinality": 1.3911489248275757,
+      "contrastive": 0.13166463375091553,
+      "loss": 0.8920379877090454,
+      "relation": 0.5677255392074585,
+      "step": 72
+    },
+    {
+      "cardinality": 1.3855890035629272,
+      "contrastive": 0.13241788744926453,
+      "loss": 0.8897729516029358,
+      "relation": 0.5663089156150818,
+      "step": 73
+    },
+    {
+      "cardinality": 1.3800239562988281,
+      "contrastive": 0.13318508863449097,
+      "loss": 0.8875098824501038,
+      "relation": 0.5648903250694275,
+      "step": 74
+    },
+    {
+      "cardinality": 1.3744539022445679,
+      "contrastive": 0.1339617818593979,
+      "loss": 0.8852488398551941,
+      "relation": 0.5634714365005493,
+      "step": 75
+    },
+    {
+      "cardinality": 1.368880271911621,
+      "contrastive": 0.1347438097000122,
+      "loss": 0.8829905390739441,
+      "relation": 0.5620541572570801,
+      "step": 76
+    },
+    {
+      "cardinality": 1.363304615020752,
+      "contrastive": 0.13552901148796082,
+      "loss": 0.8807346820831299,
+      "relation": 0.5606386065483093,
+      "step": 77
+    },
+    {
+      "cardinality": 1.3577287197113037,
+      "contrastive": 0.13631807267665863,
+      "loss": 0.8784813284873962,
+      "relation": 0.5592242479324341,
+      "step": 78
+    },
+    {
+      "cardinality": 1.3521535396575928,
+      "contrastive": 0.1371082365512848,
+      "loss": 0.8762306571006775,
+      "relation": 0.5578120350837708,
+      "step": 79
+    },
+    {
+      "cardinality": 1.3465800285339355,
+      "contrastive": 0.1378999948501587,
+      "loss": 0.8739824891090393,
+      "relation": 0.5564014911651611,
+      "step": 80
+    },
+    {
+      "cardinality": 1.3410099744796753,
+      "contrastive": 0.13869041204452515,
+      "loss": 0.871737539768219,
+      "relation": 0.5549938678741455,
+      "step": 81
+    },
+    {
+      "cardinality": 1.3354456424713135,
+      "contrastive": 0.1394817978143692,
+      "loss": 0.8694957494735718,
+      "relation": 0.5535879731178284,
+      "step": 82
+    },
+    {
+      "cardinality": 1.329887866973877,
+      "contrastive": 0.14027036726474762,
+      "loss": 0.8672574162483215,
+      "relation": 0.5521851778030396,
+      "step": 83
+    },
+    {
+      "cardinality": 1.324337363243103,
+      "contrastive": 0.14105510711669922,
+      "loss": 0.8650224208831787,
+      "relation": 0.5507856607437134,
+      "step": 84
+    },
+    {
+      "cardinality": 1.3187953233718872,
+      "contrastive": 0.1418377161026001,
+      "loss": 0.8627909421920776,
+      "relation": 0.5493886470794678,
+      "step": 85
+    },
+    {
+      "cardinality": 1.3132641315460205,
+      "contrastive": 0.1426224708557129,
+      "loss": 0.8605632185935974,
+      "relation": 0.5479925274848938,
+      "step": 86
+    },
+    {
+      "cardinality": 1.307745099067688,
+      "contrastive": 0.1434112787246704,
+      "loss": 0.8583397269248962,
+      "relation": 0.5465967655181885,
+      "step": 87
+    },
+    {
+      "cardinality": 1.302240252494812,
+      "contrastive": 0.14420481026172638,
+      "loss": 0.8561205863952637,
+      "relation": 0.5452008843421936,
+      "step": 88
+    },
+    {
+      "cardinality": 1.2967501878738403,
+      "contrastive": 0.14500375092029572,
+      "loss": 0.8539055585861206,
+      "relation": 0.5438042283058167,
+      "step": 89
+    },
+    {
+      "cardinality": 1.2912752628326416,
+      "contrastive": 0.14580775797367096,
+      "loss": 0.8516948223114014,
+      "relation": 0.5424070358276367,
+      "step": 90
+    },
+    {
+      "cardinality": 1.2858164310455322,
+      "contrastive": 0.14661678671836853,
+      "loss": 0.8494887351989746,
+      "relation": 0.5410095453262329,
+      "step": 91
+    },
+    {
+      "cardinality": 1.2803728580474854,
+      "contrastive": 0.1474275141954422,
+      "loss": 0.8472871780395508,
+      "relation": 0.5396130084991455,
+      "step": 92
+    },
+    {
+      "cardinality": 1.2749451398849487,
+      "contrastive": 0.14823657274246216,
+      "loss": 0.8450905680656433,
+      "relation": 0.5382187366485596,
+      "step": 93
+    },
+    {
+      "cardinality": 1.2695322036743164,
+      "contrastive": 0.1490405797958374,
+      "loss": 0.8428988456726074,
+      "relation": 0.5368281602859497,
+      "step": 94
+    },
+    {
+      "cardinality": 1.2641334533691406,
+      "contrastive": 0.14983516931533813,
+      "loss": 0.8407121896743774,
+      "relation": 0.5354431867599487,
+      "step": 95
+    },
+    {
+      "cardinality": 1.2587491273880005,
+      "contrastive": 0.15061931312084198,
+      "loss": 0.8385306596755981,
+      "relation": 0.5340641140937805,
+      "step": 96
+    },
+    {
+      "cardinality": 1.2533782720565796,
+      "contrastive": 0.15138818323612213,
+      "loss": 0.8363544344902039,
+      "relation": 0.5326929092407227,
+      "step": 97
+    },
+    {
+      "cardinality": 1.2480216026306152,
+      "contrastive": 0.15214033424854279,
+      "loss": 0.8341837525367737,
+      "relation": 0.5313302874565125,
+      "step": 98
+    },
+    {
+      "cardinality": 1.2426804304122925,
+      "contrastive": 0.15287569165229797,
+      "loss": 0.8320187330245972,
+      "relation": 0.5299761295318604,
+      "step": 99
+    },
+    {
+      "cardinality": 1.237356424331665,
+      "contrastive": 0.15359658002853394,
+      "loss": 0.8298595547676086,
+      "relation": 0.52862948179245,
+      "step": 100
+    },
+    {
+      "cardinality": 1.2320514917373657,
+      "contrastive": 0.154303178191185,
+      "loss": 0.8277062773704529,
+      "relation": 0.527289867401123,
+      "step": 101
+    },
+    {
+      "cardinality": 1.2267677783966064,
+      "contrastive": 0.1549977958202362,
+      "loss": 0.8255593180656433,
+      "relation": 0.5259565114974976,
+      "step": 102
+    },
+    {
+      "cardinality": 1.2215064764022827,
+      "contrastive": 0.1556810587644577,
+      "loss": 0.8234182596206665,
+      "relation": 0.5246285796165466,
+      "step": 103
+    },
+    {
+      "cardinality": 1.2162692546844482,
+      "contrastive": 0.1563538759946823,
+      "loss": 0.8212836980819702,
+      "relation": 0.5233060121536255,
+      "step": 104
+    },
+    {
+      "cardinality": 1.2110575437545776,
+      "contrastive": 0.15701889991760254,
+      "loss": 0.8191555738449097,
+      "relation": 0.5219874382019043,
+      "step": 105
+    },
+    {
+      "cardinality": 1.2058732509613037,
+      "contrastive": 0.15767739713191986,
+      "loss": 0.817034125328064,
+      "relation": 0.5206723809242249,
+      "step": 106
+    },
+    {
+      "cardinality": 1.2007169723510742,
+      "contrastive": 0.15832911431789398,
+      "loss": 0.8149193525314331,
+      "relation": 0.5193607211112976,
+      "step": 107
+    },
+    {
+      "cardinality": 1.1955897808074951,
+      "contrastive": 0.15897513926029205,
+      "loss": 0.8128112554550171,
+      "relation": 0.5180519819259644,
+      "step": 108
+    },
+    {
+      "cardinality": 1.1904926300048828,
+      "contrastive": 0.15961599349975586,
+      "loss": 0.8107100129127502,
+      "relation": 0.5167458653450012,
+      "step": 109
+    },
+    {
+      "cardinality": 1.1854238510131836,
+      "contrastive": 0.16024799644947052,
+      "loss": 0.8086158037185669,
+      "relation": 0.515444278717041,
+      "step": 110
+    },
+    {
+      "cardinality": 1.1803820133209229,
+      "contrastive": 0.16086804866790771,
+      "loss": 0.8065285682678223,
+      "relation": 0.5141483545303345,
+      "step": 111
+    },
+    {
+      "cardinality": 1.1753672361373901,
+      "contrastive": 0.16147783398628235,
+      "loss": 0.8044484257698059,
+      "relation": 0.5128577351570129,
+      "step": 112
+    },
+    {
+      "cardinality": 1.1703780889511108,
+      "contrastive": 0.16207368671894073,
+      "loss": 0.8023754954338074,
+      "relation": 0.5115740895271301,
+      "step": 113
+    },
+    {
+      "cardinality": 1.1654131412506104,
+      "contrastive": 0.16265350580215454,
+      "loss": 0.800309956073761,
+      "relation": 0.5102985501289368,
+      "step": 114
+    },
+    {
+      "cardinality": 1.1604710817337036,
+      "contrastive": 0.16321560740470886,
+      "loss": 0.7982515692710876,
+      "relation": 0.5090318918228149,
+      "step": 115
+    },
+    {
+      "cardinality": 1.1555511951446533,
+      "contrastive": 0.1637585461139679,
+      "loss": 0.7962007522583008,
+      "relation": 0.5077750086784363,
+      "step": 116
+    },
+    {
+      "cardinality": 1.1506520509719849,
+      "contrastive": 0.16427990794181824,
+      "loss": 0.7941574454307556,
+      "relation": 0.5065290331840515,
+      "step": 117
+    },
+    {
+      "cardinality": 1.1457750797271729,
+      "contrastive": 0.16478385031223297,
+      "loss": 0.7921215891838074,
+      "relation": 0.5052922368049622,
+      "step": 118
+    },
+    {
+      "cardinality": 1.1409229040145874,
+      "contrastive": 0.16527439653873444,
+      "loss": 0.7900935411453247,
+      "relation": 0.5040628910064697,
+      "step": 119
+    },
+    {
+      "cardinality": 1.1360974311828613,
+      "contrastive": 0.16575494408607483,
+      "loss": 0.7880730032920837,
+      "relation": 0.5028393268585205,
+      "step": 120
+    },
+    {
+      "cardinality": 1.1313002109527588,
+      "contrastive": 0.16622836887836456,
+      "loss": 0.7860603928565979,
+      "relation": 0.5016204118728638,
+      "step": 121
+    },
+    {
+      "cardinality": 1.1265318393707275,
+      "contrastive": 0.16669535636901855,
+      "loss": 0.7840555906295776,
+      "relation": 0.5004058480262756,
+      "step": 122
+    },
+    {
+      "cardinality": 1.12179434299469,
+      "contrastive": 0.1671593338251114,
+      "loss": 0.7820587158203125,
+      "relation": 0.49919408559799194,
+      "step": 123
+    },
+    {
+      "cardinality": 1.1170891523361206,
+      "contrastive": 0.16762211918830872,
+      "loss": 0.7800696492195129,
+      "relation": 0.4979841113090515,
+      "step": 124
+    },
+    {
+      "cardinality": 1.1124157905578613,
+      "contrastive": 0.16808201372623444,
+      "loss": 0.7780885696411133,
+      "relation": 0.4967767000198364,
+      "step": 125
+    },
+    {
+      "cardinality": 1.107770562171936,
+      "contrastive": 0.16853389143943787,
+      "loss": 0.7761154174804688,
+      "relation": 0.4955744445323944,
+      "step": 126
+    },
+    {
+      "cardinality": 1.1031506061553955,
+      "contrastive": 0.16897347569465637,
+      "loss": 0.7741503119468689,
+      "relation": 0.4943794310092926,
+      "step": 127
+    },
+    {
+      "cardinality": 1.0985530614852905,
+      "contrastive": 0.16939622163772583,
+      "loss": 0.772193193435669,
+      "relation": 0.4931938946247101,
+      "step": 128
+    },
+    {
+      "cardinality": 1.0939768552780151,
+      "contrastive": 0.16980144381523132,
+      "loss": 0.7702440619468689,
+      "relation": 0.4920181930065155,
+      "step": 129
+    },
+    {
+      "cardinality": 1.0894230604171753,
+      "contrastive": 0.17019139230251312,
+      "loss": 0.7683029770851135,
+      "relation": 0.49085140228271484,
+      "step": 130
+    },
+    {
+      "cardinality": 1.08489191532135,
+      "contrastive": 0.17056848108768463,
+      "loss": 0.7663700580596924,
+      "relation": 0.48969265818595886,
+      "step": 131
+    },
+    {
+      "cardinality": 1.0803873538970947,
+      "contrastive": 0.17093756794929504,
+      "loss": 0.7644453048706055,
+      "relation": 0.4885396361351013,
+      "step": 132
+    },
+    {
+      "cardinality": 1.075910210609436,
+      "contrastive": 0.17130117118358612,
+      "loss": 0.762528657913208,
+      "relation": 0.4873912036418915,
+      "step": 133
+    },
+    {
+      "cardinality": 1.071457028388977,
+      "contrastive": 0.17165496945381165,
+      "loss": 0.7606201171875,
+      "relation": 0.48624947667121887,
+      "step": 134
+    },
+    {
+      "cardinality": 1.0670280456542969,
+      "contrastive": 0.17199890315532684,
+      "loss": 0.7587196230888367,
+      "relation": 0.4851143956184387,
+      "step": 135
+    },
+    {
+      "cardinality": 1.0626239776611328,
+      "contrastive": 0.17233429849147797,
+      "loss": 0.7568272948265076,
+      "relation": 0.4839854836463928,
+      "step": 136
+    },
+    {
+      "cardinality": 1.0582480430603027,
+      "contrastive": 0.1726657748222351,
+      "loss": 0.7549431920051575,
+      "relation": 0.4828605353832245,
+      "step": 137
+    },
+    {
+      "cardinality": 1.053902506828308,
+      "contrastive": 0.17299601435661316,
+      "loss": 0.7530673146247864,
+      "relation": 0.4817381799221039,
+      "step": 138
+    },
+    {
+      "cardinality": 1.0495868921279907,
+      "contrastive": 0.17332346737384796,
+      "loss": 0.75119948387146,
+      "relation": 0.4806188941001892,
+      "step": 139
+    },
+    {
+      "cardinality": 1.045299768447876,
+      "contrastive": 0.17364650964736938,
+      "loss": 0.749339759349823,
+      "relation": 0.4795035421848297,
+      "step": 140
+    },
+    {
+      "cardinality": 1.0410394668579102,
+      "contrastive": 0.17396219074726105,
+      "loss": 0.747488260269165,
+      "relation": 0.47839364409446716,
+      "step": 141
+    },
+    {
+      "cardinality": 1.0368061065673828,
+      "contrastive": 0.17427082359790802,
+      "loss": 0.7456450462341309,
+      "relation": 0.47728902101516724,
+      "step": 142
+    },
+    {
+      "cardinality": 1.0325980186462402,
+      "contrastive": 0.17456968128681183,
+      "loss": 0.7438099980354309,
+      "relation": 0.476190984249115,
+      "step": 143
+    },
+    {
+      "cardinality": 1.028414011001587,
+      "contrastive": 0.1748587042093277,
+      "loss": 0.7419829964637756,
+      "relation": 0.4750996232032776,
+      "step": 144
+    },
+    {
+      "cardinality": 1.0242524147033691,
+      "contrastive": 0.17513629794120789,
+      "loss": 0.7401641607284546,
+      "relation": 0.4740159809589386,
+      "step": 145
+    },
+    {
+      "cardinality": 1.0201125144958496,
+      "contrastive": 0.17540277540683746,
+      "loss": 0.7383534908294678,
+      "relation": 0.47293999791145325,
+      "step": 146
+    },
+    {
+      "cardinality": 1.0159941911697388,
+      "contrastive": 0.17565888166427612,
+      "loss": 0.7365509271621704,
+      "relation": 0.4718714952468872,
+      "step": 147
+    },
+    {
+      "cardinality": 1.0118956565856934,
+      "contrastive": 0.175902858376503,
+      "loss": 0.7347564697265625,
+      "relation": 0.4708113670349121,
+      "step": 148
+    },
+    {
+      "cardinality": 1.007817029953003,
+      "contrastive": 0.17613612115383148,
+      "loss": 0.7329702377319336,
+      "relation": 0.46975916624069214,
+      "step": 149
+    },
+    {
+      "cardinality": 1.003757357597351,
+      "contrastive": 0.17635764181613922,
+      "loss": 0.7311919927597046,
+      "relation": 0.4687153398990631,
+      "step": 150
+    },
+    {
+      "cardinality": 0.9997197389602661,
+      "contrastive": 0.17657198011875153,
+      "loss": 0.7294217348098755,
+      "relation": 0.46767762303352356,
+      "step": 151
+    },
+    {
+      "cardinality": 0.9957072734832764,
+      "contrastive": 0.17678247392177582,
+      "loss": 0.7276597023010254,
+      "relation": 0.46664440631866455,
+      "step": 152
+    },
+    {
+      "cardinality": 0.9917193055152893,
+      "contrastive": 0.17698949575424194,
+      "loss": 0.7259055376052856,
+      "relation": 0.4656153619289398,
+      "step": 153
+    },
+    {
+      "cardinality": 0.987754225730896,
+      "contrastive": 0.1771911233663559,
+      "loss": 0.7241592407226562,
+      "relation": 0.46459150314331055,
+      "step": 154
+    },
+    {
+      "cardinality": 0.9838098287582397,
+      "contrastive": 0.17738395929336548,
+      "loss": 0.7224210500717163,
+      "relation": 0.46357470750808716,
+      "step": 155
+    },
+    {
+      "cardinality": 0.9798868894577026,
+      "contrastive": 0.17757008969783783,
+      "loss": 0.7206907868385315,
+      "relation": 0.4625638723373413,
+      "step": 156
+    },
+    {
+      "cardinality": 0.9759888648986816,
+      "contrastive": 0.17775346338748932,
+      "loss": 0.7189685106277466,
+      "relation": 0.461557000875473,
+      "step": 157
+    },
+    {
+      "cardinality": 0.9721170663833618,
+      "contrastive": 0.17793560028076172,
+      "loss": 0.7172541618347168,
+      "relation": 0.4605533182621002,
+      "step": 158
+    },
+    {
+      "cardinality": 0.9682716131210327,
+      "contrastive": 0.178117036819458,
+      "loss": 0.7155478000640869,
+      "relation": 0.45955249667167664,
+      "step": 159
+    },
+    {
+      "cardinality": 0.9644508361816406,
+      "contrastive": 0.17829565703868866,
+      "loss": 0.7138493061065674,
+      "relation": 0.4585556387901306,
+      "step": 160
+    },
+    {
+      "cardinality": 0.9606536030769348,
+      "contrastive": 0.17847032845020294,
+      "loss": 0.7121586203575134,
+      "relation": 0.45756328105926514,
+      "step": 161
+    },
+    {
+      "cardinality": 0.9568794965744019,
+      "contrastive": 0.17864052951335907,
+      "loss": 0.7104759216308594,
+      "relation": 0.45657581090927124,
+      "step": 162
+    },
+    {
+      "cardinality": 0.9531251788139343,
+      "contrastive": 0.17880229651927948,
+      "loss": 0.7088010311126709,
+      "relation": 0.45559513568878174,
+      "step": 163
+    },
+    {
+      "cardinality": 0.9493875503540039,
+      "contrastive": 0.17895355820655823,
+      "loss": 0.7071337103843689,
+      "relation": 0.45462244749069214,
+      "step": 164
+    },
+    {
+      "cardinality": 0.9456671476364136,
+      "contrastive": 0.17909516394138336,
+      "loss": 0.7054741382598877,
+      "relation": 0.4536574184894562,
+      "step": 165
+    },
+    {
+      "cardinality": 0.9419646263122559,
+      "contrastive": 0.17922823131084442,
+      "loss": 0.7038224339485168,
+      "relation": 0.4526996314525604,
+      "step": 166
+    },
+    {
+      "cardinality": 0.9382815361022949,
+      "contrastive": 0.17935560643672943,
+      "loss": 0.7021783590316772,
+      "relation": 0.4517475664615631,
+      "step": 167
+    },
+    {
+      "cardinality": 0.9346199035644531,
+      "contrastive": 0.1794792115688324,
+      "loss": 0.7005419731140137,
+      "relation": 0.4508002698421478,
+      "step": 168
+    },
+    {
+      "cardinality": 0.9309818148612976,
+      "contrastive": 0.1796010434627533,
+      "loss": 0.6989132761955261,
+      "relation": 0.4498565196990967,
+      "step": 169
+    },
+    {
+      "cardinality": 0.9273654818534851,
+      "contrastive": 0.17971888184547424,
+      "loss": 0.6972920298576355,
+      "relation": 0.44891732931137085,
+      "step": 170
+    },
+    {
+      "cardinality": 0.9237653017044067,
+      "contrastive": 0.17982767522335052,
+      "loss": 0.6956784129142761,
+      "relation": 0.44798561930656433,
+      "step": 171
+    },
+    {
+      "cardinality": 0.9201809167861938,
+      "contrastive": 0.17992720007896423,
+      "loss": 0.6940721273422241,
+      "relation": 0.4470614194869995,
+      "step": 172
+    },
+    {
+      "cardinality": 0.9166150689125061,
+      "contrastive": 0.18002088367938995,
+      "loss": 0.6924734711647034,
+      "relation": 0.44614315032958984,
+      "step": 173
+    },
+    {
+      "cardinality": 0.9130737781524658,
+      "contrastive": 0.18011590838432312,
+      "loss": 0.6908823251724243,
+      "relation": 0.4452270269393921,
+      "step": 174
+    },
+    {
+      "cardinality": 0.9095550179481506,
+      "contrastive": 0.18020965158939362,
+      "loss": 0.6892986297607422,
+      "relation": 0.44431421160697937,
+      "step": 175
+    },
+    {
+      "cardinality": 0.9060570597648621,
+      "contrastive": 0.1803005188703537,
+      "loss": 0.6877221465110779,
+      "relation": 0.4434055984020233,
+      "step": 176
+    },
+    {
+      "cardinality": 0.9025810956954956,
+      "contrastive": 0.1803901493549347,
+      "loss": 0.6861530542373657,
+      "relation": 0.4425002932548523,
+      "step": 177
+    },
+    {
+      "cardinality": 0.899126410484314,
+      "contrastive": 0.18047817051410675,
+      "loss": 0.6845911741256714,
+      "relation": 0.4415985643863678,
+      "step": 178
+    },
+    {
+      "cardinality": 0.8956912755966187,
+      "contrastive": 0.18056242167949677,
+      "loss": 0.6830366849899292,
+      "relation": 0.44070157408714294,
+      "step": 179
+    },
+    {
+      "cardinality": 0.8922737836837769,
+      "contrastive": 0.1806405782699585,
+      "loss": 0.6814893484115601,
+      "relation": 0.4398103654384613,
+      "step": 180
+    },
+    {
+      "cardinality": 0.8888723850250244,
+      "contrastive": 0.18071137368679047,
+      "loss": 0.679949164390564,
+      "relation": 0.43892571330070496,
+      "step": 181
+    },
+    {
+      "cardinality": 0.8854838609695435,
+      "contrastive": 0.18077099323272705,
+      "loss": 0.6784160733222961,
+      "relation": 0.43804943561553955,
+      "step": 182
+    },
+    {
+      "cardinality": 0.8821119666099548,
+      "contrastive": 0.1808241754770279,
+      "loss": 0.6768900156021118,
+      "relation": 0.43717917799949646,
+      "step": 183
+    },
+    {
+      "cardinality": 0.8787581324577332,
+      "contrastive": 0.18087320029735565,
+      "loss": 0.6753709316253662,
+      "relation": 0.4363137185573578,
+      "step": 184
+    },
+    {
+      "cardinality": 0.8754216432571411,
+      "contrastive": 0.18091735243797302,
+      "loss": 0.6738588213920593,
+      "relation": 0.4354534447193146,
+      "step": 185
+    },
+    {
+      "cardinality": 0.8721053004264832,
+      "contrastive": 0.1809600591659546,
+      "loss": 0.6723536252975464,
+      "relation": 0.43459656834602356,
+      "step": 186
+    },
+    {
+      "cardinality": 0.868809163570404,
+      "contrastive": 0.18100176751613617,
+      "loss": 0.6708552241325378,
+      "relation": 0.4337427616119385,
+      "step": 187
+    },
+    {
+      "cardinality": 0.8655364513397217,
+      "contrastive": 0.18104581534862518,
+      "loss": 0.6693637371063232,
+      "relation": 0.4328904151916504,
+      "step": 188
+    },
+    {
+      "cardinality": 0.862285852432251,
+      "contrastive": 0.18109139800071716,
+      "loss": 0.6678789854049683,
+      "relation": 0.4320398271083832,
+      "step": 189
+    },
+    {
+      "cardinality": 0.8590545058250427,
+      "contrastive": 0.18113605678081512,
+      "loss": 0.6664010286331177,
+      "relation": 0.4311924874782562,
+      "step": 190
+    },
+    {
+      "cardinality": 0.8558393120765686,
+      "contrastive": 0.18117623031139374,
+      "loss": 0.6649296283721924,
+      "relation": 0.43035009503364563,
+      "step": 191
+    },
+    {
+      "cardinality": 0.8526367545127869,
+      "contrastive": 0.18120867013931274,
+      "loss": 0.6634649038314819,
+      "relation": 0.4295145273208618,
+      "step": 192
+    },
+    {
+      "cardinality": 0.849448025226593,
+      "contrastive": 0.18123409152030945,
+      "loss": 0.6620067358016968,
+      "relation": 0.42868518829345703,
+      "step": 193
+    },
+    {
+      "cardinality": 0.8462708592414856,
+      "contrastive": 0.18125008046627045,
+      "loss": 0.6605551242828369,
+      "relation": 0.4278634488582611,
+      "step": 194
+    },
+    {
+      "cardinality": 0.8431093096733093,
+      "contrastive": 0.18126097321510315,
+      "loss": 0.6591100096702576,
+      "relation": 0.4270468056201935,
+      "step": 195
+    },
+    {
+      "cardinality": 0.8399631977081299,
+      "contrastive": 0.18126751482486725,
+      "loss": 0.657671332359314,
+      "relation": 0.4262351095676422,
+      "step": 196
+    },
+    {
+      "cardinality": 0.8368368148803711,
+      "contrastive": 0.18127396702766418,
+      "loss": 0.6562391519546509,
+      "relation": 0.4254259169101715,
+      "step": 197
+    },
+    {
+      "cardinality": 0.8337284326553345,
+      "contrastive": 0.18127833306789398,
+      "loss": 0.6548133492469788,
+      "relation": 0.42462021112442017,
+      "step": 198
+    },
+    {
+      "cardinality": 0.8306366801261902,
+      "contrastive": 0.18127882480621338,
+      "loss": 0.6533938050270081,
+      "relation": 0.4238188862800598,
+      "step": 199
+    },
+    {
+      "cardinality": 0.8275588154792786,
+      "contrastive": 0.1812724769115448,
+      "loss": 0.6519805788993835,
+      "relation": 0.42302343249320984,
+      "step": 200
+    },
+    {
+      "cardinality": 0.8244964480400085,
+      "contrastive": 0.18126124143600464,
+      "loss": 0.6505735516548157,
+      "relation": 0.42223283648490906,
+      "step": 201
+    },
+    {
+      "cardinality": 0.8214496374130249,
+      "contrastive": 0.18124617636203766,
+      "loss": 0.6491727232933044,
+      "relation": 0.42144662141799927,
+      "step": 202
+    },
+    {
+      "cardinality": 0.818418562412262,
+      "contrastive": 0.18122875690460205,
+      "loss": 0.6477780342102051,
+      "relation": 0.4206642508506775,
+      "step": 203
+    },
+    {
+      "cardinality": 0.815401554107666,
+      "contrastive": 0.18120743334293365,
+      "loss": 0.6463894844055176,
+      "relation": 0.4198865592479706,
+      "step": 204
+    },
+    {
+      "cardinality": 0.8123963475227356,
+      "contrastive": 0.18118071556091309,
+      "loss": 0.6450068354606628,
+      "relation": 0.4191143214702606,
+      "step": 205
+    },
+    {
+      "cardinality": 0.8094015121459961,
+      "contrastive": 0.18114817142486572,
+      "loss": 0.6436302661895752,
+      "relation": 0.418348103761673,
+      "step": 206
+    },
+    {
+      "cardinality": 0.8064228892326355,
+      "contrastive": 0.1811143308877945,
+      "loss": 0.6422597169876099,
+      "relation": 0.4175851047039032,
+      "step": 207
+    },
+    {
+      "cardinality": 0.8034582734107971,
+      "contrastive": 0.18107792735099792,
+      "loss": 0.6408950686454773,
+      "relation": 0.41682612895965576,
+      "step": 208
+    },
+    {
+      "cardinality": 0.8005089163780212,
+      "contrastive": 0.181040421128273,
+      "loss": 0.6395362615585327,
+      "relation": 0.4160703420639038,
+      "step": 209
+    },
+    {
+      "cardinality": 0.7975740432739258,
+      "contrastive": 0.18100151419639587,
+      "loss": 0.6381833553314209,
+      "relation": 0.41531801223754883,
+      "step": 210
+    },
+    {
+      "cardinality": 0.7946551442146301,
+      "contrastive": 0.18096303939819336,
+      "loss": 0.6368362307548523,
+      "relation": 0.41456809639930725,
+      "step": 211
+    },
+    {
+      "cardinality": 0.7917519211769104,
+      "contrastive": 0.18092596530914307,
+      "loss": 0.6354948282241821,
+      "relation": 0.4138203263282776,
+      "step": 212
+    },
+    {
+      "cardinality": 0.7888612151145935,
+      "contrastive": 0.180887833237648,
+      "loss": 0.6341590881347656,
+      "relation": 0.4130760729312897,
+      "step": 213
+    },
+    {
+      "cardinality": 0.7859780788421631,
+      "contrastive": 0.18084459006786346,
+      "loss": 0.6328290700912476,
+      "relation": 0.41233786940574646,
+      "step": 214
+    },
+    {
+      "cardinality": 0.7830991744995117,
+      "contrastive": 0.18079274892807007,
+      "loss": 0.6315048336982727,
+      "relation": 0.4116075038909912,
+      "step": 215
+    },
+    {
+      "cardinality": 0.7802305221557617,
+      "contrastive": 0.1807381510734558,
+      "loss": 0.630186140537262,
+      "relation": 0.4108816981315613,
+      "step": 216
+    },
+    {
+      "cardinality": 0.7773745059967041,
+      "contrastive": 0.18068267405033112,
+      "loss": 0.6288731098175049,
+      "relation": 0.41015928983688354,
+      "step": 217
+    },
+    {
+      "cardinality": 0.7745309472084045,
+      "contrastive": 0.18062591552734375,
+      "loss": 0.6275656819343567,
+      "relation": 0.40944042801856995,
+      "step": 218
+    },
+    {
+      "cardinality": 0.7716977596282959,
+      "contrastive": 0.18056592345237732,
+      "loss": 0.6262637376785278,
+      "relation": 0.4087260961532593,
+      "step": 219
+    },
+    {
+      "cardinality": 0.7688718438148499,
+      "contrastive": 0.18050028383731842,
+      "loss": 0.6249672174453735,
+      "relation": 0.40801775455474854,
+      "step": 220
+    },
+    {
+      "cardinality": 0.766056478023529,
+      "contrastive": 0.18043236434459686,
+      "loss": 0.6236761808395386,
+      "relation": 0.4073135554790497,
+      "step": 221
+    },
+    {
+      "cardinality": 0.7632500529289246,
+      "contrastive": 0.18036115169525146,
+      "loss": 0.6223905086517334,
+      "relation": 0.40661412477493286,
+      "step": 222
+    },
+    {
+      "cardinality": 0.7604532241821289,
+      "contrastive": 0.180287167429924,
+      "loss": 0.6211102604866028,
+      "relation": 0.4059191048145294,
+      "step": 223
+    },
+    {
+      "cardinality": 0.757668137550354,
+      "contrastive": 0.18021300435066223,
+      "loss": 0.6198352575302124,
+      "relation": 0.40522709488868713,
+      "step": 224
+    },
+    {
+      "cardinality": 0.7548931241035461,
+      "contrastive": 0.1801382303237915,
+      "loss": 0.6185656785964966,
+      "relation": 0.40453869104385376,
+      "step": 225
+    },
+    {
+      "cardinality": 0.7521296739578247,
+      "contrastive": 0.18006473779678345,
+      "loss": 0.6173012852668762,
+      "relation": 0.403852641582489,
+      "step": 226
+    },
+    {
+      "cardinality": 0.7493741512298584,
+      "contrastive": 0.17998921871185303,
+      "loss": 0.6160419583320618,
+      "relation": 0.40317094326019287,
+      "step": 227
+    },
+    {
+      "cardinality": 0.746629536151886,
+      "contrastive": 0.17991450428962708,
+      "loss": 0.6147879362106323,
+      "relation": 0.4024919867515564,
+      "step": 228
+    },
+    {
+      "cardinality": 0.7438987493515015,
+      "contrastive": 0.1798420250415802,
+      "loss": 0.6135391592979431,
+      "relation": 0.40181466937065125,
+      "step": 229
+    },
+    {
+      "cardinality": 0.7411843538284302,
+      "contrastive": 0.17977455258369446,
+      "loss": 0.6122953295707703,
+      "relation": 0.4011373817920685,
+      "step": 230
+    },
+    {
+      "cardinality": 0.7384856343269348,
+      "contrastive": 0.17971117794513702,
+      "loss": 0.6110566854476929,
+      "relation": 0.4004606306552887,
+      "step": 231
+    },
+    {
+      "cardinality": 0.7357955574989319,
+      "contrastive": 0.17964588105678558,
+      "loss": 0.6098230481147766,
+      "relation": 0.39978787302970886,
+      "step": 232
+    },
+    {
+      "cardinality": 0.7331109046936035,
+      "contrastive": 0.1795758306980133,
+      "loss": 0.6085944175720215,
+      "relation": 0.3991207182407379,
+      "step": 233
+    },
+    {
+      "cardinality": 0.7304286360740662,
+      "contrastive": 0.17949870228767395,
+      "loss": 0.6073707938194275,
+      "relation": 0.3984605073928833,
+      "step": 234
+    },
+    {
+      "cardinality": 0.7277526259422302,
+      "contrastive": 0.1794183850288391,
+      "loss": 0.6061521172523499,
+      "relation": 0.39780518412590027,
+      "step": 235
+    },
+    {
+      "cardinality": 0.7250836491584778,
+      "contrastive": 0.1793358027935028,
+      "loss": 0.6049384474754333,
+      "relation": 0.39715421199798584,
+      "step": 236
+    },
+    {
+      "cardinality": 0.7224318385124207,
+      "contrastive": 0.17925938963890076,
+      "loss": 0.6037297248840332,
+      "relation": 0.3965025842189789,
+      "step": 237
+    },
+    {
+      "cardinality": 0.7197940945625305,
+      "contrastive": 0.17918723821640015,
+      "loss": 0.6025258898735046,
+      "relation": 0.3958515524864197,
+      "step": 238
+    },
+    {
+      "cardinality": 0.7171662449836731,
+      "contrastive": 0.17911534011363983,
+      "loss": 0.6013270020484924,
+      "relation": 0.3952033817768097,
+      "step": 239
+    },
+    {
+      "cardinality": 0.7145369648933411,
+      "contrastive": 0.17903369665145874,
+      "loss": 0.6001328229904175,
+      "relation": 0.3945636749267578,
+      "step": 240
+    },
+    {
+      "cardinality": 0.7119072675704956,
+      "contrastive": 0.17894291877746582,
+      "loss": 0.5989435315132141,
+      "relation": 0.3939321041107178,
+      "step": 241
+    },
+    {
+      "cardinality": 0.7092822194099426,
+      "contrastive": 0.17884725332260132,
+      "loss": 0.5977591276168823,
+      "relation": 0.3933061361312866,
+      "step": 242
+    },
+    {
+      "cardinality": 0.7066662907600403,
+      "contrastive": 0.1787511259317398,
+      "loss": 0.5965794324874878,
+      "relation": 0.3926832675933838,
+      "step": 243
+    },
+    {
+      "cardinality": 0.7040673494338989,
+      "contrastive": 0.1786610335111618,
+      "loss": 0.5954044461250305,
+      "relation": 0.3920596241950989,
+      "step": 244
+    },
+    {
+      "cardinality": 0.701484203338623,
+      "contrastive": 0.17857463657855988,
+      "loss": 0.5942342877388,
+      "relation": 0.39143627882003784,
+      "step": 245
+    },
+    {
+      "cardinality": 0.6989086866378784,
+      "contrastive": 0.17848517000675201,
+      "loss": 0.5930688381195068,
+      "relation": 0.39081722497940063,
+      "step": 246
+    },
+    {
+      "cardinality": 0.69633948802948,
+      "contrastive": 0.17839156091213226,
+      "loss": 0.5919079780578613,
+      "relation": 0.39020299911499023,
+      "step": 247
+    },
+    {
+      "cardinality": 0.6937835216522217,
+      "contrastive": 0.17830105125904083,
+      "loss": 0.5907516479492188,
+      "relation": 0.3895896077156067,
+      "step": 248
+    },
+    {
+      "cardinality": 0.691234290599823,
+      "contrastive": 0.17820896208286285,
+      "loss": 0.5896000862121582,
+      "relation": 0.38898009061813354,
+      "step": 249
+    },
+    {
+      "cardinality": 0.6886829733848572,
+      "contrastive": 0.17810827493667603,
+      "loss": 0.5884529948234558,
+      "relation": 0.3883785307407379,
+      "step": 250
+    },
+    {
+      "cardinality": 0.68613600730896,
+      "contrastive": 0.178004652261734,
+      "loss": 0.587310791015625,
+      "relation": 0.38778194785118103,
+      "step": 251
+    },
+    {
+      "cardinality": 0.6836138367652893,
+      "contrastive": 0.17791570723056793,
+      "loss": 0.5861731171607971,
+      "relation": 0.38717982172966003,
+      "step": 252
+    },
+    {
+      "cardinality": 0.6810967326164246,
+      "contrastive": 0.17782337963581085,
+      "loss": 0.5850400924682617,
+      "relation": 0.3865825831890106,
+      "step": 253
+    },
+    {
+      "cardinality": 0.678581953048706,
+      "contrastive": 0.17772413790225983,
+      "loss": 0.5839117765426636,
+      "relation": 0.3859919011592865,
+      "step": 254
+    },
+    {
+      "cardinality": 0.6760810017585754,
+      "contrastive": 0.17762793600559235,
+      "loss": 0.5827879905700684,
+      "relation": 0.38540199398994446,
+      "step": 255
+    },
+    {
+      "cardinality": 0.6736008524894714,
+      "contrastive": 0.17754137516021729,
+      "loss": 0.5816688537597656,
+      "relation": 0.38480913639068604,
+      "step": 256
+    },
+    {
+      "cardinality": 0.6711428165435791,
+      "contrastive": 0.1774657964706421,
+      "loss": 0.5805542469024658,
+      "relation": 0.3842126131057739,
+      "step": 257
+    },
+    {
+      "cardinality": 0.668697714805603,
+      "contrastive": 0.1773933470249176,
+      "loss": 0.5794442296028137,
+      "relation": 0.3836170434951782,
+      "step": 258
+    },
+    {
+      "cardinality": 0.6662580370903015,
+      "contrastive": 0.17731858789920807,
+      "loss": 0.578338623046875,
+      "relation": 0.38302552700042725,
+      "step": 259
+    },
+    {
+      "cardinality": 0.6638144850730896,
+      "contrastive": 0.17723357677459717,
+      "loss": 0.577237606048584,
+      "relation": 0.3824429512023926,
+      "step": 260
+    },
+    {
+      "cardinality": 0.6613630652427673,
+      "contrastive": 0.17713512480258942,
+      "loss": 0.5761408805847168,
+      "relation": 0.38187098503112793,
+      "step": 261
+    },
+    {
+      "cardinality": 0.658911943435669,
+      "contrastive": 0.17703044414520264,
+      "loss": 0.5750486850738525,
+      "relation": 0.38130566477775574,
+      "step": 262
+    },
+    {
+      "cardinality": 0.6564788222312927,
+      "contrastive": 0.17693494260311127,
+      "loss": 0.5739607810974121,
+      "relation": 0.3807378113269806,
+      "step": 263
+    },
+    {
+      "cardinality": 0.6540668606758118,
+      "contrastive": 0.17684996128082275,
+      "loss": 0.5728771686553955,
+      "relation": 0.38016626238822937,
+      "step": 264
+    },
+    {
+      "cardinality": 0.6516667604446411,
+      "contrastive": 0.17676599323749542,
+      "loss": 0.5717979073524475,
+      "relation": 0.3795965015888214,
+      "step": 265
+    },
+    {
+      "cardinality": 0.6492616534233093,
+      "contrastive": 0.1766684502363205,
+      "loss": 0.5707229971885681,
+      "relation": 0.37903669476509094,
+      "step": 266
+    },
+    {
+      "cardinality": 0.6468417644500732,
+      "contrastive": 0.1765495240688324,
+      "loss": 0.569652259349823,
+      "relation": 0.37849161028862,
+      "step": 267
+    },
+    {
+      "cardinality": 0.6444317698478699,
+      "contrastive": 0.17642991244792938,
+      "loss": 0.5685858130455017,
+      "relation": 0.3779489994049072,
+      "step": 268
+    },
+    {
+      "cardinality": 0.6420447826385498,
+      "contrastive": 0.17632116377353668,
+      "loss": 0.5675235390663147,
+      "relation": 0.3774022161960602,
+      "step": 269
+    },
+    {
+      "cardinality": 0.6396797895431519,
+      "contrastive": 0.1762217879295349,
+      "loss": 0.5664656162261963,
+      "relation": 0.37685203552246094,
+      "step": 270
+    },
+    {
+      "cardinality": 0.6373242735862732,
+      "contrastive": 0.17611998319625854,
+      "loss": 0.5654119253158569,
+      "relation": 0.37630507349967957,
+      "step": 271
+    },
+    {
+      "cardinality": 0.634977400302887,
+      "contrastive": 0.17601479589939117,
+      "loss": 0.5643623471260071,
+      "relation": 0.3757617175579071,
+      "step": 272
+    },
+    {
+      "cardinality": 0.6326400637626648,
+      "contrastive": 0.17590615153312683,
+      "loss": 0.5633170008659363,
+      "relation": 0.3752218782901764,
+      "step": 273
+    },
+    {
+      "cardinality": 0.6303287148475647,
+      "contrastive": 0.17580720782279968,
+      "loss": 0.5622758269309998,
+      "relation": 0.3746775984764099,
+      "step": 274
+    },
+    {
+      "cardinality": 0.6280512809753418,
+      "contrastive": 0.1757264882326126,
+      "loss": 0.5612388253211975,
+      "relation": 0.37412428855895996,
+      "step": 275
+    },
+    {
+      "cardinality": 0.6257866621017456,
+      "contrastive": 0.17564678192138672,
+      "loss": 0.5602059960365295,
+      "relation": 0.37357228994369507,
+      "step": 276
+    },
+    {
+      "cardinality": 0.6235252022743225,
+      "contrastive": 0.17556095123291016,
+      "loss": 0.5591772198677063,
+      "relation": 0.3730258643627167,
+      "step": 277
+    },
+    {
+      "cardinality": 0.621265709400177,
+      "contrastive": 0.17546826601028442,
+      "loss": 0.5581527352333069,
+      "relation": 0.3724856674671173,
+      "step": 278
+    },
+    {
+      "cardinality": 0.6190046668052673,
+      "contrastive": 0.17536582052707672,
+      "loss": 0.5571322441101074,
+      "relation": 0.37195324897766113,
+      "step": 279
+    },
+    {
+      "cardinality": 0.6167450547218323,
+      "contrastive": 0.17525556683540344,
+      "loss": 0.5561157464981079,
+      "relation": 0.3714272975921631,
+      "step": 280
+    },
+    {
+      "cardinality": 0.6144949793815613,
+      "contrastive": 0.1751432865858078,
+      "loss": 0.5551033020019531,
+      "relation": 0.3709041476249695,
+      "step": 281
+    },
+    {
+      "cardinality": 0.6122615337371826,
+      "contrastive": 0.1750355362892151,
+      "loss": 0.5540950298309326,
+      "relation": 0.3703802824020386,
+      "step": 282
+    },
+    {
+      "cardinality": 0.6100486516952515,
+      "contrastive": 0.1749364733695984,
+      "loss": 0.5530907511711121,
+      "relation": 0.36985328793525696,
+      "step": 283
+    },
+    {
+      "cardinality": 0.6078358888626099,
+      "contrastive": 0.17482998967170715,
+      "loss": 0.552090585231781,
+      "relation": 0.369332879781723,
+      "step": 284
+    },
+    {
+      "cardinality": 0.6056100130081177,
+      "contrastive": 0.1747037023305893,
+      "loss": 0.5510942935943604,
+      "relation": 0.3688260018825531,
+      "step": 285
+    },
+    {
+      "cardinality": 0.6033888459205627,
+      "contrastive": 0.17457328736782074,
+      "loss": 0.550102174282074,
+      "relation": 0.36832377314567566,
+      "step": 286
+    },
+    {
+      "cardinality": 0.6012141108512878,
+      "contrastive": 0.17447201907634735,
+      "loss": 0.5491140484809875,
+      "relation": 0.36780598759651184,
+      "step": 287
+    },
+    {
+      "cardinality": 0.5990537405014038,
+      "contrastive": 0.174372598528862,
+      "loss": 0.5481299757957458,
+      "relation": 0.3672887980937958,
+      "step": 288
+    },
+    {
+      "cardinality": 0.5968768000602722,
+      "contrastive": 0.1742475926876068,
+      "loss": 0.5471498966217041,
+      "relation": 0.3667879104614258,
+      "step": 289
+    },
+    {
+      "cardinality": 0.5947068333625793,
+      "contrastive": 0.1741163730621338,
+      "loss": 0.5461738705635071,
+      "relation": 0.3662917912006378,
+      "step": 290
+    },
+    {
+      "cardinality": 0.5925901532173157,
+      "contrastive": 0.17401759326457977,
+      "loss": 0.54520183801651,
+      "relation": 0.3657776415348053,
+      "step": 291
+    },
+    {
+      "cardinality": 0.5905008316040039,
+      "contrastive": 0.1739305555820465,
+      "loss": 0.5442337989807129,
+      "relation": 0.36525794863700867,
+      "step": 292
+    },
+    {
+      "cardinality": 0.5883842706680298,
+      "contrastive": 0.17381173372268677,
+      "loss": 0.5432698130607605,
+      "relation": 0.36475884914398193,
+      "step": 293
+    },
+    {
+      "cardinality": 0.5862575173377991,
+      "contrastive": 0.17367462813854218,
+      "loss": 0.5423097610473633,
+      "relation": 0.3642721176147461,
+      "step": 294
+    },
+    {
+      "cardinality": 0.584166944026947,
+      "contrastive": 0.1735592782497406,
+      "loss": 0.5413535833358765,
+      "relation": 0.36377444863319397,
+      "step": 295
+    },
+    {
+      "cardinality": 0.58211350440979,
+      "contrastive": 0.17346574366092682,
+      "loss": 0.5404015779495239,
+      "relation": 0.36326584219932556,
+      "step": 296
+    },
+    {
+      "cardinality": 0.5800460577011108,
+      "contrastive": 0.17334993183612823,
+      "loss": 0.5394534468650818,
+      "relation": 0.36277174949645996,
+      "step": 297
+    },
+    {
+      "cardinality": 0.577948272228241,
+      "contrastive": 0.17319831252098083,
+      "loss": 0.5385093092918396,
+      "relation": 0.36230024695396423,
+      "step": 298
+    },
+    {
+      "cardinality": 0.5758644342422485,
+      "contrastive": 0.17304827272891998,
+      "loss": 0.5375692844390869,
+      "relation": 0.3618294894695282,
+      "step": 299
+    },
+    {
+      "cardinality": 0.5738235116004944,
+      "contrastive": 0.17292360961437225,
+      "loss": 0.5366332530975342,
+      "relation": 0.3613452911376953,
+      "step": 300
+    },
+    {
+      "cardinality": 0.5718222260475159,
+      "contrastive": 0.17281994223594666,
+      "loss": 0.5357012152671814,
+      "relation": 0.3608497679233551,
+      "step": 301
+    },
+    {
+      "cardinality": 0.5698136687278748,
+      "contrastive": 0.17269697785377502,
+      "loss": 0.5347732305526733,
+      "relation": 0.360366553068161,
+      "step": 302
+    },
+    {
+      "cardinality": 0.5677992701530457,
+      "contrastive": 0.17255666851997375,
+      "loss": 0.53384929895401,
+      "relation": 0.35989463329315186,
+      "step": 303
+    },
+    {
+      "cardinality": 0.5658373236656189,
+      "contrastive": 0.17244672775268555,
+      "loss": 0.5329294800758362,
+      "relation": 0.35940566658973694,
+      "step": 304
+    },
+    {
+      "cardinality": 0.5639001131057739,
+      "contrastive": 0.17234718799591064,
+      "loss": 0.5320137739181519,
+      "relation": 0.35891222953796387,
+      "step": 305
+    },
+    {
+      "cardinality": 0.5619603395462036,
+      "contrastive": 0.17223870754241943,
+      "loss": 0.5311020612716675,
+      "relation": 0.35842645168304443,
+      "step": 306
+    },
+    {
+      "cardinality": 0.5600073337554932,
+      "contrastive": 0.17211216688156128,
+      "loss": 0.5301945209503174,
+      "relation": 0.3579537570476532,
+      "step": 307
+    },
+    {
+      "cardinality": 0.5580829977989197,
+      "contrastive": 0.17199943959712982,
+      "loss": 0.5292909741401672,
+      "relation": 0.35747453570365906,
+      "step": 308
+    },
+    {
+      "cardinality": 0.556178867816925,
+      "contrastive": 0.1718914657831192,
+      "loss": 0.5283913612365723,
+      "relation": 0.35699355602264404,
+      "step": 309
+    },
+    {
+      "cardinality": 0.5542592406272888,
+      "contrastive": 0.1717580109834671,
+      "loss": 0.5274956226348877,
+      "relation": 0.35652846097946167,
+      "step": 310
+    },
+    {
+      "cardinality": 0.552329421043396,
+      "contrastive": 0.17160454392433167,
+      "loss": 0.5266039967536926,
+      "relation": 0.35607650876045227,
+      "step": 311
+    },
+    {
+      "cardinality": 0.5504326224327087,
+      "contrastive": 0.1714666336774826,
+      "loss": 0.525716245174408,
+      "relation": 0.35561639070510864,
+      "step": 312
+    },
+    {
+      "cardinality": 0.5485644936561584,
+      "contrastive": 0.17134328186511993,
+      "loss": 0.5248324275016785,
+      "relation": 0.35514938831329346,
+      "step": 313
+    },
+    {
+      "cardinality": 0.5466962456703186,
+      "contrastive": 0.17121171951293945,
+      "loss": 0.5239526629447937,
+      "relation": 0.35468927025794983,
+      "step": 314
+    },
+    {
+      "cardinality": 0.5448493957519531,
+      "contrastive": 0.171087384223938,
+      "loss": 0.5230767726898193,
+      "relation": 0.35422635078430176,
+      "step": 315
+    },
+    {
+      "cardinality": 0.543026864528656,
+      "contrastive": 0.17096897959709167,
+      "loss": 0.5222049951553345,
+      "relation": 0.3537604510784149,
+      "step": 316
+    },
+    {
+      "cardinality": 0.5412437915802002,
+      "contrastive": 0.17086739838123322,
+      "loss": 0.5213370323181152,
+      "relation": 0.35328465700149536,
+      "step": 317
+    },
+    {
+      "cardinality": 0.5394544005393982,
+      "contrastive": 0.1707502156496048,
+      "loss": 0.5204729437828064,
+      "relation": 0.3528194725513458,
+      "step": 318
+    },
+    {
+      "cardinality": 0.5376451015472412,
+      "contrastive": 0.17060789465904236,
+      "loss": 0.5196126699447632,
+      "relation": 0.35237088799476624,
+      "step": 319
+    },
+    {
+      "cardinality": 0.5358564257621765,
+      "contrastive": 0.1704695075750351,
+      "loss": 0.5187563300132751,
+      "relation": 0.3519206941127777,
+      "step": 320
+    },
+    {
+      "cardinality": 0.5340878367424011,
+      "contrastive": 0.17033740878105164,
+      "loss": 0.5179038643836975,
+      "relation": 0.35146820545196533,
+      "step": 321
+    },
+    {
+      "cardinality": 0.5323266386985779,
+      "contrastive": 0.170204758644104,
+      "loss": 0.5170552134513855,
+      "relation": 0.35101819038391113,
+      "step": 322
+    },
+    {
+      "cardinality": 0.5305598974227905,
+      "contrastive": 0.1700621396303177,
+      "loss": 0.5162103176116943,
+      "relation": 0.35057657957077026,
+      "step": 323
+    },
+    {
+      "cardinality": 0.5288119316101074,
+      "contrastive": 0.1699284166097641,
+      "loss": 0.5153692960739136,
+      "relation": 0.35013192892074585,
+      "step": 324
+    },
+    {
+      "cardinality": 0.5270999670028687,
+      "contrastive": 0.16981247067451477,
+      "loss": 0.5145320296287537,
+      "relation": 0.3496776521205902,
+      "step": 325
+    },
+    {
+      "cardinality": 0.525393545627594,
+      "contrastive": 0.16968877613544464,
+      "loss": 0.5136984586715698,
+      "relation": 0.3492286801338196,
+      "step": 326
+    },
+    {
+      "cardinality": 0.5236881971359253,
+      "contrastive": 0.16955333948135376,
+      "loss": 0.5128686428070068,
+      "relation": 0.3487873375415802,
+      "step": 327
+    },
+    {
+      "cardinality": 0.5220308899879456,
+      "contrastive": 0.16944488883018494,
+      "loss": 0.5120425820350647,
+      "relation": 0.34833067655563354,
+      "step": 328
+    },
+    {
+      "cardinality": 0.5203806161880493,
+      "contrastive": 0.16933295130729675,
+      "loss": 0.5112200379371643,
+      "relation": 0.3478774130344391,
+      "step": 329
+    },
+    {
+      "cardinality": 0.5187157392501831,
+      "contrastive": 0.16920305788516998,
+      "loss": 0.5104013681411743,
+      "relation": 0.3474371135234833,
+      "step": 330
+    },
+    {
+      "cardinality": 0.5170397162437439,
+      "contrastive": 0.16906075179576874,
+      "loss": 0.5095861554145813,
+      "relation": 0.3470069468021393,
+      "step": 331
+    },
+    {
+      "cardinality": 0.5154107213020325,
+      "contrastive": 0.16894520819187164,
+      "loss": 0.5087746381759644,
+      "relation": 0.34656164050102234,
+      "step": 332
+    },
+    {
+      "cardinality": 0.5137723088264465,
+      "contrastive": 0.16880938410758972,
+      "loss": 0.5079666376113892,
+      "relation": 0.346128910779953,
+      "step": 333
+    },
+    {
+      "cardinality": 0.5121116638183594,
+      "contrastive": 0.16864529252052307,
+      "loss": 0.5071622729301453,
+      "relation": 0.34571412205696106,
+      "step": 334
+    },
+    {
+      "cardinality": 0.5104910135269165,
+      "contrastive": 0.16850003600120544,
+      "loss": 0.5063614845275879,
+      "relation": 0.34528830647468567,
+      "step": 335
+    },
+    {
+      "cardinality": 0.5089004635810852,
+      "contrastive": 0.16836996376514435,
+      "loss": 0.5055641531944275,
+      "relation": 0.34485459327697754,
+      "step": 336
+    },
+    {
+      "cardinality": 0.507308304309845,
+      "contrastive": 0.16823416948318481,
+      "loss": 0.5047704577445984,
+      "relation": 0.34442684054374695,
+      "step": 337
+    },
+    {
+      "cardinality": 0.5057279467582703,
+      "contrastive": 0.16810238361358643,
+      "loss": 0.5039801597595215,
+      "relation": 0.3439987003803253,
+      "step": 338
+    },
+    {
+      "cardinality": 0.5041693449020386,
+      "contrastive": 0.16798263788223267,
+      "loss": 0.5031932592391968,
+      "relation": 0.3435654640197754,
+      "step": 339
+    },
+    {
+      "cardinality": 0.5025969743728638,
+      "contrastive": 0.1678476780653,
+      "loss": 0.5024097561836243,
+      "relation": 0.3431437015533447,
+      "step": 340
+    },
+    {
+      "cardinality": 0.5010554194450378,
+      "contrastive": 0.1677294373512268,
+      "loss": 0.5016297101974487,
+      "relation": 0.34271329641342163,
+      "step": 341
+    },
+    {
+      "cardinality": 0.499533087015152,
+      "contrastive": 0.1676175743341446,
+      "loss": 0.5008530020713806,
+      "relation": 0.34228020906448364,
+      "step": 342
+    },
+    {
+      "cardinality": 0.49800291657447815,
+      "contrastive": 0.16749384999275208,
+      "loss": 0.5000796318054199,
+      "relation": 0.3418562114238739,
+      "step": 343
+    },
+    {
+      "cardinality": 0.4964815080165863,
+      "contrastive": 0.16736885905265808,
+      "loss": 0.4993096590042114,
+      "relation": 0.3414342701435089,
+      "step": 344
+    },
+    {
+      "cardinality": 0.4949828088283539,
+      "contrastive": 0.16725552082061768,
+      "loss": 0.49854305386543274,
+      "relation": 0.3410070538520813,
+      "step": 345
+    },
+    {
+      "cardinality": 0.4934689700603485,
+      "contrastive": 0.16712835431098938,
+      "loss": 0.49777957797050476,
+      "relation": 0.34059086441993713,
+      "step": 346
+    },
+    {
+      "cardinality": 0.49194061756134033,
+      "contrastive": 0.1669866293668747,
+      "loss": 0.49701952934265137,
+      "relation": 0.34018605947494507,
+      "step": 347
+    },
+    {
+      "cardinality": 0.4904465973377228,
+      "contrastive": 0.16686277091503143,
+      "loss": 0.4962625801563263,
+      "relation": 0.3397713005542755,
+      "step": 348
+    },
+    {
+      "cardinality": 0.48898544907569885,
+      "contrastive": 0.16675235331058502,
+      "loss": 0.4955088794231415,
+      "relation": 0.3393484652042389,
+      "step": 349
+    },
+    {
+      "cardinality": 0.4875178039073944,
+      "contrastive": 0.16662602126598358,
+      "loss": 0.4947583079338074,
+      "relation": 0.33893564343452454,
+      "step": 350
+    },
+    {
+      "cardinality": 0.4860782027244568,
+      "contrastive": 0.1665116250514984,
+      "loss": 0.4940108358860016,
+      "relation": 0.33851611614227295,
+      "step": 351
+    },
+    {
+      "cardinality": 0.48464372754096985,
+      "contrastive": 0.16639339923858643,
+      "loss": 0.4932665228843689,
+      "relation": 0.3381000757217407,
+      "step": 352
+    },
+    {
+      "cardinality": 0.4832302927970886,
+      "contrastive": 0.1662842482328415,
+      "loss": 0.4925254285335541,
+      "relation": 0.3376798629760742,
+      "step": 353
+    },
+    {
+      "cardinality": 0.48182734847068787,
+      "contrastive": 0.1661759614944458,
+      "loss": 0.4917873442173004,
+      "relation": 0.33726027607917786,
+      "step": 354
+    },
+    {
+      "cardinality": 0.4804060161113739,
+      "contrastive": 0.16604633629322052,
+      "loss": 0.49105241894721985,
+      "relation": 0.3368549942970276,
+      "step": 355
+    },
+    {
+      "cardinality": 0.47901347279548645,
+      "contrastive": 0.16592936217784882,
+      "loss": 0.4903203547000885,
+      "relation": 0.33644238114356995,
+      "step": 356
+    },
+    {
+      "cardinality": 0.4776131212711334,
+      "contrastive": 0.16580131649971008,
+      "loss": 0.48959144949913025,
+      "relation": 0.33603835105895996,
+      "step": 357
+    },
+    {
+      "cardinality": 0.47619107365608215,
+      "contrastive": 0.16565363109111786,
+      "loss": 0.4888654351234436,
+      "relation": 0.33564844727516174,
+      "step": 358
+    },
+    {
+      "cardinality": 0.4748295843601227,
+      "contrastive": 0.16554270684719086,
+      "loss": 0.4881424307823181,
+      "relation": 0.3352365791797638,
+      "step": 359
+    },
+    {
+      "cardinality": 0.4734727442264557,
+      "contrastive": 0.16542775928974152,
+      "loss": 0.48742246627807617,
+      "relation": 0.3348281979560852,
+      "step": 360
+    },
+    {
+      "cardinality": 0.47209852933883667,
+      "contrastive": 0.1652941107749939,
+      "loss": 0.4867054224014282,
+      "relation": 0.3344327509403229,
+      "step": 361
+    },
+    {
+      "cardinality": 0.47078874707221985,
+      "contrastive": 0.16519656777381897,
+      "loss": 0.48599129915237427,
+      "relation": 0.33401474356651306,
+      "step": 362
+    },
+    {
+      "cardinality": 0.4694489538669586,
+      "contrastive": 0.1650754064321518,
+      "loss": 0.4852800667285919,
+      "relation": 0.33361387252807617,
+      "step": 363
+    },
+    {
+      "cardinality": 0.4680696725845337,
+      "contrastive": 0.1649269163608551,
+      "loss": 0.48457175493240356,
+      "relation": 0.33323338627815247,
+      "step": 364
+    },
+    {
+      "cardinality": 0.4667590260505676,
+      "contrastive": 0.16482332348823547,
+      "loss": 0.48386621475219727,
+      "relation": 0.33282625675201416,
+      "step": 365
+    },
+    {
+      "cardinality": 0.46541160345077515,
+      "contrastive": 0.1646900177001953,
+      "loss": 0.4831635355949402,
+      "relation": 0.33243972063064575,
+      "step": 366
+    },
+    {
+      "cardinality": 0.46406790614128113,
+      "contrastive": 0.16455353796482086,
+      "loss": 0.4824637174606323,
+      "relation": 0.3320564031600952,
+      "step": 367
+    },
+    {
+      "cardinality": 0.4627757668495178,
+      "contrastive": 0.16444702446460724,
+      "loss": 0.48176661133766174,
+      "relation": 0.33165499567985535,
+      "step": 368
+    },
+    {
+      "cardinality": 0.4614693224430084,
+      "contrastive": 0.1643267273902893,
+      "loss": 0.48107224702835083,
+      "relation": 0.33126401901245117,
+      "step": 369
+    },
+    {
+      "cardinality": 0.4601595401763916,
+      "contrastive": 0.1641998440027237,
+      "loss": 0.4803806245326996,
+      "relation": 0.3308787941932678,
+      "step": 370
+    },
+    {
+      "cardinality": 0.4588664174079895,
+      "contrastive": 0.16407820582389832,
+      "loss": 0.4796917140483856,
+      "relation": 0.3304910659790039,
+      "step": 371
+    },
+    {
+      "cardinality": 0.45756077766418457,
+      "contrastive": 0.16394196450710297,
+      "loss": 0.47900548577308655,
+      "relation": 0.33011364936828613,
+      "step": 372
+    },
+    {
+      "cardinality": 0.4562920033931732,
+      "contrastive": 0.16382524371147156,
+      "loss": 0.47832199931144714,
+      "relation": 0.3297247588634491,
+      "step": 373
+    },
+    {
+      "cardinality": 0.4550154209136963,
+      "contrastive": 0.16370020806789398,
+      "loss": 0.47764119505882263,
+      "relation": 0.3293430209159851,
+      "step": 374
+    },
+    {
+      "cardinality": 0.4537626802921295,
+      "contrastive": 0.16358888149261475,
+      "loss": 0.47696301341056824,
+      "relation": 0.3289543688297272,
+      "step": 375
+    },
+    {
+      "cardinality": 0.452502965927124,
+      "contrastive": 0.1634681224822998,
+      "loss": 0.47628748416900635,
+      "relation": 0.3285730481147766,
+      "step": 376
+    },
+    {
+      "cardinality": 0.4512566030025482,
+      "contrastive": 0.16334830224514008,
+      "loss": 0.4756145775318146,
+      "relation": 0.328191339969635,
+      "step": 377
+    },
+    {
+      "cardinality": 0.45002076029777527,
+      "contrastive": 0.16322921216487885,
+      "loss": 0.47494426369667053,
+      "relation": 0.3278099000453949,
+      "step": 378
+    },
+    {
+      "cardinality": 0.44877249002456665,
+      "contrastive": 0.16309647262096405,
+      "loss": 0.47427648305892944,
+      "relation": 0.32743823528289795,
+      "step": 379
+    },
+    {
+      "cardinality": 0.4475502073764801,
+      "contrastive": 0.1629767268896103,
+      "loss": 0.4736112952232361,
+      "relation": 0.32705938816070557,
+      "step": 380
+    },
+    {
+      "cardinality": 0.44634750485420227,
+      "contrastive": 0.16286486387252808,
+      "loss": 0.4729485809803009,
+      "relation": 0.3266763985157013,
+      "step": 381
+    },
+    {
+      "cardinality": 0.4451448321342468,
+      "contrastive": 0.1627490371465683,
+      "loss": 0.4722885191440582,
+      "relation": 0.3262973725795746,
+      "step": 382
+    },
+    {
+      "cardinality": 0.4439167082309723,
+      "contrastive": 0.1626131534576416,
+      "loss": 0.4716308116912842,
+      "relation": 0.3259328603744507,
+      "step": 383
+    },
+    {
+      "cardinality": 0.4427546262741089,
+      "contrastive": 0.16251525282859802,
+      "loss": 0.4709756076335907,
+      "relation": 0.3255443572998047,
+      "step": 384
+    },
+    {
+      "cardinality": 0.4415457546710968,
+      "contrastive": 0.1623799055814743,
+      "loss": 0.470322847366333,
+      "relation": 0.3251807391643524,
+      "step": 385
+    },
+    {
+      "cardinality": 0.4403585195541382,
+      "contrastive": 0.16225215792655945,
+      "loss": 0.4696725904941559,
+      "relation": 0.3248126208782196,
+      "step": 386
+    },
+    {
+      "cardinality": 0.43921011686325073,
+      "contrastive": 0.1621471643447876,
+      "loss": 0.46902474761009216,
+      "relation": 0.3244312107563019,
+      "step": 387
+    },
+    {
+      "cardinality": 0.4380008280277252,
+      "contrastive": 0.1620015650987625,
+      "loss": 0.46837925910949707,
+      "relation": 0.3240785300731659,
+      "step": 388
+    },
+    {
+      "cardinality": 0.43686917424201965,
+      "contrastive": 0.1619054079055786,
+      "loss": 0.46773621439933777,
+      "relation": 0.32369548082351685,
+      "step": 389
+    },
+    {
+      "cardinality": 0.43565118312835693,
+      "contrastive": 0.16174763441085815,
+      "loss": 0.4670955538749695,
+      "relation": 0.3233536183834076,
+      "step": 390
+    },
+    {
+      "cardinality": 0.43454509973526,
+      "contrastive": 0.1616571545600891,
+      "loss": 0.46645715832710266,
+      "relation": 0.32296812534332275,
+      "step": 391
+    },
+    {
+      "cardinality": 0.4333549439907074,
+      "contrastive": 0.16150468587875366,
+      "loss": 0.4658210873603821,
+      "relation": 0.32262346148490906,
+      "step": 392
+    },
+    {
+      "cardinality": 0.4322354793548584,
+      "contrastive": 0.16139273345470428,
+      "loss": 0.4651874303817749,
+      "relation": 0.32225286960601807,
+      "step": 393
+    },
+    {
+      "cardinality": 0.4311195909976959,
+      "contrastive": 0.16128046810626984,
+      "loss": 0.46455609798431396,
+      "relation": 0.32188400626182556,
+      "step": 394
+    },
+    {
+      "cardinality": 0.42999371886253357,
+      "contrastive": 0.16115915775299072,
+      "loss": 0.4639269709587097,
+      "relation": 0.3215225338935852,
+      "step": 395
+    },
+    {
+      "cardinality": 0.42887037992477417,
+      "contrastive": 0.16103538870811462,
+      "loss": 0.4633001685142517,
+      "relation": 0.32116371393203735,
+      "step": 396
+    },
+    {
+      "cardinality": 0.4277576804161072,
+      "contrastive": 0.16091503202915192,
+      "loss": 0.46267563104629517,
+      "relation": 0.32080385088920593,
+      "step": 397
+    },
+    {
+      "cardinality": 0.4266487956047058,
+      "contrastive": 0.16079026460647583,
+      "loss": 0.4620533585548401,
+      "relation": 0.32044699788093567,
+      "step": 398
+    },
+    {
+      "cardinality": 0.4255788326263428,
+      "contrastive": 0.1606852412223816,
+      "loss": 0.46143338084220886,
+      "relation": 0.3200777769088745,
+      "step": 399
+    },
+    {
+      "cardinality": 0.42448675632476807,
+      "contrastive": 0.1605626791715622,
+      "loss": 0.46081554889678955,
+      "relation": 0.3197212517261505,
+      "step": 400
+    },
+    {
+      "cardinality": 0.42337071895599365,
+      "contrastive": 0.16042488813400269,
+      "loss": 0.46019992232322693,
+      "relation": 0.319377064704895,
+      "step": 401
+    },
+    {
+      "cardinality": 0.42229658365249634,
+      "contrastive": 0.16031306982040405,
+      "loss": 0.4595865309238434,
+      "relation": 0.3190176486968994,
+      "step": 402
+    },
+    {
+      "cardinality": 0.42115873098373413,
+      "contrastive": 0.1601555496454239,
+      "loss": 0.45897534489631653,
+      "relation": 0.31868916749954224,
+      "step": 403
+    },
+    {
+      "cardinality": 0.42014339566230774,
+      "contrastive": 0.16007138788700104,
+      "loss": 0.4583662152290344,
+      "relation": 0.31831255555152893,
+      "step": 404
+    },
+    {
+      "cardinality": 0.419050395488739,
+      "contrastive": 0.15992949903011322,
+      "loss": 0.457759290933609,
+      "relation": 0.31797388195991516,
+      "step": 405
+    },
+    {
+      "cardinality": 0.41800105571746826,
+      "contrastive": 0.1598147451877594,
+      "loss": 0.45715445280075073,
+      "relation": 0.31761905550956726,
+      "step": 406
+    },
+    {
+      "cardinality": 0.4169333577156067,
+      "contrastive": 0.159691721200943,
+      "loss": 0.456551730632782,
+      "relation": 0.31727296113967896,
+      "step": 407
+    },
+    {
+      "cardinality": 0.41586825251579285,
+      "contrastive": 0.15956376492977142,
+      "loss": 0.45595115423202515,
+      "relation": 0.3169301748275757,
+      "step": 408
+    },
+    {
+      "cardinality": 0.414834588766098,
+      "contrastive": 0.1594475954771042,
+      "loss": 0.45535269379615784,
+      "relation": 0.31657910346984863,
+      "step": 409
+    },
+    {
+      "cardinality": 0.4138163924217224,
+      "contrastive": 0.15933455526828766,
+      "loss": 0.4547562301158905,
+      "relation": 0.3162258565425873,
+      "step": 410
+    },
+    {
+      "cardinality": 0.41277459263801575,
+      "contrastive": 0.15920542180538177,
+      "loss": 0.4541618525981903,
+      "relation": 0.3158850371837616,
+      "step": 411
+    },
+    {
+      "cardinality": 0.4117342531681061,
+      "contrastive": 0.15907594561576843,
+      "loss": 0.45356953144073486,
+      "relation": 0.31554609537124634,
+      "step": 412
+    },
+    {
+      "cardinality": 0.41070684790611267,
+      "contrastive": 0.15894976258277893,
+      "loss": 0.452979177236557,
+      "relation": 0.3152053952217102,
+      "step": 413
+    },
+    {
+      "cardinality": 0.4096752405166626,
+      "contrastive": 0.15881237387657166,
+      "loss": 0.4523908793926239,
+      "relation": 0.31487149000167847,
+      "step": 414
+    },
+    {
+      "cardinality": 0.40865299105644226,
+      "contrastive": 0.1586780846118927,
+      "loss": 0.45180457830429077,
+      "relation": 0.3145366311073303,
+      "step": 415
+    },
+    {
+      "cardinality": 0.4076789915561676,
+      "contrastive": 0.15857094526290894,
+      "loss": 0.45122024416923523,
+      "relation": 0.31418460607528687,
+      "step": 416
+    },
+    {
+      "cardinality": 0.406631201505661,
+      "contrastive": 0.15841388702392578,
+      "loss": 0.45063796639442444,
+      "relation": 0.31386685371398926,
+      "step": 417
+    },
+    {
+      "cardinality": 0.40571072697639465,
+      "contrastive": 0.15833474695682526,
+      "loss": 0.45005759596824646,
+      "relation": 0.31349828839302063,
+      "step": 418
+    },
+    {
+      "cardinality": 0.4047158658504486,
+      "contrastive": 0.15820664167404175,
+      "loss": 0.4494791328907013,
+      "relation": 0.3131636381149292,
+      "step": 419
+    },
+    {
+      "cardinality": 0.40369662642478943,
+      "contrastive": 0.15806342661380768,
+      "loss": 0.44890275597572327,
+      "relation": 0.3128412365913391,
+      "step": 420
+    },
+    {
+      "cardinality": 0.4027979075908661,
+      "contrastive": 0.15799666941165924,
+      "loss": 0.4483281970024109,
+      "relation": 0.3124697804450989,
+      "step": 421
+    },
+    {
+      "cardinality": 0.40173014998435974,
+      "contrastive": 0.15781719982624054,
+      "loss": 0.4477554261684418,
+      "relation": 0.31217339634895325,
+      "step": 422
+    },
+    {
+      "cardinality": 0.40076830983161926,
+      "contrastive": 0.15770122408866882,
+      "loss": 0.447184681892395,
+      "relation": 0.3118355870246887,
+      "step": 423
+    },
+    {
+      "cardinality": 0.39985254406929016,
+      "contrastive": 0.157607764005661,
+      "loss": 0.44661593437194824,
+      "relation": 0.311482697725296,
+      "step": 424
+    },
+    {
+      "cardinality": 0.398815393447876,
+      "contrastive": 0.15743191540241241,
+      "loss": 0.44604891538619995,
+      "relation": 0.3111846446990967,
+      "step": 425
+    },
+    {
+      "cardinality": 0.3978922367095947,
+      "contrastive": 0.15732672810554504,
+      "loss": 0.4454836845397949,
+      "relation": 0.3108408749103546,
+      "step": 426
+    },
+    {
+      "cardinality": 0.3969631791114807,
+      "contrastive": 0.15721260011196136,
+      "loss": 0.44492045044898987,
+      "relation": 0.31050339341163635,
+      "step": 427
+    },
+    {
+      "cardinality": 0.39593011140823364,
+      "contrastive": 0.15702418982982635,
+      "loss": 0.4443590044975281,
+      "relation": 0.3102145195007324,
+      "step": 428
+    },
+    {
+      "cardinality": 0.3950667679309845,
+      "contrastive": 0.1569395363330841,
+      "loss": 0.44379928708076477,
+      "relation": 0.3098571002483368,
+      "step": 429
+    },
+    {
+      "cardinality": 0.39409303665161133,
+      "contrastive": 0.15678255259990692,
+      "loss": 0.4432414472103119,
+      "relation": 0.309548944234848,
+      "step": 430
+    },
+    {
+      "cardinality": 0.3931482136249542,
+      "contrastive": 0.15664252638816833,
+      "loss": 0.44268545508384705,
+      "relation": 0.3092309236526489,
+      "step": 431
+    },
+    {
+      "cardinality": 0.39229831099510193,
+      "contrastive": 0.1565621942281723,
+      "loss": 0.4421314001083374,
+      "relation": 0.3088749647140503,
+      "step": 432
+    },
+    {
+      "cardinality": 0.39122745394706726,
+      "contrastive": 0.15634271502494812,
+      "loss": 0.4415791630744934,
+      "relation": 0.30861371755599976,
+      "step": 433
+    },
+    {
+      "cardinality": 0.3905131220817566,
+      "contrastive": 0.15634411573410034,
+      "loss": 0.4410284459590912,
+      "relation": 0.30820539593696594,
+      "step": 434
+    },
+    {
+      "cardinality": 0.3894253969192505,
+      "contrastive": 0.15611042082309723,
+      "loss": 0.44047942757606506,
+      "relation": 0.30795568227767944,
+      "step": 435
+    },
+    {
+      "cardinality": 0.3886216878890991,
+      "contrastive": 0.15605126321315765,
+      "loss": 0.43993204832077026,
+      "relation": 0.3075897693634033,
+      "step": 436
+    },
+    {
+      "cardinality": 0.3877086043357849,
+      "contrastive": 0.15592573583126068,
+      "loss": 0.43938666582107544,
+      "relation": 0.30727091431617737,
+      "step": 437
+    },
+    {
+      "cardinality": 0.38666611909866333,
+      "contrastive": 0.15571576356887817,
+      "loss": 0.4388431906700134,
+      "relation": 0.3070094585418701,
+      "step": 438
+    },
+    {
+      "cardinality": 0.38596731424331665,
+      "contrastive": 0.155708447098732,
+      "loss": 0.4383014142513275,
+      "relation": 0.30660998821258545,
+      "step": 439
+    },
+    {
+      "cardinality": 0.38484400510787964,
+      "contrastive": 0.15543948113918304,
+      "loss": 0.43776121735572815,
+      "relation": 0.30638858675956726,
+      "step": 440
+    },
+    {
+      "cardinality": 0.3841775059700012,
+      "contrastive": 0.15544915199279785,
+      "loss": 0.43722236156463623,
+      "relation": 0.3059796392917633,
+      "step": 441
+    },
+    {
+      "cardinality": 0.38314390182495117,
+      "contrastive": 0.15523339807987213,
+      "loss": 0.43668514490127563,
+      "relation": 0.3057246804237366,
+      "step": 442
+    },
+    {
+      "cardinality": 0.3822921812534332,
+      "contrastive": 0.1551218330860138,
+      "loss": 0.43614986538887024,
+      "relation": 0.30539876222610474,
+      "step": 443
+    },
+    {
+      "cardinality": 0.38147515058517456,
+      "contrastive": 0.1550256311893463,
+      "loss": 0.4356164038181305,
+      "relation": 0.3050623834133148,
+      "step": 444
+    },
+    {
+      "cardinality": 0.38045990467071533,
+      "contrastive": 0.1548042893409729,
+      "loss": 0.43508458137512207,
+      "relation": 0.30481112003326416,
+      "step": 445
+    },
+    {
+      "cardinality": 0.3797798752784729,
+      "contrastive": 0.15478752553462982,
+      "loss": 0.4345543384552002,
+      "relation": 0.3044227063655853,
+      "step": 446
+    },
+    {
+      "cardinality": 0.378792941570282,
+      "contrastive": 0.1545819640159607,
+      "loss": 0.43402552604675293,
+      "relation": 0.30416327714920044,
+      "step": 447
+    },
+    {
+      "cardinality": 0.37800362706184387,
+      "contrastive": 0.1545019894838333,
+      "loss": 0.43349841237068176,
+      "relation": 0.30382201075553894,
+      "step": 448
+    },
+    {
+      "cardinality": 0.3771572709083557,
+      "contrastive": 0.1543848216533661,
+      "loss": 0.43297311663627625,
+      "relation": 0.3035069704055786,
+      "step": 449
+    },
+    {
+      "cardinality": 0.37621450424194336,
+      "contrastive": 0.15420310199260712,
+      "loss": 0.43244946002960205,
+      "relation": 0.3032354712486267,
+      "step": 450
+    },
+    {
+      "cardinality": 0.37548696994781494,
+      "contrastive": 0.1541503518819809,
+      "loss": 0.43192732334136963,
+      "relation": 0.3028773069381714,
+      "step": 451
+    },
+    {
+      "cardinality": 0.37451985478401184,
+      "contrastive": 0.15394990146160126,
+      "loss": 0.43140679597854614,
+      "relation": 0.3026203513145447,
+      "step": 452
+    },
+    {
+      "cardinality": 0.3738097846508026,
+      "contrastive": 0.1539044827222824,
+      "loss": 0.4308878183364868,
+      "relation": 0.30225929617881775,
+      "step": 453
+    },
+    {
+      "cardinality": 0.37287142872810364,
+      "contrastive": 0.15371446311473846,
+      "loss": 0.4303703308105469,
+      "relation": 0.30199599266052246,
+      "step": 454
+    },
+    {
+      "cardinality": 0.3721177279949188,
+      "contrastive": 0.1536371111869812,
+      "loss": 0.42985448241233826,
+      "relation": 0.30165794491767883,
+      "step": 455
+    },
+    {
+      "cardinality": 0.37123391032218933,
+      "contrastive": 0.15347318351268768,
+      "loss": 0.4293401837348938,
+      "relation": 0.3013777732849121,
+      "step": 456
+    },
+    {
+      "cardinality": 0.37045326828956604,
+      "contrastive": 0.15336766839027405,
+      "loss": 0.4288274645805359,
+      "relation": 0.3010581135749817,
+      "step": 457
+    },
+    {
+      "cardinality": 0.36961829662323,
+      "contrastive": 0.1532258689403534,
+      "loss": 0.42831629514694214,
+      "relation": 0.3007635772228241,
+      "step": 458
+    },
+    {
+      "cardinality": 0.368854284286499,
+      "contrastive": 0.15312668681144714,
+      "loss": 0.42780664563179016,
+      "relation": 0.3004414439201355,
+      "step": 459
+    },
+    {
+      "cardinality": 0.367981880903244,
+      "contrastive": 0.15296049416065216,
+      "loss": 0.42729848623275757,
+      "relation": 0.30016592144966125,
+      "step": 460
+    },
+    {
+      "cardinality": 0.3672390580177307,
+      "contrastive": 0.15287087857723236,
+      "loss": 0.42679187655448914,
+      "relation": 0.2998392581939697,
+      "step": 461
+    },
+    {
+      "cardinality": 0.366378515958786,
+      "contrastive": 0.15269753336906433,
+      "loss": 0.4262866973876953,
+      "relation": 0.2995668351650238,
+      "step": 462
+    },
+    {
+      "cardinality": 0.36566150188446045,
+      "contrastive": 0.1526096612215042,
+      "loss": 0.4257830083370209,
+      "relation": 0.29923731088638306,
+      "step": 463
+    },
+    {
+      "cardinality": 0.36479899287223816,
+      "contrastive": 0.15242968499660492,
+      "loss": 0.42528077960014343,
+      "relation": 0.2989705801010132,
+      "step": 464
+    },
+    {
+      "cardinality": 0.3640606105327606,
+      "contrastive": 0.1523292511701584,
+      "loss": 0.4247799515724182,
+      "relation": 0.29865261912345886,
+      "step": 465
+    },
+    {
+      "cardinality": 0.36325693130493164,
+      "contrastive": 0.152184396982193,
+      "loss": 0.42428064346313477,
+      "relation": 0.2983647286891937,
+      "step": 466
+    },
+    {
+      "cardinality": 0.3624536693096161,
+      "contrastive": 0.15203642845153809,
+      "loss": 0.4237828850746155,
+      "relation": 0.29807937145233154,
+      "step": 467
+    },
+    {
+      "cardinality": 0.3617737293243408,
+      "contrastive": 0.15196536481380463,
+      "loss": 0.4232865869998932,
+      "relation": 0.29774394631385803,
+      "step": 468
+    },
+    {
+      "cardinality": 0.36084452271461487,
+      "contrastive": 0.15173667669296265,
+      "loss": 0.4227917790412903,
+      "relation": 0.29751503467559814,
+      "step": 469
+    },
+    {
+      "cardinality": 0.3602679371833801,
+      "contrastive": 0.15172237157821655,
+      "loss": 0.42229825258255005,
+      "relation": 0.2971418499946594,
+      "step": 470
+    },
+    {
+      "cardinality": 0.3593103289604187,
+      "contrastive": 0.15147289633750916,
+      "loss": 0.4218061864376068,
+      "relation": 0.29692861437797546,
+      "step": 471
+    },
+    {
+      "cardinality": 0.35874664783477783,
+      "contrastive": 0.15146508812904358,
+      "loss": 0.421315461397171,
+      "relation": 0.2965533435344696,
+      "step": 472
+    },
+    {
+      "cardinality": 0.35777685046195984,
+      "contrastive": 0.15120692551136017,
+      "loss": 0.42082616686820984,
+      "relation": 0.29634836316108704,
+      "step": 473
+    },
+    {
+      "cardinality": 0.35721030831336975,
+      "contrastive": 0.15119172632694244,
+      "loss": 0.4203380048274994,
+      "relation": 0.295978844165802,
+      "step": 474
+    },
+    {
+      "cardinality": 0.35631880164146423,
+      "contrastive": 0.15097911655902863,
+      "loss": 0.4198514223098755,
+      "relation": 0.29574498534202576,
+      "step": 475
+    },
+    {
+      "cardinality": 0.35566943883895874,
+      "contrastive": 0.15090766549110413,
+      "loss": 0.41936612129211426,
+      "relation": 0.2954145669937134,
+      "step": 476
+    },
+    {
+      "cardinality": 0.35487881302833557,
+      "contrastive": 0.15074239671230316,
+      "loss": 0.4188823699951172,
+      "relation": 0.29514676332473755,
+      "step": 477
+    },
+    {
+      "cardinality": 0.35416141152381897,
+      "contrastive": 0.15062348544597626,
+      "loss": 0.4183999001979828,
+      "relation": 0.2948493957519531,
+      "step": 478
+    },
+    {
+      "cardinality": 0.3534570336341858,
+      "contrastive": 0.15051504969596863,
+      "loss": 0.4179189205169678,
+      "relation": 0.29454725980758667,
+      "step": 479
+    },
+    {
+      "cardinality": 0.3526350259780884,
+      "contrastive": 0.15032914280891418,
+      "loss": 0.4174393117427826,
+      "relation": 0.29429709911346436,
+      "step": 480
+    },
+    {
+      "cardinality": 0.35204118490219116,
+      "contrastive": 0.15027457475662231,
+      "loss": 0.41696107387542725,
+      "relation": 0.2939567267894745,
+      "step": 481
+    },
+    {
+      "cardinality": 0.3511784076690674,
+      "contrastive": 0.150055393576622,
+      "loss": 0.4164840579032898,
+      "relation": 0.2937289774417877,
+      "step": 482
+    },
+    {
+      "cardinality": 0.35061660408973694,
+      "contrastive": 0.1500186175107956,
+      "loss": 0.41600826382637024,
+      "relation": 0.29337844252586365,
+      "step": 483
+    },
+    {
+      "cardinality": 0.3497375249862671,
+      "contrastive": 0.14979098737239838,
+      "loss": 0.4155338704586029,
+      "relation": 0.29315951466560364,
+      "step": 484
+    },
+    {
+      "cardinality": 0.34913456439971924,
+      "contrastive": 0.14972443878650665,
+      "loss": 0.4150606393814087,
+      "relation": 0.2928301692008972,
+      "step": 485
+    },
+    {
+      "cardinality": 0.3483744263648987,
+      "contrastive": 0.14955998957157135,
+      "loss": 0.4145888090133667,
+      "relation": 0.2925679385662079,
+      "step": 486
+    },
+    {
+      "cardinality": 0.3476540446281433,
+      "contrastive": 0.14942041039466858,
+      "loss": 0.41411834955215454,
+      "relation": 0.2922903895378113,
+      "step": 487
+    },
+    {
+      "cardinality": 0.34698793292045593,
+      "contrastive": 0.1493154764175415,
+      "loss": 0.41364914178848267,
+      "relation": 0.29199111461639404,
+      "step": 488
+    },
+    {
+      "cardinality": 0.34617701172828674,
+      "contrastive": 0.14912547171115875,
+      "loss": 0.41318124532699585,
+      "relation": 0.2917519211769104,
+      "step": 489
+    },
+    {
+      "cardinality": 0.3455754518508911,
+      "contrastive": 0.14905878901481628,
+      "loss": 0.4127146005630493,
+      "relation": 0.29142892360687256,
+      "step": 490
+    },
+    {
+      "cardinality": 0.3447667360305786,
+      "contrastive": 0.14886216819286346,
+      "loss": 0.4122491180896759,
+      "relation": 0.29119402170181274,
+      "step": 491
+    },
+    {
+      "cardinality": 0.3441465497016907,
+      "contrastive": 0.14877066016197205,
+      "loss": 0.4117848873138428,
+      "relation": 0.2908858358860016,
+      "step": 492
+    },
+    {
+      "cardinality": 0.3434121012687683,
+      "contrastive": 0.14860695600509644,
+      "loss": 0.4113219678401947,
+      "relation": 0.2906270921230316,
+      "step": 493
+    },
+    {
+      "cardinality": 0.3427010178565979,
+      "contrastive": 0.14846312999725342,
+      "loss": 0.4108602702617645,
+      "relation": 0.29035794734954834,
+      "step": 494
+    },
+    {
+      "cardinality": 0.3420657217502594,
+      "contrastive": 0.14836765825748444,
+      "loss": 0.41039982438087463,
+      "relation": 0.2900580167770386,
+      "step": 495
+    },
+    {
+      "cardinality": 0.34129369258880615,
+      "contrastive": 0.14818528294563293,
+      "loss": 0.40994060039520264,
+      "relation": 0.2898170053958893,
+      "step": 496
+    },
+    {
+      "cardinality": 0.3407048285007477,
+      "contrastive": 0.14810651540756226,
+      "loss": 0.40948259830474854,
+      "relation": 0.28950434923171997,
+      "step": 497
+    },
+    {
+      "cardinality": 0.3399369716644287,
+      "contrastive": 0.1479218453168869,
+      "loss": 0.40902578830718994,
+      "relation": 0.2892657518386841,
+      "step": 498
+    },
+    {
+      "cardinality": 0.3393627405166626,
+      "contrastive": 0.1478498876094818,
+      "loss": 0.40857023000717163,
+      "relation": 0.28895020484924316,
+      "step": 499
+    },
+    {
+      "cardinality": 0.3385773003101349,
+      "contrastive": 0.14765015244483948,
+      "loss": 0.4081158936023712,
+      "relation": 0.2887228727340698,
+      "step": 500
+    },
+    {
+      "cardinality": 0.3380245864391327,
+      "contrastive": 0.14759038388729095,
+      "loss": 0.4076627194881439,
+      "relation": 0.28840115666389465,
+      "step": 501
+    },
+    {
+      "cardinality": 0.33724159002304077,
+      "contrastive": 0.14739109575748444,
+      "loss": 0.40721064805984497,
+      "relation": 0.28817546367645264,
+      "step": 502
+    },
+    {
+      "cardinality": 0.3366638720035553,
+      "contrastive": 0.14731378853321075,
+      "loss": 0.40675976872444153,
+      "relation": 0.28786715865135193,
+      "step": 503
+    },
+    {
+      "cardinality": 0.3359910249710083,
+      "contrastive": 0.14717741310596466,
+      "loss": 0.406310111284256,
+      "relation": 0.2875998020172119,
+      "step": 504
+    },
+    {
+      "cardinality": 0.3352872133255005,
+      "contrastive": 0.14702068269252777,
+      "loss": 0.40586161613464355,
+      "relation": 0.2873469293117523,
+      "step": 505
+    },
+    {
+      "cardinality": 0.3346635699272156,
+      "contrastive": 0.146908700466156,
+      "loss": 0.40541431307792664,
+      "relation": 0.2870635688304901,
+      "step": 506
+    },
+    {
+      "cardinality": 0.33396682143211365,
+      "contrastive": 0.146749809384346,
+      "loss": 0.40496817231178284,
+      "relation": 0.2868123948574066,
+      "step": 507
+    },
+    {
+      "cardinality": 0.333391010761261,
+      "contrastive": 0.146662175655365,
+      "loss": 0.40452319383621216,
+      "relation": 0.28651323914527893,
+      "step": 508
+    },
+    {
+      "cardinality": 0.3326265215873718,
+      "contrastive": 0.1464581936597824,
+      "loss": 0.4040793776512146,
+      "relation": 0.28629371523857117,
+      "step": 509
+    },
+    {
+      "cardinality": 0.33211836218833923,
+      "contrastive": 0.14640040695667267,
+      "loss": 0.40363672375679016,
+      "relation": 0.2859728932380676,
+      "step": 510
+    },
+    {
+      "cardinality": 0.33135998249053955,
+      "contrastive": 0.14619410037994385,
+      "loss": 0.40319517254829407,
+      "relation": 0.2857552468776703,
+      "step": 511
+    },
+    {
+      "cardinality": 0.33084774017333984,
+      "contrastive": 0.1461307257413864,
+      "loss": 0.40275466442108154,
+      "relation": 0.2854393422603607,
+      "step": 512
+    },
+    {
+      "cardinality": 0.330087274312973,
+      "contrastive": 0.14592531323432922,
+      "loss": 0.40231528878211975,
+      "relation": 0.28522399067878723,
+      "step": 513
+    },
+    {
+      "cardinality": 0.3295452296733856,
+      "contrastive": 0.14584504067897797,
+      "loss": 0.4018770456314087,
+      "relation": 0.28492221236228943,
+      "step": 514
+    },
+    {
+      "cardinality": 0.3289211690425873,
+      "contrastive": 0.14571309089660645,
+      "loss": 0.40143993496894836,
+      "relation": 0.2846561074256897,
+      "step": 515
+    },
+    {
+      "cardinality": 0.32824504375457764,
+      "contrastive": 0.1455531120300293,
+      "loss": 0.4010038375854492,
+      "relation": 0.2844112515449524,
+      "step": 516
+    },
+    {
+      "cardinality": 0.3276626169681549,
+      "contrastive": 0.1454511433839798,
+      "loss": 0.40056905150413513,
+      "relation": 0.2841286063194275,
+      "step": 517
+    },
+    {
+      "cardinality": 0.32696297764778137,
+      "contrastive": 0.14527471363544464,
+      "loss": 0.400135338306427,
+      "relation": 0.2838965654373169,
+      "step": 518
+    },
+    {
+      "cardinality": 0.32649850845336914,
+      "contrastive": 0.14522919058799744,
+      "loss": 0.39970269799232483,
+      "relation": 0.2835727632045746,
+      "step": 519
+    },
+    {
+      "cardinality": 0.3256780505180359,
+      "contrastive": 0.1449739784002304,
+      "loss": 0.3992711305618286,
+      "relation": 0.28339460492134094,
+      "step": 520
+    },
+    {
+      "cardinality": 0.3252313435077667,
+      "contrastive": 0.14493702352046967,
+      "loss": 0.39884042739868164,
+      "relation": 0.28306618332862854,
+      "step": 521
+    },
+    {
+      "cardinality": 0.32455193996429443,
+      "contrastive": 0.14475785195827484,
+      "loss": 0.39841073751449585,
+      "relation": 0.28283509612083435,
+      "step": 522
+    },
+    {
+      "cardinality": 0.32394781708717346,
+      "contrastive": 0.14462460577487946,
+      "loss": 0.39798223972320557,
+      "relation": 0.2825740575790405,
+      "step": 523
+    },
+    {
+      "cardinality": 0.32339173555374146,
+      "contrastive": 0.14452026784420013,
+      "loss": 0.3975549042224884,
+      "relation": 0.28229448199272156,
+      "step": 524
+    },
+    {
+      "cardinality": 0.3226541578769684,
+      "contrastive": 0.1443035900592804,
+      "loss": 0.3971286714076996,
+      "relation": 0.28209158778190613,
+      "step": 525
+    },
+    {
+      "cardinality": 0.3222801983356476,
+      "contrastive": 0.14429929852485657,
+      "loss": 0.3967035412788391,
+      "relation": 0.28174275159835815,
+      "step": 526
+    },
+    {
+      "cardinality": 0.3213993012905121,
+      "contrastive": 0.14400292932987213,
+      "loss": 0.396279513835907,
+      "relation": 0.28159862756729126,
+      "step": 527
+    },
+    {
+      "cardinality": 0.32104557752609253,
+      "contrastive": 0.14402206242084503,
+      "loss": 0.39585596323013306,
+      "relation": 0.2812391519546509,
+      "step": 528
+    },
+    {
+      "cardinality": 0.32027456164360046,
+      "contrastive": 0.14379072189331055,
+      "loss": 0.3954334855079651,
+      "relation": 0.2810518145561218,
+      "step": 529
+    },
+    {
+      "cardinality": 0.3197815716266632,
+      "contrastive": 0.14371338486671448,
+      "loss": 0.39501217007637024,
+      "relation": 0.2807561755180359,
+      "step": 530
+    },
+    {
+      "cardinality": 0.3192073106765747,
+      "contrastive": 0.14358893036842346,
+      "loss": 0.3945920467376709,
+      "relation": 0.28049445152282715,
+      "step": 531
+    },
+    {
+      "cardinality": 0.3184269666671753,
+      "contrastive": 0.14334562420845032,
+      "loss": 0.394173264503479,
+      "relation": 0.28031691908836365,
+      "step": 532
+    },
+    {
+      "cardinality": 0.31812942028045654,
+      "contrastive": 0.14338190853595734,
+      "loss": 0.39375513792037964,
+      "relation": 0.27994561195373535,
+      "step": 533
+    },
+    {
+      "cardinality": 0.31729233264923096,
+      "contrastive": 0.14309923350811005,
+      "loss": 0.39333802461624146,
+      "relation": 0.2797948122024536,
+      "step": 534
+    },
+    {
+      "cardinality": 0.31684619188308716,
+      "contrastive": 0.14305181801319122,
+      "loss": 0.39292147755622864,
+      "relation": 0.2794840931892395,
+      "step": 535
+    },
+    {
+      "cardinality": 0.3162441849708557,
+      "contrastive": 0.1429007649421692,
+      "loss": 0.39250612258911133,
+      "relation": 0.27924200892448425,
+      "step": 536
+    },
+    {
+      "cardinality": 0.315634161233902,
+      "contrastive": 0.1427396684885025,
+      "loss": 0.39209219813346863,
+      "relation": 0.2790064811706543,
+      "step": 537
+    },
+    {
+      "cardinality": 0.31519022583961487,
+      "contrastive": 0.14269238710403442,
+      "loss": 0.3916790187358856,
+      "relation": 0.2786986231803894,
+      "step": 538
+    },
+    {
+      "cardinality": 0.3143671751022339,
+      "contrastive": 0.14242514967918396,
+      "loss": 0.3912668824195862,
+      "relation": 0.27854466438293457,
+      "step": 539
+    },
+    {
+      "cardinality": 0.3140123188495636,
+      "contrastive": 0.14242127537727356,
+      "loss": 0.3908553719520569,
+      "relation": 0.2782054543495178,
+      "step": 540
+    },
+    {
+      "cardinality": 0.3133872151374817,
+      "contrastive": 0.1422496736049652,
+      "loss": 0.39044490456581116,
+      "relation": 0.27798008918762207,
+      "step": 541
+    },
+    {
+      "cardinality": 0.3126956820487976,
+      "contrastive": 0.14204367995262146,
+      "loss": 0.39003580808639526,
+      "relation": 0.2777813971042633,
+      "step": 542
+    },
+    {
+      "cardinality": 0.31235453486442566,
+      "contrastive": 0.14204072952270508,
+      "loss": 0.389627605676651,
+      "relation": 0.27744242548942566,
+      "step": 543
+    },
+    {
+      "cardinality": 0.31156525015830994,
+      "contrastive": 0.14177368581295013,
+      "loss": 0.38922032713890076,
+      "relation": 0.27728649973869324,
+      "step": 544
+    },
+    {
+      "cardinality": 0.31120067834854126,
+      "contrastive": 0.14176100492477417,
+      "loss": 0.38881349563598633,
+      "relation": 0.2769570052623749,
+      "step": 545
+    },
+    {
+      "cardinality": 0.3105103671550751,
+      "contrastive": 0.1415448784828186,
+      "loss": 0.38840770721435547,
+      "relation": 0.2767649292945862,
+      "step": 546
+    },
+    {
+      "cardinality": 0.3099750280380249,
+      "contrastive": 0.1414097249507904,
+      "loss": 0.3880031108856201,
+      "relation": 0.2765147089958191,
+      "step": 547
+    },
+    {
+      "cardinality": 0.309591144323349,
+      "contrastive": 0.1413717418909073,
+      "loss": 0.3875997066497803,
+      "relation": 0.27620136737823486,
+      "step": 548
+    },
+    {
+      "cardinality": 0.3087485134601593,
+      "contrastive": 0.14107975363731384,
+      "loss": 0.3871971070766449,
+      "relation": 0.2760694921016693,
+      "step": 549
+    },
+    {
+      "cardinality": 0.3084507882595062,
+      "contrastive": 0.1410977840423584,
+      "loss": 0.3867950439453125,
+      "relation": 0.27572065591812134,
+      "step": 550
+    },
+    {
+      "cardinality": 0.30781328678131104,
+      "contrastive": 0.14090503752231598,
+      "loss": 0.38639384508132935,
+      "relation": 0.2755144238471985,
+      "step": 551
+    },
+    {
+      "cardinality": 0.30721190571784973,
+      "contrastive": 0.14073552191257477,
+      "loss": 0.3859938383102417,
+      "relation": 0.2752940356731415,
+      "step": 552
+    },
+    {
+      "cardinality": 0.30678775906562805,
+      "contrastive": 0.14066791534423828,
+      "loss": 0.3855949640274048,
+      "relation": 0.2750036418437958,
+      "step": 553
+    },
+    {
+      "cardinality": 0.3060959279537201,
+      "contrastive": 0.14043740928173065,
+      "loss": 0.3851967453956604,
+      "relation": 0.27482447028160095,
+      "step": 554
+    },
+    {
+      "cardinality": 0.30572688579559326,
+      "contrastive": 0.1404017210006714,
+      "loss": 0.38479918241500854,
+      "relation": 0.27451321482658386,
+      "step": 555
+    },
+    {
+      "cardinality": 0.305115669965744,
+      "contrastive": 0.14021852612495422,
+      "loss": 0.38440263271331787,
+      "relation": 0.27430301904678345,
+      "step": 556
+    },
+    {
+      "cardinality": 0.3045269846916199,
+      "contrastive": 0.14003702998161316,
+      "loss": 0.38400718569755554,
+      "relation": 0.2740888297557831,
+      "step": 557
+    },
+    {
+      "cardinality": 0.3041781783103943,
+      "contrastive": 0.14000676572322845,
+      "loss": 0.38361263275146484,
+      "relation": 0.2737746238708496,
+      "step": 558
+    },
+    {
+      "cardinality": 0.30344367027282715,
+      "contrastive": 0.13976697623729706,
+      "loss": 0.3832187056541443,
+      "relation": 0.27361151576042175,
+      "step": 559
+    },
+    {
+      "cardinality": 0.30298519134521484,
+      "contrastive": 0.1396806538105011,
+      "loss": 0.38282567262649536,
+      "relation": 0.2733404040336609,
+      "step": 560
+    },
+    {
+      "cardinality": 0.3025306165218353,
+      "contrastive": 0.13957558572292328,
+      "loss": 0.38243362307548523,
+      "relation": 0.27307602763175964,
+      "step": 561
+    },
+    {
+      "cardinality": 0.30187538266181946,
+      "contrastive": 0.13935989141464233,
+      "loss": 0.38204243779182434,
+      "relation": 0.27289140224456787,
+      "step": 562
+    },
+    {
+      "cardinality": 0.3014630079269409,
+      "contrastive": 0.13929389417171478,
+      "loss": 0.38165217638015747,
+      "relation": 0.2726067006587982,
+      "step": 563
+    },
+    {
+      "cardinality": 0.30086955428123474,
+      "contrastive": 0.1391165405511856,
+      "loss": 0.38126251101493835,
+      "relation": 0.27239781618118286,
+      "step": 564
+    },
+    {
+      "cardinality": 0.30037081241607666,
+      "contrastive": 0.1389932632446289,
+      "loss": 0.38087382912635803,
+      "relation": 0.27215203642845154,
+      "step": 565
+    },
+    {
+      "cardinality": 0.2999041676521301,
+      "contrastive": 0.13888511061668396,
+      "loss": 0.3804861307144165,
+      "relation": 0.27189549803733826,
+      "step": 566
+    },
+    {
+      "cardinality": 0.29925644397735596,
+      "contrastive": 0.13867118954658508,
+      "loss": 0.3800992965698242,
+      "relation": 0.27171310782432556,
+      "step": 567
+    },
+    {
+      "cardinality": 0.2989382743835449,
+      "contrastive": 0.1386529952287674,
+      "loss": 0.3797132670879364,
+      "relation": 0.27139705419540405,
+      "step": 568
+    },
+    {
+      "cardinality": 0.29819434881210327,
+      "contrastive": 0.1383926123380661,
+      "loss": 0.3793279826641083,
+      "relation": 0.27125170826911926,
+      "step": 569
+    },
+    {
+      "cardinality": 0.2978767454624176,
+      "contrastive": 0.1383756548166275,
+      "loss": 0.3789435029029846,
+      "relation": 0.27093666791915894,
+      "step": 570
+    },
+    {
+      "cardinality": 0.2972182035446167,
+      "contrastive": 0.1381528526544571,
+      "loss": 0.37855973839759827,
+      "relation": 0.2707625925540924,
+      "step": 571
+    },
+    {
+      "cardinality": 0.29677313566207886,
+      "contrastive": 0.13805659115314484,
+      "loss": 0.37817686796188354,
+      "relation": 0.2705024182796478,
+      "step": 572
+    },
+    {
+      "cardinality": 0.296286016702652,
+      "contrastive": 0.13793043792247772,
+      "loss": 0.37779492139816284,
+      "relation": 0.27026206254959106,
+      "step": 573
+    },
+    {
+      "cardinality": 0.29570862650871277,
+      "contrastive": 0.1377633661031723,
+      "loss": 0.377413809299469,
+      "relation": 0.2700549066066742,
+      "step": 574
+    },
+    {
+      "cardinality": 0.29531168937683105,
+      "contrastive": 0.13769562542438507,
+      "loss": 0.377033531665802,
+      "relation": 0.26977771520614624,
+      "step": 575
+    },
+    {
+      "cardinality": 0.29463425278663635,
+      "contrastive": 0.1374591439962387,
+      "loss": 0.37665414810180664,
+      "relation": 0.26961660385131836,
+      "step": 576
+    },
+    {
+      "cardinality": 0.2943635582923889,
+      "contrastive": 0.13745719194412231,
+      "loss": 0.37627550959587097,
+      "relation": 0.26929280161857605,
+      "step": 577
+    },
+    {
+      "cardinality": 0.29360130429267883,
+      "contrastive": 0.13716597855091095,
+      "loss": 0.37589773535728455,
+      "relation": 0.2691693902015686,
+      "step": 578
+    },
+    {
+      "cardinality": 0.2933753728866577,
+      "contrastive": 0.13718217611312866,
+      "loss": 0.37552034854888916,
+      "relation": 0.2688315212726593,
+      "step": 579
+    },
+    {
+      "cardinality": 0.29269206523895264,
+      "contrastive": 0.13693943619728088,
+      "loss": 0.3751438856124878,
+      "relation": 0.26867666840553284,
+      "step": 580
+    },
+    {
+      "cardinality": 0.29226574301719666,
+      "contrastive": 0.13685065507888794,
+      "loss": 0.3747681975364685,
+      "relation": 0.2684173285961151,
+      "step": 581
+    },
+    {
+      "cardinality": 0.29180988669395447,
+      "contrastive": 0.1367376446723938,
+      "loss": 0.37439343333244324,
+      "relation": 0.2681732773780823,
+      "step": 582
+    },
+    {
+      "cardinality": 0.2912102937698364,
+      "contrastive": 0.13654595613479614,
+      "loss": 0.374019593000412,
+      "relation": 0.2679864466190338,
+      "step": 583
+    },
+    {
+      "cardinality": 0.2908776104450226,
+      "contrastive": 0.13650840520858765,
+      "loss": 0.3736465275287628,
+      "relation": 0.26769304275512695,
+      "step": 584
+    },
+    {
+      "cardinality": 0.29015910625457764,
+      "contrastive": 0.13623392581939697,
+      "loss": 0.37327438592910767,
+      "relation": 0.2675606906414032,
+      "step": 585
+    },
+    {
+      "cardinality": 0.2899547815322876,
+      "contrastive": 0.13626734912395477,
+      "loss": 0.3729027211666107,
+      "relation": 0.2672181725502014,
+      "step": 586
+    },
+    {
+      "cardinality": 0.2891683876514435,
+      "contrastive": 0.13595901429653168,
+      "loss": 0.37253186106681824,
+      "relation": 0.26711252331733704,
+      "step": 587
+    },
+    {
+      "cardinality": 0.2889896631240845,
+      "contrastive": 0.13599960505962372,
+      "loss": 0.3721615970134735,
+      "relation": 0.2667638063430786,
+      "step": 588
+    },
+    {
+      "cardinality": 0.28823041915893555,
+      "contrastive": 0.13569974899291992,
+      "loss": 0.3717922568321228,
+      "relation": 0.2666512429714203,
+      "step": 589
+    },
+    {
+      "cardinality": 0.28799402713775635,
+      "contrastive": 0.13569775223731995,
+      "loss": 0.3714233934879303,
+      "relation": 0.26633039116859436,
+      "step": 590
+    },
+    {
+      "cardinality": 0.2873923182487488,
+      "contrastive": 0.13549630343914032,
+      "loss": 0.37105536460876465,
+      "relation": 0.2661531865596771,
+      "step": 591
+    },
+    {
+      "cardinality": 0.2868989408016205,
+      "contrastive": 0.13536126911640167,
+      "loss": 0.370688259601593,
+      "relation": 0.26593202352523804,
+      "step": 592
+    },
+    {
+      "cardinality": 0.2865043580532074,
+      "contrastive": 0.1352648288011551,
+      "loss": 0.3703218698501587,
+      "relation": 0.2656783163547516,
+      "step": 593
+    },
+    {
+      "cardinality": 0.2859627604484558,
+      "contrastive": 0.13508227467536926,
+      "loss": 0.369956374168396,
+      "relation": 0.265485018491745,
+      "step": 594
+    },
+    {
+      "cardinality": 0.28556153178215027,
+      "contrastive": 0.13499698042869568,
+      "loss": 0.36959153413772583,
+      "relation": 0.26523029804229736,
+      "step": 595
+    },
+    {
+      "cardinality": 0.28498220443725586,
+      "contrastive": 0.1347927451133728,
+      "loss": 0.36922749876976013,
+      "relation": 0.2650536000728607,
+      "step": 596
+    },
+    {
+      "cardinality": 0.28470414876937866,
+      "contrastive": 0.13477283716201782,
+      "loss": 0.36886414885520935,
+      "relation": 0.2647528350353241,
+      "step": 597
+    },
+    {
+      "cardinality": 0.2839563488960266,
+      "contrastive": 0.1344839483499527,
+      "loss": 0.3685018718242645,
+      "relation": 0.2646412253379822,
+      "step": 598
+    },
+    {
+      "cardinality": 0.2838992178440094,
+      "contrastive": 0.13457754254341125,
+      "loss": 0.3681405782699585,
+      "relation": 0.26425862312316895,
+      "step": 599
+    },
+    {
+      "cardinality": 0.2829473912715912,
+      "contrastive": 0.13416755199432373,
+      "loss": 0.3677796721458435,
+      "relation": 0.26423153281211853,
+      "step": 600
+    },
+    {
+      "cardinality": 0.2829543650150299,
+      "contrastive": 0.13431455194950104,
+      "loss": 0.36741921305656433,
+      "relation": 0.26381823420524597,
+      "step": 601
+    },
+    {
+      "cardinality": 0.2820378243923187,
+      "contrastive": 0.13391920924186707,
+      "loss": 0.3670594096183777,
+      "relation": 0.2637801170349121,
+      "step": 602
+    },
+    {
+      "cardinality": 0.2819538116455078,
+      "contrastive": 0.13401098549365997,
+      "loss": 0.36669960618019104,
+      "relation": 0.2634049952030182,
+      "step": 603
+    },
+    {
+      "cardinality": 0.2811987102031708,
+      "contrastive": 0.13371533155441284,
+      "loss": 0.3663412034511566,
+      "relation": 0.2633010745048523,
+      "step": 604
+    },
+    {
+      "cardinality": 0.28102943301200867,
+      "contrastive": 0.13372904062271118,
+      "loss": 0.3659839332103729,
+      "relation": 0.2629728615283966,
+      "step": 605
+    },
+    {
+      "cardinality": 0.2804243564605713,
+      "contrastive": 0.13351194560527802,
+      "loss": 0.3656262457370758,
+      "relation": 0.26281219720840454,
+      "step": 606
+    },
+    {
+      "cardinality": 0.2799126207828522,
+      "contrastive": 0.1333555430173874,
+      "loss": 0.36527037620544434,
+      "relation": 0.2626134157180786,
+      "step": 607
+    },
+    {
+      "cardinality": 0.2797398567199707,
+      "contrastive": 0.133370041847229,
+      "loss": 0.3649159371852875,
+      "relation": 0.2622884511947632,
+      "step": 608
+    },
+    {
+      "cardinality": 0.27890655398368835,
+      "contrastive": 0.13302604854106903,
+      "loss": 0.36456066370010376,
+      "relation": 0.26222023367881775,
+      "step": 609
+    },
+    {
+      "cardinality": 0.27880600094795227,
+      "contrastive": 0.13310712575912476,
+      "loss": 0.3642071485519409,
+      "relation": 0.2618584632873535,
+      "step": 610
+    },
+    {
+      "cardinality": 0.277981162071228,
+      "contrastive": 0.1327466368675232,
+      "loss": 0.3638540804386139,
+      "relation": 0.2617965340614319,
+      "step": 611
+    },
+    {
+      "cardinality": 0.27797359228134155,
+      "contrastive": 0.13286474347114563,
+      "loss": 0.3635009825229645,
+      "relation": 0.2614036202430725,
+      "step": 612
+    },
+    {
+      "cardinality": 0.27702948451042175,
+      "contrastive": 0.1324455291032791,
+      "loss": 0.3631499409675598,
+      "relation": 0.2613881230354309,
+      "step": 613
+    },
+    {
+      "cardinality": 0.2772120237350464,
+      "contrastive": 0.13264521956443787,
+      "loss": 0.3627992868423462,
+      "relation": 0.2609310746192932,
+      "step": 614
+    },
+    {
+      "cardinality": 0.2762969434261322,
+      "contrastive": 0.13224147260189056,
+      "loss": 0.36244693398475647,
+      "relation": 0.2609030306339264,
+      "step": 615
+    },
+    {
+      "cardinality": 0.2759615182876587,
+      "contrastive": 0.13220559060573578,
+      "loss": 0.3620980381965637,
+      "relation": 0.26063379645347595,
+      "step": 616
+    },
+    {
+      "cardinality": 0.27571019530296326,
+      "contrastive": 0.1321585476398468,
+      "loss": 0.36174842715263367,
+      "relation": 0.26035088300704956,
+      "step": 617
+    },
+    {
+      "cardinality": 0.2750062048435211,
+      "contrastive": 0.13186822831630707,
+      "loss": 0.36139920353889465,
+      "relation": 0.26024410128593445,
+      "step": 618
+    },
+    {
+      "cardinality": 0.2747989296913147,
+      "contrastive": 0.13188761472702026,
+      "loss": 0.3610537648200989,
+      "relation": 0.25993332266807556,
+      "step": 619
+    },
+    {
+      "cardinality": 0.2741537392139435,
+      "contrastive": 0.13160614669322968,
+      "loss": 0.36070516705513,
+      "relation": 0.25981226563453674,
+      "step": 620
+    },
+    {
+      "cardinality": 0.27404963970184326,
+      "contrastive": 0.13167062401771545,
+      "loss": 0.36035776138305664,
+      "relation": 0.2594631016254425,
+      "step": 621
+    },
+    {
+      "cardinality": 0.2731788456439972,
+      "contrastive": 0.13130898773670197,
+      "loss": 0.36001330614089966,
+      "relation": 0.25941941142082214,
+      "step": 622
+    },
+    {
+      "cardinality": 0.2732207477092743,
+      "contrastive": 0.1314217746257782,
+      "loss": 0.35966718196868896,
+      "relation": 0.2590254247188568,
+      "step": 623
+    },
+    {
+      "cardinality": 0.2724789083003998,
+      "contrastive": 0.1311112940311432,
+      "loss": 0.35932233929634094,
+      "relation": 0.2589375972747803,
+      "step": 624
+    },
+    {
+      "cardinality": 0.2721695303916931,
+      "contrastive": 0.13107849657535553,
+      "loss": 0.3589797019958496,
+      "relation": 0.25866830348968506,
+      "step": 625
+    },
+    {
+      "cardinality": 0.2715649902820587,
+      "contrastive": 0.13082920014858246,
+      "loss": 0.35863491892814636,
+      "relation": 0.25853168964385986,
+      "step": 626
+    },
+    {
+      "cardinality": 0.2714768350124359,
+      "contrastive": 0.13089407980442047,
+      "loss": 0.35829272866249084,
+      "relation": 0.25818443298339844,
+      "step": 627
+    },
+    {
+      "cardinality": 0.27062132954597473,
+      "contrastive": 0.13052764534950256,
+      "loss": 0.35795140266418457,
+      "relation": 0.25814247131347656,
+      "step": 628
+    },
+    {
+      "cardinality": 0.27071234583854675,
+      "contrastive": 0.1306762844324112,
+      "loss": 0.35760974884033203,
+      "relation": 0.2577305734157562,
+      "step": 629
+    },
+    {
+      "cardinality": 0.2698160409927368,
+      "contrastive": 0.13026587665081024,
+      "loss": 0.3572697341442108,
+      "relation": 0.2577134668827057,
+      "step": 630
+    },
+    {
+      "cardinality": 0.26973336935043335,
+      "contrastive": 0.13035885989665985,
+      "loss": 0.356930136680603,
+      "relation": 0.2573578655719757,
+      "step": 631
+    },
+    {
+      "cardinality": 0.26901891827583313,
+      "contrastive": 0.13003979623317719,
+      "loss": 0.35658928751945496,
+      "relation": 0.25727158784866333,
+      "step": 632
+    },
+    {
+      "cardinality": 0.268868625164032,
+      "contrastive": 0.13006138801574707,
+      "loss": 0.35625019669532776,
+      "relation": 0.25695496797561646,
+      "step": 633
+    },
+    {
+      "cardinality": 0.26825442910194397,
+      "contrastive": 0.12983500957489014,
+      "loss": 0.35591283440589905,
+      "relation": 0.2568196952342987,
+      "step": 634
+    },
+    {
+      "cardinality": 0.26803693175315857,
+      "contrastive": 0.12980042397975922,
+      "loss": 0.3555752635002136,
+      "relation": 0.2565377354621887,
+      "step": 635
+    },
+    {
+      "cardinality": 0.26749423146247864,
+      "contrastive": 0.12960341572761536,
+      "loss": 0.35523760318756104,
+      "relation": 0.25637757778167725,
+      "step": 636
+    },
+    {
+      "cardinality": 0.26705509424209595,
+      "contrastive": 0.12948104739189148,
+      "loss": 0.35490238666534424,
+      "relation": 0.2561730146408081,
+      "step": 637
+    },
+    {
+      "cardinality": 0.26673394441604614,
+      "contrastive": 0.12939408421516418,
+      "loss": 0.3545669913291931,
+      "relation": 0.2559322714805603,
+      "step": 638
+    },
+    {
+      "cardinality": 0.2662246823310852,
+      "contrastive": 0.1292174607515335,
+      "loss": 0.3542311191558838,
+      "relation": 0.2557600438594818,
+      "step": 639
+    },
+    {
+      "cardinality": 0.2658662796020508,
+      "contrastive": 0.1291370987892151,
+      "loss": 0.3538978695869446,
+      "relation": 0.2555266320705414,
+      "step": 640
+    },
+    {
+      "cardinality": 0.265381783246994,
+      "contrastive": 0.12894496321678162,
+      "loss": 0.3535647988319397,
+      "relation": 0.2553577125072479,
+      "step": 641
+    },
+    {
+      "cardinality": 0.26516807079315186,
+      "contrastive": 0.1289358139038086,
+      "loss": 0.35323068499565125,
+      "relation": 0.2550695240497589,
+      "step": 642
+    },
+    {
+      "cardinality": 0.2643616497516632,
+      "contrastive": 0.12858512997627258,
+      "loss": 0.35290011763572693,
+      "relation": 0.2550230026245117,
+      "step": 643
+    },
+    {
+      "cardinality": 0.26466652750968933,
+      "contrastive": 0.12884022295475006,
+      "loss": 0.35257044434547424,
+      "relation": 0.2545430660247803,
+      "step": 644
+    },
+    {
+      "cardinality": 0.26362571120262146,
+      "contrastive": 0.12833310663700104,
+      "loss": 0.3522377014160156,
+      "relation": 0.2545959949493408,
+      "step": 645
+    },
+    {
+      "cardinality": 0.26361528038978577,
+      "contrastive": 0.12848526239395142,
+      "loss": 0.35191017389297485,
+      "relation": 0.254217267036438,
+      "step": 646
+    },
+    {
+      "cardinality": 0.2628484070301056,
+      "contrastive": 0.12812454998493195,
+      "loss": 0.35157787799835205,
+      "relation": 0.25416460633277893,
+      "step": 647
+    },
+    {
+      "cardinality": 0.26284024119377136,
+      "contrastive": 0.12822677195072174,
+      "loss": 0.35124677419662476,
+      "relation": 0.25379934906959534,
+      "step": 648
+    },
+    {
+      "cardinality": 0.26197317242622375,
+      "contrastive": 0.12784437835216522,
+      "loss": 0.3509203791618347,
+      "relation": 0.25378021597862244,
+      "step": 649
+    },
+    {
+      "cardinality": 0.26204168796539307,
+      "contrastive": 0.1279701590538025,
+      "loss": 0.3505902588367462,
+      "relation": 0.25339236855506897,
+      "step": 650
+    },
+    {
+      "cardinality": 0.2614397406578064,
+      "contrastive": 0.12773093581199646,
+      "loss": 0.35026225447654724,
+      "relation": 0.2532684803009033,
+      "step": 651
+    },
+    {
+      "cardinality": 0.2609500288963318,
+      "contrastive": 0.12758444249629974,
+      "loss": 0.34993717074394226,
+      "relation": 0.25309261679649353,
+      "step": 652
+    },
+    {
+      "cardinality": 0.26064780354499817,
+      "contrastive": 0.12748566269874573,
+      "loss": 0.34960848093032837,
+      "relation": 0.2528589367866516,
+      "step": 653
+    },
+    {
+      "cardinality": 0.2602120637893677,
+      "contrastive": 0.12733671069145203,
+      "loss": 0.34928303956985474,
+      "relation": 0.2526727616786957,
+      "step": 654
+    },
+    {
+      "cardinality": 0.2598644196987152,
+      "contrastive": 0.1272583305835724,
+      "loss": 0.34895938634872437,
+      "relation": 0.25244608521461487,
+      "step": 655
+    },
+    {
+      "cardinality": 0.25929710268974304,
+      "contrastive": 0.12700684368610382,
+      "loss": 0.3486335873603821,
+      "relation": 0.2523217797279358,
+      "step": 656
+    },
+    {
+      "cardinality": 0.25936228036880493,
+      "contrastive": 0.12715460360050201,
+      "loss": 0.3483109176158905,
+      "relation": 0.25193434953689575,
+      "step": 657
+    },
+    {
+      "cardinality": 0.2582971155643463,
+      "contrastive": 0.1266440749168396,
+      "loss": 0.34798872470855713,
+      "relation": 0.25200387835502625,
+      "step": 658
+    },
+    {
+      "cardinality": 0.2587684690952301,
+      "contrastive": 0.12699712812900543,
+      "loss": 0.34766721725463867,
+      "relation": 0.25146451592445374,
+      "step": 659
+    },
+    {
+      "cardinality": 0.25748971104621887,
+      "contrastive": 0.12633147835731506,
+      "loss": 0.347346693277359,
+      "relation": 0.2516327500343323,
+      "step": 660
+    },
+    {
+      "cardinality": 0.25792208313941956,
+      "contrastive": 0.1267288327217102,
+      "loss": 0.3470260798931122,
+      "relation": 0.251086562871933,
+      "step": 661
+    },
+    {
+      "cardinality": 0.25665807723999023,
+      "contrastive": 0.1260889768600464,
+      "loss": 0.34670260548591614,
+      "relation": 0.2512398660182953,
+      "step": 662
+    },
+    {
+      "cardinality": 0.257215291261673,
+      "contrastive": 0.1265043318271637,
+      "loss": 0.3463825583457947,
+      "relation": 0.25066298246383667,
+      "step": 663
+    },
+    {
+      "cardinality": 0.256122350692749,
+      "contrastive": 0.12594926357269287,
+      "loss": 0.3460600674152374,
+      "relation": 0.25075334310531616,
+      "step": 664
+    },
+    {
+      "cardinality": 0.2561739683151245,
+      "contrastive": 0.12609630823135376,
+      "loss": 0.3457399010658264,
+      "relation": 0.25037139654159546,
+      "step": 665
+    },
+    {
+      "cardinality": 0.25540244579315186,
+      "contrastive": 0.12576621770858765,
+      "loss": 0.3454209268093109,
+      "relation": 0.25032225251197815,
+      "step": 666
+    },
+    {
+      "cardinality": 0.25519800186157227,
+      "contrastive": 0.1257580667734146,
+      "loss": 0.3451022803783417,
+      "relation": 0.25004735589027405,
+      "step": 667
+    },
+    {
+      "cardinality": 0.2547857165336609,
+      "contrastive": 0.12559539079666138,
+      "loss": 0.34478452801704407,
+      "relation": 0.2498689889907837,
+      "step": 668
+    },
+    {
+      "cardinality": 0.25438547134399414,
+      "contrastive": 0.12545238435268402,
+      "loss": 0.34446778893470764,
+      "relation": 0.24968236684799194,
+      "step": 669
+    },
+    {
+      "cardinality": 0.25421518087387085,
+      "contrastive": 0.1254677176475525,
+      "loss": 0.3441518247127533,
+      "relation": 0.24939508736133575,
+      "step": 670
+    },
+    {
+      "cardinality": 0.2533744275569916,
+      "contrastive": 0.125078946352005,
+      "loss": 0.34383732080459595,
+      "relation": 0.2493847906589508,
+      "step": 671
+    },
+    {
+      "cardinality": 0.2538430392742157,
+      "contrastive": 0.12542003393173218,
+      "loss": 0.34352606534957886,
+      "relation": 0.2488604485988617,
+      "step": 672
+    },
+    {
+      "cardinality": 0.25250065326690674,
+      "contrastive": 0.12470214813947678,
+      "loss": 0.34321239590644836,
+      "relation": 0.2490665316581726,
+      "step": 673
+    },
+    {
+      "cardinality": 0.25317054986953735,
+      "contrastive": 0.12523114681243896,
+      "loss": 0.3429016172885895,
+      "relation": 0.24843661487102509,
+      "step": 674
+    },
+    {
+      "cardinality": 0.2515811622142792,
+      "contrastive": 0.12438953667879105,
+      "loss": 0.3425876200199127,
+      "relation": 0.24873504042625427,
+      "step": 675
+    },
+    {
+      "cardinality": 0.25250244140625,
+      "contrastive": 0.12502755224704742,
+      "loss": 0.34227481484413147,
+      "relation": 0.2480146735906601,
+      "step": 676
+    },
+    {
+      "cardinality": 0.251071572303772,
+      "contrastive": 0.1242549791932106,
+      "loss": 0.34195688366889954,
+      "relation": 0.24825333058834076,
+      "step": 677
+    },
+    {
+      "cardinality": 0.25121229887008667,
+      "contrastive": 0.12445607036352158,
+      "loss": 0.3416421413421631,
+      "relation": 0.2478400617837906,
+      "step": 678
+    },
+    {
+      "cardinality": 0.25072309374809265,
+      "contrastive": 0.1242782473564148,
+      "loss": 0.34132978320121765,
+      "relation": 0.24768777191638947,
+      "step": 679
+    },
+    {
+      "cardinality": 0.25004446506500244,
+      "contrastive": 0.12398084998130798,
+      "loss": 0.3410201370716095,
+      "relation": 0.2476179599761963,
+      "step": 680
+    },
+    {
+      "cardinality": 0.2502804696559906,
+      "contrastive": 0.12422339618206024,
+      "loss": 0.3407125473022461,
+      "relation": 0.24717825651168823,
+      "step": 681
+    },
+    {
+      "cardinality": 0.24913816154003143,
+      "contrastive": 0.12362402677536011,
+      "loss": 0.3404044806957245,
+      "relation": 0.24730844795703888,
+      "step": 682
+    },
+    {
+      "cardinality": 0.24991537630558014,
+      "contrastive": 0.12417487800121307,
+      "loss": 0.3400987684726715,
+      "relation": 0.2466544806957245,
+      "step": 683
+    },
+    {
+      "cardinality": 0.2484159767627716,
+      "contrastive": 0.12334900349378586,
+      "loss": 0.33978724479675293,
+      "relation": 0.24693191051483154,
+      "step": 684
+    },
+    {
+      "cardinality": 0.24893473088741302,
+      "contrastive": 0.12376191467046738,
+      "loss": 0.3394772708415985,
+      "relation": 0.24637366831302643,
+      "step": 685
+    },
+    {
+      "cardinality": 0.24787859618663788,
+      "contrastive": 0.12323556840419769,
+      "loss": 0.33916711807250977,
+      "relation": 0.24645893275737762,
+      "step": 686
+    },
+    {
+      "cardinality": 0.24782676994800568,
+      "contrastive": 0.12330858409404755,
+      "loss": 0.3388586640357971,
+      "relation": 0.24613530933856964,
+      "step": 687
+    },
+    {
+      "cardinality": 0.24743983149528503,
+      "contrastive": 0.12316079437732697,
+      "loss": 0.33855223655700684,
+      "relation": 0.24595797061920166,
+      "step": 688
+    },
+    {
+      "cardinality": 0.24687311053276062,
+      "contrastive": 0.12289594113826752,
+      "loss": 0.33824706077575684,
+      "relation": 0.24585887789726257,
+      "step": 689
+    },
+    {
+      "cardinality": 0.24701595306396484,
+      "contrastive": 0.12310187518596649,
+      "loss": 0.33794307708740234,
+      "relation": 0.24545422196388245,
+      "step": 690
+    },
+    {
+      "cardinality": 0.24589575827121735,
+      "contrastive": 0.12254615128040314,
+      "loss": 0.3376398980617523,
+      "relation": 0.2455696016550064,
+      "step": 691
+    },
+    {
+      "cardinality": 0.2466459572315216,
+      "contrastive": 0.12307242304086685,
+      "loss": 0.3373401463031769,
+      "relation": 0.24493560194969177,
+      "step": 692
+    },
+    {
+      "cardinality": 0.24520856142044067,
+      "contrastive": 0.12227369099855423,
+      "loss": 0.3370347023010254,
+      "relation": 0.24519722163677216,
+      "step": 693
+    },
+    {
+      "cardinality": 0.24567750096321106,
+      "contrastive": 0.12268427014350891,
+      "loss": 0.3367314040660858,
+      "relation": 0.24465642869472504,
+      "step": 694
+    },
+    {
+      "cardinality": 0.24456912279129028,
+      "contrastive": 0.1221022829413414,
+      "loss": 0.3364245891571045,
+      "relation": 0.2447749823331833,
+      "step": 695
+    },
+    {
+      "cardinality": 0.24473461508750916,
+      "contrastive": 0.12228452414274216,
+      "loss": 0.33612048625946045,
+      "relation": 0.24437396228313446,
+      "step": 696
+    },
+    {
+      "cardinality": 0.24415762722492218,
+      "contrastive": 0.12201948463916779,
+      "loss": 0.3358185291290283,
+      "relation": 0.24428018927574158,
+      "step": 697
+    },
+    {
+      "cardinality": 0.24387764930725098,
+      "contrastive": 0.12190049886703491,
+      "loss": 0.3355172574520111,
+      "relation": 0.24407653510570526,
+      "step": 698
+    },
+    {
+      "cardinality": 0.24366813898086548,
+      "contrastive": 0.12189693748950958,
+      "loss": 0.3352160155773163,
+      "relation": 0.243818461894989,
+      "step": 699
+    },
+    {
+      "cardinality": 0.24281013011932373,
+      "contrastive": 0.12149841338396072,
+      "loss": 0.33491823077201843,
+      "relation": 0.24383175373077393,
+      "step": 700
+    },
+    {
+      "cardinality": 0.24342894554138184,
+      "contrastive": 0.12191756069660187,
+      "loss": 0.3346235156059265,
+      "relation": 0.24326656758785248,
+      "step": 701
+    },
+    {
+      "cardinality": 0.24214591085910797,
+      "contrastive": 0.12120001763105392,
+      "loss": 0.3343231976032257,
+      "relation": 0.24347400665283203,
+      "step": 702
+    },
+    {
+      "cardinality": 0.2424921989440918,
+      "contrastive": 0.12156707048416138,
+      "loss": 0.3340300917625427,
+      "relation": 0.24298317730426788,
+      "step": 703
+    },
+    {
+      "cardinality": 0.2415837198495865,
+      "contrastive": 0.12108545750379562,
+      "loss": 0.3337261974811554,
+      "relation": 0.24302954971790314,
+      "step": 704
+    },
+    {
+      "cardinality": 0.2416662573814392,
+      "contrastive": 0.12124165892601013,
+      "loss": 0.3334238827228546,
+      "relation": 0.24265606701374054,
+      "step": 705
+    },
+    {
+      "cardinality": 0.2409350425004959,
+      "contrastive": 0.12090256065130234,
+      "loss": 0.33313003182411194,
+      "relation": 0.2426271140575409,
+      "step": 706
+    },
+    {
+      "cardinality": 0.24088186025619507,
+      "contrastive": 0.12088602036237717,
+      "loss": 0.33283093571662903,
+      "relation": 0.2423444390296936,
+      "step": 707
+    },
+    {
+      "cardinality": 0.2407676726579666,
+      "contrastive": 0.12092269212007523,
+      "loss": 0.33253490924835205,
+      "relation": 0.2420584261417389,
+      "step": 708
+    },
+    {
+      "cardinality": 0.23966893553733826,
+      "contrastive": 0.12040141224861145,
+      "loss": 0.33224135637283325,
+      "relation": 0.24216710031032562,
+      "step": 709
+    },
+    {
+      "cardinality": 0.2401040494441986,
+      "contrastive": 0.12072166800498962,
+      "loss": 0.3319442570209503,
+      "relation": 0.2416708618402481,
+      "step": 710
+    },
+    {
+      "cardinality": 0.23918350040912628,
+      "contrastive": 0.12021910399198532,
+      "loss": 0.33165255188941956,
+      "relation": 0.2417391687631607,
+      "step": 711
+    },
+    {
+      "cardinality": 0.23935429751873016,
+      "contrastive": 0.1204495057463646,
+      "loss": 0.3313595950603485,
+      "relation": 0.24133142828941345,
+      "step": 712
+    },
+    {
+      "cardinality": 0.23828382790088654,
+      "contrastive": 0.11986928433179855,
+      "loss": 0.33106306195259094,
+      "relation": 0.24145205318927765,
+      "step": 713
+    },
+    {
+      "cardinality": 0.2389528751373291,
+      "contrastive": 0.12035838514566422,
+      "loss": 0.33077266812324524,
+      "relation": 0.24085664749145508,
+      "step": 714
+    },
+    {
+      "cardinality": 0.237775519490242,
+      "contrastive": 0.11971013993024826,
+      "loss": 0.330475389957428,
+      "relation": 0.2410217523574829,
+      "step": 715
+    },
+    {
+      "cardinality": 0.2378721684217453,
+      "contrastive": 0.11987725645303726,
+      "loss": 0.3301835358142853,
+      "relation": 0.24065203964710236,
+      "step": 716
+    },
+    {
+      "cardinality": 0.23739255964756012,
+      "contrastive": 0.11965832114219666,
+      "loss": 0.32989075779914856,
+      "relation": 0.24053184688091278,
+      "step": 717
+    },
+    {
+      "cardinality": 0.23707899451255798,
+      "contrastive": 0.11956699937582016,
+      "loss": 0.3295977711677551,
+      "relation": 0.24033351242542267,
+      "step": 718
+    },
+    {
+      "cardinality": 0.2366381585597992,
+      "contrastive": 0.11940307915210724,
+      "loss": 0.32930988073349,
+      "relation": 0.24019116163253784,
+      "step": 719
+    },
+    {
+      "cardinality": 0.2364882230758667,
+      "contrastive": 0.11934255063533783,
+      "loss": 0.32901889085769653,
+      "relation": 0.23995135724544525,
+      "step": 720
+    },
+    {
+      "cardinality": 0.2362816333770752,
+      "contrastive": 0.11931905895471573,
+      "loss": 0.3287276029586792,
+      "relation": 0.23970960080623627,
+      "step": 721
+    },
+    {
+      "cardinality": 0.23541811108589172,
+      "contrastive": 0.118925541639328,
+      "loss": 0.32844188809394836,
+      "relation": 0.23973432183265686,
+      "step": 722
+    },
+    {
+      "cardinality": 0.2358051836490631,
+      "contrastive": 0.11920534074306488,
+      "loss": 0.328152596950531,
+      "relation": 0.2392696738243103,
+      "step": 723
+    },
+    {
+      "cardinality": 0.23490490019321442,
+      "contrastive": 0.11871586740016937,
+      "loss": 0.32786422967910767,
+      "relation": 0.23933269083499908,
+      "step": 724
+    },
+    {
+      "cardinality": 0.2349330335855484,
+      "contrastive": 0.11887601763010025,
+      "loss": 0.3275817632675171,
+      "relation": 0.23898854851722717,
+      "step": 725
+    },
+    {
+      "cardinality": 0.2341919094324112,
+      "contrastive": 0.11847113072872162,
+      "loss": 0.32728978991508484,
+      "relation": 0.2389865219593048,
+      "step": 726
+    },
+    {
+      "cardinality": 0.2344607561826706,
+      "contrastive": 0.11874524503946304,
+      "loss": 0.3270014822483063,
+      "relation": 0.23854850232601166,
+      "step": 727
+    },
+    {
+      "cardinality": 0.23343271017074585,
+      "contrastive": 0.1182115226984024,
+      "loss": 0.32671502232551575,
+      "relation": 0.23865444958209991,
+      "step": 728
+    },
+    {
+      "cardinality": 0.2337663769721985,
+      "contrastive": 0.11846953630447388,
+      "loss": 0.3264271318912506,
+      "relation": 0.238209530711174,
+      "step": 729
+    },
+    {
+      "cardinality": 0.23302817344665527,
+      "contrastive": 0.11809711903333664,
+      "loss": 0.3261425197124481,
+      "relation": 0.23820288479328156,
+      "step": 730
+    },
+    {
+      "cardinality": 0.232894629240036,
+      "contrastive": 0.11813756823539734,
+      "loss": 0.3258577883243561,
+      "relation": 0.23793071508407593,
+      "step": 731
+    },
+    {
+      "cardinality": 0.23221541941165924,
+      "contrastive": 0.11777332425117493,
+      "loss": 0.3255716562271118,
+      "relation": 0.23790791630744934,
+      "step": 732
+    },
+    {
+      "cardinality": 0.23248276114463806,
+      "contrastive": 0.11801105737686157,
+      "loss": 0.32528871297836304,
+      "relation": 0.2374882996082306,
+      "step": 733
+    },
+    {
+      "cardinality": 0.2314991056919098,
+      "contrastive": 0.11749386787414551,
+      "loss": 0.32500511407852173,
+      "relation": 0.23758243024349213,
+      "step": 734
+    },
+    {
+      "cardinality": 0.2319725900888443,
+      "contrastive": 0.11786123365163803,
+      "loss": 0.3247234523296356,
+      "relation": 0.2370775192975998,
+      "step": 735
+    },
+    {
+      "cardinality": 0.2307858169078827,
+      "contrastive": 0.11718667298555374,
+      "loss": 0.32444337010383606,
+      "relation": 0.23727089166641235,
+      "step": 736
+    },
+    {
+      "cardinality": 0.23146037757396698,
+      "contrastive": 0.11770608276128769,
+      "loss": 0.32416602969169617,
+      "relation": 0.23667684197425842,
+      "step": 737
+    },
+    {
+      "cardinality": 0.22988824546337128,
+      "contrastive": 0.116777703166008,
+      "loss": 0.32388636469841003,
+      "relation": 0.23703652620315552,
+      "step": 738
+    },
+    {
+      "cardinality": 0.23134469985961914,
+      "contrastive": 0.11775121092796326,
+      "loss": 0.3236122727394104,
+      "relation": 0.23613041639328003,
+      "step": 739
+    },
+    {
+      "cardinality": 0.22946587204933167,
+      "contrastive": 0.11663282662630081,
+      "loss": 0.32332274317741394,
+      "relation": 0.23660808801651,
+      "step": 740
+    },
+    {
+      "cardinality": 0.23004576563835144,
+      "contrastive": 0.11715666949748993,
+      "loss": 0.3230392038822174,
+      "relation": 0.23602521419525146,
+      "step": 741
+    },
+    {
+      "cardinality": 0.22910256683826447,
+      "contrastive": 0.11666209250688553,
+      "loss": 0.32275229692459106,
+      "relation": 0.23610004782676697,
+      "step": 742
+    },
+    {
+      "cardinality": 0.22893324494361877,
+      "contrastive": 0.11664939671754837,
+      "loss": 0.32247090339660645,
+      "relation": 0.23585698008537292,
+      "step": 743
+    },
+    {
+      "cardinality": 0.22875110805034637,
+      "contrastive": 0.1166161596775055,
+      "loss": 0.3221946954727173,
+      "relation": 0.23562881350517273,
+      "step": 744
+    },
+    {
+      "cardinality": 0.22819116711616516,
+      "contrastive": 0.11629513651132584,
+      "loss": 0.32191652059555054,
+      "relation": 0.23557499051094055,
+      "step": 745
+    },
+    {
+      "cardinality": 0.2285371720790863,
+      "contrastive": 0.11663790047168732,
+      "loss": 0.32163888216018677,
+      "relation": 0.2351081818342209,
+      "step": 746
+    },
+    {
+      "cardinality": 0.2272564023733139,
+      "contrastive": 0.1159641221165657,
+      "loss": 0.32136204838752747,
+      "relation": 0.23532332479953766,
+      "step": 747
+    },
+    {
+      "cardinality": 0.22796055674552917,
+      "contrastive": 0.11645381897687912,
+      "loss": 0.32108572125434875,
+      "relation": 0.23473477363586426,
+      "step": 748
+    },
+    {
+      "cardinality": 0.2267666757106781,
+      "contrastive": 0.1157408058643341,
+      "loss": 0.32080796360969543,
+      "relation": 0.2349453568458557,
+      "step": 749
+    },
+    {
+      "cardinality": 0.22714568674564362,
+      "contrastive": 0.11609794199466705,
+      "loss": 0.3205331563949585,
+      "relation": 0.23446974158287048,
+      "step": 750
+    },
+    {
+      "cardinality": 0.22609955072402954,
+      "contrastive": 0.11552290618419647,
+      "loss": 0.3202543258666992,
+      "relation": 0.23460140824317932,
+      "step": 751
+    },
+    {
+      "cardinality": 0.22658737003803253,
+      "contrastive": 0.1159258484840393,
+      "loss": 0.3199783265590668,
+      "relation": 0.234086811542511,
+      "step": 752
+    },
+    {
+      "cardinality": 0.22567562758922577,
+      "contrastive": 0.1154198870062828,
+      "loss": 0.3197004795074463,
+      "relation": 0.2341683954000473,
+      "step": 753
+    },
+    {
+      "cardinality": 0.22574324905872345,
+      "contrastive": 0.11551332473754883,
+      "loss": 0.3194247782230377,
+      "relation": 0.2338464856147766,
+      "step": 754
+    },
+    {
+      "cardinality": 0.22525230050086975,
+      "contrastive": 0.1153048425912857,
+      "loss": 0.31915006041526794,
+      "relation": 0.23374290764331818,
+      "step": 755
+    },
+    {
+      "cardinality": 0.22485819458961487,
+      "contrastive": 0.11517811566591263,
+      "loss": 0.3188764154911041,
+      "relation": 0.2335924357175827,
+      "step": 756
+    },
+    {
+      "cardinality": 0.22480469942092896,
+      "contrastive": 0.11520920693874359,
+      "loss": 0.3186037540435791,
+      "relation": 0.23331958055496216,
+      "step": 757
+    },
+    {
+      "cardinality": 0.22407543659210205,
+      "contrastive": 0.11481285840272903,
+      "loss": 0.31833237409591675,
+      "relation": 0.2333327829837799,
+      "step": 758
+    },
+    {
+      "cardinality": 0.224644273519516,
+      "contrastive": 0.1152479276061058,
+      "loss": 0.3180652856826782,
+      "relation": 0.23279966413974762,
+      "step": 759
+    },
+    {
+      "cardinality": 0.223127081990242,
+      "contrastive": 0.11434867233037949,
+      "loss": 0.3178001344203949,
+      "relation": 0.23315267264842987,
+      "step": 760
+    },
+    {
+      "cardinality": 0.22462280094623566,
+      "contrastive": 0.11536932736635208,
+      "loss": 0.31754258275032043,
+      "relation": 0.23223876953125,
+      "step": 761
+    },
+    {
+      "cardinality": 0.22233961522579193,
+      "contrastive": 0.11393614858388901,
+      "loss": 0.31727179884910583,
+      "relation": 0.23292621970176697,
+      "step": 762
+    },
+    {
+      "cardinality": 0.22399838268756866,
+      "contrastive": 0.11509045958518982,
+      "loss": 0.31699734926223755,
+      "relation": 0.23191602528095245,
+      "step": 763
+    },
+    {
+      "cardinality": 0.22217494249343872,
+      "contrastive": 0.11400716751813889,
+      "loss": 0.316710889339447,
+      "relation": 0.2323734015226364,
+      "step": 764
+    },
+    {
+      "cardinality": 0.2223253846168518,
+      "contrastive": 0.114255890250206,
+      "loss": 0.3164328932762146,
+      "relation": 0.23197825253009796,
+      "step": 765
+    },
+    {
+      "cardinality": 0.22216618061065674,
+      "contrastive": 0.11424548923969269,
+      "loss": 0.3161643147468567,
+      "relation": 0.2317451536655426,
+      "step": 766
+    },
+    {
+      "cardinality": 0.22109675407409668,
+      "contrastive": 0.11362016946077347,
+      "loss": 0.3159036636352539,
+      "relation": 0.23191724717617035,
+      "step": 767
+    },
+    {
+      "cardinality": 0.2224070131778717,
+      "contrastive": 0.11453510075807571,
+      "loss": 0.31564828753471375,
+      "relation": 0.2310796082019806,
+      "step": 768
+    },
+    {
+      "cardinality": 0.2203717827796936,
+      "contrastive": 0.113273486495018,
+      "loss": 0.31537774205207825,
+      "relation": 0.23165765404701233,
+      "step": 769
+    },
+    {
+      "cardinality": 0.22167301177978516,
+      "contrastive": 0.11423417180776596,
+      "loss": 0.31510618329048157,
+      "relation": 0.23078963160514832,
+      "step": 770
+    },
+    {
+      "cardinality": 0.22011293470859528,
+      "contrastive": 0.11332191526889801,
+      "loss": 0.31482619047164917,
+      "relation": 0.23114094138145447,
+      "step": 771
+    },
+    {
+      "cardinality": 0.22017596662044525,
+      "contrastive": 0.11345779895782471,
+      "loss": 0.3145543932914734,
+      "relation": 0.23080898821353912,
+      "step": 772
+    },
+    {
+      "cardinality": 0.2201348841190338,
+      "contrastive": 0.11351634562015533,
+      "loss": 0.31429100036621094,
+      "relation": 0.23053328692913055,
+      "step": 773
+    },
+    {
+      "cardinality": 0.21902337670326233,
+      "contrastive": 0.11285809427499771,
+      "loss": 0.3140318691730499,
+      "relation": 0.23072685301303864,
+      "step": 774
+    },
+    {
+      "cardinality": 0.22041992843151093,
+      "contrastive": 0.11379354447126389,
+      "loss": 0.31377771496772766,
+      "relation": 0.22986599802970886,
+      "step": 775
+    },
+    {
+      "cardinality": 0.218595489859581,
+      "contrastive": 0.1126568391919136,
+      "loss": 0.31350409984588623,
+      "relation": 0.23035509884357452,
+      "step": 776
+    },
+    {
+      "cardinality": 0.2189738154411316,
+      "contrastive": 0.1130790114402771,
+      "loss": 0.3132338225841522,
+      "relation": 0.22986140847206116,
+      "step": 777
+    },
+    {
+      "cardinality": 0.2186405211687088,
+      "contrastive": 0.11294388025999069,
+      "loss": 0.3129640817642212,
+      "relation": 0.2297056019306183,
+      "step": 778
+    },
+    {
+      "cardinality": 0.21775750815868378,
+      "contrastive": 0.11246303468942642,
+      "loss": 0.3127056062221527,
+      "relation": 0.2297920435667038,
+      "step": 779
+    },
+    {
+      "cardinality": 0.21828368306159973,
+      "contrastive": 0.11292897909879684,
+      "loss": 0.3124525249004364,
+      "relation": 0.22927063703536987,
+      "step": 780
+    },
+    {
+      "cardinality": 0.21723011136054993,
+      "contrastive": 0.11221608519554138,
+      "loss": 0.3121820092201233,
+      "relation": 0.22946037352085114,
+      "step": 781
+    },
+    {
+      "cardinality": 0.21791352331638336,
+      "contrastive": 0.11275587975978851,
+      "loss": 0.31191393733024597,
+      "relation": 0.22886668145656586,
+      "step": 782
+    },
+    {
+      "cardinality": 0.21683643758296967,
+      "contrastive": 0.11218822747468948,
+      "loss": 0.31164711713790894,
+      "relation": 0.22901396453380585,
+      "step": 783
+    },
+    {
+      "cardinality": 0.2165665179491043,
+      "contrastive": 0.11206477880477905,
+      "loss": 0.31138408184051514,
+      "relation": 0.22884808480739594,
+      "step": 784
+    },
+    {
+      "cardinality": 0.21683639287948608,
+      "contrastive": 0.1122988760471344,
+      "loss": 0.3111254572868347,
+      "relation": 0.22845356166362762,
+      "step": 785
+    },
+    {
+      "cardinality": 0.21573244035243988,
+      "contrastive": 0.11165396124124527,
+      "loss": 0.31086617708206177,
+      "relation": 0.22864079475402832,
+      "step": 786
+    },
+    {
+      "cardinality": 0.21656636893749237,
+      "contrastive": 0.11225813627243042,
+      "loss": 0.3106083571910858,
+      "relation": 0.22800475358963013,
+      "step": 787
+    },
+    {
+      "cardinality": 0.2153068631887436,
+      "contrastive": 0.1115114614367485,
+      "loss": 0.3103451728820801,
+      "relation": 0.2282547950744629,
+      "step": 788
+    },
+    {
+      "cardinality": 0.21554292738437653,
+      "contrastive": 0.11178617924451828,
+      "loss": 0.31008341908454895,
+      "relation": 0.22784964740276337,
+      "step": 789
+    },
+    {
+      "cardinality": 0.21504107117652893,
+      "contrastive": 0.11150144785642624,
+      "loss": 0.30982041358947754,
+      "relation": 0.22778668999671936,
+      "step": 790
+    },
+    {
+      "cardinality": 0.21466994285583496,
+      "contrastive": 0.11135469377040863,
+      "loss": 0.3095608651638031,
+      "relation": 0.22765274345874786,
+      "step": 791
+    },
+    {
+      "cardinality": 0.214577779173851,
+      "contrastive": 0.11142309755086899,
+      "loss": 0.3093053102493286,
+      "relation": 0.22739166021347046,
+      "step": 792
+    },
+    {
+      "cardinality": 0.21411706507205963,
+      "contrastive": 0.1111302450299263,
+      "loss": 0.30904701352119446,
+      "relation": 0.22732803225517273,
+      "step": 793
+    },
+    {
+      "cardinality": 0.21430569887161255,
+      "contrastive": 0.11134044080972672,
+      "loss": 0.30878740549087524,
+      "relation": 0.22695711255073547,
+      "step": 794
+    },
+    {
+      "cardinality": 0.21327537298202515,
+      "contrastive": 0.11078330129384995,
+      "loss": 0.30853188037872314,
+      "relation": 0.2271026372909546,
+      "step": 795
+    },
+    {
+      "cardinality": 0.21395260095596313,
+      "contrastive": 0.11124341189861298,
+      "loss": 0.30827653408050537,
+      "relation": 0.22655081748962402,
+      "step": 796
+    },
+    {
+      "cardinality": 0.2129541039466858,
+      "contrastive": 0.11065706610679626,
+      "loss": 0.30801668763160706,
+      "relation": 0.22669589519500732,
+      "step": 797
+    },
+    {
+      "cardinality": 0.21287909150123596,
+      "contrastive": 0.11076340824365616,
+      "loss": 0.30776578187942505,
+      "relation": 0.22642278671264648,
+      "step": 798
+    },
+    {
+      "cardinality": 0.21263612806797028,
+      "contrastive": 0.1106199398636818,
+      "loss": 0.30750390887260437,
+      "relation": 0.22625970840454102,
+      "step": 799
+    },
+    {
+      "cardinality": 0.21246233582496643,
+      "contrastive": 0.11058468371629715,
+      "loss": 0.3072468340396881,
+      "relation": 0.2260497361421585,
+      "step": 800
+    }
+  ],
+  "model_family": "FROZEN_SENTENCE_ENCODER_PROPOSAL",
+  "objective": "L_relation + 0.20 L_cardinality + 0.35 L_contrastive",
+  "optimizer": {
+    "gradient_norm_clip": 1.0,
+    "learning_rate": 0.0005,
+    "name": "AdamW",
+    "weight_decay": 0.0002
+  },
+  "parameter_scope": {
+    "checkpoint": 32420,
+    "frozen": 22713216,
+    "total": 22745636,
+    "trainable": 32420
+  },
+  "paraphrase_groups": [
+    {
+      "group": "v6-active-coral-3",
+      "group_sha256": "eb6515d15126aeede17cb1b104163e0b26cc7d386e8761783ffa3dfb5e68175e",
+      "lesson_ids": [
+        "v6-active-coral-3-01",
+        "v6-active-coral-3-02",
+        "v6-active-coral-3-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "e91a7bd3da67b493e3ead918ec63e112a4c9fcd25a0d4cdae230c694202301bc"
+    },
+    {
+      "group": "v6-active-maple-8",
+      "group_sha256": "cd4e99d74a784bf309fe47dbfcf225c4891e12f059446ff72821fdd2f7604d33",
+      "lesson_ids": [
+        "v6-active-maple-8-01",
+        "v6-active-maple-8-02",
+        "v6-active-maple-8-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "5b411131c10c0fd8c4c13412b34c843b9a6ccda47ba259a303ccda8c18d9c353"
+    },
+    {
+      "group": "v6-active-silver-2",
+      "group_sha256": "553fe8d2d0ae1048875febe3ad432daf1bd56485427da37f1b65e7ad9c265b5d",
+      "lesson_ids": [
+        "v6-active-silver-2-01",
+        "v6-active-silver-2-02",
+        "v6-active-silver-2-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "fb76c75adacdc64acd347ea5e22b1d7fd6e8bf8ecc8b3b59e52c4fb83d091143"
+    },
+    {
+      "group": "v6-composition-conflicting-constraints-01",
+      "group_sha256": "d46efe01f300df9eb24a6c6b1b0b5feec3b658fc4a20e9277718a64ea708e293",
+      "lesson_ids": [
+        "v6-composition-conflicting-constraints-01-01",
+        "v6-composition-conflicting-constraints-01-02",
+        "v6-composition-conflicting-constraints-01-03",
+        "v6-composition-conflicting-constraints-01-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "534f3f27106257bd5d0b2ba17499e4356ecc49c5289307e6c26997207233f869"
+    },
+    {
+      "group": "v6-composition-conflicting-constraints-02",
+      "group_sha256": "97ae19448de04a48dc9f89d784fcc6860f8ebbc420e6b550ab8c861b0faf9f93",
+      "lesson_ids": [
+        "v6-composition-conflicting-constraints-02-01",
+        "v6-composition-conflicting-constraints-02-02",
+        "v6-composition-conflicting-constraints-02-03",
+        "v6-composition-conflicting-constraints-02-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "3032440924ace23954f588f7037b3385dc1918fde1a3c3b885777ed185318b36"
+    },
+    {
+      "group": "v6-composition-goal-constraint-01",
+      "group_sha256": "03608e20c9c8bfc5a65d2ec8619ea50f6e2e0fa539961ad282175a22cef9f1fb",
+      "lesson_ids": [
+        "v6-composition-goal-constraint-01-01",
+        "v6-composition-goal-constraint-01-02",
+        "v6-composition-goal-constraint-01-03",
+        "v6-composition-goal-constraint-01-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "e5e37d593680b7c198bfee95cc3ac9acaecc5ada29fec6c4378bc9b926b54fbe"
+    },
+    {
+      "group": "v6-composition-goal-constraint-02",
+      "group_sha256": "a43470082ee1a43764fd33349504cd0c461d2d43f3a89f2c2f49c2e7ba5198e6",
+      "lesson_ids": [
+        "v6-composition-goal-constraint-02-01",
+        "v6-composition-goal-constraint-02-02",
+        "v6-composition-goal-constraint-02-03",
+        "v6-composition-goal-constraint-02-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "e08713e96ede317069047ad5f609256c200ffa63ca2bea5ca30ac11947ed5c89"
+    },
+    {
+      "group": "v6-composition-goal-constraint-03",
+      "group_sha256": "c2b33f9cd5a0f6b79ff2626ddf5495ced9bbaed5963c0ef2c8397e1a3c5aa86b",
+      "lesson_ids": [
+        "v6-composition-goal-constraint-03-01",
+        "v6-composition-goal-constraint-03-02",
+        "v6-composition-goal-constraint-03-03",
+        "v6-composition-goal-constraint-03-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "f0e535eef071a98846c8e326c711e338c12342e6ed2d8be11dbe5865c659a3dc"
+    },
+    {
+      "group": "v6-composition-goal-constraint-04",
+      "group_sha256": "2e8c613e755953ae14e7fdfdda02c161637b7697cec8fc6e33039cf940a2ebd6",
+      "lesson_ids": [
+        "v6-composition-goal-constraint-04-01",
+        "v6-composition-goal-constraint-04-02",
+        "v6-composition-goal-constraint-04-03",
+        "v6-composition-goal-constraint-04-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "3dfb4d578d0f38a3a9c0c911afcb9d947ab6167f97bab4799a5aeb8f17bdca04"
+    },
+    {
+      "group": "v6-composition-goal-observation-01",
+      "group_sha256": "cacdba8a2dbdb9e3ebae0b1e9fa8ebf8e7becc7d9be42a08b86d92f3daaab5a8",
+      "lesson_ids": [
+        "v6-composition-goal-observation-01-01",
+        "v6-composition-goal-observation-01-02",
+        "v6-composition-goal-observation-01-03",
+        "v6-composition-goal-observation-01-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "bf3d5d96025b37ec9a67e7c931d33f10e02ab46afe086121cbbd190144e49444"
+    },
+    {
+      "group": "v6-composition-goal-observation-02",
+      "group_sha256": "21fdb5364c5080c69ff2ad7d99d0a3d20567f6ac83c591e5ebf952a59959a8d3",
+      "lesson_ids": [
+        "v6-composition-goal-observation-02-01",
+        "v6-composition-goal-observation-02-02",
+        "v6-composition-goal-observation-02-03",
+        "v6-composition-goal-observation-02-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "f143a51f7d9443516e7a3a9b3221eef0dd955702b2b630da8885a2c8c90bc06a"
+    },
+    {
+      "group": "v6-composition-goal-observation-03",
+      "group_sha256": "65f9c5a560e4305f5024971332e95384ae74f7cd0b130a2c8a6b87e142d59254",
+      "lesson_ids": [
+        "v6-composition-goal-observation-03-01",
+        "v6-composition-goal-observation-03-02",
+        "v6-composition-goal-observation-03-03",
+        "v6-composition-goal-observation-03-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "bb9407f679ea08f887e29d6c70c2edf755649c49a3d4d90f2209439bbbd36cac"
+    },
+    {
+      "group": "v6-composition-goal-observation-04",
+      "group_sha256": "6ec019bb9b27076118d65f4f4e19a1dc492125d07a9b67052f6f912d7a4d1c78",
+      "lesson_ids": [
+        "v6-composition-goal-observation-04-01",
+        "v6-composition-goal-observation-04-02",
+        "v6-composition-goal-observation-04-03",
+        "v6-composition-goal-observation-04-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "ee20d7eb2e37e2790690894beca9be77d352669a5df30b2474349780d7fde048"
+    },
+    {
+      "group": "v6-composition-observation-prediction-01",
+      "group_sha256": "2a27e59e9f15887ea9e4066ee48ed815a47f1d2c079858b74c391d12d5df978e",
+      "lesson_ids": [
+        "v6-composition-observation-prediction-01-01",
+        "v6-composition-observation-prediction-01-02",
+        "v6-composition-observation-prediction-01-03",
+        "v6-composition-observation-prediction-01-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "5e34176dec7bfa415019f23507c110554419afde9ec3e03747ad2daa0049b690"
+    },
+    {
+      "group": "v6-composition-observation-prediction-02",
+      "group_sha256": "bb4ccc78457e9ac6c4dafbff040d8cd20286e9166922ce70f966f74e01402ec5",
+      "lesson_ids": [
+        "v6-composition-observation-prediction-02-01",
+        "v6-composition-observation-prediction-02-02",
+        "v6-composition-observation-prediction-02-03",
+        "v6-composition-observation-prediction-02-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "e6d6a70d91617a6ec000baf9cc7044c736d8da3401136ca689b59f5fd22c7509"
+    },
+    {
+      "group": "v6-composition-observation-prediction-03",
+      "group_sha256": "fc31681679bb9b07937ac20432cb674d617aa08efc7da14f5bd01d6f103f9f42",
+      "lesson_ids": [
+        "v6-composition-observation-prediction-03-01",
+        "v6-composition-observation-prediction-03-02",
+        "v6-composition-observation-prediction-03-03",
+        "v6-composition-observation-prediction-03-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "1a3f2aa76bae4ef293aeb1f670bd59fd913f3c4fdb283c4b2b2ad214f076fd46"
+    },
+    {
+      "group": "v6-composition-quad-01",
+      "group_sha256": "4d547bbbd2459015bd27e7f9293808c458b138bc77d7ebb1cceb8dd77500d5cd",
+      "lesson_ids": [
+        "v6-composition-quad-01-01",
+        "v6-composition-quad-01-02",
+        "v6-composition-quad-01-03",
+        "v6-composition-quad-01-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "6e15b29c26ed56e879b67f81cd493bbe957bcc72355605ef55b8f8bede2440e2"
+    },
+    {
+      "group": "v6-composition-quad-02",
+      "group_sha256": "b128e47b05403662901de6cc399b260e17d9c2028823a2cedcb1ae30cf4c3bee",
+      "lesson_ids": [
+        "v6-composition-quad-02-01",
+        "v6-composition-quad-02-02",
+        "v6-composition-quad-02-03",
+        "v6-composition-quad-02-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "bdd211678f1df466a21a30cbc9bf52f23b73506c6aad3f21e2cd41081100a77d"
+    },
+    {
+      "group": "v6-composition-triple-01",
+      "group_sha256": "d87247a3639791488bd9192da06bbdff20754b31900a96266df7c8c9aae2e28f",
+      "lesson_ids": [
+        "v6-composition-triple-01-01",
+        "v6-composition-triple-01-02",
+        "v6-composition-triple-01-03",
+        "v6-composition-triple-01-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "05f645cf551c2af8d86c4f12213a27818e6397c91b7a0f4839fa2eefb0126003"
+    },
+    {
+      "group": "v6-composition-triple-02",
+      "group_sha256": "333d63053d09e6dc4bd95b6c0d7d564edf52562b8aed3bb974cab03803804047",
+      "lesson_ids": [
+        "v6-composition-triple-02-01",
+        "v6-composition-triple-02-02",
+        "v6-composition-triple-02-03",
+        "v6-composition-triple-02-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "216b257cb428cc03bf6e80ff747a0d8c30d8bd4370c7af8d033af3df006dc187"
+    },
+    {
+      "group": "v6-composition-triple-03",
+      "group_sha256": "b966377737612be178a50773864a2e6e42495673eec954d20201e5630005b59f",
+      "lesson_ids": [
+        "v6-composition-triple-03-01",
+        "v6-composition-triple-03-02",
+        "v6-composition-triple-03-03",
+        "v6-composition-triple-03-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "807e97c3a192d2ae79d04be6bca9254faad5e3b4e59f9b2520482c7fa329f8fc"
+    },
+    {
+      "group": "v6-composition-two-goals-01",
+      "group_sha256": "96366d0b1791ca1deca6056996259492309645ecd3401a63d0ed30887bffc59c",
+      "lesson_ids": [
+        "v6-composition-two-goals-01-01",
+        "v6-composition-two-goals-01-02",
+        "v6-composition-two-goals-01-03",
+        "v6-composition-two-goals-01-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "b7e0e40c5a0a1bd0a59d850f45547e0756768dc4622d6a584f4460e4c961629d"
+    },
+    {
+      "group": "v6-composition-two-goals-02",
+      "group_sha256": "b0991ea99318070d31b38228bcc18c8ddf106704dba8d2bbb247a3eea50e0c05",
+      "lesson_ids": [
+        "v6-composition-two-goals-02-01",
+        "v6-composition-two-goals-02-02",
+        "v6-composition-two-goals-02-03",
+        "v6-composition-two-goals-02-04"
+      ],
+      "rows": 4,
+      "semantic_target_sha256": "424e354e4dfb36d1b54af825cb3a5c619b8c14e6ddc7fbd966f4017617b5ef63"
+    },
+    {
+      "group": "v6-constraint-memory-640",
+      "group_sha256": "67ca105a4ce305fe4fd024e2b38fdacc3f8518e8bd3097fccb9c3ffd050547e5",
+      "lesson_ids": [
+        "v6-constraint-memory-640-01",
+        "v6-constraint-memory-640-02",
+        "v6-constraint-memory-640-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "6274f37bd4f399aa70b958fd20c31087f8aec627a9bf47e8b257aecb0550e8c1"
+    },
+    {
+      "group": "v6-constraint-staging-registry",
+      "group_sha256": "2c239610452f4c4e87787e778fef2c1cea0573932e40f46e3ff9a2e63f9ef49b",
+      "lesson_ids": [
+        "v6-constraint-staging-registry-01",
+        "v6-constraint-staging-registry-02",
+        "v6-constraint-staging-registry-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "6f8b84c541f2e1092bc01771be136b199d74065ddc33183b34bc41c996f1cb16"
+    },
+    {
+      "group": "v6-constraint-test-catalog",
+      "group_sha256": "375d0ea006ed9ed4ca9a1349aa72fb3a7462b620c54dc3bcca446dd0f88ca134",
+      "lesson_ids": [
+        "v6-constraint-test-catalog-01",
+        "v6-constraint-test-catalog-02",
+        "v6-constraint-test-catalog-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "9e90f5a7d25878a4d515d83ac0866825e78bf226521d64a9d47a6a5b5d00b87a"
+    },
+    {
+      "group": "v6-copy-ember-cedar",
+      "group_sha256": "c9248f2ddf6772dfb5572848c4314c4e6ba596a6ca7514b0015b21048ee315f2",
+      "lesson_ids": [
+        "v6-copy-ember-cedar-01",
+        "v6-copy-ember-cedar-02",
+        "v6-copy-ember-cedar-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "261f163fcf32d63ef67442a21aef228eabd1661cd954f3cbf96607f9a8b79ffd"
+    },
+    {
+      "group": "v6-copy-north-south",
+      "group_sha256": "2085bc75d67faf337590f6384fab6d7cbcc23e60dd89c04d9b81cc857565d1e5",
+      "lesson_ids": [
+        "v6-copy-north-south-01",
+        "v6-copy-north-south-02",
+        "v6-copy-north-south-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "df34f444dd39a23ca251f323fb014b60ccb762de93430dec3966d231996c8743"
+    },
+    {
+      "group": "v6-copy-trial-audit",
+      "group_sha256": "92c730d329b44d7d2f8f3a802c5940a7e5b60947466f212d3883801d90312e82",
+      "lesson_ids": [
+        "v6-copy-trial-audit-01",
+        "v6-copy-trial-audit-02",
+        "v6-copy-trial-audit-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "0661404ef11aefdc924294ddb2c5ec8a378d7f63708127fbd6074894e9f4fd56"
+    },
+    {
+      "group": "v6-evidence-conflict-beta",
+      "group_sha256": "f2660aafc32b055cc9a38e118d786f56ef34f128378e8bbd4cac7520bd03e50e",
+      "lesson_ids": [
+        "v6-evidence-conflict-beta-01",
+        "v6-evidence-conflict-beta-02",
+        "v6-evidence-conflict-beta-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "8c26806948e0320a9ebc48d702a92188882158754f3ae95c60e87f33bb9e6257"
+    },
+    {
+      "group": "v6-evidence-consistent",
+      "group_sha256": "bfe898d53c40d321bbcf09cfc6bf3e0efc12e4ea641e94a22ddf58b5d0e77a47",
+      "lesson_ids": [
+        "v6-evidence-consistent-alpha-01",
+        "v6-evidence-consistent-alpha-02",
+        "v6-evidence-consistent-alpha-03",
+        "v6-evidence-consistent-gamma-01",
+        "v6-evidence-consistent-gamma-02",
+        "v6-evidence-consistent-gamma-03"
+      ],
+      "rows": 6,
+      "semantic_target_sha256": "2f66af091b9f28d73fcce6b8aae5679690c0041c172c9b50ebb85539d13134e1"
+    },
+    {
+      "group": "v6-goal-export-88",
+      "group_sha256": "0a50378f951e9670ef7e46373ec700168ad5035b6be2b921f6ae425b34753393",
+      "lesson_ids": [
+        "v6-goal-export-88-01",
+        "v6-goal-export-88-02",
+        "v6-goal-export-88-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "0ae7a29968dcd72c1c1776736b71ff5390d4eab3c2645b3d0a47bd4f74d29ccc"
+    },
+    {
+      "group": "v6-goal-queue-42",
+      "group_sha256": "f76cbd37f2ccd6aafc76ccd92bbc8ed2792001d10445775b194b572d2df18e13",
+      "lesson_ids": [
+        "v6-goal-queue-42-01",
+        "v6-goal-queue-42-02",
+        "v6-goal-queue-42-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "2af8ca8e42f723e24c8d8e522f971193bb11fc0e00c4cab7f967044529c2a0e7"
+    },
+    {
+      "group": "v6-goal-sandbox-throughput",
+      "group_sha256": "a45b2acfbaa52355ab54e65da29cb983ed76432d33aea369a88bc733bc7d6286",
+      "lesson_ids": [
+        "v6-goal-sandbox-throughput-01",
+        "v6-goal-sandbox-throughput-02",
+        "v6-goal-sandbox-throughput-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "7fc9b9bbb6aece9c8155e16ec04e837c93379cc18a90f80cc7a065fcd254040b"
+    },
+    {
+      "group": "v6-magnitude-minus-17",
+      "group_sha256": "8205c1eef19f9c2d7e331fb12c26e36df291bce5fa7c46249a53c13fd6a8091c",
+      "lesson_ids": [
+        "v6-magnitude-minus-17-01",
+        "v6-magnitude-minus-17-02",
+        "v6-magnitude-minus-17-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "fd9b11ccd0d7e8ec3cca7230f3e6b3536d288f126d5d7d62b0e8e1ef0b2843be"
+    },
+    {
+      "group": "v6-magnitude-minus-29",
+      "group_sha256": "19c1a2c6914975adc66b7c2cb70a40c05ef7c8c1344a8b2376516f0bb5bcc7ac",
+      "lesson_ids": [
+        "v6-magnitude-minus-29-01",
+        "v6-magnitude-minus-29-02",
+        "v6-magnitude-minus-29-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "a9dc8095a8d9fd3e9468fb94ad16b41d421dcbad879cd47cf73559c01942e5d1"
+    },
+    {
+      "group": "v6-magnitude-plus-34",
+      "group_sha256": "76d1f8591cc8378c380227dc133c7fb542037371bc0429ea3a5d15621998ebf7",
+      "lesson_ids": [
+        "v6-magnitude-plus-34-01",
+        "v6-magnitude-plus-34-02",
+        "v6-magnitude-plus-34-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "27dd77827d630f48ab67506d57c12db2ba5e93f1f0b324d70796a74a477adbb5"
+    },
+    {
+      "group": "v6-negate-13",
+      "group_sha256": "dce0011b5a3af89e00375b065fa97efd5e182d9511ec12168fc0138864b9bbf9",
+      "lesson_ids": [
+        "v6-negate-13-01",
+        "v6-negate-13-02",
+        "v6-negate-13-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "be1725f7dd71b99a0367426f9e839698bf475d8d20b29e21cf74b6e344a7b481"
+    },
+    {
+      "group": "v6-negate-8",
+      "group_sha256": "e8ba5873d68cb5a17884ee1b6493537c61cabf5e431cacb5eb3ccd2853302674",
+      "lesson_ids": [
+        "v6-negate-8-01",
+        "v6-negate-8-02",
+        "v6-negate-8-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "69942f911bbce60187e4291d125e20ca96fd4cb215b07b2124621fc93de414ed"
+    },
+    {
+      "group": "v6-negate-minus-21",
+      "group_sha256": "16b97614d4e29781f696fa95aaed3333e948f0001d19462f91fb3df669ae8ede",
+      "lesson_ids": [
+        "v6-negate-minus-21-01",
+        "v6-negate-minus-21-02",
+        "v6-negate-minus-21-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "56f694af6cb6f1d9f6f7ca91a4334e7b952402eba7c5543e18912ce17708b4c7"
+    },
+    {
+      "group": "v6-observation-disk-58",
+      "group_sha256": "87402cf4474c7bb3c558002129241d73782fafd7e99a7c245fec7d1d91a44deb",
+      "lesson_ids": [
+        "v6-observation-disk-58-01",
+        "v6-observation-disk-58-02",
+        "v6-observation-disk-58-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "d683fc4d008cbe2d981db35aeb942292ec38a99e25a3d986c1c05c50becbef17"
+    },
+    {
+      "group": "v6-observation-export-91",
+      "group_sha256": "35ae94013e3e63a87d3e0a0aaf1318b7dd061b13c424289ae615f06856ef0990",
+      "lesson_ids": [
+        "v6-observation-export-91-01",
+        "v6-observation-export-91-02",
+        "v6-observation-export-91-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "9888f803d813c95c6801889703f9a8d7ff42fb5898415bf86bdce5f467817017"
+    },
+    {
+      "group": "v6-observation-queue-67",
+      "group_sha256": "bdc285e179935daa6212882ee5b2ff34cdf94ac59ea00f301396a41b84cd489b",
+      "lesson_ids": [
+        "v6-observation-queue-67-01",
+        "v6-observation-queue-67-02",
+        "v6-observation-queue-67-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "9112460b3efbce5ea9ecd68456734a6bb10647ec0b21a82f3d7e4ca9c4c5faa5"
+    },
+    {
+      "group": "v6-prediction-cache-320",
+      "group_sha256": "6862066133dea4b53087b4ba37e4818c33c8944700b88132f80866f2ebb2021f",
+      "lesson_ids": [
+        "v6-prediction-cache-320-01",
+        "v6-prediction-cache-320-02",
+        "v6-prediction-cache-320-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "fa8a8100703506bcd8d21add2dbc62ed3ef767a234057fdd182fab8e70053c30"
+    },
+    {
+      "group": "v6-prediction-export-96",
+      "group_sha256": "3b0d990ac0ca5aa33ec71b268e2a1c0e395a2531d4c6c41c75b2ff39fe093619",
+      "lesson_ids": [
+        "v6-prediction-export-96-01",
+        "v6-prediction-export-96-02",
+        "v6-prediction-export-96-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "86698b3cabab68bf495bad73595814ef445871b060fe5779cc68b0ed7c8c879f"
+    },
+    {
+      "group": "v6-prediction-queue-49",
+      "group_sha256": "42d3b423b18cbc0755f97f8a76bd5830d35757a868933596ceefba987bd95282",
+      "lesson_ids": [
+        "v6-prediction-queue-49-01",
+        "v6-prediction-queue-49-02",
+        "v6-prediction-queue-49-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "c5e441e18bf13a79ee3afb3e82c29e4f051976e405bee92bc456b1d6f08b2c32"
+    },
+    {
+      "group": "v6-receipt-rec-31",
+      "group_sha256": "e68cd55a5ea4fa8272ebec88003b852e71621b2723822c9a61d82ad4a706f9ab",
+      "lesson_ids": [
+        "v6-receipt-rec-31-01",
+        "v6-receipt-rec-31-02",
+        "v6-receipt-rec-31-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "dbb2df7ed86920b51ed12ae47fa134ef4cc1b3eef636eb7c45ee67198c0ca2cf"
+    },
+    {
+      "group": "v6-receipt-rec-44",
+      "group_sha256": "ceb7d65a1028c76b5d315e3ce728a80466467a897202b67a057a6db5412e19f0",
+      "lesson_ids": [
+        "v6-receipt-rec-44-01",
+        "v6-receipt-rec-44-02",
+        "v6-receipt-rec-44-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "d9c452b6e4c61d29217f8d7f9f1451d0897cde2e15fcea75acb54f49ba3d3018"
+    },
+    {
+      "group": "v6-receipt-rec-58",
+      "group_sha256": "699a0076bfd86cd5c8ce40cbd197f0812f0b5017efefca54f453d1ee9bb1aa27",
+      "lesson_ids": [
+        "v6-receipt-rec-58-01",
+        "v6-receipt-rec-58-02",
+        "v6-receipt-rec-58-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "e4de7d6ea4a48912304904c5b97ae8fc46317a4ede690b3c74a7308534ac9586"
+    },
+    {
+      "group": "v6-reference-delta-7",
+      "group_sha256": "8d3e4b13fea86b6ae61426d06c2d81aba5ed2815eeb5f249d12648ef8831d85c",
+      "lesson_ids": [
+        "v6-reference-delta-7-01",
+        "v6-reference-delta-7-02",
+        "v6-reference-delta-7-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "5a8a60e900158e32ec34bfe6855794b44320119b313b993f9597fac515a704e5"
+    },
+    {
+      "group": "v6-reference-issue-184",
+      "group_sha256": "0b63e00ca213b343a1d6e034089ad8e8e72abaa731837c74d165530e64d96ff7",
+      "lesson_ids": [
+        "v6-reference-issue-184-01",
+        "v6-reference-issue-184-02",
+        "v6-reference-issue-184-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "17a87498b1859f67c98c523438d4c1df9f01020c3cf75b0cde4d2cee101a0e42"
+    },
+    {
+      "group": "v6-reference-note-52",
+      "group_sha256": "8fca4a09aac28c41bcbb34ee7958a58e213d73af27d991d121fddeae57632e58",
+      "lesson_ids": [
+        "v6-reference-note-52-01",
+        "v6-reference-note-52-02",
+        "v6-reference-note-52-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "5a1fdf191eb234dde8f41e888a513bca08238e4320b875615b0bed088cd20e47"
+    },
+    {
+      "group": "v6-run-probe-22",
+      "group_sha256": "f44b45e65fb7aa43a86ee0b62c0028ac130d2416c88c3931a10bc8a1159d77bf",
+      "lesson_ids": [
+        "v6-run-probe-22-01",
+        "v6-run-probe-22-02",
+        "v6-run-probe-22-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "9e09863b3dd9b81ed77590dd7c9d84cdd51b6ff301c2aa58027bec98c872f18e"
+    },
+    {
+      "group": "v6-run-sample-31",
+      "group_sha256": "3fecabfbd91900d555290c43ef40a5a75082e1e2e53e8380ddd0872112c60891",
+      "lesson_ids": [
+        "v6-run-sample-31-01",
+        "v6-run-sample-31-02",
+        "v6-run-sample-31-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "2aa3df33a7080de7922b8871de92f67695df743865f6f5b2d31e873bb66694ee"
+    },
+    {
+      "group": "v6-run-trial-17",
+      "group_sha256": "86e98dbe2ad7ce555189e3e69fb652856211eccba8e944dd05e7691dfa65b0f1",
+      "lesson_ids": [
+        "v6-run-trial-17-01",
+        "v6-run-trial-17-02",
+        "v6-run-trial-17-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "2771097bfc61420b0847a51c97ccb4acb0b2468ebc72748056b546d65c809f54"
+    },
+    {
+      "group": "v6-supersedes-policy-r3",
+      "group_sha256": "df9ee2b1671d806cd1e808f28a4e447f293c8f7193eadd79999aad55d70e82ef",
+      "lesson_ids": [
+        "v6-supersedes-policy-r3-01",
+        "v6-supersedes-policy-r3-02",
+        "v6-supersedes-policy-r3-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "cc130d5496a39a1c97eb26daef439ce110a51a00f5121da89957d1308a9ec222"
+    },
+    {
+      "group": "v6-supersedes-sable-azure",
+      "group_sha256": "2a3d2972a645392fd85ca189631ecf355f9319d1b030cbdc68d21632b2eb0564",
+      "lesson_ids": [
+        "v6-supersedes-sable-azure-01",
+        "v6-supersedes-sable-azure-02",
+        "v6-supersedes-sable-azure-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "c3af7bb59fdfa42652100f6a659b037e9da20bb0900740a65b2cd1ba3adb34a4"
+    },
+    {
+      "group": "v6-supersedes-seed-b",
+      "group_sha256": "e388d149c8570e7c496b3b523d230bbb4689c8069ab05fc6bac1b65d149c9db0",
+      "lesson_ids": [
+        "v6-supersedes-seed-b-01",
+        "v6-supersedes-seed-b-02",
+        "v6-supersedes-seed-b-03"
+      ],
+      "rows": 3,
+      "semantic_target_sha256": "4ae9595d38b203d16c1aabb8fd7961d47d7261d4ea695b660c91dcc76ca54340"
+    }
+  ],
+  "paraphrase_groups_sha256": "ffd6815652fe177605794134178723879e6db984876173a15f4f215d2cf9867e",
+  "parent_path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\public\\semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+  "parent_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+  "pinned_held_out_vocabulary_expected_file_sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+  "pinned_held_out_vocabulary_file_sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+  "pinned_held_out_vocabulary_path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\held-out-vocabulary-v1.txt",
+  "promotion_features": [],
+  "required_held_out_vocabulary": [
+    "ameliorate",
+    "antedescedes",
+    "antipode",
+    "attested",
+    "celerity",
+    "citation",
+    "concordant",
+    "contrapose",
+    "displaces",
+    "dormant",
+    "empirically",
+    "inviolable",
+    "modulus",
+    "norm",
+    "portend",
+    "presage",
+    "quiescent",
+    "sacrosanct"
+  ],
+  "required_held_out_vocabulary_artifacts": [
+    {
+      "declared_by": [
+        {
+          "path": "evals/frozen/manifest-v6.json",
+          "role": "preserved_held_out_vocabulary_v1",
+          "sha256": "07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce"
+        }
+      ],
+      "path": "evals/frozen/held-out-vocabulary-v1.txt",
+      "sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+      "size_bytes": 82,
+      "terms": [
+        "antedescedes",
+        "celerity",
+        "contrapose",
+        "empirically",
+        "inviolable",
+        "modulus",
+        "portend",
+        "quiescent"
+      ],
+      "terms_sha256": "ecf44ec6b67135dfe9c6ad5bf21c42a449d40c22af5af80c8ce3ecc546cc4c8e"
+    },
+    {
+      "declared_by": [
+        {
+          "path": "evals/frozen/manifest-v6.json",
+          "role": "held_out_vocabulary",
+          "sha256": "07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce"
+        }
+      ],
+      "path": "evals/frozen/held-out-vocabulary-v2.txt",
+      "sha256": "087da62e8129dd259c1b2662f0439eb7d6387714528af14444a4575c66e76798",
+      "size_bytes": 91,
+      "terms": [
+        "ameliorate",
+        "antipode",
+        "attested",
+        "citation",
+        "concordant",
+        "displaces",
+        "dormant",
+        "norm",
+        "presage",
+        "sacrosanct"
+      ],
+      "terms_sha256": "be40d9c9499f1b7e7774102837137fea66d6ffbbb7bc5e8b5cfb2f12de5ded3f"
+    }
+  ],
+  "required_held_out_vocabulary_artifacts_sha256": "d2d6f3f0ff96773b2b8855abf96083e5bce95112dcacc5f37f9a67a017110412",
+  "required_held_out_vocabulary_terms_sha256": "e79ae8dace9a7c8bb3cfae86621146e1250a0ed10896061eea8deaa1ce4dc8ba",
+  "schema": "kev.training-receipt.v1",
+  "score_status": "UNCALIBRATED",
+  "seed": 52031,
+  "steps": 800,
+  "torch_num_threads": 2,
+  "trainer_source_sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59",
+  "training_contract_source_sha256": "8f5fe48a7a697ee3c9f87b52e76aa9e71a6e8c2058894d004ac768a5a6a61f95",
+  "training_exclusion_artifacts": [
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\manifest-v6.json",
+      "role": "FROZEN_EVALUATION_MANIFEST",
+      "sha256": "07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v1-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v2-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "ef9ff61967f8716e541ccdef3adea887da99dc988799098a9faf47e2ea3dd3c4"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v3-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "1bce1b6c1123336e30531b3cf54c1d01ff4aa420cfec0cb078eaca7f40f3b2d8"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v4-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v5-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "e913f483bdce2e3ea1a435f0c139a846874a73660665c69b8723a9670348451c"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v6-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\calibration-fit-v1.jsonl",
+      "role": "CALIBRATION_FIT_TRAINING_EXCLUSION",
+      "sha256": "5734adb2045fa9d192888a2932c2821842833f6a17d9bc27db8bd5defe37e94c"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\calibration-fit-v2.jsonl",
+      "role": "CALIBRATION_FIT_TRAINING_EXCLUSION",
+      "sha256": "d0e7d4fcffef2c3ccd376acb2c77a1fb90289224caa046cddc88c9656ace101c"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\frame-parser-known-failures-v1.json",
+      "role": "DEVELOPMENT_INFLUENCED_AUDIT_TRAINING_EXCLUSION",
+      "sha256": "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901"
+    }
+  ],
+  "training_exclusions_sha256": "caa22b61113c7d878d4d5eaf6228aca8dce04127a14cf804742cf5bc0dca9eb6",
+  "training_inputs": {
+    "encoder_manifest_sha256": "cfd8f8bc3413f31ab927ad7d78eb380c3359fdb2893061075d2369dfec81ea57",
+    "encoder_runtime_source_sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9",
+    "frozen_embedding_values_sha256": "ca9a0d4d0721eee5c8b1bffe96f0bc241cc3e8a6d48b4e9665fcd257cc711711",
+    "held_out_vocabulary_sha256": "e79ae8dace9a7c8bb3cfae86621146e1250a0ed10896061eea8deaa1ce4dc8ba",
+    "lessons_sha256": "c626da3350d873c1ccf62007b6a4c670b86c90840abbf3868db85c8aeae685ed",
+    "objective": "L_relation + 0.20 L_cardinality + 0.35 L_contrastive",
+    "optimizer": {
+      "gradient_norm_clip": 1.0,
+      "learning_rate": 0.0005,
+      "name": "AdamW",
+      "weight_decay": 0.0002
+    },
+    "paraphrase_groups_sha256": "ffd6815652fe177605794134178723879e6db984876173a15f4f215d2cf9867e",
+    "parent_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+    "pinned_held_out_vocabulary_file_sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+    "required_held_out_vocabulary_artifacts_sha256": "d2d6f3f0ff96773b2b8855abf96083e5bce95112dcacc5f37f9a67a017110412",
+    "required_held_out_vocabulary_terms_sha256": "e79ae8dace9a7c8bb3cfae86621146e1250a0ed10896061eea8deaa1ce4dc8ba",
+    "seed": 52031,
+    "steps": 800,
+    "torch_num_threads": 2,
+    "trainer_source_sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59",
+    "training_contract_source_sha256": "8f5fe48a7a697ee3c9f87b52e76aa9e71a6e8c2058894d004ac768a5a6a61f95",
+    "training_exclusions_sha256": "caa22b61113c7d878d4d5eaf6228aca8dce04127a14cf804742cf5bc0dca9eb6",
+    "training_source_manifest": [
+      {
+        "path": "kev/sentence_training.py",
+        "role": "FROZEN_ENCODER_TRAINER",
+        "sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59"
+      },
+      {
+        "path": "kev/encoders.py",
+        "role": "ENCODER_RUNTIME",
+        "sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9"
+      },
+      {
+        "path": "kev/uc51a2/semantic_breadth.py",
+        "role": "SHARED_SEMANTIC_TRAINING",
+        "sha256": "8f5fe48a7a697ee3c9f87b52e76aa9e71a6e8c2058894d004ac768a5a6a61f95"
+      }
+    ],
+    "training_source_manifest_sha256": "429d7674d614dddef1a88ccaea6f53385551a50fa41d479a2a225641a2b95359"
+  },
+  "training_inputs_sha256": "4ff483fee9a00b35b6bfbd7fa1667be5be9e7bba3e31c664dc1ffcb7fc92dfad",
+  "training_scope": "projection_frame_and_cardinality_heads_only",
+  "training_source_manifest": [
+    {
+      "path": "kev/sentence_training.py",
+      "role": "FROZEN_ENCODER_TRAINER",
+      "sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59"
+    },
+    {
+      "path": "kev/encoders.py",
+      "role": "ENCODER_RUNTIME",
+      "sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9"
+    },
+    {
+      "path": "kev/uc51a2/semantic_breadth.py",
+      "role": "SHARED_SEMANTIC_TRAINING",
+      "sha256": "8f5fe48a7a697ee3c9f87b52e76aa9e71a6e8c2058894d004ac768a5a6a61f95"
+    }
+  ],
+  "training_source_manifest_sha256": "429d7674d614dddef1a88ccaea6f53385551a50fa41d479a2a225641a2b95359"
+}

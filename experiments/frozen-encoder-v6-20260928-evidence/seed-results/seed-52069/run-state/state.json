@@ -1,0 +1,24 @@
+{
+  "active_session": null,
+  "constraints": [],
+  "created_at": "2026-09-28T13:07:50Z",
+  "facts": {},
+  "goals": [],
+  "identity": {
+    "description": "local teachable evidence-grounded research intelligence",
+    "name": "KEV"
+  },
+  "model_history": [],
+  "observations": [],
+  "prediction_scores": [],
+  "predictions": [],
+  "relations": [],
+  "reviewed_lessons": [],
+  "schema": "kev.alive-state.v2",
+  "semantic_model": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\public\\semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+  "semantic_model_generation": 0,
+  "semantic_model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+  "typed_memory": [],
+  "updated_at": "2026-09-28T13:07:50Z",
+  "version": "0.52.0-alpha.1"
+}

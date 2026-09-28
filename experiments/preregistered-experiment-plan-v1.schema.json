@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jacksonjp0311-gif/KEV/schemas/preregistered-experiment-plan-v1.json",
+  "title": "KEV fixed frozen-encoder preregistered experiment plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "frozen",
+    "experiment_id",
+    "output_root",
+    "artifacts",
+    "execution",
+    "runtime_environment",
+    "selection_policy"
+  ],
+  "properties": {
+    "schema": {
+      "const": "kev.preregistered-experiment-plan.v1"
+    },
+    "frozen": {
+      "const": true
+    },
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "output_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifacts": {
+      "type": "object",
+      "required": [
+        "public_registry",
+        "incumbent_checkpoint",
+        "promotion_suite",
+        "calibration_fit",
+        "held_out_vocabulary",
+        "encoder_manifest",
+        "reviewed_corpus"
+      ],
+      "additionalProperties": {
+        "$ref": "#/$defs/artifactRef"
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ordered_seeds", "steps", "retention_epsilon"],
+      "properties": {
+        "ordered_seeds": {
+          "const": [52031, 52047, 52069]
+        },
+        "steps": {
+          "const": 800
+        },
+        "retention_epsilon": {
+          "const": 0.0
+        }
+      }
+    },
+    "runtime_environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "python",
+        "python_implementation",
+        "platform",
+        "byteorder",
+        "packages"
+      ],
+      "properties": {
+        "schema": {
+          "const": "kev.preregistered-runtime-environment.v1"
+        },
+        "python": {"type": "string", "minLength": 1},
+        "python_implementation": {"type": "string", "minLength": 1},
+        "platform": {"type": "string", "minLength": 1},
+        "byteorder": {"enum": ["little", "big"]},
+        "packages": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "huggingface-hub",
+            "numpy",
+            "safetensors",
+            "tokenizers",
+            "torch",
+            "transformers"
+          ],
+          "properties": {
+            "huggingface-hub": {"type": "string", "minLength": 1},
+            "numpy": {"type": "string", "minLength": 1},
+            "safetensors": {"type": "string", "minLength": 1},
+            "tokenizers": {"type": "string", "minLength": 1},
+            "torch": {"type": "string", "minLength": 1},
+            "transformers": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "selection_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "primary_seed",
+        "robustness_only_seeds",
+        "requires_all_seed_receipts",
+        "training_loss_is_criterion"
+      ],
+      "properties": {
+        "kind": {
+          "const": "PREDECLARED_PRIMARY_ONLY"
+        },
+        "primary_seed": {
+          "const": 52031
+        },
+        "robustness_only_seeds": {
+          "const": [52047, 52069]
+        },
+        "requires_all_seed_receipts": {
+          "const": true
+        },
+        "training_loss_is_criterion": {
+          "const": false
+        }
+      }
+    }
+  },
+  "$defs": {
+    "artifactRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema", "role", "path", "size_bytes", "sha256"],
+      "properties": {
+        "schema": {
+          "const": "kev.artifact-ref.v1"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "canonical_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

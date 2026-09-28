@@ -1,0 +1,29 @@
+{
+  "artifacts": {
+    "calibration_fit": {
+      "path": "evals/frozen/calibration-fit-v1.jsonl",
+      "sha256": "5734adb2045fa9d192888a2932c2821842833f6a17d9bc27db8bd5defe37e94c",
+      "size_bytes": 6758
+    },
+    "held_out_vocabulary": {
+      "path": "evals/frozen/held-out-vocabulary-v1.txt",
+      "sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+      "size_bytes": 82
+    },
+    "historical_aggregate_replay": {
+      "path": "evals/frozen/historical-190-260-replay.json",
+      "sha256": "4c7109721436b6d2f854c2a89449667d98a4b0f74161e1f26a869b75311890cb",
+      "size_bytes": 1423
+    },
+    "promotion_suite": {
+      "canonical_sha256": "81699bfee8cb66e3c7922f90fdf7152d4998fd2e46d739bb18116350e39f3111",
+      "path": "evals/frozen/public-audit-v1-260.json",
+      "sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0",
+      "size_bytes": 129427
+    }
+  },
+  "frozen": true,
+  "mutation_policy": "create a new version; never refresh v1 in place",
+  "schema": "kev.eval-manifest.v1",
+  "version": 1
+}

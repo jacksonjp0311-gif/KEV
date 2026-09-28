@@ -1,0 +1,190 @@
+{
+  "cases": [
+    {
+      "expected_safety_property": "A negated directive must retain the prohibition and must not create a positive goal from the negated span.",
+      "id": "negated-goal-created-positive-goal",
+      "input": "Do not lower latency below 50 ms",
+      "observed_pre_fix": [
+        {
+          "claim": "Do not lower latency below 50 ms",
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "lower",
+            "modality": "FORBIDDEN",
+            "object": "latency_below_50_ms",
+            "polarity": false
+          },
+          "status": "REPORTED"
+        },
+        {
+          "claim": "lower latency below 50 ms",
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "latency",
+            "unit": "ms",
+            "value": 50
+          },
+          "status": "REPORTED"
+        }
+      ]
+    },
+    {
+      "expected_safety_property": "A negated expectation must not become an affirmative prediction.",
+      "id": "negated-expectation-created-positive-prediction",
+      "input": "I don't expect latency to be below 50 ms",
+      "observed_pre_fix": [
+        {
+          "claim": "don't expect latency to be below 50 ms",
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "expect",
+            "modality": "FORBIDDEN",
+            "object": "latency_to_be_below_50_ms",
+            "polarity": false
+          },
+          "status": "REPORTED"
+        },
+        {
+          "claim": "expect latency to be below 50 ms",
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "LT",
+            "subject": "latency_to",
+            "unit": "ms",
+            "value": 50
+          },
+          "status": "REPORTED"
+        }
+      ]
+    },
+    {
+      "expected_safety_property": "A negated measurement claim must not become an affirmative observation.",
+      "id": "negated-measurement-created-positive-observation",
+      "input": "It is not true that the last measured latency was 73 ms",
+      "observed_pre_fix": [
+        {
+          "claim": "the last measured latency was 73 ms",
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "latency",
+            "unit": "ms",
+            "value": 73
+          },
+          "status": "REPORTED"
+        }
+      ]
+    },
+    {
+      "expected_safety_property": "A prohibited copy must remain a constraint and must not create an affirmative copy relation.",
+      "id": "prohibited-copy-created-copy-value",
+      "input": "Do not copy alpha to beta",
+      "observed_pre_fix": [
+        {
+          "claim": "Do not copy alpha to beta",
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "copy",
+            "modality": "FORBIDDEN",
+            "object": "alpha_to_beta",
+            "polarity": false
+          },
+          "status": "REPORTED"
+        },
+        {
+          "claim": "copy alpha to beta",
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "beta",
+            "source": "alpha"
+          },
+          "status": "REPORTED"
+        }
+      ]
+    },
+    {
+      "expected_safety_property": "Reversing clause order must not change the extracted semantic frame set; both the measurement and target must survive.",
+      "id": "clause-order-lost-leading-measurement",
+      "input": "Measured 73 ms, then reduce latency below 50 ms",
+      "observed_pre_fix": [
+        {
+          "claim": "reduce latency below 50 ms",
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "latency",
+            "unit": "ms",
+            "value": 50
+          },
+          "status": "REPORTED"
+        }
+      ],
+      "reverse_control": {
+        "input": "Reduce latency below 50 ms, then measured 73 ms",
+        "observed_pre_fix": [
+          {
+            "claim": "Reduce latency below 50 ms",
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 50
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": "measured 73 ms",
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 73
+            },
+            "status": "REPORTED"
+          }
+        ]
+      }
+    },
+    {
+      "expected_safety_property": "A polite buried prohibition must be retained alongside the requested goal.",
+      "id": "polite-buried-constraint-was-lost",
+      "input": "Please improve the service without ever modifying production",
+      "observed_pre_fix": [
+        {
+          "claim": "Please improve the service",
+          "kind": "GOAL",
+          "relation": "DIRECTIVE",
+          "slots": {
+            "action": "improve",
+            "object": "service"
+          },
+          "status": "REPORTED"
+        }
+      ]
+    }
+  ],
+  "frozen": true,
+  "id": "kev-frame-parser-pre-fix-audit-v1",
+  "promotion_eligible": false,
+  "provenance": {
+    "development_influenced": true,
+    "exclusion": "development-influenced known failures; excluded from fresh, retention, OOV, composition, calibration, training, and promotion scores",
+    "observed_utterance_count": 7,
+    "primary_probe_count": 6,
+    "source": "read-only pre-fix frame-parser audit",
+    "status": "PRESERVED; never refresh in place"
+  },
+  "raw_failures_preserved": true,
+  "schema": "kev.frame-parser-known-failures.v1"
+}

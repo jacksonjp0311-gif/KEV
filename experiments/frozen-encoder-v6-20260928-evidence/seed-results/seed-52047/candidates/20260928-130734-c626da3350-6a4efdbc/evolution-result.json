@@ -1,0 +1,29 @@
+{
+  "candidate_preserved": true,
+  "challenger": {
+    "eval_card": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\frozen-encoder-v6-20260928-evidence\\seed-results\\seed-52047\\candidates\\20260928-130734-c626da3350-6a4efdbc\\eval-card.json",
+    "eval_card_sha256": "a114be7dcd0565bc9901e2249e8513faae60420826b64d6274fbeab5a065db0e",
+    "parent_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+    "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\frozen-encoder-v6-20260928-evidence\\seed-results\\seed-52047\\candidates\\20260928-130734-c626da3350-6a4efdbc\\calibrated\\semantic-breadth.calibrated.pt",
+    "score_status": "CALIBRATED",
+    "sha256": "081527c9cb50fb78a313e2fff2ef56e4231358e099f4a8fd72798d7bd030768f"
+  },
+  "decision": "REJECT",
+  "eval_card": {
+    "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\frozen-encoder-v6-20260928-evidence\\seed-results\\seed-52047\\candidates\\20260928-130734-c626da3350-6a4efdbc\\eval-card.json",
+    "sha256": "a114be7dcd0565bc9901e2249e8513faae60420826b64d6274fbeab5a065db0e"
+  },
+  "incumbent": {
+    "generation": 0,
+    "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\public\\semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+    "sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+    "source": "state"
+  },
+  "ledger_event": "4eac00b851b36a5b793bb11d786dee16a824a7a76203b1b5218981b2e62ae6aa",
+  "local_registry": null,
+  "old_incumbent_preserved": true,
+  "result_sha256": "5d7256a0443dac4044e6566cf086886d643520ea980cdf6e76a58e7aeb8f7125",
+  "run_id": "20260928-130734-c626da3350-6a4efdbc",
+  "schema": "kev.evolution-result.v1",
+  "training_loss_used_for_promotion": false
+}

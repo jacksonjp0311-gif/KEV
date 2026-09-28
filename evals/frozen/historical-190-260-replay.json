@@ -1,0 +1,53 @@
+{
+  "aggregate": {
+    "challenger": {
+      "correct": 190,
+      "total": 260
+    },
+    "parent": {
+      "correct": 190,
+      "total": 260
+    },
+    "source": "published aggregate; item-level prompts and predictions unavailable",
+    "split": "fresh",
+    "suite_id": "published-audit-260"
+  },
+  "aggregate_sha256": "deb3c041aeaaad5aef3d098c5258e1aac69dfc4f94d58821c9a2d830765661ed",
+  "calibration": {
+    "reason": "NO_TEMPERATURE_ARTIFACT_IN_PUBLISHED_AGGREGATE",
+    "status": "UNCALIBRATED"
+  },
+  "checkpoint_hashes": {
+    "challenger": null,
+    "parent": null,
+    "status": "NOT_PRESENT_IN_PUBLISHED_AGGREGATE"
+  },
+  "decision": "REJECT",
+  "evidence_kind": "HISTORICAL_AGGREGATE_ONLY",
+  "policy": {
+    "eligible_under_current_full_policy": false,
+    "fresh": "STRICT_IMPROVEMENT",
+    "scope": "HISTORICAL_FRESH_AGGREGATE_REPLAY",
+    "tie": "REJECT",
+    "training_loss_used": false
+  },
+  "promote": false,
+  "raw_failures": {
+    "available": false,
+    "items": [],
+    "reason": "ITEM_LEVEL_PROMPTS_AND_PREDICTIONS_NOT_PUBLISHED"
+  },
+  "reason_codes": [
+    "FRESH_TIE"
+  ],
+  "reasons": [
+    "fresh aggregate tied; strict improvement is required"
+  ],
+  "report_sha256": "4534640a37a6055c4e6a8c722a57904449eb5541c4dc334b87baf967361f50a7",
+  "schema": "kev.historical-eval-replay.v1",
+  "scores": {
+    "challenger": 0.7307692307692307,
+    "delta": 0.0,
+    "parent": 0.7307692307692307
+  }
+}

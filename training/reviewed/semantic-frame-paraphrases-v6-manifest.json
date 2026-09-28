@@ -1,0 +1,222 @@
+{
+  "builder": {
+    "path": "scripts/build_reviewed_training_corpus_v6.py",
+    "schema": "kev.artifact-ref.v1",
+    "sha256": "e6386160ac10ad4037d4d3c58a00d8994623e42f51ab69f3a8c17669f23aeb1a",
+    "size_bytes": 16282
+  },
+  "builder_dependencies": [
+    {
+      "path": "scripts/build_reviewed_training_corpus_v5.py",
+      "role": "PRESERVED_CORPUS_BUILDER",
+      "schema": "kev.artifact-ref.v1",
+      "sha256": "7b63bdb809becfde07641affc7ba4ee22387486ed5bb9d5ac9f51004aeea3a32",
+      "size_bytes": 50138
+    }
+  ],
+  "corpus": {
+    "canonical_rows_sha256": "950b0dc563e8a0861838eddcfb45f568c6c7c6535d5dfcd7f4ca3383c61ea794",
+    "path": "training/reviewed/semantic-frame-paraphrases-v6-reviewed.jsonl",
+    "schema": "kev.artifact-ref.v1",
+    "semantic_targets_sha256": "7d4c57c37244cca36042e3ae40cb540c4833ed38f153d5d2af21fce49879a5b4",
+    "sha256": "c626da3350d873c1ccf62007b6a4c670b86c90840abbf3868db85c8aeae685ed",
+    "size_bytes": 271890
+  },
+  "coverage": {
+    "cardinalities": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "frame_kinds": [
+      "COPY_VALUE",
+      "SUPERSEDES",
+      "MAGNITUDE",
+      "NEGATE",
+      "REFERENCE",
+      "ACTIVE_SELECTION",
+      "RUN_STATUS",
+      "RECEIPT_VALUE",
+      "EVIDENCE_CONSISTENCY",
+      "GOAL",
+      "CONSTRAINT",
+      "OBSERVATION",
+      "PREDICTION"
+    ],
+    "required_phenomena": [
+      "single-frame",
+      "multi-frame",
+      "negation",
+      "order-swap",
+      "number-change",
+      "polite-buried-constraint",
+      "conflicting-constraints",
+      "repeated-kind"
+    ],
+    "semantic_target_group_policy": "EXACTLY_ONE_PARAPHRASE_GROUP_PER_TARGET"
+  },
+  "created_at": "2026-09-28T11:18:33Z",
+  "frozen": true,
+  "id": "kev-v6-reviewed-semantic-frame-corpus",
+  "limitations": [
+    "synthetic corpus; it does not establish natural-language breadth",
+    "same-party agent review; it is not independent human or external review",
+    "exact surface and vocabulary separation do not prove semantic independence",
+    "training completion and lower loss cannot qualify a model"
+  ],
+  "metrics": {
+    "cardinality_rows": {
+      "1": 117,
+      "2": 60,
+      "3": 12,
+      "4": 8
+    },
+    "contrastive_positive_pair_count": 246,
+    "kind_occurrences": {
+      "ACTIVE_SELECTION": 9,
+      "CONSTRAINT": 61,
+      "COPY_VALUE": 9,
+      "EVIDENCE_CONSISTENCY": 9,
+      "GOAL": 77,
+      "MAGNITUDE": 9,
+      "NEGATE": 9,
+      "OBSERVATION": 57,
+      "PREDICTION": 29,
+      "RECEIPT_VALUE": 9,
+      "REFERENCE": 9,
+      "RUN_STATUS": 9,
+      "SUPERSEDES": 9
+    },
+    "paraphrase_group_count": 58,
+    "row_count": 197,
+    "row_kind_presence": {
+      "ACTIVE_SELECTION": 9,
+      "CONSTRAINT": 53,
+      "COPY_VALUE": 9,
+      "EVIDENCE_CONSISTENCY": 9,
+      "GOAL": 69,
+      "MAGNITUDE": 9,
+      "NEGATE": 9,
+      "OBSERVATION": 57,
+      "PREDICTION": 29,
+      "RECEIPT_VALUE": 9,
+      "REFERENCE": 9,
+      "RUN_STATUS": 9,
+      "SUPERSEDES": 9
+    },
+    "training_tag_rows": {
+      "conflict": 3,
+      "conflicting-constraints": 8,
+      "multi-frame": 80,
+      "negation": 47,
+      "number-change": 26,
+      "number-control": 97,
+      "order-swap": 80,
+      "paraphrase": 108,
+      "polite": 36,
+      "polite-buried-constraint": 36,
+      "positive-policy": 3,
+      "repeated-kind": 16,
+      "revision": 9,
+      "single-frame": 117
+    }
+  },
+  "mutation_policy": "immutable after first write; create a new corpus and manifest version for any change",
+  "predecessor_rejection": {
+    "canonical_json_sha256": "520f583644f8087a9b34e72eb20462f2fae4eb02244329c1cd6e790ce4d92815",
+    "decision": "REJECTED_BEFORE_TRAINING",
+    "path": "training/reviewed/semantic-frame-paraphrases-v5-rejection.json",
+    "schema": "kev.artifact-ref.v1",
+    "sha256": "7fac970160fd0039d863557cf2b562358c3f4322c92046e9d30d30323f52d85d",
+    "size_bytes": 2302
+  },
+  "provenance": {
+    "authored_by": "openai-codex-agent:reviewed-corpus-task",
+    "authorization": "user-authorized corrected KEV v5 repository experiment",
+    "authorship": "REPOSITORY_AUTHORED_SYNTHETIC",
+    "derived_from_rejected_corpus_sha256": "91b49f47804120906537f2b3eafeef5ddf1df1663f114e5c91a1c9fa59ce5dd8",
+    "independent_human_review": false,
+    "ordinary_chat_training_data": false,
+    "permission": "repository-authored synthetic text; user-authorized for the corrected KEV v5 local training experiment; no third-party text; not independent human review",
+    "review_type": "SAME_PARTY_AGENT_REVIEW",
+    "reviewed_by": "openai-codex-agent:reviewed-corpus-task",
+    "third_party_text": false
+  },
+  "purpose": "corrected first bounded experiment for frame-kind and cardinality proposal heads",
+  "schema": "kev.reviewed-training-corpus-manifest.v1",
+  "separation": {
+    "final_training_boundary": "train() must still verify this corpus against every frozen suite at execution time",
+    "held_out_vocabularies": [
+      {
+        "path": "evals/frozen/held-out-vocabulary-v1.txt",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+        "size_bytes": 82,
+        "term_count": 8,
+        "terms_canonical_sha256": "ecf44ec6b67135dfe9c6ad5bf21c42a449d40c22af5af80c8ce3ecc546cc4c8e"
+      },
+      {
+        "path": "evals/frozen/held-out-vocabulary-v2.txt",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "087da62e8129dd259c1b2662f0439eb7d6387714528af14444a4575c66e76798",
+        "size_bytes": 91,
+        "term_count": 10,
+        "terms_canonical_sha256": "be40d9c9499f1b7e7774102837137fea66d6ffbbb7bc5e8b5cfb2f12de5ded3f"
+      }
+    ],
+    "v1_v4_exact_surface_exclusions": [
+      {
+        "path": "evals/frozen/public-audit-v1-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0",
+        "size_bytes": 129427
+      },
+      {
+        "path": "evals/frozen/public-audit-v2-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "ef9ff61967f8716e541ccdef3adea887da99dc988799098a9faf47e2ea3dd3c4",
+        "size_bytes": 114471
+      },
+      {
+        "path": "evals/frozen/public-audit-v3-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "1bce1b6c1123336e30531b3cf54c1d01ff4aa420cfec0cb078eaca7f40f3b2d8",
+        "size_bytes": 118634
+      },
+      {
+        "path": "evals/frozen/public-audit-v4-260.json",
+        "role": "EVALUATION_SUITE",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322",
+        "size_bytes": 144574
+      },
+      {
+        "path": "evals/frozen/calibration-fit-v1.jsonl",
+        "role": "CALIBRATION_FIT",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "5734adb2045fa9d192888a2932c2821842833f6a17d9bc27db8bd5defe37e94c",
+        "size_bytes": 6758
+      },
+      {
+        "path": "evals/frozen/frame-parser-known-failures-v1.json",
+        "role": "DEVELOPMENT_INFLUENCED_FAILURES",
+        "schema": "kev.artifact-ref.v1",
+        "sha256": "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901",
+        "size_bytes": 5924
+      }
+    ],
+    "v5_promotion_suite_provenance_only": {
+      "canonical_sha256": "1cb5431b83e93f284bb1277ceea4c6e27ad1249f6a5c6fb24df4e22371e42698",
+      "content_read": false,
+      "file_sha256": "e913f483bdce2e3ea1a435f0c139a846874a73660665c69b8723a9670348451c"
+    },
+    "v5_promotion_suite_read_by_builder": false,
+    "v5_promotion_suite_surface_used": false,
+    "v5_vocabulary_holdout_read_only": true
+  },
+  "version": 6
+}

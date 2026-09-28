@@ -1,0 +1,4101 @@
+{
+  "frozen": true,
+  "id": "kev-public-audit-v2-260",
+  "provenance": {
+    "change_reason": "v1 fresh parser cases were saturated; v2 adds proposal-head headroom without altering v1",
+    "created_for": "future KEV promotion decisions after v1 baseline execution",
+    "derived_from_v1_sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0",
+    "item_count": 260,
+    "status": "FROZEN; version bump required for any change",
+    "training_exclusion": "this file and all split items are forbidden inputs to train()",
+    "v1_baseline_evidence_sha256": "d8338e14763c091ea67ae556e8e2d306db6487abaf9faa92653cdb5300de644f"
+  },
+  "schema": "kev.eval-suite.v1",
+  "splits": {
+    "calibration": [
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-calibration-eval-000",
+        "input": "Calibration audit 0 expresses goal intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-calibration-eval-001",
+        "input": "Calibration audit 1 expresses constraint intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-calibration-eval-002",
+        "input": "Calibration audit 2 expresses observation intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-calibration-eval-003",
+        "input": "Calibration audit 3 expresses prediction intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-calibration-eval-004",
+        "input": "Calibration audit 4 expresses goal intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-calibration-eval-005",
+        "input": "Calibration audit 5 expresses constraint intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-calibration-eval-006",
+        "input": "Calibration audit 6 expresses observation intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-calibration-eval-007",
+        "input": "Calibration audit 7 expresses prediction intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-calibration-eval-008",
+        "input": "Calibration audit 8 expresses goal intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-calibration-eval-009",
+        "input": "Calibration audit 9 expresses constraint intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-calibration-eval-010",
+        "input": "Calibration audit 10 expresses observation intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-calibration-eval-011",
+        "input": "Calibration audit 11 expresses prediction intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-calibration-eval-012",
+        "input": "Calibration audit 12 expresses goal intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-calibration-eval-013",
+        "input": "Calibration audit 13 expresses constraint intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-calibration-eval-014",
+        "input": "Calibration audit 14 expresses observation intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-calibration-eval-015",
+        "input": "Calibration audit 15 expresses prediction intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-calibration-eval-016",
+        "input": "Calibration audit 16 expresses goal intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-calibration-eval-017",
+        "input": "Calibration audit 17 expresses constraint intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-calibration-eval-018",
+        "input": "Calibration audit 18 expresses observation intent",
+        "projection": "kinds"
+      },
+      {
+        "audit": "calibration-measurement-only",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-calibration-eval-019",
+        "input": "Calibration audit 19 expresses prediction intent",
+        "projection": "kinds"
+      }
+    ],
+    "composition": [
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 40
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 70
+            }
+          }
+        ],
+        "id": "v2-composition-multi-000",
+        "input": "Reduce latency below 40 ms, do not modify production, and the last measured latency was 70 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 41
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ],
+        "id": "v2-composition-multi-001",
+        "input": "Reduce latency below 41 ms, do not modify production, and the last measured latency was 71 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 42
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 72
+            }
+          }
+        ],
+        "id": "v2-composition-multi-002",
+        "input": "Reduce latency below 42 ms, do not modify production, and the last measured latency was 72 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 43
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 73
+            }
+          }
+        ],
+        "id": "v2-composition-multi-003",
+        "input": "Reduce latency below 43 ms, do not modify production, and the last measured latency was 73 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 44
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 74
+            }
+          }
+        ],
+        "id": "v2-composition-multi-004",
+        "input": "Reduce latency below 44 ms, do not modify production, and the last measured latency was 74 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 45
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-buried-000",
+        "input": "Please improve the service to keep latency below 45 ms without modifying production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 46
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-buried-001",
+        "input": "Please improve the service to keep latency below 46 ms without modifying production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 47
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-buried-002",
+        "input": "Please improve the service to keep latency below 47 ms without modifying production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 48
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-buried-003",
+        "input": "Please improve the service to keep latency below 48 ms without modifying production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 49
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-buried-004",
+        "input": "Please improve the service to keep latency below 49 ms without modifying production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 50
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-paraphrase-000",
+        "input": "Lower response time under 50 milliseconds; production must not be changed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 50
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-paraphrase-001",
+        "input": "Keep latency below 50 ms and never modify production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 51
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-paraphrase-002",
+        "input": "Lower response time under 51 milliseconds; production must not be changed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 51
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-paraphrase-003",
+        "input": "Keep latency below 51 ms and never modify production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 52
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-composition-paraphrase-004",
+        "input": "Lower response time under 52 milliseconds; production must not be changed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "staging_0",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "REQUIRED",
+              "object": "staging_0",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v2-composition-conflict-000",
+        "input": "Do not modify staging-0, but staging-0 must be modified",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "staging_1",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "REQUIRED",
+              "object": "staging_1",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v2-composition-conflict-001",
+        "input": "Do not modify staging-1, but staging-1 must be modified",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "staging_2",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "REQUIRED",
+              "object": "staging_2",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v2-composition-conflict-002",
+        "input": "Do not modify staging-2, but staging-2 must be modified",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "staging_3",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "REQUIRED",
+              "object": "staging_3",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v2-composition-conflict-003",
+        "input": "Do not modify staging-3, but staging-3 must be modified",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "conflicting-constraints",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "staging_4",
+              "polarity": false
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "REQUIRED",
+              "object": "staging_4",
+              "polarity": true
+            }
+          }
+        ],
+        "id": "v2-composition-conflict-004",
+        "input": "Do not modify staging-4, but staging-4 must be modified",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL"
+        ],
+        "id": "v2-composition-neural-000",
+        "input": "Semantic signal glyph-composition-0 encodes goal constraint",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-001",
+        "input": "Semantic signal glyph-composition-1 encodes observation prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION"
+        ],
+        "id": "v2-composition-neural-002",
+        "input": "Semantic signal glyph-composition-2 encodes goal constraint observation",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-003",
+        "input": "Semantic signal glyph-composition-3 encodes goal constraint observation prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL"
+        ],
+        "id": "v2-composition-neural-004",
+        "input": "Semantic signal glyph-composition-4 encodes goal constraint",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-005",
+        "input": "Semantic signal glyph-composition-5 encodes observation prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION"
+        ],
+        "id": "v2-composition-neural-006",
+        "input": "Semantic signal glyph-composition-6 encodes goal constraint observation",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-007",
+        "input": "Semantic signal glyph-composition-7 encodes goal constraint observation prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL"
+        ],
+        "id": "v2-composition-neural-008",
+        "input": "Semantic signal glyph-composition-8 encodes goal constraint",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-009",
+        "input": "Semantic signal glyph-composition-9 encodes observation prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION"
+        ],
+        "id": "v2-composition-neural-010",
+        "input": "Semantic signal glyph-composition-10 encodes goal constraint observation",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-011",
+        "input": "Semantic signal glyph-composition-11 encodes goal constraint observation prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL"
+        ],
+        "id": "v2-composition-neural-012",
+        "input": "Semantic signal glyph-composition-12 encodes goal constraint",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-013",
+        "input": "Semantic signal glyph-composition-13 encodes observation prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION"
+        ],
+        "id": "v2-composition-neural-014",
+        "input": "Semantic signal glyph-composition-14 encodes goal constraint observation",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-015",
+        "input": "Semantic signal glyph-composition-15 encodes goal constraint observation prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL"
+        ],
+        "id": "v2-composition-neural-016",
+        "input": "Semantic signal glyph-composition-16 encodes goal constraint",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-017",
+        "input": "Semantic signal glyph-composition-17 encodes observation prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION"
+        ],
+        "id": "v2-composition-neural-018",
+        "input": "Semantic signal glyph-composition-18 encodes goal constraint observation",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-composition-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT",
+          "GOAL",
+          "OBSERVATION",
+          "PREDICTION"
+        ],
+        "id": "v2-composition-neural-019",
+        "input": "Semantic signal glyph-composition-19 encodes goal constraint observation prediction",
+        "projection": "kinds"
+      }
+    ],
+    "fresh": [
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 25
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-000",
+        "input": "Reduce latency below 25 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 26
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-001",
+        "input": "Reduce throughput below 26 rps",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "error_rate",
+              "unit": "%",
+              "value": 27
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-002",
+        "input": "Reduce error rate below 27 %",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 28
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-003",
+        "input": "Reduce queue depth below 28 requests",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 29
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-004",
+        "input": "Reduce latency below 29 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 30
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-005",
+        "input": "Reduce throughput below 30 rps",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "error_rate",
+              "unit": "%",
+              "value": 31
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-006",
+        "input": "Reduce error rate below 31 %",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 32
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-007",
+        "input": "Reduce queue depth below 32 requests",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 33
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-008",
+        "input": "Reduce latency below 33 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 34
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-009",
+        "input": "Reduce throughput below 34 rps",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "error_rate",
+              "unit": "%",
+              "value": 35
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-010",
+        "input": "Reduce error rate below 35 %",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 36
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-011",
+        "input": "Reduce queue depth below 36 requests",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 37
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-012",
+        "input": "Reduce latency below 37 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 38
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-013",
+        "input": "Reduce throughput below 38 rps",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "error_rate",
+              "unit": "%",
+              "value": 39
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-014",
+        "input": "Reduce error rate below 39 %",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 40
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-015",
+        "input": "Reduce queue depth below 40 requests",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 41
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-016",
+        "input": "Reduce latency below 41 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 42
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-017",
+        "input": "Reduce throughput below 42 rps",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "error_rate",
+              "unit": "%",
+              "value": 43
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-018",
+        "input": "Reduce error rate below 43 %",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "single-frame-goal",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 44
+            }
+          }
+        ],
+        "id": "v2-fresh-goal-019",
+        "input": "Reduce queue depth below 44 requests",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-000",
+        "input": "Do not modify production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "billing",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-001",
+        "input": "Do not modify billing",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "audit_ledger",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-002",
+        "input": "Do not modify the audit ledger",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "customer_records",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-003",
+        "input": "Do not modify customer records",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "model_registry",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-004",
+        "input": "Do not modify model registry",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-005",
+        "input": "Do not modify production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "billing",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-006",
+        "input": "Do not modify billing",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "audit_ledger",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-007",
+        "input": "Do not modify the audit ledger",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "customer_records",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-008",
+        "input": "Do not modify customer records",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "model_registry",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-009",
+        "input": "Do not modify model registry",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "production",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-010",
+        "input": "Do not modify production",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "billing",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-011",
+        "input": "Do not modify billing",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "audit_ledger",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-012",
+        "input": "Do not modify the audit ledger",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "customer_records",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-013",
+        "input": "Do not modify customer records",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "model_registry",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-fresh-constraint-014",
+        "input": "Do not modify model registry",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 61
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-000",
+        "input": "The last measured latency was 61 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 62
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-001",
+        "input": "The last measured latency was 62 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 63
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-002",
+        "input": "The last measured latency was 63 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 64
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-003",
+        "input": "The last measured latency was 64 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 65
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-004",
+        "input": "The last measured latency was 65 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 66
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-005",
+        "input": "The last measured latency was 66 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 67
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-006",
+        "input": "The last measured latency was 67 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 68
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-007",
+        "input": "The last measured latency was 68 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 69
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-008",
+        "input": "The last measured latency was 69 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 70
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-009",
+        "input": "The last measured latency was 70 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-010",
+        "input": "The last measured latency was 71 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 72
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-011",
+        "input": "The last measured latency was 72 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 73
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-012",
+        "input": "The last measured latency was 73 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 74
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-013",
+        "input": "The last measured latency was 74 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "number-change",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 75
+            }
+          }
+        ],
+        "id": "v2-fresh-observation-014",
+        "input": "The last measured latency was 75 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 40
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-000",
+        "input": "We predict latency will be below 40 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 41
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-001",
+        "input": "We predict latency will be below 41 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 42
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-002",
+        "input": "We predict latency will be below 42 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 43
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-003",
+        "input": "We predict latency will be below 43 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 44
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-004",
+        "input": "We predict latency will be below 44 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 45
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-005",
+        "input": "We predict latency will be below 45 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 46
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-006",
+        "input": "We predict latency will be below 46 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-007",
+        "input": "We predict latency will be below 47 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 48
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-008",
+        "input": "We predict latency will be below 48 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "prediction",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 49
+            }
+          }
+        ],
+        "id": "v2-fresh-prediction-009",
+        "input": "We predict latency will be below 49 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "COPY_VALUE"
+        ],
+        "id": "v2-fresh-neural-000",
+        "input": "Semantic signal glyph-fresh-0 encodes copy_value",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v2-fresh-neural-001",
+        "input": "Semantic signal glyph-fresh-1 encodes supersedes",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v2-fresh-neural-002",
+        "input": "Semantic signal glyph-fresh-2 encodes magnitude",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v2-fresh-neural-003",
+        "input": "Semantic signal glyph-fresh-3 encodes negate",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "REFERENCE"
+        ],
+        "id": "v2-fresh-neural-004",
+        "input": "Semantic signal glyph-fresh-4 encodes reference",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "ACTIVE_SELECTION"
+        ],
+        "id": "v2-fresh-neural-005",
+        "input": "Semantic signal glyph-fresh-5 encodes active_selection",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v2-fresh-neural-006",
+        "input": "Semantic signal glyph-fresh-6 encodes run_status",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "RECEIPT_VALUE"
+        ],
+        "id": "v2-fresh-neural-007",
+        "input": "Semantic signal glyph-fresh-7 encodes receipt_value",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "EVIDENCE_CONSISTENCY"
+        ],
+        "id": "v2-fresh-neural-008",
+        "input": "Semantic signal glyph-fresh-8 encodes evidence_consistency",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-fresh-neural-009",
+        "input": "Semantic signal glyph-fresh-9 encodes goal",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-fresh-neural-010",
+        "input": "Semantic signal glyph-fresh-10 encodes constraint",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-fresh-neural-011",
+        "input": "Semantic signal glyph-fresh-11 encodes observation",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-fresh-neural-012",
+        "input": "Semantic signal glyph-fresh-12 encodes prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "COPY_VALUE"
+        ],
+        "id": "v2-fresh-neural-013",
+        "input": "Semantic signal glyph-fresh-13 encodes copy_value",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v2-fresh-neural-014",
+        "input": "Semantic signal glyph-fresh-14 encodes supersedes",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v2-fresh-neural-015",
+        "input": "Semantic signal glyph-fresh-15 encodes magnitude",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v2-fresh-neural-016",
+        "input": "Semantic signal glyph-fresh-16 encodes negate",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "REFERENCE"
+        ],
+        "id": "v2-fresh-neural-017",
+        "input": "Semantic signal glyph-fresh-17 encodes reference",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "ACTIVE_SELECTION"
+        ],
+        "id": "v2-fresh-neural-018",
+        "input": "Semantic signal glyph-fresh-18 encodes active_selection",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v2-fresh-neural-019",
+        "input": "Semantic signal glyph-fresh-19 encodes run_status",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "RECEIPT_VALUE"
+        ],
+        "id": "v2-fresh-neural-020",
+        "input": "Semantic signal glyph-fresh-20 encodes receipt_value",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "EVIDENCE_CONSISTENCY"
+        ],
+        "id": "v2-fresh-neural-021",
+        "input": "Semantic signal glyph-fresh-21 encodes evidence_consistency",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-fresh-neural-022",
+        "input": "Semantic signal glyph-fresh-22 encodes goal",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-fresh-neural-023",
+        "input": "Semantic signal glyph-fresh-23 encodes constraint",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-fresh-neural-024",
+        "input": "Semantic signal glyph-fresh-24 encodes observation",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-fresh-neural-025",
+        "input": "Semantic signal glyph-fresh-25 encodes prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "COPY_VALUE"
+        ],
+        "id": "v2-fresh-neural-026",
+        "input": "Semantic signal glyph-fresh-26 encodes copy_value",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v2-fresh-neural-027",
+        "input": "Semantic signal glyph-fresh-27 encodes supersedes",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v2-fresh-neural-028",
+        "input": "Semantic signal glyph-fresh-28 encodes magnitude",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v2-fresh-neural-029",
+        "input": "Semantic signal glyph-fresh-29 encodes negate",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "REFERENCE"
+        ],
+        "id": "v2-fresh-neural-030",
+        "input": "Semantic signal glyph-fresh-30 encodes reference",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "ACTIVE_SELECTION"
+        ],
+        "id": "v2-fresh-neural-031",
+        "input": "Semantic signal glyph-fresh-31 encodes active_selection",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v2-fresh-neural-032",
+        "input": "Semantic signal glyph-fresh-32 encodes run_status",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "RECEIPT_VALUE"
+        ],
+        "id": "v2-fresh-neural-033",
+        "input": "Semantic signal glyph-fresh-33 encodes receipt_value",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "EVIDENCE_CONSISTENCY"
+        ],
+        "id": "v2-fresh-neural-034",
+        "input": "Semantic signal glyph-fresh-34 encodes evidence_consistency",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-fresh-neural-035",
+        "input": "Semantic signal glyph-fresh-35 encodes goal",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-fresh-neural-036",
+        "input": "Semantic signal glyph-fresh-36 encodes constraint",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-fresh-neural-037",
+        "input": "Semantic signal glyph-fresh-37 encodes observation",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-fresh-neural-038",
+        "input": "Semantic signal glyph-fresh-38 encodes prediction",
+        "projection": "kinds"
+      },
+      {
+        "audit": "neural-fresh-frame-kind-cardinality",
+        "comparison": "set_exact",
+        "expected": [
+          "COPY_VALUE"
+        ],
+        "id": "v2-fresh-neural-039",
+        "input": "Semantic signal glyph-fresh-39 encodes copy_value",
+        "projection": "kinds"
+      }
+    ],
+    "oov": [
+      {
+        "audit": "held-out-vocabulary:celerity",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-oov-000",
+        "input": "OOV audit 0: celerity token expresses goal semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:inviolable",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-oov-001",
+        "input": "OOV audit 1: inviolable token expresses constraint semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:empirically",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-oov-002",
+        "input": "OOV audit 2: empirically token expresses observation semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:portend",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-oov-003",
+        "input": "OOV audit 3: portend token expresses prediction semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:quiescent",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v2-oov-004",
+        "input": "OOV audit 4: quiescent token expresses run_status semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:antedescedes",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v2-oov-005",
+        "input": "OOV audit 5: antedescedes token expresses supersedes semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:modulus",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v2-oov-006",
+        "input": "OOV audit 6: modulus token expresses magnitude semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:contrapose",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v2-oov-007",
+        "input": "OOV audit 7: contrapose token expresses negate semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:celerity",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-oov-008",
+        "input": "OOV audit 8: celerity token expresses goal semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:inviolable",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-oov-009",
+        "input": "OOV audit 9: inviolable token expresses constraint semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:empirically",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-oov-010",
+        "input": "OOV audit 10: empirically token expresses observation semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:portend",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-oov-011",
+        "input": "OOV audit 11: portend token expresses prediction semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:quiescent",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v2-oov-012",
+        "input": "OOV audit 12: quiescent token expresses run_status semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:antedescedes",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v2-oov-013",
+        "input": "OOV audit 13: antedescedes token expresses supersedes semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:modulus",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v2-oov-014",
+        "input": "OOV audit 14: modulus token expresses magnitude semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:contrapose",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v2-oov-015",
+        "input": "OOV audit 15: contrapose token expresses negate semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:celerity",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-oov-016",
+        "input": "OOV audit 16: celerity token expresses goal semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:inviolable",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-oov-017",
+        "input": "OOV audit 17: inviolable token expresses constraint semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:empirically",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-oov-018",
+        "input": "OOV audit 18: empirically token expresses observation semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:portend",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-oov-019",
+        "input": "OOV audit 19: portend token expresses prediction semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:quiescent",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v2-oov-020",
+        "input": "OOV audit 20: quiescent token expresses run_status semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:antedescedes",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v2-oov-021",
+        "input": "OOV audit 21: antedescedes token expresses supersedes semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:modulus",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v2-oov-022",
+        "input": "OOV audit 22: modulus token expresses magnitude semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:contrapose",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v2-oov-023",
+        "input": "OOV audit 23: contrapose token expresses negate semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:celerity",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-oov-024",
+        "input": "OOV audit 24: celerity token expresses goal semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:inviolable",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-oov-025",
+        "input": "OOV audit 25: inviolable token expresses constraint semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:empirically",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-oov-026",
+        "input": "OOV audit 26: empirically token expresses observation semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:portend",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-oov-027",
+        "input": "OOV audit 27: portend token expresses prediction semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:quiescent",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v2-oov-028",
+        "input": "OOV audit 28: quiescent token expresses run_status semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:antedescedes",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v2-oov-029",
+        "input": "OOV audit 29: antedescedes token expresses supersedes semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:modulus",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v2-oov-030",
+        "input": "OOV audit 30: modulus token expresses magnitude semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:contrapose",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v2-oov-031",
+        "input": "OOV audit 31: contrapose token expresses negate semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:celerity",
+        "comparison": "set_exact",
+        "expected": [
+          "GOAL"
+        ],
+        "id": "v2-oov-032",
+        "input": "OOV audit 32: celerity token expresses goal semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:inviolable",
+        "comparison": "set_exact",
+        "expected": [
+          "CONSTRAINT"
+        ],
+        "id": "v2-oov-033",
+        "input": "OOV audit 33: inviolable token expresses constraint semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:empirically",
+        "comparison": "set_exact",
+        "expected": [
+          "OBSERVATION"
+        ],
+        "id": "v2-oov-034",
+        "input": "OOV audit 34: empirically token expresses observation semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:portend",
+        "comparison": "set_exact",
+        "expected": [
+          "PREDICTION"
+        ],
+        "id": "v2-oov-035",
+        "input": "OOV audit 35: portend token expresses prediction semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:quiescent",
+        "comparison": "set_exact",
+        "expected": [
+          "RUN_STATUS"
+        ],
+        "id": "v2-oov-036",
+        "input": "OOV audit 36: quiescent token expresses run_status semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:antedescedes",
+        "comparison": "set_exact",
+        "expected": [
+          "SUPERSEDES"
+        ],
+        "id": "v2-oov-037",
+        "input": "OOV audit 37: antedescedes token expresses supersedes semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:modulus",
+        "comparison": "set_exact",
+        "expected": [
+          "MAGNITUDE"
+        ],
+        "id": "v2-oov-038",
+        "input": "OOV audit 38: modulus token expresses magnitude semantics",
+        "projection": "kinds"
+      },
+      {
+        "audit": "held-out-vocabulary:contrapose",
+        "comparison": "set_exact",
+        "expected": [
+          "NEGATE"
+        ],
+        "id": "v2-oov-039",
+        "input": "OOV audit 39: contrapose token expresses negate semantics",
+        "projection": "kinds"
+      }
+    ],
+    "retention": [
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 80
+            }
+          }
+        ],
+        "id": "v2-retention-000",
+        "input": "Keep latency at most 80 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_1",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-001",
+        "input": "Never modify archive-1",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 82
+            }
+          }
+        ],
+        "id": "v2-retention-002",
+        "input": "Observed latency was 82 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 83
+            }
+          }
+        ],
+        "id": "v2-retention-003",
+        "input": "Latency will remain below 83 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_4",
+              "old_value": "old_4"
+            }
+          }
+        ],
+        "id": "v2-retention-004",
+        "input": "replace old-4 with new-4",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-5",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-005",
+        "input": "run retain-5 failed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 86
+            }
+          }
+        ],
+        "id": "v2-retention-006",
+        "input": "Keep latency at most 86 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_7",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-007",
+        "input": "Never modify archive-7",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 88
+            }
+          }
+        ],
+        "id": "v2-retention-008",
+        "input": "Observed latency was 88 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 89
+            }
+          }
+        ],
+        "id": "v2-retention-009",
+        "input": "Latency will remain below 89 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_10",
+              "old_value": "old_10"
+            }
+          }
+        ],
+        "id": "v2-retention-010",
+        "input": "replace old-10 with new-10",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-11",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-011",
+        "input": "run retain-11 failed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 92
+            }
+          }
+        ],
+        "id": "v2-retention-012",
+        "input": "Keep latency at most 92 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_13",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-013",
+        "input": "Never modify archive-13",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 94
+            }
+          }
+        ],
+        "id": "v2-retention-014",
+        "input": "Observed latency was 94 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 95
+            }
+          }
+        ],
+        "id": "v2-retention-015",
+        "input": "Latency will remain below 95 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_16",
+              "old_value": "old_16"
+            }
+          }
+        ],
+        "id": "v2-retention-016",
+        "input": "replace old-16 with new-16",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-17",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-017",
+        "input": "run retain-17 failed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 98
+            }
+          }
+        ],
+        "id": "v2-retention-018",
+        "input": "Keep latency at most 98 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_19",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-019",
+        "input": "Never modify archive-19",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 100
+            }
+          }
+        ],
+        "id": "v2-retention-020",
+        "input": "Observed latency was 100 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 101
+            }
+          }
+        ],
+        "id": "v2-retention-021",
+        "input": "Latency will remain below 101 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_22",
+              "old_value": "old_22"
+            }
+          }
+        ],
+        "id": "v2-retention-022",
+        "input": "replace old-22 with new-22",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-23",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-023",
+        "input": "run retain-23 failed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 104
+            }
+          }
+        ],
+        "id": "v2-retention-024",
+        "input": "Keep latency at most 104 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_25",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-025",
+        "input": "Never modify archive-25",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 106
+            }
+          }
+        ],
+        "id": "v2-retention-026",
+        "input": "Observed latency was 106 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 107
+            }
+          }
+        ],
+        "id": "v2-retention-027",
+        "input": "Latency will remain below 107 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_28",
+              "old_value": "old_28"
+            }
+          }
+        ],
+        "id": "v2-retention-028",
+        "input": "replace old-28 with new-28",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-29",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-029",
+        "input": "run retain-29 failed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 110
+            }
+          }
+        ],
+        "id": "v2-retention-030",
+        "input": "Keep latency at most 110 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_31",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-031",
+        "input": "Never modify archive-31",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 112
+            }
+          }
+        ],
+        "id": "v2-retention-032",
+        "input": "Observed latency was 112 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 113
+            }
+          }
+        ],
+        "id": "v2-retention-033",
+        "input": "Latency will remain below 113 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_34",
+              "old_value": "old_34"
+            }
+          }
+        ],
+        "id": "v2-retention-034",
+        "input": "replace old-34 with new-34",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-35",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-035",
+        "input": "run retain-35 failed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 116
+            }
+          }
+        ],
+        "id": "v2-retention-036",
+        "input": "Keep latency at most 116 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_37",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-037",
+        "input": "Never modify archive-37",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 118
+            }
+          }
+        ],
+        "id": "v2-retention-038",
+        "input": "Observed latency was 118 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 119
+            }
+          }
+        ],
+        "id": "v2-retention-039",
+        "input": "Latency will remain below 119 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_40",
+              "old_value": "old_40"
+            }
+          }
+        ],
+        "id": "v2-retention-040",
+        "input": "replace old-40 with new-40",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-41",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-041",
+        "input": "run retain-41 failed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 122
+            }
+          }
+        ],
+        "id": "v2-retention-042",
+        "input": "Keep latency at most 122 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_43",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-043",
+        "input": "Never modify archive-43",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 124
+            }
+          }
+        ],
+        "id": "v2-retention-044",
+        "input": "Observed latency was 124 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 125
+            }
+          }
+        ],
+        "id": "v2-retention-045",
+        "input": "Latency will remain below 125 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_46",
+              "old_value": "old_46"
+            }
+          }
+        ],
+        "id": "v2-retention-046",
+        "input": "replace old-46 with new-46",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-47",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-047",
+        "input": "run retain-47 failed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 128
+            }
+          }
+        ],
+        "id": "v2-retention-048",
+        "input": "Keep latency at most 128 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_49",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-049",
+        "input": "Never modify archive-49",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 130
+            }
+          }
+        ],
+        "id": "v2-retention-050",
+        "input": "Observed latency was 130 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 131
+            }
+          }
+        ],
+        "id": "v2-retention-051",
+        "input": "Latency will remain below 131 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_52",
+              "old_value": "old_52"
+            }
+          }
+        ],
+        "id": "v2-retention-052",
+        "input": "replace old-52 with new-52",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-53",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-053",
+        "input": "run retain-53 failed",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LTE",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 134
+            }
+          }
+        ],
+        "id": "v2-retention-054",
+        "input": "Keep latency at most 134 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "modify",
+              "modality": "FORBIDDEN",
+              "object": "archive_55",
+              "polarity": false
+            }
+          }
+        ],
+        "id": "v2-retention-055",
+        "input": "Never modify archive-55",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "latency",
+              "unit": "ms",
+              "value": 136
+            }
+          }
+        ],
+        "id": "v2-retention-056",
+        "input": "Observed latency was 136 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "LT",
+              "subject": "latency",
+              "unit": "ms",
+              "value": 137
+            }
+          }
+        ],
+        "id": "v2-retention-057",
+        "input": "Latency will remain below 137 ms",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "new_58",
+              "old_value": "old_58"
+            }
+          }
+        ],
+        "id": "v2-retention-058",
+        "input": "replace old-58 with new-58",
+        "projection": "semantic_frames"
+      },
+      {
+        "audit": "retention",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "retain-59",
+              "status": "FAILED"
+            }
+          }
+        ],
+        "id": "v2-retention-059",
+        "input": "run retain-59 failed",
+        "projection": "semantic_frames"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+# These files are content-addressed evidence. Preserve their committed bytes on
+# every platform; line-ending conversion would invalidate published SHA-256s.
+/evals/** -text
+/models/public/** -text
+/models/registry.json -text
+/models/encoder-sources/** -text
+/training/reviewed/** -text
+/experiments/** -text

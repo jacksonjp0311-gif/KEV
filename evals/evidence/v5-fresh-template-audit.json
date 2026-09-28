@@ -1,0 +1,180 @@
+{
+  "audited_at": "2026-09-28T11:31:10Z",
+  "finding": {
+    "affected_split": "fresh",
+    "digit_normalized_template_repetition_count": 6,
+    "exact_surface_overlap_count": 0,
+    "items": [
+      {
+        "digit_normalized_template": "transfer the contents of source-<N> into destination-<N>.",
+        "expected_kinds": [
+          "COPY_VALUE"
+        ],
+        "input": "Transfer the contents of source-210 into destination-210.",
+        "item_id": "v5-fresh-kind-00-0",
+        "matched_v4_items": [
+          {
+            "input": "Transfer the contents of source-11 into destination-11.",
+            "item_id": "v4-fresh-semantic-000"
+          },
+          {
+            "input": "Transfer the contents of source-24 into destination-24.",
+            "item_id": "v4-fresh-semantic-013"
+          },
+          {
+            "input": "Transfer the contents of source-37 into destination-37.",
+            "item_id": "v4-fresh-semantic-026"
+          },
+          {
+            "input": "Transfer the contents of source-50 into destination-50.",
+            "item_id": "v4-fresh-semantic-039"
+          }
+        ]
+      },
+      {
+        "digit_normalized_template": "transfer the contents of source-<N> into destination-<N>.",
+        "expected_kinds": [
+          "COPY_VALUE"
+        ],
+        "input": "Transfer the contents of source-211 into destination-211.",
+        "item_id": "v5-fresh-kind-00-1",
+        "matched_v4_items": [
+          {
+            "input": "Transfer the contents of source-11 into destination-11.",
+            "item_id": "v4-fresh-semantic-000"
+          },
+          {
+            "input": "Transfer the contents of source-24 into destination-24.",
+            "item_id": "v4-fresh-semantic-013"
+          },
+          {
+            "input": "Transfer the contents of source-37 into destination-37.",
+            "item_id": "v4-fresh-semantic-026"
+          },
+          {
+            "input": "Transfer the contents of source-50 into destination-50.",
+            "item_id": "v4-fresh-semantic-039"
+          }
+        ]
+      },
+      {
+        "digit_normalized_template": "how far from zero is -<N>?",
+        "expected_kinds": [
+          "MAGNITUDE"
+        ],
+        "input": "How far from zero is -214?",
+        "item_id": "v5-fresh-kind-02-0",
+        "matched_v4_items": [
+          {
+            "input": "How far from zero is -13?",
+            "item_id": "v4-fresh-semantic-002"
+          },
+          {
+            "input": "How far from zero is -26?",
+            "item_id": "v4-fresh-semantic-015"
+          },
+          {
+            "input": "How far from zero is -39?",
+            "item_id": "v4-fresh-semantic-028"
+          }
+        ]
+      },
+      {
+        "digit_normalized_template": "how far from zero is -<N>?",
+        "expected_kinds": [
+          "MAGNITUDE"
+        ],
+        "input": "How far from zero is -215?",
+        "item_id": "v5-fresh-kind-02-1",
+        "matched_v4_items": [
+          {
+            "input": "How far from zero is -13?",
+            "item_id": "v4-fresh-semantic-002"
+          },
+          {
+            "input": "How far from zero is -26?",
+            "item_id": "v4-fresh-semantic-015"
+          },
+          {
+            "input": "How far from zero is -39?",
+            "item_id": "v4-fresh-semantic-028"
+          }
+        ]
+      },
+      {
+        "digit_normalized_template": "reverse the sign of <N>.",
+        "expected_kinds": [
+          "NEGATE"
+        ],
+        "input": "Reverse the sign of 216.",
+        "item_id": "v5-fresh-kind-03-0",
+        "matched_v4_items": [
+          {
+            "input": "Reverse the sign of 14.",
+            "item_id": "v4-fresh-semantic-003"
+          },
+          {
+            "input": "Reverse the sign of 27.",
+            "item_id": "v4-fresh-semantic-016"
+          },
+          {
+            "input": "Reverse the sign of 40.",
+            "item_id": "v4-fresh-semantic-029"
+          }
+        ]
+      },
+      {
+        "digit_normalized_template": "reverse the sign of <N>.",
+        "expected_kinds": [
+          "NEGATE"
+        ],
+        "input": "Reverse the sign of 217.",
+        "item_id": "v5-fresh-kind-03-1",
+        "matched_v4_items": [
+          {
+            "input": "Reverse the sign of 14.",
+            "item_id": "v4-fresh-semantic-003"
+          },
+          {
+            "input": "Reverse the sign of 27.",
+            "item_id": "v4-fresh-semantic-016"
+          },
+          {
+            "input": "Reverse the sign of 40.",
+            "item_id": "v4-fresh-semantic-029"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "v5-fresh-number-only-template-repetitions",
+  "intervening_change_attestation": {
+    "active_checkpoint_changed": false,
+    "active_checkpoint_sha256_before_and_after": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+    "challenger_training_started": false,
+    "model_weights_changed": false,
+    "statement": "No challenger training or model change occurred between the v5 freeze and this finding."
+  },
+  "method": {
+    "exact_normalization": "Unicode NFKC, casefold, collapse whitespace",
+    "template_normalization": "exact normalization plus replace every decimal digit run with <N>"
+  },
+  "resolution": {
+    "action": "CREATE_V6_WITH_SIX_NEW_SURFACES; DO_NOT_PATCH_V5",
+    "replacement_count": 6,
+    "v5_bytes_preserved": true,
+    "v5_status": "PRESERVED_DEVELOPMENT_EVIDENCE_NOT_CURRENT_PROMOTION_SUITE"
+  },
+  "schema": "kev.eval-audit-finding.v1",
+  "scope": "v5 fresh surfaces compared with preserved v1-v4 evaluation surfaces",
+  "source_manifest": {
+    "path": "evals/frozen/manifest-v5.json",
+    "sha256": "4b2cb72aa1a891e1673225be4ff9c5989cc1165ad79203938ffdbe4f794e3e94"
+  },
+  "source_suite": {
+    "canonical_sha256": "1cb5431b83e93f284bb1277ceea4c6e27ad1249f6a5c6fb24df4e22371e42698",
+    "path": "evals/frozen/public-audit-v5-260.json",
+    "sha256": "e913f483bdce2e3ea1a435f0c139a846874a73660665c69b8723a9670348451c"
+  },
+  "status": "FROZEN_DEVELOPMENT_EVIDENCE"
+}

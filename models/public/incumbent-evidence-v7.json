@@ -1,0 +1,29 @@
+{
+  "artifact_status": "INCUMBENT",
+  "checkpoint_path": "models/public/semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+  "checkpoint_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+  "claim_boundary": "untrained public genesis reference; v4 scores are a label-clean semantic baseline, not evidence of learning",
+  "eval_card_path": "evals/evidence/v4-genesis-baseline.json",
+  "eval_card_sha256": "3e2ac77d9dd210cad542b079563a29575d030d35971c8dca3e6ecbdbd3f2f838",
+  "eval_manifest_path": "evals/frozen/manifest-v4.json",
+  "eval_manifest_sha256": "21ae7711e3f3ad5323bc6a8a5669a5f073f7dedb646a61320dabfe487041888d",
+  "evaluated_at": "2026-09-28T09:06:34Z",
+  "known_failures_path": "evals/frozen/frame-parser-known-failures-v1.json",
+  "known_failures_promotion_eligible": false,
+  "known_failures_sha256": "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901",
+  "metrics": {
+    "calibration_exact_match": 0.0,
+    "composition_exact_match": 0.5,
+    "fresh_exact_match": 0.6,
+    "oov_exact_match": 0.0,
+    "retention_exact_match": 1.0
+  },
+  "parent_sha256": null,
+  "raw_failure_count": 120,
+  "report_sha256": "662140bb815d8f271ea8382eaeb4aa283f17a0ee69f17b7380996eb4e29f03b9",
+  "schema": "kev.incumbent-evidence.v1",
+  "score_status": "UNCALIBRATED",
+  "suite_canonical_sha256": "826cf80e56e500877e9402202acf410370e9ef10e00830750282c24f57eb038d",
+  "suite_path": "evals/frozen/public-audit-v4-260.json",
+  "suite_sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322"
+}

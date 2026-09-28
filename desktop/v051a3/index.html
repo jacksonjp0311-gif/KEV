@@ -1,1 +1,48 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KEV Alive</title><link rel="stylesheet" href="app.css"></head><body><main><header><div><span class="eyebrow">KEV · ALIVE RUNTIME</span><h1>Persistent semantic intelligence</h1><p>Conversation, typed memory, reviewed teaching, and a tamper-evident event ledger.</p></div><div id="status" class="status">loading…</div></header><section id="chat" class="chat"></section><form id="form"><textarea id="message" placeholder="Talk to KEV… Try: Remember that project codename is Lumen"></textarea><button>Send</button></form><section class="controls"><button id="newSession">New session</button><details><summary>Teach a reviewed semantic lesson</summary><select id="intent"></select><textarea id="lesson" placeholder="Example wording to teach"></textarea><button id="teach" type="button">Add reviewed lesson</button></details></section><footer>KEV semantic weights are experimental. No tool execution or checkpoint activation occurs from this screen.</footer></main><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KEV Alive</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <span class="eyebrow">KEV · ALIVE RUNTIME</span>
+        <h1>Evidence-grounded research runtime</h1>
+        <p>Structured frames, revisioned facts, reviewed lessons, and a hash-linked event ledger.</p>
+      </div>
+      <div id="status" class="status">loading…</div>
+    </header>
+    <section id="chat" class="chat" aria-live="polite"></section>
+    <form id="form">
+      <textarea id="message" aria-label="Message" placeholder="Try: Remember that project codename is Lumen"></textarea>
+      <button>Send</button>
+    </form>
+    <section class="controls">
+      <button id="newSession" type="button">New session</button>
+      <details>
+        <summary>Draft and review a semantic lesson</summary>
+        <label for="intent">Frame kind</label>
+        <select id="intent"></select>
+        <label for="lesson">Permission-clean example</label>
+        <textarea id="lesson" placeholder="Example wording to propose"></textarea>
+        <button id="teach" type="button">Create lesson draft</button>
+        <hr>
+        <label for="lessonId">Draft lesson ID</label>
+        <input id="lessonId" placeholder="lesson-…">
+        <label for="reviewer">Reviewer</label>
+        <input id="reviewer" placeholder="Reviewer identity">
+        <label for="permission">Permission provenance</label>
+        <input id="permission" placeholder="For example: human-authored, approved for training">
+        <button id="review" type="button">Mark reviewed</button>
+        <p id="lessonStatus" class="notice"></p>
+      </details>
+    </section>
+    <footer>KEV is experimental research software, not AGI. This screen does not execute tools or activate checkpoints.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

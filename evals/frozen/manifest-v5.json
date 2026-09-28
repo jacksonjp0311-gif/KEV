@@ -1,0 +1,118 @@
+{
+  "artifacts": {
+    "calibration_fit": {
+      "path": "evals/frozen/calibration-fit-v2.jsonl",
+      "sha256": "d0e7d4fcffef2c3ccd376acb2c77a1fb90289224caa046cddc88c9656ace101c",
+      "size_bytes": 14516
+    },
+    "frame_parser_known_failures_v1": {
+      "canonical_sha256": "0b1786309a10e9c61734032800a58e77332f1c89181e6d6904ce6fdf4fbb2d26",
+      "path": "evals/frozen/frame-parser-known-failures-v1.json",
+      "promotion_eligible": false,
+      "sha256": "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901",
+      "size_bytes": 5924,
+      "status": "DEVELOPMENT_INFLUENCED_KNOWN_FAILURES_NOT_PROMOTION_DATA"
+    },
+    "held_out_vocabulary": {
+      "path": "evals/frozen/held-out-vocabulary-v2.txt",
+      "sha256": "087da62e8129dd259c1b2662f0439eb7d6387714528af14444a4575c66e76798",
+      "size_bytes": 91
+    },
+    "historical_aggregate_replay": {
+      "path": "evals/frozen/historical-190-260-replay.json",
+      "sha256": "4c7109721436b6d2f854c2a89449667d98a4b0f74161e1f26a869b75311890cb",
+      "size_bytes": 1423
+    },
+    "preserved_calibration_fit_v1": {
+      "path": "evals/frozen/calibration-fit-v1.jsonl",
+      "sha256": "5734adb2045fa9d192888a2932c2821842833f6a17d9bc27db8bd5defe37e94c",
+      "size_bytes": 6758,
+      "status": "PRESERVED_LABEL_LEAKY_CALIBRATION_FIT_NOT_CURRENT"
+    },
+    "preserved_held_out_vocabulary_v1": {
+      "path": "evals/frozen/held-out-vocabulary-v1.txt",
+      "sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+      "size_bytes": 82,
+      "status": "PRESERVED_PRIOR_HELD_OUT_VOCABULARY"
+    },
+    "preserved_manifest_v4": {
+      "canonical_sha256": "61ef8ab04486c4374579af5356a9df0a14cdac41e44c944c57d4faf32d6acc10",
+      "path": "evals/frozen/manifest-v4.json",
+      "sha256": "21ae7711e3f3ad5323bc6a8a5669a5f073f7dedb646a61320dabfe487041888d",
+      "size_bytes": 3427,
+      "status": "PRESERVED_PREVIOUS_EVALUATION_MANIFEST"
+    },
+    "preserved_promotion_suite_v2": {
+      "canonical_sha256": "c239ab2382c5eabc798094fc75cee5adfd34ede5282c70b066e2006de4be2326",
+      "path": "evals/frozen/public-audit-v2-260.json",
+      "sha256": "ef9ff61967f8716e541ccdef3adea887da99dc988799098a9faf47e2ea3dd3c4",
+      "size_bytes": 114471,
+      "status": "PRESERVED_DEVELOPMENT_EVIDENCE_NOT_CURRENT_PROMOTION_SUITE"
+    },
+    "preserved_promotion_suite_v3": {
+      "canonical_sha256": "25153929122a1d76e51e0f866a70d57fbbf1d179599d4ed383d35662cf44c888",
+      "path": "evals/frozen/public-audit-v3-260.json",
+      "sha256": "1bce1b6c1123336e30531b3cf54c1d01ff4aa420cfec0cb078eaca7f40f3b2d8",
+      "size_bytes": 118634,
+      "status": "PRESERVED_DEVELOPMENT_EVIDENCE_NOT_CURRENT_PROMOTION_SUITE"
+    },
+    "preserved_promotion_suite_v4": {
+      "canonical_sha256": "826cf80e56e500877e9402202acf410370e9ef10e00830750282c24f57eb038d",
+      "path": "evals/frozen/public-audit-v4-260.json",
+      "sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322",
+      "size_bytes": 144574,
+      "status": "PRESERVED_DEVELOPMENT_EVIDENCE_NOT_CURRENT_PROMOTION_SUITE"
+    },
+    "promotion_suite": {
+      "canonical_sha256": "1cb5431b83e93f284bb1277ceea4c6e27ad1249f6a5c6fb24df4e22371e42698",
+      "path": "evals/frozen/public-audit-v5-260.json",
+      "sha256": "e913f483bdce2e3ea1a435f0c139a846874a73660665c69b8723a9670348451c",
+      "size_bytes": 146580
+    },
+    "superseded_development_suite": {
+      "canonical_sha256": "81699bfee8cb66e3c7922f90fdf7152d4998fd2e46d739bb18116350e39f3111",
+      "path": "evals/frozen/public-audit-v1-260.json",
+      "sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0",
+      "size_bytes": 129427,
+      "status": "PRESERVED_DEVELOPMENT_EVIDENCE_NOT_CURRENT_PROMOTION_SUITE"
+    },
+    "v1_baseline_self_evaluation": {
+      "path": "evals/evidence/v1-baseline-self-eval.json",
+      "sha256": "d8338e14763c091ea67ae556e8e2d306db6487abaf9faa92653cdb5300de644f",
+      "size_bytes": 567845
+    },
+    "v2_baseline_self_evaluation": {
+      "path": "evals/evidence/v2-genesis-baseline.json",
+      "sha256": "f8282ddd540c0903f1219996f085ad39574fa4d0ef912ab20507328c6d7ce3ac",
+      "size_bytes": 660861
+    },
+    "v3_baseline_self_evaluation": {
+      "path": "evals/evidence/v3-genesis-baseline-portable-v4.json",
+      "sha256": "10287ceef18424cae710abfc1fee6a6b4febe301e0015a2614b5c8087a6b4051",
+      "size_bytes": 712577,
+      "status": "PRESERVED_LABEL_LEAKAGE_DEVELOPMENT_EVIDENCE"
+    },
+    "v4_baseline_self_evaluation": {
+      "canonical_sha256": "7734f0e276514e52b0c73316f861e1164a98591a01da4995592e93981e748fbe",
+      "path": "evals/evidence/v4-genesis-baseline-audit-gated.json",
+      "sha256": "e4675d7f2bd4370bcaa28a25cd213a7e1aecae46d43abca875a62660d815a003",
+      "size_bytes": 734542,
+      "status": "PRESERVED_PRE_V5_BASELINE_WITH_RAW_FAILURES"
+    }
+  },
+  "frozen": true,
+  "mutation_policy": "create a new version; never refresh v1 through v5 in place",
+  "preserved_generations": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "schema": "kev.eval-manifest.v1",
+  "training_boundary": {
+    "calibration_fit": "TEMPERATURE_ONLY_FORBIDDEN_IN_WEIGHT_TRAIN",
+    "held_out_vocabulary": "FORBIDDEN_SURFACE_FORMS_IN_TRAIN",
+    "suite": "FORBIDDEN_IN_TRAIN"
+  },
+  "version": 5
+}

@@ -4,13 +4,22 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "kev-cognitive-runtime"
-version = "0.51.0a3"
+version = "0.52.0a1"
 description = "KEV persistent, teachable, evidence-grounded cognitive runtime research"
 requires-python = ">=3.11,<3.14"
-dependencies = ["numpy>=1.24"]
+dependencies = ["numpy>=1.24", "torch>=2.0"]
+
+[project.scripts]
+kev = "kev.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["kev", "kev.*"]
 
 [project.optional-dependencies]
-semantic = ["torch>=2.0"]
+dev = ["mypy>=1.13", "pytest>=8.0", "ruff>=0.9"]
+semantic-encoder = [
+  "huggingface-hub>=0.24,<2",
+  "safetensors>=0.4,<1",
+  "tokenizers>=0.19,<1",
+  "transformers>=4.41,<6",
+]
