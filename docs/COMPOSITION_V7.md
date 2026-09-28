@@ -95,6 +95,15 @@ not treat the controlled probes or better fresh scores as model qualification.
 Local verification completed with 280 tests passing, plus lint, type checks,
 compilation, immutable-artifact checks, and development-evidence replay.
 
+Publication CI exposed a static-analysis portability issue in the existing
+file mutex: mypy does not narrow `os.name` branches, and its Linux view omits
+the Windows-only `msvcrt` declarations. The
+[original failed check](https://github.com/jacksonjp0311-gif/KEV/actions/runs/36432931490)
+is retained. CI now explicitly type-checks the Windows API view on both hosts,
+without suppressing errors or changing frozen runtime sources. Runtime tests
+still run separately on Linux and Windows; the dynamically imported POSIX
+`fcntl` backend is runtime-tested, not statically typed.
+
 ## Artifacts and replay
 
 | Artifact | SHA-256 |

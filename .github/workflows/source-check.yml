@@ -30,8 +30,11 @@ jobs:
         run: python -m compileall -q kev scripts tests_public
       - name: Lint Python source
         run: python -m ruff check kev scripts tests_public
-      - name: Type-check runtime source
-        run: python -m mypy kev
+      - name: Type-check runtime source against Windows API declarations
+        # The frozen source guards msvcrt with os.name, which mypy does not
+        # narrow on Linux. Check its real Windows declarations without ignoring
+        # errors; the test matrix separately exercises each host's lock backend.
+        run: python -m mypy --platform win32 kev
       - name: Verify immutable public artifacts
         run: python -m kev.cli doctor
       - name: Replay the published aggregate rejection
