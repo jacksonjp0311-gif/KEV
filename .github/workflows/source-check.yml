@@ -40,4 +40,14 @@ jobs:
       - name: Replay the published aggregate rejection
         run: python -m kev.cli historical-replay
       - name: Run public test suite
+        env:
+          KEV_REPLAY_DIAGNOSTICS: ${{ runner.temp }}/kev-replay-diagnostics
         run: python -m pytest -q tests_public
+      - name: Preserve baseline replay diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: baseline-replay-${{ matrix.os }}
+          path: ${{ runner.temp }}/kev-replay-diagnostics
+          if-no-files-found: ignore
+          retention-days: 90

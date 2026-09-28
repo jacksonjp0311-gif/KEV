@@ -3,7 +3,10 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
+import platform
 import shutil
+import tempfile
 from collections import Counter
 from pathlib import Path
 
@@ -338,6 +341,105 @@ def test_historical_tie_replay_matches_the_frozen_published_artifact():
     assert path.stat().st_size == manifest_record["size_bytes"]
 
 
+def _replay_leaf_differences(expected: object, actual: object) -> dict:
+    missing = object()
+    categories: Counter[str] = Counter()
+    types: Counter[str] = Counter()
+    first: list[dict] = []
+    total = 0
+    maximum_numeric_delta: float | None = None
+
+    def compare(left: object, right: object, path: str) -> None:
+        nonlocal total, maximum_numeric_delta
+        if isinstance(left, dict) and isinstance(right, dict):
+            for key in sorted(left.keys() | right.keys()):
+                segment = str(key).replace("~", "~0").replace("/", "~1")
+                compare(
+                    left.get(key, missing), right.get(key, missing), f"{path}/{segment}"
+                )
+            return
+        if isinstance(left, list) and isinstance(right, list):
+            for index in range(max(len(left), len(right))):
+                compare(
+                    left[index] if index < len(left) else missing,
+                    right[index] if index < len(right) else missing,
+                    f"{path}/{index}",
+                )
+            return
+        if type(left) is type(right) and left == right:
+            return
+        numeric = (
+            isinstance(left, (int, float))
+            and not isinstance(left, bool)
+            and isinstance(right, (int, float))
+            and not isinstance(right, bool)
+        )
+        if left is missing or right is missing:
+            category = "missing_expected" if left is missing else "missing_actual"
+        elif type(left) is not type(right):
+            category = "type_mismatch"
+        elif numeric:
+            category = "numeric_value"
+        else:
+            category = "non_numeric_value"
+        if numeric:
+            delta = abs(float(left) - float(right))
+            maximum_numeric_delta = max(maximum_numeric_delta or 0.0, delta)
+        total += 1
+        categories[category] += 1
+        left_type = "MISSING" if left is missing else type(left).__name__
+        right_type = "MISSING" if right is missing else type(right).__name__
+        types[f"{left_type}->{right_type}"] += 1
+        if len(first) < 20:
+            first.append(
+                {
+                    "path": path or "/",
+                    "category": category,
+                    "expected": "<MISSING>" if left is missing else left,
+                    "actual": "<MISSING>" if right is missing else right,
+                }
+            )
+
+    compare(expected, actual, "")
+    return {
+        "total_leaf_differences": total,
+        "category_counts": dict(sorted(categories.items())),
+        "type_counts": dict(sorted(types.items())),
+        "max_numeric_delta": maximum_numeric_delta,
+        "first_20_differences": first,
+    }
+
+
+def _replay_environment() -> dict:
+    capability = getattr(
+        getattr(torch.backends, "cpu", None), "get_cpu_capability", None
+    )
+    cpu_capability = capability() if callable(capability) else "UNAVAILABLE"
+    return {
+        "python_version": platform.python_version(),
+        "python_implementation": platform.python_implementation(),
+        "platform": platform.platform(),
+        "machine": platform.machine(),
+        "torch_version": str(torch.__version__),
+        "torch_num_threads": torch.get_num_threads(),
+        "torch_num_interop_threads": torch.get_num_interop_threads(),
+        "torch_cpu_capability": cpu_capability,
+        "github_actions": {
+            key: os.environ[key]
+            for key in (
+                "GITHUB_SHA",
+                "GITHUB_RUN_ID",
+                "GITHUB_RUN_ATTEMPT",
+                "GITHUB_JOB",
+                "GITHUB_WORKFLOW",
+                "RUNNER_OS",
+                "RUNNER_ARCH",
+            )
+            if key in os.environ
+        },
+    }
+
+
 def test_current_public_baseline_replays_byte_exact():
     registry = _json("models/registry.json")
     active = registry["active"]
@@ -357,5 +459,41 @@ def test_current_public_baseline_replays_byte_exact():
     encoded = (
         json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
     ).encode("utf-8")
-    assert hashlib.sha256(encoded).hexdigest() == active["eval_card_sha256"]
-    assert report == _json(active["eval_card_path"])
+    actual_sha256 = hashlib.sha256(encoded).hexdigest()
+    expected_report = _json(active["eval_card_path"])
+    if actual_sha256 != active["eval_card_sha256"]:
+        diagnostic = _replay_leaf_differences(expected_report, report)
+        diagnostic.update(
+            expected_sha256=active["eval_card_sha256"],
+            actual_sha256=actual_sha256,
+            execution_environment=_replay_environment(),
+        )
+        output_directory = os.environ.get("KEV_REPLAY_DIAGNOSTICS")
+        if output_directory:
+            try:
+                destination = Path(output_directory)
+                destination.mkdir(parents=True, exist_ok=True)
+                descriptor, artifact_path = tempfile.mkstemp(
+                    prefix=f"baseline-actual-{actual_sha256}-",
+                    suffix=".json",
+                    dir=destination,
+                )
+                with os.fdopen(descriptor, "wb") as handle:
+                    handle.write(encoded)
+                diagnostic["actual_report_path"] = artifact_path
+                sidecar_path = Path(artifact_path).with_suffix(".diagnostic.json")
+                diagnostic["diagnostic_path"] = str(sidecar_path)
+                with sidecar_path.open("xb") as handle:
+                    handle.write(
+                        (
+                            json.dumps(diagnostic, indent=2, sort_keys=True) + "\n"
+                        ).encode()
+                    )
+            except OSError as error:
+                diagnostic["actual_report_preservation_error"] = str(error)
+        print(
+            "BASELINE_REPLAY_MISMATCH "
+            + json.dumps(diagnostic, indent=2, sort_keys=True)
+        )
+    assert actual_sha256 == active["eval_card_sha256"]
+    assert report == expected_report
