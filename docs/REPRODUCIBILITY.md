@@ -68,6 +68,17 @@ and `d3590d6f9eda20a3510df94f7473aeed45c5d616aadfe4ee7fb5f452f0036f28`.
 Repository artifact paths
 and newline serialization are stable across supported platforms.
 
+One observed hosted numerical replay instead has file SHA-256
+`8a50f0fa1b92697681e0688c509b3a30c3dd2bdc03bac2ea91101504879cccc6`:
+one confidence differs by one millionth, with changed derived calibration
+summaries and hashes but identical typed predictions, failures, accuracy
+counts, and reject decision. Its full report and provenance are retained in
+the [explicit replay-variant manifest](../experiments/composition-v7-portability/replay-variants-v1.json).
+The test accepts only exact declared report bytes, independently checks their
+semantic identity and integrity, and rejects any unknown numerical variant.
+The registry's original baseline is not replaced. Do not interpret this finite
+record of observed replays as universal bitwise reproducibility.
+
 ## 3. Replay the historical claim without inventing evidence
 
 ```text

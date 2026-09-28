@@ -104,6 +104,29 @@ without suppressing errors or changing frozen runtime sources. Runtime tests
 still run separately on Linux and Windows; the dynamically imported POSIX
 `fcntl` backend is runtime-tested, not statically typed.
 
+### Observed numerical replay variation
+
+Hosted CI also exposed a numerical portability limit, preserved in
+[run 36434282077](https://github.com/jacksonjp0311-gif/KEV/actions/runs/36434282077).
+One rounded, uncalibrated confidence changed from `0.517286` to `0.517287`;
+its derived calibration summaries and integrity hashes changed accordingly.
+Every typed prediction, exact slot, raw failure, accuracy count, and promotion
+decision stayed identical. The captured runner reports AVX512 and Torch
+`2.5.1+cpu`; the original local run reports AVX2 and `2.5.1+cu121` on CPU.
+Those environment differences are recorded, not isolated as a proven cause.
+
+The [numerical replay manifest](../experiments/composition-v7-portability/replay-variants-v1.json)
+retains the full actual report, failure diagnostic, provenance, and exact leaf
+differences. The original baseline remains unchanged. Tests require exact
+bytes from one of the two explicitly recorded reports; an unknown hash still
+fails and produces diagnostics. This is not a tolerance, automatic snapshot
+refresh, evaluation-item change, or promotion-policy exception. Neither the
+registry nor any experiment candidate or decision was changed. These two
+observed replays do not establish universal bitwise portability.
+
+The final local suite, including ten additional replay-contract tests, passed
+all 290 tests. The 58 original experiment-plan artifact hashes remain unchanged.
+
 ## Artifacts and replay
 
 | Artifact | SHA-256 |

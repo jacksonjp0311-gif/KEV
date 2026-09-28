@@ -22,6 +22,8 @@ from kev.artifacts import (
     verify_file_sha256,
 )
 from kev.evaluation import (
+    _calibration_summary,
+    compare_evaluations,
     evaluate_challenger,
     load_frozen_suite,
     replay_historical_aggregate,
@@ -341,7 +343,12 @@ def test_historical_tie_replay_matches_the_frozen_published_artifact():
     assert path.stat().st_size == manifest_record["size_bytes"]
 
 
-def _replay_leaf_differences(expected: object, actual: object) -> dict:
+def _replay_leaf_differences(
+    expected: object,
+    actual: object,
+    *,
+    include_all: bool = False,
+) -> dict:
     missing = object()
     categories: Counter[str] = Counter()
     types: Counter[str] = Counter()
@@ -390,7 +397,7 @@ def _replay_leaf_differences(expected: object, actual: object) -> dict:
         left_type = "MISSING" if left is missing else type(left).__name__
         right_type = "MISSING" if right is missing else type(right).__name__
         types[f"{left_type}->{right_type}"] += 1
-        if len(first) < 20:
+        if include_all or len(first) < 20:
             first.append(
                 {
                     "path": path or "/",
@@ -406,8 +413,175 @@ def _replay_leaf_differences(expected: object, actual: object) -> dict:
         "category_counts": dict(sorted(categories.items())),
         "type_counts": dict(sorted(types.items())),
         "max_numeric_delta": maximum_numeric_delta,
-        "first_20_differences": first,
+        "first_20_differences": first[:20],
+        **({"all_differences": first} if include_all else {}),
     }
+
+
+REPLAY_VARIANTS_PATH = (
+    ROOT / "experiments/composition-v7-portability/replay-variants-v1.json"
+)
+REPLAY_VARIANTS_SHA256 = (
+    "ab9394035dbdca0949cd65c25bacea9947476cd27d78ca850977433e5eda09a3"
+)
+
+
+def _verify_replay_report_integrity(report: dict) -> None:
+    assert report["incumbent"] == report["challenger"], "self-evaluation reports differ"
+    for role in ("incumbent", "challenger"):
+        inner = report[role]
+        body = {key: value for key, value in inner.items() if key != "report_sha256"}
+        assert canonical_json_sha256(body) == inner["report_sha256"], (
+            "inner report hash mismatch"
+        )
+        prediction_evidence = [
+            {
+                "item_id": row["item_id"],
+                "split": row["split"],
+                "predicted": row["predicted"],
+                "confidence": row["confidence"],
+                **({"error": row["error"]} if "error" in row else {}),
+            }
+            for row in inner["records"]
+        ]
+        assert (
+            canonical_json_sha256(prediction_evidence)
+            == inner["prediction_evidence_sha256"]
+        ), "prediction evidence hash mismatch"
+        status = inner["calibration"]["status"]
+        for key, value in _calibration_summary(inner["records"], status).items():
+            assert inner["calibration"][key] == value, (
+                "global calibration summary mismatch"
+            )
+        for split, metric in inner["splits"].items():
+            rows = [row for row in inner["records"] if row["split"] == split]
+            assert metric["calibration"] == _calibration_summary(rows, status), (
+                "split calibration summary mismatch"
+            )
+        assert report["raw_failures"][role] == inner["raw_failures"]
+    decision = report["decision"]
+    evidence_hashes = decision["evidence_hashes"]
+    for role in ("incumbent", "challenger"):
+        assert evidence_hashes[f"{role}_report_sha256"] == report[role]["report_sha256"]
+        assert evidence_hashes[f"{role}_splits_sha256"] == canonical_json_sha256(
+            report[role]["splits"]
+        )
+    assert decision == compare_evaluations(
+        report["incumbent"],
+        report["challenger"],
+        retention_epsilon=decision["policy"]["retention_epsilon"],
+    ), "decision or gate integrity mismatch"
+    decision_body = {
+        key: value for key, value in decision.items() if key != "decision_sha256"
+    }
+    assert canonical_json_sha256(decision_body) == decision["decision_sha256"]
+    body = {key: value for key, value in report.items() if key != "report_sha256"}
+    assert canonical_json_sha256(body) == report["report_sha256"], (
+        "top report hash mismatch"
+    )
+
+
+def _allowed_numerical_replay_paths() -> set[str]:
+    # This is the single observed confidence leaf and its derived summaries,
+    # never a blanket omission of scores, numeric slot values, or hash fields.
+    paths = {"/report_sha256", "/decision/decision_sha256"}
+    for role in ("incumbent", "challenger"):
+        paths.update(
+            {
+                f"/{role}/records/189/confidence",
+                f"/{role}/report_sha256",
+                f"/{role}/prediction_evidence_sha256",
+                f"/decision/evidence_hashes/{role}_report_sha256",
+                f"/decision/evidence_hashes/{role}_splits_sha256",
+            }
+        )
+        for section in ("calibration", "splits/oov/calibration"):
+            for metric in (
+                "expected_calibration_error_10_bin",
+                "mean_confidence",
+                "top_label_brier",
+            ):
+                paths.add(f"/{role}/{section}/{metric}")
+    return paths
+
+
+def _verify_numerical_variant(original: dict, variant: dict, declaration: dict) -> None:
+    differences = _replay_leaf_differences(original, variant, include_all=True)
+    assert differences["all_differences"] == declaration["differences"], (
+        "undeclared replay leaf difference"
+    )
+    assert differences["total_leaf_differences"] == 24
+    assert {
+        row["path"] for row in declaration["differences"]
+    } == _allowed_numerical_replay_paths(), "unexpected numerical replay path inventory"
+    for role in ("incumbent", "challenger"):
+        assert original[role]["records"][189]["item_id"] == "v7-oov-009"
+        assert variant[role]["records"][189]["item_id"] == "v7-oov-009"
+    # Exhaustive diff equality above compares every other leaf exactly,
+    # including all frames/slots, failures, count metrics, gates and policies.
+    _verify_replay_report_integrity(original)
+    _verify_replay_report_integrity(variant)
+
+
+def _declared_baseline_replays() -> dict[str, bytes]:
+    raw_manifest = REPLAY_VARIANTS_PATH.read_bytes()
+    assert hashlib.sha256(raw_manifest).hexdigest() == REPLAY_VARIANTS_SHA256, (
+        "numerical replay manifest hash mismatch"
+    )
+    manifest = json.loads(raw_manifest)
+    assert manifest["schema"] == "kev.baseline-numerical-replays.v1"
+    assert manifest["scope"] == "TEST_ONLY_NO_PROMOTION_AUTHORITY"
+
+    def captured(reference: dict) -> bytes:
+        payload = (ROOT / reference["path"]).read_bytes()
+        assert hashlib.sha256(payload).hexdigest() == reference["sha256"], (
+            "declared replay artifact hash mismatch"
+        )
+        return payload
+
+    original_bytes = captured(manifest["original"])
+    original = json.loads(original_bytes)
+    evidence = json.loads(captured(manifest["source_evidence"]))
+    assert evidence["eval_card_sha256"] == manifest["original"]["sha256"]
+    for relative, digest in evidence["runtime_source_sha256"].items():
+        assert file_sha256(ROOT / relative) == digest, "frozen runtime source changed"
+    for role in ("incumbent", "challenger"):
+        assert original[role]["checkpoint"]["sha256"] == evidence["checkpoint_sha256"]
+        assert (
+            original[role]["suite"]["canonical_sha256"]
+            == evidence["suite_canonical_sha256"]
+        )
+        assert original[role]["suite"]["file_sha256"] == evidence["suite_sha256"]
+    registry = _json("models/registry.json")
+    assert registry["active"]["eval_card_sha256"] == manifest["original"]["sha256"]
+    known = {manifest["original"]["sha256"]: original_bytes}
+    for declaration in manifest["variants"]:
+        raw_variant = captured(declaration["report"])
+        variant = json.loads(raw_variant)
+        sidecar = json.loads(captured(declaration["diagnostic"]))
+        assert sidecar["actual_sha256"] == declaration["report"]["sha256"]
+        assert sidecar["expected_sha256"] == manifest["original"]["sha256"]
+        assert sidecar["execution_environment"] == declaration["execution_environment"]
+        assert (
+            sidecar["execution_environment"]["github_actions"]
+            == declaration["github_actions"]
+        )
+        difference_summary = _replay_leaf_differences(original, variant)
+        assert all(sidecar[key] == value for key, value in difference_summary.items())
+        _verify_numerical_variant(original, variant, declaration)
+        known[declaration["report"]["sha256"]] = raw_variant
+    return known
+
+
+def _assert_declared_baseline_replay(
+    encoded: bytes, report: dict, known: dict[str, bytes]
+) -> None:
+    digest = hashlib.sha256(encoded).hexdigest()
+    assert digest in known, f"unknown numerical baseline replay SHA-256: {digest}"
+    assert encoded == known[digest], "replay bytes differ from declared artifact"
+    assert report == json.loads(known[digest]), (
+        "replay JSON differs from declared artifact"
+    )
 
 
 def _replay_environment() -> dict:
@@ -440,7 +614,7 @@ def _replay_environment() -> dict:
     }
 
 
-def test_current_public_baseline_replays_byte_exact():
+def test_current_public_baseline_replays_declared_bytes():
     registry = _json("models/registry.json")
     active = registry["active"]
     checkpoint = ROOT / active["path"]
@@ -461,7 +635,8 @@ def test_current_public_baseline_replays_byte_exact():
     ).encode("utf-8")
     actual_sha256 = hashlib.sha256(encoded).hexdigest()
     expected_report = _json(active["eval_card_path"])
-    if actual_sha256 != active["eval_card_sha256"]:
+    known = _declared_baseline_replays()
+    if actual_sha256 not in known:
         diagnostic = _replay_leaf_differences(expected_report, report)
         diagnostic.update(
             expected_sha256=active["eval_card_sha256"],
@@ -495,5 +670,4 @@ def test_current_public_baseline_replays_byte_exact():
             "BASELINE_REPLAY_MISMATCH "
             + json.dumps(diagnostic, indent=2, sort_keys=True)
         )
-    assert actual_sha256 == active["eval_card_sha256"]
-    assert report == expected_report
+    _assert_declared_baseline_replay(encoded, report, known)

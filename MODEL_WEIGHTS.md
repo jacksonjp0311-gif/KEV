@@ -38,6 +38,15 @@ composition 75/80, and calibration 1/20, with all 116 raw failures retained.
 These measure unchanged genesis weights with the v7 runtime. Runtime changes,
 different evaluation suites, and weight improvement are separate claims.
 
+A hosted replay differed in one rounded confidence by `0.000001`, with
+identical predictions, failures, accuracy counts, and reject decision. Its complete
+report has SHA-256
+`8a50f0fa1b92697681e0688c509b3a30c3dd2bdc03bac2ea91101504879cccc6`.
+The [numerical replay manifest](experiments/composition-v7-portability/replay-variants-v1.json)
+preserves that derivative and its failure provenance without replacing the
+reference baseline or advancing the registry. Only these exact declared
+report bytes are accepted by the replay test; unseen variation fails.
+
 ## Frozen promotion evidence
 
 Current promotion suite:

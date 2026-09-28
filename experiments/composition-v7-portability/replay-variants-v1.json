@@ -1,0 +1,210 @@
+{
+  "claim_boundary": "One empirically captured numerical replay. The source of numerical variation is not causally established. No tolerance, model activation, evaluation change, or candidate-result change.",
+  "frozen": true,
+  "mutation_policy": "preserve original reports and this manifest; any newly observed variant requires explicit review and a new version",
+  "original": {
+    "path": "evals/evidence/v7-genesis-baseline.json",
+    "sha256": "b124cae0447847225f4c7edc54e38f97517e24ae13ce809708ad0f1dd84ca4a0"
+  },
+  "schema": "kev.baseline-numerical-replays.v1",
+  "scope": "TEST_ONLY_NO_PROMOTION_AUTHORITY",
+  "selection_policy": "EXACT_FULL_REPORT_SHA256_AND_BYTES; NOT_OPERATING_SYSTEM; UNKNOWN_HASH_REJECTS",
+  "source_evidence": {
+    "path": "models/public/incumbent-evidence-v11.json",
+    "sha256": "146bd0ed36728df46566d33002b9b253b4fb7d06d6f41a031c2dfba5dd2de770"
+  },
+  "variants": [
+    {
+      "capture_url": "https://github.com/jacksonjp0311-gif/KEV/actions/runs/36434282077",
+      "confidence_record": {
+        "actual": 0.517287,
+        "expected": 0.517286,
+        "index": 189,
+        "item_id": "v7-oov-009"
+      },
+      "diagnostic": {
+        "path": "experiments/composition-v7-portability/ci-36434282077-windows/baseline-actual-8a50f0fa1b92697681e0688c509b3a30c3dd2bdc03bac2ea91101504879cccc6-3wz7u26i.diagnostic.json",
+        "sha256": "c930f2edb6d569595172d78efa30bfc6174c08921f0ab7f62bbf71e006d82444"
+      },
+      "differences": [
+        {
+          "actual": 0.029175826923076964,
+          "category": "numeric_value",
+          "expected": 0.029175830769230804,
+          "path": "/challenger/calibration/expected_calibration_error_10_bin"
+        },
+        {
+          "actual": 0.5246703269230769,
+          "category": "numeric_value",
+          "expected": 0.5246703230769231,
+          "path": "/challenger/calibration/mean_confidence"
+        },
+        {
+          "actual": 0.24699421847928077,
+          "category": "numeric_value",
+          "expected": 0.24699421450015382,
+          "path": "/challenger/calibration/top_label_brier"
+        },
+        {
+          "actual": "3450322fb3dc7248c8dc1e8274ade46f316fba8a523eed29101971abe1a7a8da",
+          "category": "non_numeric_value",
+          "expected": "198aceb4374d56c76ef67acddb89ec37f434834653029117f65f609f08af0f21",
+          "path": "/challenger/prediction_evidence_sha256"
+        },
+        {
+          "actual": 0.517287,
+          "category": "numeric_value",
+          "expected": 0.517286,
+          "path": "/challenger/records/189/confidence"
+        },
+        {
+          "actual": "c4b9fdb934e07389202da082405d2d7964edea22a3bd01b89c6fc0d0bb27cde0",
+          "category": "non_numeric_value",
+          "expected": "d36d8a2c209cc12e3a242d4b7dbcefd40d9ad5735ac5070f9a483189158fe753",
+          "path": "/challenger/report_sha256"
+        },
+        {
+          "actual": 0.47106722500000003,
+          "category": "numeric_value",
+          "expected": 0.47106719999999996,
+          "path": "/challenger/splits/oov/calibration/expected_calibration_error_10_bin"
+        },
+        {
+          "actual": 0.521067225,
+          "category": "numeric_value",
+          "expected": 0.5210672,
+          "path": "/challenger/splits/oov/calibration/mean_confidence"
+        },
+        {
+          "actual": 0.26844965589492503,
+          "category": "numeric_value",
+          "expected": 0.26844963003059996,
+          "path": "/challenger/splits/oov/calibration/top_label_brier"
+        },
+        {
+          "actual": "b3cf7292f2d5436a73bb82108eb7adeb573d617507d8161567ab70cf263c7615",
+          "category": "non_numeric_value",
+          "expected": "0d75012d5bdeee70a9fd529cd689aecbd6925463f084c7ead177d8a87b3824b6",
+          "path": "/decision/decision_sha256"
+        },
+        {
+          "actual": "c4b9fdb934e07389202da082405d2d7964edea22a3bd01b89c6fc0d0bb27cde0",
+          "category": "non_numeric_value",
+          "expected": "d36d8a2c209cc12e3a242d4b7dbcefd40d9ad5735ac5070f9a483189158fe753",
+          "path": "/decision/evidence_hashes/challenger_report_sha256"
+        },
+        {
+          "actual": "30622c754c004a8b1db06df73457df6b6a22fcc29c5eff7e293f0b6e7402ce85",
+          "category": "non_numeric_value",
+          "expected": "f2c9b213ca27c85d777f4ec8b7af7772148f3c445d86b646de8d124c7399ae92",
+          "path": "/decision/evidence_hashes/challenger_splits_sha256"
+        },
+        {
+          "actual": "c4b9fdb934e07389202da082405d2d7964edea22a3bd01b89c6fc0d0bb27cde0",
+          "category": "non_numeric_value",
+          "expected": "d36d8a2c209cc12e3a242d4b7dbcefd40d9ad5735ac5070f9a483189158fe753",
+          "path": "/decision/evidence_hashes/incumbent_report_sha256"
+        },
+        {
+          "actual": "30622c754c004a8b1db06df73457df6b6a22fcc29c5eff7e293f0b6e7402ce85",
+          "category": "non_numeric_value",
+          "expected": "f2c9b213ca27c85d777f4ec8b7af7772148f3c445d86b646de8d124c7399ae92",
+          "path": "/decision/evidence_hashes/incumbent_splits_sha256"
+        },
+        {
+          "actual": 0.029175826923076964,
+          "category": "numeric_value",
+          "expected": 0.029175830769230804,
+          "path": "/incumbent/calibration/expected_calibration_error_10_bin"
+        },
+        {
+          "actual": 0.5246703269230769,
+          "category": "numeric_value",
+          "expected": 0.5246703230769231,
+          "path": "/incumbent/calibration/mean_confidence"
+        },
+        {
+          "actual": 0.24699421847928077,
+          "category": "numeric_value",
+          "expected": 0.24699421450015382,
+          "path": "/incumbent/calibration/top_label_brier"
+        },
+        {
+          "actual": "3450322fb3dc7248c8dc1e8274ade46f316fba8a523eed29101971abe1a7a8da",
+          "category": "non_numeric_value",
+          "expected": "198aceb4374d56c76ef67acddb89ec37f434834653029117f65f609f08af0f21",
+          "path": "/incumbent/prediction_evidence_sha256"
+        },
+        {
+          "actual": 0.517287,
+          "category": "numeric_value",
+          "expected": 0.517286,
+          "path": "/incumbent/records/189/confidence"
+        },
+        {
+          "actual": "c4b9fdb934e07389202da082405d2d7964edea22a3bd01b89c6fc0d0bb27cde0",
+          "category": "non_numeric_value",
+          "expected": "d36d8a2c209cc12e3a242d4b7dbcefd40d9ad5735ac5070f9a483189158fe753",
+          "path": "/incumbent/report_sha256"
+        },
+        {
+          "actual": 0.47106722500000003,
+          "category": "numeric_value",
+          "expected": 0.47106719999999996,
+          "path": "/incumbent/splits/oov/calibration/expected_calibration_error_10_bin"
+        },
+        {
+          "actual": 0.521067225,
+          "category": "numeric_value",
+          "expected": 0.5210672,
+          "path": "/incumbent/splits/oov/calibration/mean_confidence"
+        },
+        {
+          "actual": 0.26844965589492503,
+          "category": "numeric_value",
+          "expected": 0.26844963003059996,
+          "path": "/incumbent/splits/oov/calibration/top_label_brier"
+        },
+        {
+          "actual": "d65a7f9acf4d2dd49037496a17f131b197ed65ff426aa96426aa45f1492fd350",
+          "category": "non_numeric_value",
+          "expected": "b0b9a10f727a9c5c7849a6b2c570b0d7064c10f8ce03f4212c67e490ead3decf",
+          "path": "/report_sha256"
+        }
+      ],
+      "execution_environment": {
+        "github_actions": {
+          "GITHUB_JOB": "test",
+          "GITHUB_RUN_ATTEMPT": "1",
+          "GITHUB_RUN_ID": "36434282077",
+          "GITHUB_SHA": "8fa2153b9b5c3220f34a87c9c222120b44e8677b",
+          "GITHUB_WORKFLOW": "source-check",
+          "RUNNER_ARCH": "X64",
+          "RUNNER_OS": "Windows"
+        },
+        "machine": "AMD64",
+        "platform": "Windows-2025Server-10.0.26100-SP0",
+        "python_implementation": "CPython",
+        "python_version": "3.12.10",
+        "torch_cpu_capability": "AVX512",
+        "torch_num_interop_threads": 2,
+        "torch_num_threads": 2,
+        "torch_version": "2.5.1+cpu"
+      },
+      "github_actions": {
+        "GITHUB_JOB": "test",
+        "GITHUB_RUN_ATTEMPT": "1",
+        "GITHUB_RUN_ID": "36434282077",
+        "GITHUB_SHA": "8fa2153b9b5c3220f34a87c9c222120b44e8677b",
+        "GITHUB_WORKFLOW": "source-check",
+        "RUNNER_ARCH": "X64",
+        "RUNNER_OS": "Windows"
+      },
+      "id": "ci-36434282077-windows-observed",
+      "report": {
+        "path": "experiments/composition-v7-portability/ci-36434282077-windows/baseline-actual-8a50f0fa1b92697681e0688c509b3a30c3dd2bdc03bac2ea91101504879cccc6-3wz7u26i.json",
+        "sha256": "8a50f0fa1b92697681e0688c509b3a30c3dd2bdc03bac2ea91101504879cccc6"
+      }
+    }
+  ]
+}
