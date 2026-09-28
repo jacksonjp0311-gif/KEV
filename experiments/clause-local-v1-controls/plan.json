@@ -1,0 +1,13 @@
+{
+  "activation": "NONE",
+  "controls": [
+    "global_kinds_with_summed_local_cardinality",
+    "all_kinds_with_clause_count_budget_no_model"
+  ],
+  "motivation": "Single-clause-only training may make global cardinality the bottleneck. A permissive parser control tests whether learned kind selection is necessary for these templates.",
+  "original_card_sha256": "6acc060d669398dfb77ffcb225a9904605b6444c878f7ddf524ec26dcdb698f5",
+  "original_protocol_sha256": "f776c41a65bba23beeff41c027049f54965373e5f3177ca9073c48d49cf0d41f",
+  "source_sha256": "ff87fb21e82e7926536d969c6299d7479ff07dd469617f3b23e80eeeac4dd8bf",
+  "status": "POST_HOC_AFTER_PRIMARY_RESULTS_NOT_PREREGISTERED",
+  "training": "NONE"
+}

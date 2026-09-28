@@ -4,6 +4,12 @@ KEV is experimental research software, not AGI or superintelligence. This roadma
 
 ## Current — v0.52 research alpha
 
+The [clause-local v1 experiment](CLAUSE_LOCAL_V1.md) is complete and non-activating.
+Its learned local head improved over the same-weight global head but did not beat
+the post-hoc no-model kind control. Next: establish a genuine learned contribution
+beyond that symbolic baseline before integrating a new runtime into promotion.
+The exposed research suite must enter future training exclusions.
+
 The following exists in the repository now.
 
 ### Alpha.2 composition update

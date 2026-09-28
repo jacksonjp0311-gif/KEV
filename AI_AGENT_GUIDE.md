@@ -6,6 +6,11 @@ typed state, bounded receipt-backed action, and gated evolution.
 
 ## Authority boundaries
 
+The completed clause-local v1 adapter is non-activating research, not the
+production inference path. See `docs/CLAUSE_LOCAL_V1.md`: the stronger no-model
+control scored better. Preserve the negative attribution conclusion and carry
+the exposed research pack into exclusions before any later training campaign.
+
 - Neural output may propose frame kinds and cardinality; parser-bound exact
   slots decide what can enter state.
 - A frozen encoder supplies a fixed feature interface. It is not cognition, and

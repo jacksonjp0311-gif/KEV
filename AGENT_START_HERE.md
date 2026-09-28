@@ -16,6 +16,12 @@ Read, in order:
 
 ## Non-negotiable invariants
 
+Latest research-only boundary: `experiments/clause-local-v1-boundary/`.
+Read `docs/CLAUSE_LOCAL_V1.md` before further model work. This exposed suite and
+its reserved vocabulary must be excluded from future training; the production
+v7 manifest does not yet automatically include this separate research pack.
+Do not promote its candidate or mistake the diagnostic numeric gate for authority.
+
 - Never overwrite an incumbent checkpoint. Training and calibration write new,
   content-addressed artifacts.
 - Training completion is not promotion. Strict-gate ties reject.

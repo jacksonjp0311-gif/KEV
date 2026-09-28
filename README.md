@@ -6,6 +6,10 @@
 
 ## Why KEV exists
 
+Latest research: [clause-local v1 and attribution controls](docs/CLAUSE_LOCAL_V1.md).
+Learned local proposals reached 55/56 composition cases, but a stronger no-model
+parser control reached 56/56. No checkpoint was promoted; all evidence is retained.
+
 Most assistants treat a conversation as text to continue. KEV explores a different architecture: **language is an interface to cognitive state, not the state itself**.
 
 KEV separates:

@@ -6,6 +6,23 @@ creates a challenger; it never overwrites or activates the parent.
 
 ## Active public reference incumbent
 
+Latest non-activating experiment: [clause-local v1](docs/CLAUSE_LOCAL_V1.md).
+Its checkpoint is **not an incumbent**; the primary hypothesis was NOT_SUPPORTED,
+and the post-hoc no-model control outperformed the learned local head.
+
+| Research artifact | SHA-256 |
+|---|---|
+| `experiments/clause-local-v1-boundary/protocol.json` | `f776c41a65bba23beeff41c027049f54965373e5f3177ca9073c48d49cf0d41f` |
+| `experiments/clause-local-v1-boundary/suite.json` | `64f71b7714f488ae62caf6ba1f5e25e719b3721761c396ab70effa3c2493c4a4` |
+| `experiments/clause-local-v1-boundary/reviewed-lessons.jsonl` | `d4b4eb48ef35866e077b69a8aa00e3be6bdd7112e6fd8917e48ea700274329cb` |
+| `experiments/clause-local-v1-evidence/candidate/semantic-breadth.pt` | `74d3463755d692c4e8f6fd6be62eba74f76ff9c880194a670b422aaabd99917c` |
+| Parent checkpoint | `8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6` |
+| `experiments/clause-local-v1-evidence/research-card.json` | `6acc060d669398dfb77ffcb225a9904605b6444c878f7ddf524ec26dcdb698f5` |
+| `experiments/clause-local-v1-evidence/inventory.json` | `61f201bfacaa998e32a8f8d1092b1791bcdd6b8efb1505fd2b4c1bed842b8b91` |
+
+The inventory pins raw reports, checkpoint, embeddings, receipts and ledger.
+Scores are UNCALIBRATED; no weights or production registry were replaced.
+
 The repository includes a small public genesis checkpoint so a clean clone is
 replayable without silently substituting historical private weights.
 

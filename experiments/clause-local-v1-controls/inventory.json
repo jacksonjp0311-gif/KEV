@@ -1,0 +1,11 @@
+{
+  "files": {
+    "all_kinds_with_clause_count_budget_no_model.json": "f1884d6e7cad6af8a9feb2abf6aa3b0c7a98f7e76dfb2bb5ab04bc3edaad2ccb",
+    "global_kinds_with_summed_local_cardinality.json": "be254d606cda5d3a37527d89c436da459e7176c8179409a91e6b58f419430297",
+    "ledger/ledger-head.json": "95810d909ac61d23e5d8366a6500a9a5fe2a71eece6fa95fe0f8107b837cbad0",
+    "ledger/ledger.jsonl": "fc7d14bd75ef81468ea077496fb7dbd3bd712a72d8f87a656160fb5b162b8f7e",
+    "ledger/state.json": "905e3faf5f50d103313f04a29a07c58f9508db90ec4db45bf57bb55dc78aefeb",
+    "plan.json": "12f5ec0817e7884a9fba994d73eff7eab23d0e6e1a7288ad6fe6b7a072780a78",
+    "summary.json": "23b8f8eef947fc79ebefda4fd972a1a81989660b9649a6c89f23e2f71163b769"
+  }
+}

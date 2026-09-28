@@ -5,6 +5,15 @@ bounded semantic proposal model, parser-grounded frame construction,
 receipt-backed observations, and strict checkpoint comparison. They do not
 measure or imply AGI or superintelligence.
 
+Research-only clause-local ablation: for fixed parser claim ranges `c_i`, the
+adapter applies the same head to each `c_i`, attaches each kind proposal to its
+exact range, and uses `sum_i cardinality(c_i)` as an advisory total budget.
+This sum is not a calibrated probability or a learned guarantee of cardinality.
+Parser guards may reject proposals. The [v1 experiment](CLAUSE_LOCAL_V1.md)
+reports exact local kind/cardinality matching separately from final frame
+accuracy and retains a stronger no-model symbolic control. None of these
+research metrics authorizes production promotion.
+
 ## 1. Language is not state
 
 Let an utterance be \(x\). KEV does not insert \(x\) directly into cognitive

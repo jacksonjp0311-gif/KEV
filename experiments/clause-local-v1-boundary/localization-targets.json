@@ -1,0 +1,594 @@
+{
+  "local-v1-composition-000": [
+    [
+      "GOAL"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-001": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-composition-002": [
+    [
+      "GOAL"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-003": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-004": [
+    [],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-005": [
+    [
+      "GOAL"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-006": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-007": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-composition-008": [
+    [
+      "OBSERVATION"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-009": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-010": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-011": [
+    [],
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-composition-012": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-composition-013": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-014": [
+    [
+      "OBSERVATION"
+    ],
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-composition-015": [
+    [
+      "PREDICTION"
+    ],
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-composition-016": [
+    [
+      "OBSERVATION"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-017": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-018": [
+    [],
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-composition-019": [
+    [
+      "OBSERVATION"
+    ],
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-composition-020": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-021": [
+    [
+      "PREDICTION"
+    ],
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-composition-022": [
+    [
+      "GOAL"
+    ],
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-composition-023": [
+    [
+      "PREDICTION"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-024": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-025": [
+    [],
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-composition-026": [
+    [
+      "PREDICTION"
+    ],
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-composition-027": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-028": [
+    [
+      "GOAL"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-029": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-composition-030": [
+    [
+      "GOAL"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-031": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-032": [
+    [],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-033": [
+    [
+      "GOAL"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-034": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-035": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-composition-036": [
+    [
+      "OBSERVATION"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-037": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-038": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-039": [
+    [],
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-composition-040": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-composition-041": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-042": [
+    [
+      "OBSERVATION"
+    ],
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-composition-043": [
+    [
+      "PREDICTION"
+    ],
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-composition-044": [
+    [
+      "OBSERVATION"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-045": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-046": [
+    [],
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-composition-047": [
+    [
+      "OBSERVATION"
+    ],
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-composition-048": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-049": [
+    [
+      "PREDICTION"
+    ],
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-composition-050": [
+    [
+      "GOAL"
+    ],
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-composition-051": [
+    [
+      "PREDICTION"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-052": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-composition-053": [
+    [],
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-composition-054": [
+    [
+      "PREDICTION"
+    ],
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-composition-055": [
+    [
+      "CONSTRAINT"
+    ],
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-fresh-000": [
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-fresh-001": [
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-fresh-002": [
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-fresh-003": [
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-fresh-004": [
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-fresh-005": [
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-fresh-006": [
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-fresh-007": [
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-fresh-008": [
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-fresh-009": [
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-fresh-010": [
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-fresh-011": [
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-fresh-012": [
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-fresh-013": [
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-fresh-014": [
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-fresh-015": [
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-oov-000": [
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-oov-001": [
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-oov-002": [
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-oov-003": [
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-oov-004": [
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-oov-005": [
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-oov-006": [
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-oov-007": [
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-oov-008": [
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-oov-009": [
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-oov-010": [
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-oov-011": [
+    [
+      "PREDICTION"
+    ]
+  ],
+  "local-v1-oov-012": [
+    [
+      "GOAL"
+    ]
+  ],
+  "local-v1-oov-013": [
+    [
+      "CONSTRAINT"
+    ]
+  ],
+  "local-v1-oov-014": [
+    [
+      "OBSERVATION"
+    ]
+  ],
+  "local-v1-oov-015": [
+    [
+      "PREDICTION"
+    ]
+  ]
+}

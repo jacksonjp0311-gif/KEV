@@ -1,0 +1,2225 @@
+{
+  "activation": "NONE",
+  "checkpoint_sha256": "74d3463755d692c4e8f6fd6be62eba74f76ff9c880194a670b422aaabd99917c",
+  "diagnostic_gate_only": {
+    "calibration_status": {
+      "challenger": "UNCALIBRATED",
+      "incumbent": "UNCALIBRATED"
+    },
+    "decision": "QUALIFY",
+    "decision_sha256": "3784ac205d9841bdf3106800267cb0cd8a926cb223a1067e3bcafb33ebbdea13",
+    "evidence_hashes": {
+      "challenger_report_sha256": "01f9ea31bee4643471e80d3d836aa4876424cad1fb8b55744e8b37c2b2aed117",
+      "challenger_splits_sha256": "1562bb6c38c7bee1639b819c15442ffd2ffc55301bfec76e160a89dacaf2dea5",
+      "incumbent_report_sha256": "9ed9879406ad9288f5de9abaa0c580293ba0fc008d35f448d9bc78ce3641b570",
+      "incumbent_splits_sha256": "534868ba43e5355ed495497d2cb87b0efeb3e7ea29931ca84756a1c04019c075"
+    },
+    "gates": [
+      {
+        "challenger": 1.0,
+        "delta": 0.6875,
+        "incumbent": 0.3125,
+        "name": "fresh",
+        "passed": true,
+        "reason": "fresh strictly improved",
+        "reason_code": "FRESH_IMPROVED"
+      },
+      {
+        "challenger": 1.0,
+        "delta": 0.0,
+        "epsilon": 0.0,
+        "incumbent": 1.0,
+        "name": "retention",
+        "passed": true,
+        "reason": "retention regression is within epsilon",
+        "reason_code": "RETENTION_WITHIN_EPSILON"
+      },
+      {
+        "challenger": 1.0,
+        "delta": 0.75,
+        "incumbent": 0.25,
+        "name": "oov",
+        "passed": true,
+        "reason": "oov did not regress",
+        "reason_code": "OOV_NO_REGRESSION"
+      },
+      {
+        "challenger": 0.9821428571428571,
+        "delta": 0.9107142857142857,
+        "incumbent": 0.07142857142857142,
+        "name": "composition",
+        "passed": true,
+        "reason": "composition strictly improved",
+        "reason_code": "COMPOSITION_IMPROVED"
+      },
+      {
+        "audit_family": "conflicting-constraints",
+        "challenger": 1.0,
+        "delta": 1.0,
+        "incumbent": 0.0,
+        "name": "audit:conflicting-constraints",
+        "passed": true,
+        "reason": "audit_conflicting_constraints did not regress",
+        "reason_code": "AUDIT_CONFLICTING_CONSTRAINTS_NO_REGRESSION"
+      },
+      {
+        "audit_family": "multi-frame",
+        "challenger": 1.0,
+        "delta": 0.75,
+        "incumbent": 0.25,
+        "name": "audit:multi-frame",
+        "passed": true,
+        "reason": "audit_multi_frame did not regress",
+        "reason_code": "AUDIT_MULTI_FRAME_NO_REGRESSION"
+      },
+      {
+        "audit_family": "negation",
+        "challenger": 1.0,
+        "delta": 1.0,
+        "incumbent": 0.0,
+        "name": "audit:negation",
+        "passed": true,
+        "reason": "audit_negation did not regress",
+        "reason_code": "AUDIT_NEGATION_NO_REGRESSION"
+      },
+      {
+        "audit_family": "order-swap",
+        "challenger": 1.0,
+        "delta": 0.75,
+        "incumbent": 0.25,
+        "name": "audit:order-swap",
+        "passed": true,
+        "reason": "audit_order_swap did not regress",
+        "reason_code": "AUDIT_ORDER_SWAP_NO_REGRESSION"
+      },
+      {
+        "audit_family": "paraphrase-same-frames",
+        "challenger": 1.0,
+        "delta": 1.0,
+        "incumbent": 0.0,
+        "name": "audit:paraphrase-same-frames",
+        "passed": true,
+        "reason": "audit_paraphrase_same_frames did not regress",
+        "reason_code": "AUDIT_PARAPHRASE_SAME_FRAMES_NO_REGRESSION"
+      },
+      {
+        "audit_family": "polite-buried-constraint",
+        "challenger": 0.875,
+        "delta": 0.875,
+        "incumbent": 0.0,
+        "name": "audit:polite-buried-constraint",
+        "passed": true,
+        "reason": "audit_polite_buried_constraint did not regress",
+        "reason_code": "AUDIT_POLITE_BURIED_CONSTRAINT_NO_REGRESSION"
+      },
+      {
+        "audit_family": "repeated-kind-number-change",
+        "challenger": 1.0,
+        "delta": 1.0,
+        "incumbent": 0.0,
+        "name": "audit:repeated-kind-number-change",
+        "passed": true,
+        "reason": "audit_repeated_kind_number_change did not regress",
+        "reason_code": "AUDIT_REPEATED_KIND_NUMBER_CHANGE_NO_REGRESSION"
+      },
+      {
+        "audit_family": "reserved-vocabulary",
+        "challenger": 1.0,
+        "delta": 0.75,
+        "incumbent": 0.25,
+        "name": "audit:reserved-vocabulary",
+        "passed": true,
+        "reason": "audit_reserved_vocabulary did not regress",
+        "reason_code": "AUDIT_RESERVED_VOCABULARY_NO_REGRESSION"
+      },
+      {
+        "audit_family": "retention",
+        "challenger": 1.0,
+        "delta": 0.0,
+        "incumbent": 1.0,
+        "name": "audit:retention",
+        "passed": true,
+        "reason": "audit_retention did not regress",
+        "reason_code": "AUDIT_RETENTION_NO_REGRESSION"
+      },
+      {
+        "audit_family": "single-frame",
+        "challenger": 1.0,
+        "delta": 0.6875,
+        "incumbent": 0.3125,
+        "name": "audit:single-frame",
+        "passed": true,
+        "reason": "audit_single_frame did not regress",
+        "reason_code": "AUDIT_SINGLE_FRAME_NO_REGRESSION"
+      }
+    ],
+    "policy": {
+      "audit_families": "NO_REGRESSION_FOR_EVERY_REPORTED_FAMILY; MISSING_OR_SIZE_MISMATCH_REJECTS",
+      "audit_family_count": 10,
+      "composition": "STRICT_IMPROVEMENT_WHEN_PRESENT",
+      "fresh": "STRICT_IMPROVEMENT",
+      "oov": "NO_REGRESSION",
+      "retention": "NO_REGRESSION_BEYOND_EPSILON",
+      "retention_epsilon": 0.0,
+      "tie": "REJECT",
+      "training_loss_used": false
+    },
+    "promote": true,
+    "raw_failures": {
+      "challenger": {
+        "available": true,
+        "count": 1,
+        "items": [
+          {
+            "audit": "polite-buried-constraint",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 101
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 108
+                }
+              }
+            ],
+            "input": "We wish orchid delay below 101 ms; please Ensure that cedar delay is below 108 ms.",
+            "item_id": "local-v1-composition-030",
+            "predicted": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 101
+                }
+              }
+            ],
+            "split": "composition"
+          }
+        ]
+      },
+      "incumbent": {
+        "available": true,
+        "count": 75,
+        "items": [
+          {
+            "audit": "polite-buried-constraint",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 97
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 104
+                }
+              }
+            ],
+            "input": "We wish orchid delay below 97 ms; please Ensure that cedar delay is below 104 ms.",
+            "item_id": "local-v1-composition-002",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "repeated-kind-number-change",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 97
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 98
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 97 ms; Ensure that orchid delay is below 98 ms.",
+            "item_id": "local-v1-composition-003",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "negation",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 108
+                }
+              }
+            ],
+            "input": "It is not true that we wish orchid delay below 97 ms; Require that cedar delay is below 108 milliseconds.",
+            "item_id": "local-v1-composition-004",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "paraphrase-same-frames",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 97
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 108
+                }
+              }
+            ],
+            "input": "We seek orchid delay below 97 milliseconds; Ensure that cedar delay is below 108 ms.",
+            "item_id": "local-v1-composition-005",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "conflicting-constraints",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 97
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "GT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 98
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 97 ms; Require that orchid delay is above 98 ms.",
+            "item_id": "local-v1-composition-006",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "multi-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 98
+                }
+              },
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 109
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 98 ms; We find that cedar delay is 109 milliseconds.",
+            "item_id": "local-v1-composition-007",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "order-swap",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 98
+                }
+              },
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 109
+                }
+              }
+            ],
+            "input": "We find that cedar delay is 109 milliseconds; Ensure that orchid delay is below 98 ms.",
+            "item_id": "local-v1-composition-008",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "polite-buried-constraint",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 98
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 105
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 98 ms; please Ensure that cedar delay is below 105 ms.",
+            "item_id": "local-v1-composition-009",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "repeated-kind-number-change",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 98
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 99
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 98 ms; Ensure that orchid delay is below 99 ms.",
+            "item_id": "local-v1-composition-010",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "negation",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 109
+                }
+              }
+            ],
+            "input": "It is not true that ensure that orchid delay is below 98 ms; We find that cedar delay is 109 milliseconds.",
+            "item_id": "local-v1-composition-011",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "paraphrase-same-frames",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 98
+                }
+              },
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 109
+                }
+              }
+            ],
+            "input": "Require that orchid delay is below 98 milliseconds; We see cedar delay is 109 ms.",
+            "item_id": "local-v1-composition-012",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "conflicting-constraints",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 98
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "GT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 99
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 98 ms; Require that orchid delay is above 99 ms.",
+            "item_id": "local-v1-composition-013",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "multi-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 99
+                }
+              },
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 110
+                }
+              }
+            ],
+            "input": "We see orchid delay is 99 ms; We estimate that cedar delay is 110 milliseconds.",
+            "item_id": "local-v1-composition-014",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "order-swap",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 99
+                }
+              },
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 110
+                }
+              }
+            ],
+            "input": "We estimate that cedar delay is 110 milliseconds; We see orchid delay is 99 ms.",
+            "item_id": "local-v1-composition-015",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "polite-buried-constraint",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 99
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 106
+                }
+              }
+            ],
+            "input": "We see orchid delay is 99 ms; please Ensure that cedar delay is below 106 ms.",
+            "item_id": "local-v1-composition-016",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "repeated-kind-number-change",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 99
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 100
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 99 ms; Ensure that orchid delay is below 100 ms.",
+            "item_id": "local-v1-composition-017",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "negation",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 110
+                }
+              }
+            ],
+            "input": "It is not true that we see orchid delay is 99 ms; We estimate that cedar delay is 110 milliseconds.",
+            "item_id": "local-v1-composition-018",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "paraphrase-same-frames",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 99
+                }
+              },
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 110
+                }
+              }
+            ],
+            "input": "We find that orchid delay is 99 milliseconds; We estimate cedar delay is 110 ms.",
+            "item_id": "local-v1-composition-019",
+            "predicted": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 110
+                }
+              }
+            ],
+            "split": "composition"
+          },
+          {
+            "audit": "conflicting-constraints",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 99
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "GT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 100
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 99 ms; Require that orchid delay is above 100 ms.",
+            "item_id": "local-v1-composition-020",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "multi-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 100
+                }
+              },
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 111
+                }
+              }
+            ],
+            "input": "We estimate orchid delay is 100 ms; We seek cedar delay below 111 milliseconds.",
+            "item_id": "local-v1-composition-021",
+            "predicted": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 111
+                }
+              }
+            ],
+            "split": "composition"
+          },
+          {
+            "audit": "order-swap",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 100
+                }
+              },
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 111
+                }
+              }
+            ],
+            "input": "We seek cedar delay below 111 milliseconds; We estimate orchid delay is 100 ms.",
+            "item_id": "local-v1-composition-022",
+            "predicted": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 111
+                }
+              }
+            ],
+            "split": "composition"
+          },
+          {
+            "audit": "polite-buried-constraint",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 100
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 107
+                }
+              }
+            ],
+            "input": "We estimate orchid delay is 100 ms; please Ensure that cedar delay is below 107 ms.",
+            "item_id": "local-v1-composition-023",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "repeated-kind-number-change",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 100
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 101
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 100 ms; Ensure that orchid delay is below 101 ms.",
+            "item_id": "local-v1-composition-024",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "negation",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 111
+                }
+              }
+            ],
+            "input": "It is not true that we estimate orchid delay is 100 ms; We seek cedar delay below 111 milliseconds.",
+            "item_id": "local-v1-composition-025",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "paraphrase-same-frames",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 100
+                }
+              },
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 111
+                }
+              }
+            ],
+            "input": "We estimate that orchid delay is 100 milliseconds; We wish cedar delay below 111 ms.",
+            "item_id": "local-v1-composition-026",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "conflicting-constraints",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 100
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "GT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 101
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 100 ms; Require that orchid delay is above 101 ms.",
+            "item_id": "local-v1-composition-027",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "polite-buried-constraint",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 101
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 108
+                }
+              }
+            ],
+            "input": "We wish orchid delay below 101 ms; please Ensure that cedar delay is below 108 ms.",
+            "item_id": "local-v1-composition-030",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "repeated-kind-number-change",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 101
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 102
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 101 ms; Ensure that orchid delay is below 102 ms.",
+            "item_id": "local-v1-composition-031",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "negation",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 112
+                }
+              }
+            ],
+            "input": "It is not true that we wish orchid delay below 101 ms; Require that cedar delay is below 112 milliseconds.",
+            "item_id": "local-v1-composition-032",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "paraphrase-same-frames",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 101
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 112
+                }
+              }
+            ],
+            "input": "We seek orchid delay below 101 milliseconds; Ensure that cedar delay is below 112 ms.",
+            "item_id": "local-v1-composition-033",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "conflicting-constraints",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 101
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "GT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 102
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 101 ms; Require that orchid delay is above 102 ms.",
+            "item_id": "local-v1-composition-034",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "multi-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 102
+                }
+              },
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 113
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 102 ms; We find that cedar delay is 113 milliseconds.",
+            "item_id": "local-v1-composition-035",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "order-swap",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 102
+                }
+              },
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 113
+                }
+              }
+            ],
+            "input": "We find that cedar delay is 113 milliseconds; Ensure that orchid delay is below 102 ms.",
+            "item_id": "local-v1-composition-036",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "polite-buried-constraint",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 102
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 109
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 102 ms; please Ensure that cedar delay is below 109 ms.",
+            "item_id": "local-v1-composition-037",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "repeated-kind-number-change",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 102
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 103
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 102 ms; Ensure that orchid delay is below 103 ms.",
+            "item_id": "local-v1-composition-038",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "negation",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 113
+                }
+              }
+            ],
+            "input": "It is not true that ensure that orchid delay is below 102 ms; We find that cedar delay is 113 milliseconds.",
+            "item_id": "local-v1-composition-039",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "paraphrase-same-frames",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 102
+                }
+              },
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 113
+                }
+              }
+            ],
+            "input": "Require that orchid delay is below 102 milliseconds; We see cedar delay is 113 ms.",
+            "item_id": "local-v1-composition-040",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "conflicting-constraints",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 102
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "GT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 103
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 102 ms; Require that orchid delay is above 103 ms.",
+            "item_id": "local-v1-composition-041",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "multi-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 103
+                }
+              },
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 114
+                }
+              }
+            ],
+            "input": "We see orchid delay is 103 ms; We estimate that cedar delay is 114 milliseconds.",
+            "item_id": "local-v1-composition-042",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "order-swap",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 103
+                }
+              },
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 114
+                }
+              }
+            ],
+            "input": "We estimate that cedar delay is 114 milliseconds; We see orchid delay is 103 ms.",
+            "item_id": "local-v1-composition-043",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "polite-buried-constraint",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 103
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 110
+                }
+              }
+            ],
+            "input": "We see orchid delay is 103 ms; please Ensure that cedar delay is below 110 ms.",
+            "item_id": "local-v1-composition-044",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "repeated-kind-number-change",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 103
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 104
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 103 ms; Ensure that orchid delay is below 104 ms.",
+            "item_id": "local-v1-composition-045",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "negation",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 114
+                }
+              }
+            ],
+            "input": "It is not true that we see orchid delay is 103 ms; We estimate that cedar delay is 114 milliseconds.",
+            "item_id": "local-v1-composition-046",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "paraphrase-same-frames",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 103
+                }
+              },
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 114
+                }
+              }
+            ],
+            "input": "We find that orchid delay is 103 milliseconds; We estimate cedar delay is 114 ms.",
+            "item_id": "local-v1-composition-047",
+            "predicted": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 114
+                }
+              }
+            ],
+            "split": "composition"
+          },
+          {
+            "audit": "conflicting-constraints",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 103
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "GT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 104
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 103 ms; Require that orchid delay is above 104 ms.",
+            "item_id": "local-v1-composition-048",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "multi-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 104
+                }
+              },
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 115
+                }
+              }
+            ],
+            "input": "We estimate orchid delay is 104 ms; We seek cedar delay below 115 milliseconds.",
+            "item_id": "local-v1-composition-049",
+            "predicted": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 115
+                }
+              }
+            ],
+            "split": "composition"
+          },
+          {
+            "audit": "order-swap",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 104
+                }
+              },
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 115
+                }
+              }
+            ],
+            "input": "We seek cedar delay below 115 milliseconds; We estimate orchid delay is 104 ms.",
+            "item_id": "local-v1-composition-050",
+            "predicted": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 115
+                }
+              }
+            ],
+            "split": "composition"
+          },
+          {
+            "audit": "polite-buried-constraint",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 104
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 111
+                }
+              }
+            ],
+            "input": "We estimate orchid delay is 104 ms; please Ensure that cedar delay is below 111 ms.",
+            "item_id": "local-v1-composition-051",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "repeated-kind-number-change",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 104
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 105
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 104 ms; Ensure that orchid delay is below 105 ms.",
+            "item_id": "local-v1-composition-052",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "negation",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 115
+                }
+              }
+            ],
+            "input": "It is not true that we estimate orchid delay is 104 ms; We seek cedar delay below 115 milliseconds.",
+            "item_id": "local-v1-composition-053",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "paraphrase-same-frames",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 104
+                }
+              },
+              {
+                "kind": "GOAL",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 115
+                }
+              }
+            ],
+            "input": "We estimate that orchid delay is 104 milliseconds; We wish cedar delay below 115 ms.",
+            "item_id": "local-v1-composition-054",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "conflicting-constraints",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 104
+                }
+              },
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "GT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 105
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 104 ms; Require that orchid delay is above 105 ms.",
+            "item_id": "local-v1-composition-055",
+            "predicted": [],
+            "split": "composition"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "Ensure that orchid delay is below 73 ms.",
+            "item_id": "local-v1-fresh-002",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "We see orchid delay is 73 ms.",
+            "item_id": "local-v1-fresh-004",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "We find that orchid delay is 73 milliseconds.",
+            "item_id": "local-v1-fresh-005",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "We estimate orchid delay is 73 ms.",
+            "item_id": "local-v1-fresh-006",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "orchid_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "We estimate that orchid delay is 73 milliseconds.",
+            "item_id": "local-v1-fresh-007",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "Ensure that cedar delay is below 73 ms.",
+            "item_id": "local-v1-fresh-010",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "Require that cedar delay is below 73 milliseconds.",
+            "item_id": "local-v1-fresh-011",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "We see cedar delay is 73 ms.",
+            "item_id": "local-v1-fresh-012",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "We find that cedar delay is 73 milliseconds.",
+            "item_id": "local-v1-fresh-013",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "We estimate cedar delay is 73 ms.",
+            "item_id": "local-v1-fresh-014",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "single-frame",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "cedar_delay",
+                  "unit": "ms",
+                  "value": 73
+                }
+              }
+            ],
+            "input": "We estimate that cedar delay is 73 milliseconds.",
+            "item_id": "local-v1-fresh-015",
+            "predicted": [],
+            "split": "fresh"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "zircon_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "Ensure that zircon delay is below 89 ms.",
+            "item_id": "local-v1-oov-001",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "zircon_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "We see zircon delay is 89 ms.",
+            "item_id": "local-v1-oov-002",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "zircon_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "We estimate zircon delay is 89 ms.",
+            "item_id": "local-v1-oov-003",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "quartz_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "Ensure that quartz delay is below 89 ms.",
+            "item_id": "local-v1-oov-005",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "quartz_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "We see quartz delay is 89 ms.",
+            "item_id": "local-v1-oov-006",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "quartz_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "We estimate quartz delay is 89 ms.",
+            "item_id": "local-v1-oov-007",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "feldspar_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "Ensure that feldspar delay is below 89 ms.",
+            "item_id": "local-v1-oov-009",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "feldspar_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "We see feldspar delay is 89 ms.",
+            "item_id": "local-v1-oov-010",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "feldspar_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "We estimate feldspar delay is 89 ms.",
+            "item_id": "local-v1-oov-011",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "CONSTRAINT",
+                "relation": "THRESHOLD",
+                "slots": {
+                  "operator": "LT",
+                  "subject": "mica_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "Ensure that mica delay is below 89 ms.",
+            "item_id": "local-v1-oov-013",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "OBSERVATION",
+                "relation": "MEASUREMENT",
+                "slots": {
+                  "subject": "mica_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "We see mica delay is 89 ms.",
+            "item_id": "local-v1-oov-014",
+            "predicted": [],
+            "split": "oov"
+          },
+          {
+            "audit": "reserved-vocabulary",
+            "comparison": "set_exact",
+            "expected": [
+              {
+                "kind": "PREDICTION",
+                "relation": "FORECAST",
+                "slots": {
+                  "operator": "EQ",
+                  "subject": "mica_delay",
+                  "unit": "ms",
+                  "value": 89
+                }
+              }
+            ],
+            "input": "We estimate mica delay is 89 ms.",
+            "item_id": "local-v1-oov-015",
+            "predicted": [],
+            "split": "oov"
+          }
+        ]
+      }
+    },
+    "reason_codes": [
+      "ALL_PROMOTION_GATES_PASSED"
+    ],
+    "reasons": [
+      "all promotion gates passed"
+    ],
+    "schema": "kev.promotion-decision.v1",
+    "suite_canonical_sha256": "5b3e1289ac3534d8c9698d91cbc094586aa743b2f292ba4aa161cfb7fedb7af5"
+  },
+  "hypothesis": "NOT_SUPPORTED",
+  "parent_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+  "production_qualification": "NOT_EVALUATED_RUNTIME_NOT_INTEGRATED",
+  "protocol_sha256": "f776c41a65bba23beeff41c027049f54965373e5f3177ca9073c48d49cf0d41f",
+  "reports": {
+    "candidate-ablations.json": "5b4d154b6ff61744ebcb6b961f0a5a83db7b2a58ff8aa30cb696aa41e6d92079",
+    "incumbent-ablations.json": "263e57470ad721cf7e737974d58abbbdcc4d68e2081525cf9671ad2487500f4f"
+  },
+  "schema": "kev.clause-local-research-card.v1",
+  "score_status": "UNCALIBRATED",
+  "training_loss_is_promotion_feature": false
+}

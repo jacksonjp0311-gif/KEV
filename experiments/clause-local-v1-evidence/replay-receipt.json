@@ -1,0 +1,7 @@
+{
+  "activation": "NONE",
+  "card_sha256": "6acc060d669398dfb77ffcb225a9904605b6444c878f7ddf524ec26dcdb698f5",
+  "protocol_sha256": "f776c41a65bba23beeff41c027049f54965373e5f3177ca9073c48d49cf0d41f",
+  "scope": "fresh inference; all raw predictions, failures, frame provenance, clause logits-derived scores and localization exact",
+  "status": "PASS"
+}

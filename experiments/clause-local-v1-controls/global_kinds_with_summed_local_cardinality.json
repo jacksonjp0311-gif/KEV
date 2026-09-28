@@ -1,0 +1,6034 @@
+{
+  "audit_metrics": {
+    "conflicting-constraints": {
+      "accuracy": 1.0,
+      "correct": 8,
+      "failures": 0,
+      "total": 8
+    },
+    "multi-frame": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "failures": 8,
+      "total": 8
+    },
+    "negation": {
+      "accuracy": 0.25,
+      "correct": 2,
+      "failures": 6,
+      "total": 8
+    },
+    "order-swap": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "failures": 8,
+      "total": 8
+    },
+    "paraphrase-same-frames": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "failures": 8,
+      "total": 8
+    },
+    "polite-buried-constraint": {
+      "accuracy": 0.125,
+      "correct": 1,
+      "failures": 7,
+      "total": 8
+    },
+    "repeated-kind-number-change": {
+      "accuracy": 1.0,
+      "correct": 8,
+      "failures": 0,
+      "total": 8
+    },
+    "reserved-vocabulary": {
+      "accuracy": 1.0,
+      "correct": 16,
+      "failures": 0,
+      "total": 16
+    },
+    "retention": {
+      "accuracy": 1.0,
+      "correct": 40,
+      "failures": 0,
+      "total": 40
+    },
+    "single-frame": {
+      "accuracy": 1.0,
+      "correct": 16,
+      "failures": 0,
+      "total": 16
+    }
+  },
+  "calibration": {
+    "available": false,
+    "observations": 0,
+    "reason": "NO_CONFIDENCE_VALUES",
+    "status": "UNCALIBRATED",
+    "temperature": null,
+    "temperature_artifact_canonical_sha256": null,
+    "temperature_artifact_file_sha256": null
+  },
+  "checkpoint": {
+    "path": null,
+    "sha256": null,
+    "size_bytes": null,
+    "status": "NOT_SUPPLIED"
+  },
+  "prediction_evidence_sha256": "561bc6335895bfd887f8b84dcba8d730bdde69d218163fa34563988dcfc1d9a7",
+  "raw_failures": {
+    "available": true,
+    "count": 37,
+    "items": [
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 97
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 108
+            }
+          }
+        ],
+        "input": "We wish orchid delay below 97 ms; Require that cedar delay is below 108 milliseconds.",
+        "item_id": "local-v1-composition-000",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 97
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 97
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 108
+            }
+          }
+        ],
+        "input": "Require that cedar delay is below 108 milliseconds; We wish orchid delay below 97 ms.",
+        "item_id": "local-v1-composition-001",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 97
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 97
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 104
+            }
+          }
+        ],
+        "input": "We wish orchid delay below 97 ms; please Ensure that cedar delay is below 104 ms.",
+        "item_id": "local-v1-composition-002",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 97
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 108
+            }
+          }
+        ],
+        "input": "It is not true that we wish orchid delay below 97 ms; Require that cedar delay is below 108 milliseconds.",
+        "item_id": "local-v1-composition-004",
+        "predicted": [],
+        "split": "composition"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 97
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 108
+            }
+          }
+        ],
+        "input": "We seek orchid delay below 97 milliseconds; Ensure that cedar delay is below 108 ms.",
+        "item_id": "local-v1-composition-005",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 97
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 98
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 109
+            }
+          }
+        ],
+        "input": "Ensure that orchid delay is below 98 ms; We find that cedar delay is 109 milliseconds.",
+        "item_id": "local-v1-composition-007",
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 98
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 98
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 109
+            }
+          }
+        ],
+        "input": "We find that cedar delay is 109 milliseconds; Ensure that orchid delay is below 98 ms.",
+        "item_id": "local-v1-composition-008",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 109
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 98
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 109
+            }
+          }
+        ],
+        "input": "Require that orchid delay is below 98 milliseconds; We see cedar delay is 109 ms.",
+        "item_id": "local-v1-composition-012",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 109
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 99
+            }
+          },
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 110
+            }
+          }
+        ],
+        "input": "We see orchid delay is 99 ms; We estimate that cedar delay is 110 milliseconds.",
+        "item_id": "local-v1-composition-014",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 110
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 99
+            }
+          },
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 110
+            }
+          }
+        ],
+        "input": "We estimate that cedar delay is 110 milliseconds; We see orchid delay is 99 ms.",
+        "item_id": "local-v1-composition-015",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 110
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 99
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 106
+            }
+          }
+        ],
+        "input": "We see orchid delay is 99 ms; please Ensure that cedar delay is below 106 ms.",
+        "item_id": "local-v1-composition-016",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 99
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 110
+            }
+          }
+        ],
+        "input": "It is not true that we see orchid delay is 99 ms; We estimate that cedar delay is 110 milliseconds.",
+        "item_id": "local-v1-composition-018",
+        "predicted": [],
+        "split": "composition"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 99
+            }
+          },
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 110
+            }
+          }
+        ],
+        "input": "We find that orchid delay is 99 milliseconds; We estimate cedar delay is 110 ms.",
+        "item_id": "local-v1-composition-019",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 99
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 100
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 111
+            }
+          }
+        ],
+        "input": "We estimate orchid delay is 100 ms; We seek cedar delay below 111 milliseconds.",
+        "item_id": "local-v1-composition-021",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 100
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 100
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 111
+            }
+          }
+        ],
+        "input": "We seek cedar delay below 111 milliseconds; We estimate orchid delay is 100 ms.",
+        "item_id": "local-v1-composition-022",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 100
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 100
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 107
+            }
+          }
+        ],
+        "input": "We estimate orchid delay is 100 ms; please Ensure that cedar delay is below 107 ms.",
+        "item_id": "local-v1-composition-023",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 100
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 111
+            }
+          }
+        ],
+        "input": "It is not true that we estimate orchid delay is 100 ms; We seek cedar delay below 111 milliseconds.",
+        "item_id": "local-v1-composition-025",
+        "predicted": [],
+        "split": "composition"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 100
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 111
+            }
+          }
+        ],
+        "input": "We estimate that orchid delay is 100 milliseconds; We wish cedar delay below 111 ms.",
+        "item_id": "local-v1-composition-026",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 100
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 101
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 112
+            }
+          }
+        ],
+        "input": "We wish orchid delay below 101 ms; Require that cedar delay is below 112 milliseconds.",
+        "item_id": "local-v1-composition-028",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 101
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 101
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 112
+            }
+          }
+        ],
+        "input": "Require that cedar delay is below 112 milliseconds; We wish orchid delay below 101 ms.",
+        "item_id": "local-v1-composition-029",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 101
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 101
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 108
+            }
+          }
+        ],
+        "input": "We wish orchid delay below 101 ms; please Ensure that cedar delay is below 108 ms.",
+        "item_id": "local-v1-composition-030",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 101
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 112
+            }
+          }
+        ],
+        "input": "It is not true that we wish orchid delay below 101 ms; Require that cedar delay is below 112 milliseconds.",
+        "item_id": "local-v1-composition-032",
+        "predicted": [],
+        "split": "composition"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 101
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 112
+            }
+          }
+        ],
+        "input": "We seek orchid delay below 101 milliseconds; Ensure that cedar delay is below 112 ms.",
+        "item_id": "local-v1-composition-033",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 101
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 102
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 113
+            }
+          }
+        ],
+        "input": "Ensure that orchid delay is below 102 ms; We find that cedar delay is 113 milliseconds.",
+        "item_id": "local-v1-composition-035",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 113
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 102
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 113
+            }
+          }
+        ],
+        "input": "We find that cedar delay is 113 milliseconds; Ensure that orchid delay is below 102 ms.",
+        "item_id": "local-v1-composition-036",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 113
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 102
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 109
+            }
+          }
+        ],
+        "input": "Ensure that orchid delay is below 102 ms; please Ensure that cedar delay is below 109 ms.",
+        "item_id": "local-v1-composition-037",
+        "predicted": [],
+        "split": "composition"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 102
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 113
+            }
+          }
+        ],
+        "input": "Require that orchid delay is below 102 milliseconds; We see cedar delay is 113 ms.",
+        "item_id": "local-v1-composition-040",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 113
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 103
+            }
+          },
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 114
+            }
+          }
+        ],
+        "input": "We see orchid delay is 103 ms; We estimate that cedar delay is 114 milliseconds.",
+        "item_id": "local-v1-composition-042",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 114
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 103
+            }
+          },
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 114
+            }
+          }
+        ],
+        "input": "We estimate that cedar delay is 114 milliseconds; We see orchid delay is 103 ms.",
+        "item_id": "local-v1-composition-043",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 114
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 103
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 110
+            }
+          }
+        ],
+        "input": "We see orchid delay is 103 ms; please Ensure that cedar delay is below 110 ms.",
+        "item_id": "local-v1-composition-044",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 103
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 114
+            }
+          }
+        ],
+        "input": "It is not true that we see orchid delay is 103 ms; We estimate that cedar delay is 114 milliseconds.",
+        "item_id": "local-v1-composition-046",
+        "predicted": [],
+        "split": "composition"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 103
+            }
+          },
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 114
+            }
+          }
+        ],
+        "input": "We find that orchid delay is 103 milliseconds; We estimate cedar delay is 114 ms.",
+        "item_id": "local-v1-composition-047",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 114
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "multi-frame",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 104
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 115
+            }
+          }
+        ],
+        "input": "We estimate orchid delay is 104 ms; We seek cedar delay below 115 milliseconds.",
+        "item_id": "local-v1-composition-049",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 104
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "order-swap",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 104
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 115
+            }
+          }
+        ],
+        "input": "We seek cedar delay below 115 milliseconds; We estimate orchid delay is 104 ms.",
+        "item_id": "local-v1-composition-050",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 104
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "polite-buried-constraint",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 104
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 111
+            }
+          }
+        ],
+        "input": "We estimate orchid delay is 104 ms; please Ensure that cedar delay is below 111 ms.",
+        "item_id": "local-v1-composition-051",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 104
+            }
+          }
+        ],
+        "split": "composition"
+      },
+      {
+        "audit": "negation",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 115
+            }
+          }
+        ],
+        "input": "It is not true that we estimate orchid delay is 104 ms; We seek cedar delay below 115 milliseconds.",
+        "item_id": "local-v1-composition-053",
+        "predicted": [],
+        "split": "composition"
+      },
+      {
+        "audit": "paraphrase-same-frames",
+        "comparison": "set_exact",
+        "expected": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 104
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cedar_delay",
+              "unit": "ms",
+              "value": 115
+            }
+          }
+        ],
+        "input": "We estimate that orchid delay is 104 milliseconds; We wish cedar delay below 115 ms.",
+        "item_id": "local-v1-composition-054",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "orchid_delay",
+              "unit": "ms",
+              "value": 104
+            }
+          }
+        ],
+        "split": "composition"
+      }
+    ]
+  },
+  "records": [
+    {
+      "audit": "multi-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 108
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-000",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "order-swap",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 108
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-001",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "polite-buried-constraint",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-002",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "repeated-kind-number-change",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-003",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "negation",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 108
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-004",
+      "predicted": [],
+      "split": "composition"
+    },
+    {
+      "audit": "paraphrase-same-frames",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 108
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-005",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "conflicting-constraints",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-006",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 97
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "multi-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 109
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-007",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "order-swap",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 109
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-008",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 109
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "polite-buried-constraint",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 105
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-009",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 105
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "repeated-kind-number-change",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-010",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "negation",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 109
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-011",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 109
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "paraphrase-same-frames",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 109
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-012",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 109
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "conflicting-constraints",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-013",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 98
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "multi-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        },
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 110
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-014",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 110
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "order-swap",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        },
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 110
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-015",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 110
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "polite-buried-constraint",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 106
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-016",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "repeated-kind-number-change",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-017",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "negation",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 110
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-018",
+      "predicted": [],
+      "split": "composition"
+    },
+    {
+      "audit": "paraphrase-same-frames",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        },
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 110
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-019",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "conflicting-constraints",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-020",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 99
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "multi-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 111
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-021",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "order-swap",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 111
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-022",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "polite-buried-constraint",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 107
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-023",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "repeated-kind-number-change",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-024",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "negation",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 111
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-025",
+      "predicted": [],
+      "split": "composition"
+    },
+    {
+      "audit": "paraphrase-same-frames",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 111
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-026",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "conflicting-constraints",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-027",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 100
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "multi-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 112
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-028",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "order-swap",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 112
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-029",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "polite-buried-constraint",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 108
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-030",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "repeated-kind-number-change",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-031",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "negation",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 112
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-032",
+      "predicted": [],
+      "split": "composition"
+    },
+    {
+      "audit": "paraphrase-same-frames",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 112
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-033",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "conflicting-constraints",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-034",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 101
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "multi-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 113
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-035",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 113
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "order-swap",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 113
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-036",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 113
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "polite-buried-constraint",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 109
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-037",
+      "predicted": [],
+      "split": "composition"
+    },
+    {
+      "audit": "repeated-kind-number-change",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-038",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "negation",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 113
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-039",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 113
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "paraphrase-same-frames",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 113
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-040",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 113
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "conflicting-constraints",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-041",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 102
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "multi-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        },
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 114
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-042",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 114
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "order-swap",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        },
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 114
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-043",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 114
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "polite-buried-constraint",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 110
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-044",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "repeated-kind-number-change",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-045",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "negation",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 114
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-046",
+      "predicted": [],
+      "split": "composition"
+    },
+    {
+      "audit": "paraphrase-same-frames",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        },
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 114
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-047",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 114
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "conflicting-constraints",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-048",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 103
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "multi-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 115
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-049",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "order-swap",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 115
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-050",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "polite-buried-constraint",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 111
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-051",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "repeated-kind-number-change",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 105
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-052",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 105
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "negation",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 115
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-053",
+      "predicted": [],
+      "split": "composition"
+    },
+    {
+      "audit": "paraphrase-same-frames",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": false,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 115
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-054",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "conflicting-constraints",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 105
+          }
+        }
+      ],
+      "item_id": "local-v1-composition-055",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 104
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 105
+          }
+        }
+      ],
+      "split": "composition"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-000",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-001",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-002",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-003",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-004",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-005",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-006",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-007",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "orchid_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-008",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-009",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-010",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-011",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-012",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-013",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-014",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "single-frame",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "item_id": "local-v1-fresh-015",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "cedar_delay",
+            "unit": "ms",
+            "value": 73
+          }
+        }
+      ],
+      "split": "fresh"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "zircon_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-000",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "zircon_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "zircon_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-001",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "zircon_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "zircon_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-002",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "zircon_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "zircon_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-003",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "zircon_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "quartz_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-004",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "quartz_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "quartz_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-005",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "quartz_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "quartz_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-006",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "quartz_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "quartz_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-007",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "quartz_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "feldspar_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-008",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "feldspar_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "feldspar_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-009",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "feldspar_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "feldspar_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-010",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "feldspar_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "feldspar_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-011",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "feldspar_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "mica_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-012",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "mica_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "mica_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-013",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "mica_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "mica_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-014",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "mica_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "reserved-vocabulary",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "mica_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "item_id": "local-v1-oov-015",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "mica_delay",
+            "unit": "ms",
+            "value": 89
+          }
+        }
+      ],
+      "split": "oov"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_310",
+            "source": "archive_310"
+          }
+        }
+      ],
+      "item_id": "v7-retention-000",
+      "predicted": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_310",
+            "source": "archive_310"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_311",
+            "source": "archive_311"
+          }
+        }
+      ],
+      "item_id": "v7-retention-001",
+      "predicted": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_311",
+            "source": "archive_311"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_312",
+            "source": "archive_312"
+          }
+        }
+      ],
+      "item_id": "v7-retention-002",
+      "predicted": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_312",
+            "source": "archive_312"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_313",
+            "old_value": "release_312"
+          }
+        }
+      ],
+      "item_id": "v7-retention-003",
+      "predicted": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_313",
+            "old_value": "release_312"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_314",
+            "old_value": "release_313"
+          }
+        }
+      ],
+      "item_id": "v7-retention-004",
+      "predicted": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_314",
+            "old_value": "release_313"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_315",
+            "old_value": "release_314"
+          }
+        }
+      ],
+      "item_id": "v7-retention-005",
+      "predicted": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_315",
+            "old_value": "release_314"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -316
+          }
+        }
+      ],
+      "item_id": "v7-retention-006",
+      "predicted": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -316
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -317
+          }
+        }
+      ],
+      "item_id": "v7-retention-007",
+      "predicted": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -317
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -318
+          }
+        }
+      ],
+      "item_id": "v7-retention-008",
+      "predicted": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -318
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 319
+          }
+        }
+      ],
+      "item_id": "v7-retention-009",
+      "predicted": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 319
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 320
+          }
+        }
+      ],
+      "item_id": "v7-retention-010",
+      "predicted": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 320
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 321
+          }
+        }
+      ],
+      "item_id": "v7-retention-011",
+      "predicted": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 321
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_322"
+          }
+        }
+      ],
+      "item_id": "v7-retention-012",
+      "predicted": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_322"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_323"
+          }
+        }
+      ],
+      "item_id": "v7-retention-013",
+      "predicted": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_323"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_324"
+          }
+        }
+      ],
+      "item_id": "v7-retention-014",
+      "predicted": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_324"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_325"
+          }
+        }
+      ],
+      "item_id": "v7-retention-015",
+      "predicted": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_325"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_326"
+          }
+        }
+      ],
+      "item_id": "v7-retention-016",
+      "predicted": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_326"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_327"
+          }
+        }
+      ],
+      "item_id": "v7-retention-017",
+      "predicted": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_327"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-328",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "item_id": "v7-retention-018",
+      "predicted": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-328",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-329",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "item_id": "v7-retention-019",
+      "predicted": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-329",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-330",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "item_id": "v7-retention-020",
+      "predicted": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-330",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-331",
+            "value": 831
+          }
+        }
+      ],
+      "item_id": "v7-retention-021",
+      "predicted": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-331",
+            "value": 831
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-332",
+            "value": 832
+          }
+        }
+      ],
+      "item_id": "v7-retention-022",
+      "predicted": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-332",
+            "value": 832
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-333",
+            "value": 833
+          }
+        }
+      ],
+      "item_id": "v7-retention-023",
+      "predicted": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-333",
+            "value": 833
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONSISTENT"
+          }
+        }
+      ],
+      "item_id": "v7-retention-024",
+      "predicted": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONSISTENT"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONFLICT"
+          }
+        }
+      ],
+      "item_id": "v7-retention-025",
+      "predicted": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONFLICT"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONSISTENT"
+          }
+        }
+      ],
+      "item_id": "v7-retention-026",
+      "predicted": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONSISTENT"
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 337
+          }
+        }
+      ],
+      "item_id": "v7-retention-027",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 337
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 338
+          }
+        }
+      ],
+      "item_id": "v7-retention-028",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 338
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 339
+          }
+        }
+      ],
+      "item_id": "v7-retention-029",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 339
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_340",
+            "polarity": false
+          }
+        }
+      ],
+      "item_id": "v7-retention-030",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_340",
+            "polarity": false
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_341",
+            "polarity": false
+          }
+        }
+      ],
+      "item_id": "v7-retention-031",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_341",
+            "polarity": false
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_342",
+            "polarity": false
+          }
+        }
+      ],
+      "item_id": "v7-retention-032",
+      "predicted": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_342",
+            "polarity": false
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 343
+          }
+        }
+      ],
+      "item_id": "v7-retention-033",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 343
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 344
+          }
+        }
+      ],
+      "item_id": "v7-retention-034",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 344
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 345
+          }
+        }
+      ],
+      "item_id": "v7-retention-035",
+      "predicted": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 345
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 346
+          }
+        }
+      ],
+      "item_id": "v7-retention-036",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 346
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 347
+          }
+        }
+      ],
+      "item_id": "v7-retention-037",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 347
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 348
+          }
+        }
+      ],
+      "item_id": "v7-retention-038",
+      "predicted": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 348
+          }
+        }
+      ],
+      "split": "retention"
+    },
+    {
+      "audit": "retention",
+      "comparison": "set_exact",
+      "confidence": null,
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 399
+          }
+        }
+      ],
+      "item_id": "v7-retention-039",
+      "predicted": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 399
+          }
+        }
+      ],
+      "split": "retention"
+    }
+  ],
+  "report_sha256": "0596e756691cf374c9f8501fca0813b6b962116880f00a3f1e750c93b0ef6451",
+  "schema": "kev.model-evaluation.v1",
+  "splits": {
+    "composition": {
+      "accuracy": 0.3392857142857143,
+      "calibration": {
+        "available": false,
+        "observations": 0,
+        "reason": "NO_CONFIDENCE_VALUES",
+        "status": "UNCALIBRATED"
+      },
+      "correct": 19,
+      "failures": 37,
+      "frame_micro": {
+        "f1": 0.7764705882352941,
+        "false_negative": 38,
+        "false_positive": 0,
+        "precision": 1.0,
+        "recall": 0.6346153846153846,
+        "true_positive": 66
+      },
+      "primary_metric": "exact_match_accuracy",
+      "primary_score": 0.3392857142857143,
+      "total": 56
+    },
+    "fresh": {
+      "accuracy": 1.0,
+      "calibration": {
+        "available": false,
+        "observations": 0,
+        "reason": "NO_CONFIDENCE_VALUES",
+        "status": "UNCALIBRATED"
+      },
+      "correct": 16,
+      "failures": 0,
+      "frame_micro": {
+        "f1": 1.0,
+        "false_negative": 0,
+        "false_positive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 16
+      },
+      "primary_metric": "exact_match_accuracy",
+      "primary_score": 1.0,
+      "total": 16
+    },
+    "oov": {
+      "accuracy": 1.0,
+      "calibration": {
+        "available": false,
+        "observations": 0,
+        "reason": "NO_CONFIDENCE_VALUES",
+        "status": "UNCALIBRATED"
+      },
+      "correct": 16,
+      "failures": 0,
+      "frame_micro": {
+        "f1": 1.0,
+        "false_negative": 0,
+        "false_positive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 16
+      },
+      "primary_metric": "exact_match_accuracy",
+      "primary_score": 1.0,
+      "total": 16
+    },
+    "retention": {
+      "accuracy": 1.0,
+      "calibration": {
+        "available": false,
+        "observations": 0,
+        "reason": "NO_CONFIDENCE_VALUES",
+        "status": "UNCALIBRATED"
+      },
+      "correct": 40,
+      "failures": 0,
+      "frame_micro": {
+        "f1": 1.0,
+        "false_negative": 0,
+        "false_positive": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positive": 40
+      },
+      "primary_metric": "exact_match_accuracy",
+      "primary_score": 1.0,
+      "total": 40
+    }
+  },
+  "suite": {
+    "canonical_sha256": "5b3e1289ac3534d8c9698d91cbc094586aa743b2f292ba4aa161cfb7fedb7af5",
+    "file_sha256": "64f71b7714f488ae62caf6ba1f5e25e719b3721761c396ab70effa3c2493c4a4",
+    "frozen": true,
+    "id": "clause-local-v1-research",
+    "path": "experiments/clause-local-v1-boundary/suite.json"
+  }
+}

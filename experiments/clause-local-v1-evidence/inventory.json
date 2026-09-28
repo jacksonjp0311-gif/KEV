@@ -1,0 +1,16 @@
+{
+  "files": {
+    "candidate-ablations.json": "5b4d154b6ff61744ebcb6b961f0a5a83db7b2a58ff8aa30cb696aa41e6d92079",
+    "candidate/frozen-embeddings.pt": "10bd2b849e5c5d8964ed576e3e2e9118e8a702e39743993808b6fd8880839db9",
+    "candidate/semantic-breadth.pt": "74d3463755d692c4e8f6fd6be62eba74f76ff9c880194a670b422aaabd99917c",
+    "candidate/training-receipt.json": "17bf6e23a551e1463f8ab1f82bcb82035b33530532eac6b177baf5f27369cea8",
+    "incumbent-ablations.json": "263e57470ad721cf7e737974d58abbbdcc4d68e2081525cf9671ad2487500f4f",
+    "replay-receipt.json": "73f0bbdc30770bf0e2f6161cebd61c5365de4d26021cf848bd0157866bddaaea",
+    "research-card.json": "6acc060d669398dfb77ffcb225a9904605b6444c878f7ddf524ec26dcdb698f5",
+    "research-ledger/ledger-head.json": "81c6a0ad28d9f98b2b86f8d2f45c4fc030e51e49a2cdba3699e2d95e22870e46",
+    "research-ledger/ledger.jsonl": "cfde02f49158c005dfed7d07036c2d1013407cbb53e4aaba4f1de19786becac5",
+    "research-ledger/state.json": "93444f974db9a076666b9230b14e6bd06bd898a4ebeebb430b747d5d1df267f1"
+  },
+  "schema": "kev.research-inventory.v1",
+  "verifier_sha256": "ff4d2d66ef50bd6eea0e6477b50eb2a6e41d4a7ac55cbc2749ed74de29d5a532"
+}

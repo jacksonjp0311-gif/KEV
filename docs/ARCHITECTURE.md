@@ -6,6 +6,12 @@ receipt-bearing actions, immutable model candidates, and evidence-backed
 promotion gates. It is not AGI or superintelligence, and none of its version
 numbers, losses, scores, or state records should be described as such.
 
+The optional `kev/clause_proposals.py` adapter is a **non-activating research
+path**, not the production runtime. It locates neural kind hints at existing
+claim boundaries; constrained parsers still own slots. Its completed attribution
+experiment and stronger no-model control are documented in
+[CLAUSE_LOCAL_V1.md](CLAUSE_LOCAL_V1.md). The production registry is unchanged.
+
 ## Architectural invariants
 
 1. **Language is an interface, not cognitive state.** Raw prose can be retained

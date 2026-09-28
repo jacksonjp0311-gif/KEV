@@ -1,0 +1,16 @@
+{
+  "schema": "kev.local-validation-summary.v1",
+  "scope": "Clause-local v1 research update; captured from completed command executions, not a model qualification",
+  "checks": [
+    {"command": "python -m pytest -q -p no:cacheprovider tests_public", "exit_code": 0, "result": "304 passed in 90.09s"},
+    {"command": "python -m ruff check kev scripts tests_public", "exit_code": 0, "result": "All checks passed"},
+    {"command": "python -m compileall -q kev scripts tests_public", "result": "completed without reported errors"},
+    {"command": "python -m mypy --platform win32 kev", "result": "Success: no issues found in 23 source files"},
+    {"command": "python -m kev.cli doctor", "exit_code": 0, "result": "ok: true; incumbent and v7 frozen manifest unchanged"},
+    {"command": "python -m kev.cli historical-replay", "exit_code": 0, "result": "190/260 tie rejected; historical aggregate only"},
+    {"command": "python -m scripts.clause_local_experiment replay", "exit_code": 0, "result": "Exact research replay passed", "receipt": "clause-local-v1-evidence/replay-receipt.json"},
+    {"command": "staged Git blob SHA-256 audit against protocol and evidence inventories", "exit_code": 0, "checked_staged_blobs": 48, "mismatches": []}
+  ],
+  "activation": "NONE",
+  "ci": "Recorded separately by GitHub Actions for the pushed commit"
+}

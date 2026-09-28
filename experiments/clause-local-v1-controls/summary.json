@@ -1,0 +1,48 @@
+{
+  "activation": "NONE",
+  "reports": {
+    "all_kinds_with_clause_count_budget_no_model": {
+      "scores": {
+        "composition": {
+          "correct": 56,
+          "total": 56
+        },
+        "fresh": {
+          "correct": 16,
+          "total": 16
+        },
+        "oov": {
+          "correct": 16,
+          "total": 16
+        },
+        "retention": {
+          "correct": 40,
+          "total": 40
+        }
+      },
+      "sha256": "f1884d6e7cad6af8a9feb2abf6aa3b0c7a98f7e76dfb2bb5ab04bc3edaad2ccb"
+    },
+    "global_kinds_with_summed_local_cardinality": {
+      "scores": {
+        "composition": {
+          "correct": 19,
+          "total": 56
+        },
+        "fresh": {
+          "correct": 16,
+          "total": 16
+        },
+        "oov": {
+          "correct": 16,
+          "total": 16
+        },
+        "retention": {
+          "correct": 40,
+          "total": 40
+        }
+      },
+      "sha256": "be254d606cda5d3a37527d89c436da459e7176c8179409a91e6b58f419430297"
+    }
+  },
+  "status": "POST_HOC_DIAGNOSTIC_ONLY"
+}

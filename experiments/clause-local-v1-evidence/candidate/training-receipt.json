@@ -1,0 +1,3832 @@
+{
+  "activation": "NONE",
+  "architecture_transition": {
+    "copied_components": [
+      "head",
+      "cardinality_head"
+    ],
+    "from_schema": "kev.semantic-frames.v052",
+    "new_projection_initialization": "DETERMINISTIC_XAVIER_UNIFORM",
+    "to_schema": "kev.frozen-sentence-frames.v1"
+  },
+  "artifact_status": "CHALLENGER",
+  "challenger_path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\clause-local-v1-evidence\\candidate\\semantic-breadth.pt",
+  "challenger_sha256": "74d3463755d692c4e8f6fd6be62eba74f76ff9c880194a670b422aaabd99917c",
+  "contrastive_positive_pairs": 64,
+  "encoder_artifact": {
+    "files": [
+      {
+        "path": "1_Pooling/config.json",
+        "sha256": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+        "size_bytes": 190
+      },
+      {
+        "path": "LICENSE-2.0.txt",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "size_bytes": 11358
+      },
+      {
+        "path": "README.md",
+        "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+        "size_bytes": 10502
+      },
+      {
+        "path": "config.json",
+        "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+        "size_bytes": 612
+      },
+      {
+        "path": "config_sentence_transformers.json",
+        "sha256": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+        "size_bytes": 116
+      },
+      {
+        "path": "model.safetensors",
+        "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+        "size_bytes": 90868376
+      },
+      {
+        "path": "modules.json",
+        "sha256": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "size_bytes": 349
+      },
+      {
+        "path": "sentence_bert_config.json",
+        "sha256": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+        "size_bytes": 53
+      },
+      {
+        "path": "special_tokens_map.json",
+        "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+        "size_bytes": 112
+      },
+      {
+        "path": "tokenizer.json",
+        "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+        "size_bytes": 466247
+      },
+      {
+        "path": "tokenizer_config.json",
+        "sha256": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+        "size_bytes": 350
+      },
+      {
+        "path": "vocab.txt",
+        "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+        "size_bytes": 231508
+      }
+    ],
+    "license": {
+      "identifier": "Apache-2.0",
+      "license_text_path": "LICENSE-2.0.txt",
+      "license_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "license_text_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "model_card_path": "README.md",
+      "model_card_sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+      "model_card_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/blob/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md"
+    },
+    "loader": {
+      "config_path": "config.json",
+      "dynamic_remote_code": false,
+      "id": "hf-bert-mean-pooling-normalize-v1",
+      "max_length": 256,
+      "model_path": "model.safetensors",
+      "modules_path": "modules.json",
+      "normalize": true,
+      "pooling": "MEAN",
+      "pooling_config_path": "1_Pooling/config.json",
+      "safetensors_only": true,
+      "tokenizer_path": "tokenizer.json"
+    },
+    "name": "sentence-transformers/all-MiniLM-L6-v2",
+    "network_policy": "LOCAL_ONLY",
+    "path": "models/local/encoders/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/encoder-manifest.json",
+    "permission": {
+      "reviewed_at": "2026-09-28T11:21:02Z",
+      "reviewed_by": "KEV repository owner authorization recorded in task",
+      "scope": "local KEV frozen feature extraction and proposal-head research under Apache-2.0; no redistribution claim beyond the license",
+      "status": "APPROVED"
+    },
+    "sha256": "cfd8f8bc3413f31ab927ad7d78eb380c3359fdb2893061075d2369dfec81ea57",
+    "source": {
+      "api_url": "https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/revision/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "provider": "huggingface",
+      "repository": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+    }
+  },
+  "encoder_runtime_source_sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9",
+  "environment": {
+    "python": "3.12.2",
+    "safetensors": "0.7.0",
+    "tokenizers": "0.22.2",
+    "torch": "2.5.1+cu121",
+    "transformers": "5.0.0"
+  },
+  "examples": 128,
+  "frozen_embedding_cache": {
+    "encoder_batch_size": 32,
+    "file_sha256": "10bd2b849e5c5d8964ed576e3e2e9118e8a702e39743993808b6fd8880839db9",
+    "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\clause-local-v1-evidence\\candidate\\frozen-embeddings.pt",
+    "shape": [
+      128,
+      384
+    ],
+    "values_sha256": "78530a9866331a4185cc32be0c3e4d889d0d0b2ead8e987cbd9ce07087d0316d"
+  },
+  "held_out_vocabulary": [
+    "ameliorate",
+    "antedescedes",
+    "antipode",
+    "attested",
+    "cedar",
+    "celerity",
+    "citation",
+    "concordant",
+    "contrapose",
+    "displaces",
+    "dormant",
+    "empirically",
+    "feldspar",
+    "inviolable",
+    "mica",
+    "modulus",
+    "norm",
+    "orchid",
+    "portend",
+    "presage",
+    "quartz",
+    "quiescent",
+    "sacrosanct",
+    "zircon"
+  ],
+  "held_out_vocabulary_sha256": "50b401da963d7abc61e2d2d5001129c22087b74b9a41da4c14b40337ff3de9ba",
+  "lessons_path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\experiments\\clause-local-v1-boundary\\reviewed-lessons.jsonl",
+  "lessons_sha256": "d4b4eb48ef35866e077b69a8aa00e3be6bdd7112e6fd8917e48ea700274329cb",
+  "loss_history": [
+    {
+      "cardinality": 1.9624245166778564,
+      "contrastive": 0.26933616399765015,
+      "loss": 1.1807003021240234,
+      "relation": 0.6939477920532227,
+      "step": 1
+    },
+    {
+      "cardinality": 1.925092101097107,
+      "contrastive": 0.2543095052242279,
+      "loss": 1.164342999458313,
+      "relation": 0.6903162002563477,
+      "step": 2
+    },
+    {
+      "cardinality": 1.886655569076538,
+      "contrastive": 0.23900732398033142,
+      "loss": 1.1475751399993896,
+      "relation": 0.686591386795044,
+      "step": 3
+    },
+    {
+      "cardinality": 1.847729206085205,
+      "contrastive": 0.22399434447288513,
+      "loss": 1.1308069229125977,
+      "relation": 0.6828631162643433,
+      "step": 4
+    },
+    {
+      "cardinality": 1.8092496395111084,
+      "contrastive": 0.20983348786830902,
+      "loss": 1.1145070791244507,
+      "relation": 0.6792154312133789,
+      "step": 5
+    },
+    {
+      "cardinality": 1.7722442150115967,
+      "contrastive": 0.19689986109733582,
+      "loss": 1.0990874767303467,
+      "relation": 0.6757236123085022,
+      "step": 6
+    },
+    {
+      "cardinality": 1.7376561164855957,
+      "contrastive": 0.18541523814201355,
+      "loss": 1.0848755836486816,
+      "relation": 0.672448992729187,
+      "step": 7
+    },
+    {
+      "cardinality": 1.7061872482299805,
+      "contrastive": 0.17549073696136475,
+      "loss": 1.0720839500427246,
+      "relation": 0.6694247126579285,
+      "step": 8
+    },
+    {
+      "cardinality": 1.6782841682434082,
+      "contrastive": 0.16716432571411133,
+      "loss": 1.0608230829238892,
+      "relation": 0.6666586995124817,
+      "step": 9
+    },
+    {
+      "cardinality": 1.6540757417678833,
+      "contrastive": 0.16036748886108398,
+      "loss": 1.0510830879211426,
+      "relation": 0.6641393303871155,
+      "step": 10
+    },
+    {
+      "cardinality": 1.6334773302078247,
+      "contrastive": 0.154929518699646,
+      "loss": 1.0427676439285278,
+      "relation": 0.6618468761444092,
+      "step": 11
+    },
+    {
+      "cardinality": 1.6162080764770508,
+      "contrastive": 0.15064504742622375,
+      "loss": 1.0357255935668945,
+      "relation": 0.6597581505775452,
+      "step": 12
+    },
+    {
+      "cardinality": 1.6018805503845215,
+      "contrastive": 0.14727964997291565,
+      "loss": 1.0297728776931763,
+      "relation": 0.6578488945960999,
+      "step": 13
+    },
+    {
+      "cardinality": 1.5900275707244873,
+      "contrastive": 0.14464756846427917,
+      "loss": 1.024726390838623,
+      "relation": 0.6560941934585571,
+      "step": 14
+    },
+    {
+      "cardinality": 1.5801745653152466,
+      "contrastive": 0.14256992936134338,
+      "loss": 1.0204049348831177,
+      "relation": 0.6544705033302307,
+      "step": 15
+    },
+    {
+      "cardinality": 1.5719000101089478,
+      "contrastive": 0.14088550209999084,
+      "loss": 1.016647219657898,
+      "relation": 0.6529572010040283,
+      "step": 16
+    },
+    {
+      "cardinality": 1.5648366212844849,
+      "contrastive": 0.13947471976280212,
+      "loss": 1.0133200883865356,
+      "relation": 0.6515365242958069,
+      "step": 17
+    },
+    {
+      "cardinality": 1.5586705207824707,
+      "contrastive": 0.13825398683547974,
+      "loss": 1.0103164911270142,
+      "relation": 0.6501935720443726,
+      "step": 18
+    },
+    {
+      "cardinality": 1.5531532764434814,
+      "contrastive": 0.13714982569217682,
+      "loss": 1.0075501203536987,
+      "relation": 0.6489169597625732,
+      "step": 19
+    },
+    {
+      "cardinality": 1.5480632781982422,
+      "contrastive": 0.13612638413906097,
+      "loss": 1.0049535036087036,
+      "relation": 0.6476965546607971,
+      "step": 20
+    },
+    {
+      "cardinality": 1.5432250499725342,
+      "contrastive": 0.13515731692314148,
+      "loss": 1.0024749040603638,
+      "relation": 0.6465247869491577,
+      "step": 21
+    },
+    {
+      "cardinality": 1.5385023355484009,
+      "contrastive": 0.13421571254730225,
+      "loss": 1.00007164478302,
+      "relation": 0.6453956365585327,
+      "step": 22
+    },
+    {
+      "cardinality": 1.5337861776351929,
+      "contrastive": 0.13328850269317627,
+      "loss": 0.9977126121520996,
+      "relation": 0.6443043947219849,
+      "step": 23
+    },
+    {
+      "cardinality": 1.5289973020553589,
+      "contrastive": 0.13236169517040253,
+      "loss": 0.9953733086585999,
+      "relation": 0.6432473063468933,
+      "step": 24
+    },
+    {
+      "cardinality": 1.5240811109542847,
+      "contrastive": 0.13142964243888855,
+      "loss": 0.9930367469787598,
+      "relation": 0.6422201991081238,
+      "step": 25
+    },
+    {
+      "cardinality": 1.5190116167068481,
+      "contrastive": 0.13048706948757172,
+      "loss": 0.9906906485557556,
+      "relation": 0.6412178874015808,
+      "step": 26
+    },
+    {
+      "cardinality": 1.5137617588043213,
+      "contrastive": 0.12955163419246674,
+      "loss": 0.9883280992507935,
+      "relation": 0.6402326822280884,
+      "step": 27
+    },
+    {
+      "cardinality": 1.5083370208740234,
+      "contrastive": 0.1286335587501526,
+      "loss": 0.9859457015991211,
+      "relation": 0.6392565369606018,
+      "step": 28
+    },
+    {
+      "cardinality": 1.5027457475662231,
+      "contrastive": 0.1277540624141693,
+      "loss": 0.9835429787635803,
+      "relation": 0.638279914855957,
+      "step": 29
+    },
+    {
+      "cardinality": 1.49702787399292,
+      "contrastive": 0.12692107260227203,
+      "loss": 0.9811217188835144,
+      "relation": 0.6372937560081482,
+      "step": 30
+    },
+    {
+      "cardinality": 1.4912225008010864,
+      "contrastive": 0.12615060806274414,
+      "loss": 0.9786865711212158,
+      "relation": 0.6362892985343933,
+      "step": 31
+    },
+    {
+      "cardinality": 1.485376000404358,
+      "contrastive": 0.12545470893383026,
+      "loss": 0.9762424230575562,
+      "relation": 0.6352580785751343,
+      "step": 32
+    },
+    {
+      "cardinality": 1.4795407056808472,
+      "contrastive": 0.12484128028154373,
+      "loss": 0.9737961292266846,
+      "relation": 0.6341935396194458,
+      "step": 33
+    },
+    {
+      "cardinality": 1.473789930343628,
+      "contrastive": 0.12429624795913696,
+      "loss": 0.9713544249534607,
+      "relation": 0.6330927610397339,
+      "step": 34
+    },
+    {
+      "cardinality": 1.4681859016418457,
+      "contrastive": 0.12380370497703552,
+      "loss": 0.9689222574234009,
+      "relation": 0.6319538354873657,
+      "step": 35
+    },
+    {
+      "cardinality": 1.4627809524536133,
+      "contrastive": 0.12334279716014862,
+      "loss": 0.9665031433105469,
+      "relation": 0.6307770013809204,
+      "step": 36
+    },
+    {
+      "cardinality": 1.457603931427002,
+      "contrastive": 0.12290087342262268,
+      "loss": 0.9640999436378479,
+      "relation": 0.6295638680458069,
+      "step": 37
+    },
+    {
+      "cardinality": 1.4526586532592773,
+      "contrastive": 0.1224764809012413,
+      "loss": 0.9617149233818054,
+      "relation": 0.6283164620399475,
+      "step": 38
+    },
+    {
+      "cardinality": 1.4479299783706665,
+      "contrastive": 0.12207282334566116,
+      "loss": 0.9593492746353149,
+      "relation": 0.627037763595581,
+      "step": 39
+    },
+    {
+      "cardinality": 1.4434033632278442,
+      "contrastive": 0.12168557196855545,
+      "loss": 0.9570037126541138,
+      "relation": 0.6257330775260925,
+      "step": 40
+    },
+    {
+      "cardinality": 1.4390544891357422,
+      "contrastive": 0.12130987644195557,
+      "loss": 0.9546777606010437,
+      "relation": 0.6244083642959595,
+      "step": 41
+    },
+    {
+      "cardinality": 1.4348376989364624,
+      "contrastive": 0.12095454335212708,
+      "loss": 0.9523705244064331,
+      "relation": 0.6230689287185669,
+      "step": 42
+    },
+    {
+      "cardinality": 1.4307152032852173,
+      "contrastive": 0.12061865627765656,
+      "loss": 0.9500807523727417,
+      "relation": 0.6217212080955505,
+      "step": 43
+    },
+    {
+      "cardinality": 1.4266409873962402,
+      "contrastive": 0.1203075498342514,
+      "loss": 0.9478057026863098,
+      "relation": 0.6203698515892029,
+      "step": 44
+    },
+    {
+      "cardinality": 1.4225802421569824,
+      "contrastive": 0.12001866847276688,
+      "loss": 0.9455426335334778,
+      "relation": 0.6190200448036194,
+      "step": 45
+    },
+    {
+      "cardinality": 1.418494701385498,
+      "contrastive": 0.119759202003479,
+      "loss": 0.943289577960968,
+      "relation": 0.6176748871803284,
+      "step": 46
+    },
+    {
+      "cardinality": 1.4143414497375488,
+      "contrastive": 0.11953747272491455,
+      "loss": 0.9410424828529358,
+      "relation": 0.6163361072540283,
+      "step": 47
+    },
+    {
+      "cardinality": 1.4100979566574097,
+      "contrastive": 0.11935647577047348,
+      "loss": 0.9387998580932617,
+      "relation": 0.6150054931640625,
+      "step": 48
+    },
+    {
+      "cardinality": 1.4057315587997437,
+      "contrastive": 0.1192297488451004,
+      "loss": 0.9365593194961548,
+      "relation": 0.6136825680732727,
+      "step": 49
+    },
+    {
+      "cardinality": 1.401208519935608,
+      "contrastive": 0.11918122321367264,
+      "loss": 0.9343200325965881,
+      "relation": 0.6123648881912231,
+      "step": 50
+    },
+    {
+      "cardinality": 1.3965346813201904,
+      "contrastive": 0.11920547485351562,
+      "loss": 0.9320814609527588,
+      "relation": 0.6110525727272034,
+      "step": 51
+    },
+    {
+      "cardinality": 1.3917381763458252,
+      "contrastive": 0.11928366869688034,
+      "loss": 0.9298431277275085,
+      "relation": 0.6097462177276611,
+      "step": 52
+    },
+    {
+      "cardinality": 1.3868165016174316,
+      "contrastive": 0.11942536383867264,
+      "loss": 0.9276053309440613,
+      "relation": 0.6084431409835815,
+      "step": 53
+    },
+    {
+      "cardinality": 1.38179349899292,
+      "contrastive": 0.11962185055017471,
+      "loss": 0.9253687262535095,
+      "relation": 0.6071423888206482,
+      "step": 54
+    },
+    {
+      "cardinality": 1.3766670227050781,
+      "contrastive": 0.1198858693242073,
+      "loss": 0.9231338500976562,
+      "relation": 0.6058403849601746,
+      "step": 55
+    },
+    {
+      "cardinality": 1.3714466094970703,
+      "contrastive": 0.12021896243095398,
+      "loss": 0.9209005236625671,
+      "relation": 0.6045345067977905,
+      "step": 56
+    },
+    {
+      "cardinality": 1.366129755973816,
+      "contrastive": 0.1206354945898056,
+      "loss": 0.9186694025993347,
+      "relation": 0.6032209992408752,
+      "step": 57
+    },
+    {
+      "cardinality": 1.3607361316680908,
+      "contrastive": 0.12112975120544434,
+      "loss": 0.9164409041404724,
+      "relation": 0.6018982529640198,
+      "step": 58
+    },
+    {
+      "cardinality": 1.355286955833435,
+      "contrastive": 0.12169168144464493,
+      "loss": 0.9142150282859802,
+      "relation": 0.6005655527114868,
+      "step": 59
+    },
+    {
+      "cardinality": 1.3497965335845947,
+      "contrastive": 0.12231451272964478,
+      "loss": 0.911990761756897,
+      "relation": 0.599221408367157,
+      "step": 60
+    },
+    {
+      "cardinality": 1.3442732095718384,
+      "contrastive": 0.12299725413322449,
+      "loss": 0.909768283367157,
+      "relation": 0.59786456823349,
+      "step": 61
+    },
+    {
+      "cardinality": 1.3387353420257568,
+      "contrastive": 0.12372377514839172,
+      "loss": 0.9075456261634827,
+      "relation": 0.5964952707290649,
+      "step": 62
+    },
+    {
+      "cardinality": 1.333176612854004,
+      "contrastive": 0.1245022863149643,
+      "loss": 0.9053226113319397,
+      "relation": 0.5951114892959595,
+      "step": 63
+    },
+    {
+      "cardinality": 1.327614426612854,
+      "contrastive": 0.12531524896621704,
+      "loss": 0.9030983448028564,
+      "relation": 0.5937151312828064,
+      "step": 64
+    },
+    {
+      "cardinality": 1.3220521211624146,
+      "contrastive": 0.12615470588207245,
+      "loss": 0.9008710384368896,
+      "relation": 0.5923064351081848,
+      "step": 65
+    },
+    {
+      "cardinality": 1.3164854049682617,
+      "contrastive": 0.12701892852783203,
+      "loss": 0.8986402153968811,
+      "relation": 0.5908865332603455,
+      "step": 66
+    },
+    {
+      "cardinality": 1.3109099864959717,
+      "contrastive": 0.1279049664735794,
+      "loss": 0.8964053988456726,
+      "relation": 0.5894566774368286,
+      "step": 67
+    },
+    {
+      "cardinality": 1.3053154945373535,
+      "contrastive": 0.1288178563117981,
+      "loss": 0.8941668272018433,
+      "relation": 0.588017463684082,
+      "step": 68
+    },
+    {
+      "cardinality": 1.2996832132339478,
+      "contrastive": 0.12976796925067902,
+      "loss": 0.8919238448143005,
+      "relation": 0.5865684151649475,
+      "step": 69
+    },
+    {
+      "cardinality": 1.294006109237671,
+      "contrastive": 0.13075688481330872,
+      "loss": 0.8896769285202026,
+      "relation": 0.5851107835769653,
+      "step": 70
+    },
+    {
+      "cardinality": 1.2882556915283203,
+      "contrastive": 0.13180486857891083,
+      "loss": 0.8874258995056152,
+      "relation": 0.5836430191993713,
+      "step": 71
+    },
+    {
+      "cardinality": 1.2824392318725586,
+      "contrastive": 0.1329048126935959,
+      "loss": 0.8851715326309204,
+      "relation": 0.5821670293807983,
+      "step": 72
+    },
+    {
+      "cardinality": 1.276543378829956,
+      "contrastive": 0.13406555354595184,
+      "loss": 0.8829134702682495,
+      "relation": 0.5806818604469299,
+      "step": 73
+    },
+    {
+      "cardinality": 1.27055823802948,
+      "contrastive": 0.13529551029205322,
+      "loss": 0.880651593208313,
+      "relation": 0.5791864991188049,
+      "step": 74
+    },
+    {
+      "cardinality": 1.2644777297973633,
+      "contrastive": 0.13659952580928802,
+      "loss": 0.8783853054046631,
+      "relation": 0.5776798725128174,
+      "step": 75
+    },
+    {
+      "cardinality": 1.258296012878418,
+      "contrastive": 0.1379837542772293,
+      "loss": 0.8761144876480103,
+      "relation": 0.5761609673500061,
+      "step": 76
+    },
+    {
+      "cardinality": 1.2520147562026978,
+      "contrastive": 0.13944819569587708,
+      "loss": 0.8738389611244202,
+      "relation": 0.5746291875839233,
+      "step": 77
+    },
+    {
+      "cardinality": 1.2456306219100952,
+      "contrastive": 0.14099638164043427,
+      "loss": 0.8715576529502869,
+      "relation": 0.5730828046798706,
+      "step": 78
+    },
+    {
+      "cardinality": 1.239143967628479,
+      "contrastive": 0.14263176918029785,
+      "loss": 0.8692708611488342,
+      "relation": 0.571520984172821,
+      "step": 79
+    },
+    {
+      "cardinality": 1.2325557470321655,
+      "contrastive": 0.14435474574565887,
+      "loss": 0.8669779896736145,
+      "relation": 0.5699426531791687,
+      "step": 80
+    },
+    {
+      "cardinality": 1.2258704900741577,
+      "contrastive": 0.14616353809833527,
+      "loss": 0.8646790385246277,
+      "relation": 0.568347692489624,
+      "step": 81
+    },
+    {
+      "cardinality": 1.2190978527069092,
+      "contrastive": 0.14805009961128235,
+      "loss": 0.8623737096786499,
+      "relation": 0.5667365789413452,
+      "step": 82
+    },
+    {
+      "cardinality": 1.2122364044189453,
+      "contrastive": 0.15001633763313293,
+      "loss": 0.8600616455078125,
+      "relation": 0.5651086568832397,
+      "step": 83
+    },
+    {
+      "cardinality": 1.2052936553955078,
+      "contrastive": 0.15205614268779755,
+      "loss": 0.8577426671981812,
+      "relation": 0.5634642243385315,
+      "step": 84
+    },
+    {
+      "cardinality": 1.1982707977294922,
+      "contrastive": 0.15416935086250305,
+      "loss": 0.8554168343544006,
+      "relation": 0.56180340051651,
+      "step": 85
+    },
+    {
+      "cardinality": 1.1911766529083252,
+      "contrastive": 0.15634649991989136,
+      "loss": 0.8530839681625366,
+      "relation": 0.560127317905426,
+      "step": 86
+    },
+    {
+      "cardinality": 1.184015154838562,
+      "contrastive": 0.15858474373817444,
+      "loss": 0.8507441878318787,
+      "relation": 0.5584364533424377,
+      "step": 87
+    },
+    {
+      "cardinality": 1.1767915487289429,
+      "contrastive": 0.16087916493415833,
+      "loss": 0.8483975529670715,
+      "relation": 0.5567315220832825,
+      "step": 88
+    },
+    {
+      "cardinality": 1.169511318206787,
+      "contrastive": 0.1632249802350998,
+      "loss": 0.8460442423820496,
+      "relation": 0.5550132393836975,
+      "step": 89
+    },
+    {
+      "cardinality": 1.1621816158294678,
+      "contrastive": 0.1656160205602646,
+      "loss": 0.8436846733093262,
+      "relation": 0.5532826781272888,
+      "step": 90
+    },
+    {
+      "cardinality": 1.1548100709915161,
+      "contrastive": 0.16804489493370056,
+      "loss": 0.8413189649581909,
+      "relation": 0.5515412092208862,
+      "step": 91
+    },
+    {
+      "cardinality": 1.1474050283432007,
+      "contrastive": 0.170503631234169,
+      "loss": 0.8389475345611572,
+      "relation": 0.5497902035713196,
+      "step": 92
+    },
+    {
+      "cardinality": 1.1399750709533691,
+      "contrastive": 0.17298413813114166,
+      "loss": 0.8365707397460938,
+      "relation": 0.5480312705039978,
+      "step": 93
+    },
+    {
+      "cardinality": 1.132528305053711,
+      "contrastive": 0.17547829449176788,
+      "loss": 0.8341888785362244,
+      "relation": 0.5462657809257507,
+      "step": 94
+    },
+    {
+      "cardinality": 1.1250725984573364,
+      "contrastive": 0.1779782772064209,
+      "loss": 0.8318024277687073,
+      "relation": 0.5444955229759216,
+      "step": 95
+    },
+    {
+      "cardinality": 1.1176154613494873,
+      "contrastive": 0.1804766058921814,
+      "loss": 0.8294117450714111,
+      "relation": 0.5427218675613403,
+      "step": 96
+    },
+    {
+      "cardinality": 1.110163927078247,
+      "contrastive": 0.18296603858470917,
+      "loss": 0.8270172476768494,
+      "relation": 0.540946364402771,
+      "step": 97
+    },
+    {
+      "cardinality": 1.1027251482009888,
+      "contrastive": 0.18543988466262817,
+      "loss": 0.824619472026825,
+      "relation": 0.5391704440116882,
+      "step": 98
+    },
+    {
+      "cardinality": 1.095305323600769,
+      "contrastive": 0.18789178133010864,
+      "loss": 0.8222184181213379,
+      "relation": 0.5373952388763428,
+      "step": 99
+    },
+    {
+      "cardinality": 1.087910771369934,
+      "contrastive": 0.190315842628479,
+      "loss": 0.819814920425415,
+      "relation": 0.535622239112854,
+      "step": 100
+    },
+    {
+      "cardinality": 1.0805469751358032,
+      "contrastive": 0.1927069127559662,
+      "loss": 0.8174091577529907,
+      "relation": 0.5338523387908936,
+      "step": 101
+    },
+    {
+      "cardinality": 1.0732183456420898,
+      "contrastive": 0.19506052136421204,
+      "loss": 0.815001368522644,
+      "relation": 0.5320865511894226,
+      "step": 102
+    },
+    {
+      "cardinality": 1.0659291744232178,
+      "contrastive": 0.1973729133605957,
+      "loss": 0.8125921487808228,
+      "relation": 0.5303257703781128,
+      "step": 103
+    },
+    {
+      "cardinality": 1.0586822032928467,
+      "contrastive": 0.19964122772216797,
+      "loss": 0.8101816177368164,
+      "relation": 0.5285707712173462,
+      "step": 104
+    },
+    {
+      "cardinality": 1.0514805316925049,
+      "contrastive": 0.20186328887939453,
+      "loss": 0.8077704310417175,
+      "relation": 0.5268222093582153,
+      "step": 105
+    },
+    {
+      "cardinality": 1.044325590133667,
+      "contrastive": 0.204037606716156,
+      "loss": 0.8053588271141052,
+      "relation": 0.5250805616378784,
+      "step": 106
+    },
+    {
+      "cardinality": 1.0372190475463867,
+      "contrastive": 0.206163227558136,
+      "loss": 0.8029471635818481,
+      "relation": 0.5233461856842041,
+      "step": 107
+    },
+    {
+      "cardinality": 1.0301620960235596,
+      "contrastive": 0.20823976397514343,
+      "loss": 0.8005355000495911,
+      "relation": 0.5216192007064819,
+      "step": 108
+    },
+    {
+      "cardinality": 1.0231558084487915,
+      "contrastive": 0.21026718616485596,
+      "loss": 0.7981248497962952,
+      "relation": 0.5199002027511597,
+      "step": 109
+    },
+    {
+      "cardinality": 1.0162007808685303,
+      "contrastive": 0.21224580705165863,
+      "loss": 0.7957150936126709,
+      "relation": 0.5181888937950134,
+      "step": 110
+    },
+    {
+      "cardinality": 1.0092978477478027,
+      "contrastive": 0.21417631208896637,
+      "loss": 0.7933067083358765,
+      "relation": 0.5164853930473328,
+      "step": 111
+    },
+    {
+      "cardinality": 1.002447247505188,
+      "contrastive": 0.21605949103832245,
+      "loss": 0.7909001111984253,
+      "relation": 0.5147898197174072,
+      "step": 112
+    },
+    {
+      "cardinality": 0.9956492185592651,
+      "contrastive": 0.21789655089378357,
+      "loss": 0.7884955406188965,
+      "relation": 0.5131018757820129,
+      "step": 113
+    },
+    {
+      "cardinality": 0.988903820514679,
+      "contrastive": 0.21968871355056763,
+      "loss": 0.7860933542251587,
+      "relation": 0.5114215016365051,
+      "step": 114
+    },
+    {
+      "cardinality": 0.9822111129760742,
+      "contrastive": 0.2214372754096985,
+      "loss": 0.783693790435791,
+      "relation": 0.5097485184669495,
+      "step": 115
+    },
+    {
+      "cardinality": 0.9755707383155823,
+      "contrastive": 0.22314366698265076,
+      "loss": 0.7812974452972412,
+      "relation": 0.5080830454826355,
+      "step": 116
+    },
+    {
+      "cardinality": 0.9689823985099792,
+      "contrastive": 0.22480912506580353,
+      "loss": 0.778904378414154,
+      "relation": 0.5064246654510498,
+      "step": 117
+    },
+    {
+      "cardinality": 0.9624457955360413,
+      "contrastive": 0.22643491625785828,
+      "loss": 0.7765150666236877,
+      "relation": 0.5047736763954163,
+      "step": 118
+    },
+    {
+      "cardinality": 0.9559605717658997,
+      "contrastive": 0.22802208364009857,
+      "loss": 0.7741296291351318,
+      "relation": 0.503129780292511,
+      "step": 119
+    },
+    {
+      "cardinality": 0.9495267868041992,
+      "contrastive": 0.22957159578800201,
+      "loss": 0.7717484831809998,
+      "relation": 0.5014930963516235,
+      "step": 120
+    },
+    {
+      "cardinality": 0.9431442022323608,
+      "contrastive": 0.23108427226543427,
+      "loss": 0.7693719863891602,
+      "relation": 0.4998636543750763,
+      "step": 121
+    },
+    {
+      "cardinality": 0.936812698841095,
+      "contrastive": 0.23256075382232666,
+      "loss": 0.7670002579689026,
+      "relation": 0.4982414245605469,
+      "step": 122
+    },
+    {
+      "cardinality": 0.9305322766304016,
+      "contrastive": 0.23400159180164337,
+      "loss": 0.7646336555480957,
+      "relation": 0.4966266453266144,
+      "step": 123
+    },
+    {
+      "cardinality": 0.9243030548095703,
+      "contrastive": 0.2354072630405426,
+      "loss": 0.7622724771499634,
+      "relation": 0.4950192868709564,
+      "step": 124
+    },
+    {
+      "cardinality": 0.9181248545646667,
+      "contrastive": 0.2367781400680542,
+      "loss": 0.7599167823791504,
+      "relation": 0.49341949820518494,
+      "step": 125
+    },
+    {
+      "cardinality": 0.91199791431427,
+      "contrastive": 0.23811458051204681,
+      "loss": 0.7575671672821045,
+      "relation": 0.49182745814323425,
+      "step": 126
+    },
+    {
+      "cardinality": 0.905921995639801,
+      "contrastive": 0.23941686749458313,
+      "loss": 0.7552236318588257,
+      "relation": 0.4902433156967163,
+      "step": 127
+    },
+    {
+      "cardinality": 0.8998968005180359,
+      "contrastive": 0.2406853288412094,
+      "loss": 0.7528863549232483,
+      "relation": 0.48866716027259827,
+      "step": 128
+    },
+    {
+      "cardinality": 0.8939223289489746,
+      "contrastive": 0.24192021787166595,
+      "loss": 0.7505557537078857,
+      "relation": 0.48709920048713684,
+      "step": 129
+    },
+    {
+      "cardinality": 0.887998104095459,
+      "contrastive": 0.2431219518184662,
+      "loss": 0.7482320070266724,
+      "relation": 0.4855397343635559,
+      "step": 130
+    },
+    {
+      "cardinality": 0.8821237087249756,
+      "contrastive": 0.24429087340831757,
+      "loss": 0.7459151744842529,
+      "relation": 0.4839886426925659,
+      "step": 131
+    },
+    {
+      "cardinality": 0.8762990832328796,
+      "contrastive": 0.24542751908302307,
+      "loss": 0.7436056137084961,
+      "relation": 0.48244616389274597,
+      "step": 132
+    },
+    {
+      "cardinality": 0.8705235123634338,
+      "contrastive": 0.24653230607509613,
+      "loss": 0.7413034439086914,
+      "relation": 0.4809124171733856,
+      "step": 133
+    },
+    {
+      "cardinality": 0.8647967576980591,
+      "contrastive": 0.24760589003562927,
+      "loss": 0.7390087842941284,
+      "relation": 0.47938740253448486,
+      "step": 134
+    },
+    {
+      "cardinality": 0.8591187000274658,
+      "contrastive": 0.24864882230758667,
+      "loss": 0.7367219924926758,
+      "relation": 0.4778711497783661,
+      "step": 135
+    },
+    {
+      "cardinality": 0.8534890413284302,
+      "contrastive": 0.24966172873973846,
+      "loss": 0.7344430685043335,
+      "relation": 0.4763636589050293,
+      "step": 136
+    },
+    {
+      "cardinality": 0.8479080200195312,
+      "contrastive": 0.2506451904773712,
+      "loss": 0.7321723103523254,
+      "relation": 0.4748649001121521,
+      "step": 137
+    },
+    {
+      "cardinality": 0.8423752784729004,
+      "contrastive": 0.25159981846809387,
+      "loss": 0.7299096584320068,
+      "relation": 0.47337472438812256,
+      "step": 138
+    },
+    {
+      "cardinality": 0.8368910551071167,
+      "contrastive": 0.25252607464790344,
+      "loss": 0.7276556491851807,
+      "relation": 0.4718932509422302,
+      "step": 139
+    },
+    {
+      "cardinality": 0.8314555287361145,
+      "contrastive": 0.2534245252609253,
+      "loss": 0.725409984588623,
+      "relation": 0.47042030096054077,
+      "step": 140
+    },
+    {
+      "cardinality": 0.8260685801506042,
+      "contrastive": 0.25429561734199524,
+      "loss": 0.7231730222702026,
+      "relation": 0.4689558446407318,
+      "step": 141
+    },
+    {
+      "cardinality": 0.8207300901412964,
+      "contrastive": 0.2551397979259491,
+      "loss": 0.7209448218345642,
+      "relation": 0.46749988198280334,
+      "step": 142
+    },
+    {
+      "cardinality": 0.8154401183128357,
+      "contrastive": 0.2559575140476227,
+      "loss": 0.7187255024909973,
+      "relation": 0.466052383184433,
+      "step": 143
+    },
+    {
+      "cardinality": 0.8101984262466431,
+      "contrastive": 0.2567490339279175,
+      "loss": 0.716515302658081,
+      "relation": 0.4646134376525879,
+      "step": 144
+    },
+    {
+      "cardinality": 0.8050047755241394,
+      "contrastive": 0.2575148940086365,
+      "loss": 0.7143141627311707,
+      "relation": 0.4631829857826233,
+      "step": 145
+    },
+    {
+      "cardinality": 0.7998591065406799,
+      "contrastive": 0.25825536251068115,
+      "loss": 0.7121222615242004,
+      "relation": 0.4617610573768616,
+      "step": 146
+    },
+    {
+      "cardinality": 0.7947608828544617,
+      "contrastive": 0.2589707374572754,
+      "loss": 0.70993971824646,
+      "relation": 0.4603477716445923,
+      "step": 147
+    },
+    {
+      "cardinality": 0.7897099256515503,
+      "contrastive": 0.25966134667396545,
+      "loss": 0.7077664732933044,
+      "relation": 0.4589430093765259,
+      "step": 148
+    },
+    {
+      "cardinality": 0.7847062945365906,
+      "contrastive": 0.26032742857933044,
+      "loss": 0.7056027054786682,
+      "relation": 0.4575468897819519,
+      "step": 149
+    },
+    {
+      "cardinality": 0.7797495126724243,
+      "contrastive": 0.2609693109989166,
+      "loss": 0.7034485340118408,
+      "relation": 0.456159383058548,
+      "step": 150
+    },
+    {
+      "cardinality": 0.7748396992683411,
+      "contrastive": 0.2615871727466583,
+      "loss": 0.7013039588928223,
+      "relation": 0.45478054881095886,
+      "step": 151
+    },
+    {
+      "cardinality": 0.7699765563011169,
+      "contrastive": 0.2621813416481018,
+      "loss": 0.6991691589355469,
+      "relation": 0.4534103274345398,
+      "step": 152
+    },
+    {
+      "cardinality": 0.7651598453521729,
+      "contrastive": 0.26275208592414856,
+      "loss": 0.6970439553260803,
+      "relation": 0.45204874873161316,
+      "step": 153
+    },
+    {
+      "cardinality": 0.7603893876075745,
+      "contrastive": 0.26329970359802246,
+      "loss": 0.6949285864830017,
+      "relation": 0.45069581270217896,
+      "step": 154
+    },
+    {
+      "cardinality": 0.7556648254394531,
+      "contrastive": 0.2638244926929474,
+      "loss": 0.6928231716156006,
+      "relation": 0.44935160875320435,
+      "step": 155
+    },
+    {
+      "cardinality": 0.7509861588478088,
+      "contrastive": 0.2643268406391144,
+      "loss": 0.6907274723052979,
+      "relation": 0.44801583886146545,
+      "step": 156
+    },
+    {
+      "cardinality": 0.7463527321815491,
+      "contrastive": 0.2648071348667145,
+      "loss": 0.6886417269706726,
+      "relation": 0.4466886818408966,
+      "step": 157
+    },
+    {
+      "cardinality": 0.741764485836029,
+      "contrastive": 0.2652657926082611,
+      "loss": 0.6865659952163696,
+      "relation": 0.445370078086853,
+      "step": 158
+    },
+    {
+      "cardinality": 0.7372211813926697,
+      "contrastive": 0.2657030522823334,
+      "loss": 0.6845001578330994,
+      "relation": 0.4440598487854004,
+      "step": 159
+    },
+    {
+      "cardinality": 0.7327223420143127,
+      "contrastive": 0.26611942052841187,
+      "loss": 0.6824443936347961,
+      "relation": 0.44275814294815063,
+      "step": 160
+    },
+    {
+      "cardinality": 0.7282678484916687,
+      "contrastive": 0.2665151357650757,
+      "loss": 0.6803986430168152,
+      "relation": 0.44146475195884705,
+      "step": 161
+    },
+    {
+      "cardinality": 0.7238573431968689,
+      "contrastive": 0.2668907046318054,
+      "loss": 0.6783629059791565,
+      "relation": 0.4401796758174896,
+      "step": 162
+    },
+    {
+      "cardinality": 0.7194905281066895,
+      "contrastive": 0.26724642515182495,
+      "loss": 0.6763372421264648,
+      "relation": 0.4389028549194336,
+      "step": 163
+    },
+    {
+      "cardinality": 0.715167224407196,
+      "contrastive": 0.2675826847553253,
+      "loss": 0.6743215322494507,
+      "relation": 0.4376341998577118,
+      "step": 164
+    },
+    {
+      "cardinality": 0.7108870148658752,
+      "contrastive": 0.26789987087249756,
+      "loss": 0.6723160743713379,
+      "relation": 0.4363737106323242,
+      "step": 165
+    },
+    {
+      "cardinality": 0.7066494226455688,
+      "contrastive": 0.2681984305381775,
+      "loss": 0.6703205704689026,
+      "relation": 0.43512123823165894,
+      "step": 166
+    },
+    {
+      "cardinality": 0.7024540901184082,
+      "contrastive": 0.2684786021709442,
+      "loss": 0.6683351397514343,
+      "relation": 0.4338768422603607,
+      "step": 167
+    },
+    {
+      "cardinality": 0.6983004212379456,
+      "contrastive": 0.2687409222126007,
+      "loss": 0.6663597822189331,
+      "relation": 0.4326403737068176,
+      "step": 168
+    },
+    {
+      "cardinality": 0.6941879987716675,
+      "contrastive": 0.2689856290817261,
+      "loss": 0.6643944978713989,
+      "relation": 0.43141189217567444,
+      "step": 169
+    },
+    {
+      "cardinality": 0.6901164054870605,
+      "contrastive": 0.2692132592201233,
+      "loss": 0.6624392867088318,
+      "relation": 0.4301913380622864,
+      "step": 170
+    },
+    {
+      "cardinality": 0.6860849261283875,
+      "contrastive": 0.26942405104637146,
+      "loss": 0.6604940295219421,
+      "relation": 0.4289785921573639,
+      "step": 171
+    },
+    {
+      "cardinality": 0.6820933222770691,
+      "contrastive": 0.2696184515953064,
+      "loss": 0.65855872631073,
+      "relation": 0.427773654460907,
+      "step": 172
+    },
+    {
+      "cardinality": 0.6781409978866577,
+      "contrastive": 0.26979678869247437,
+      "loss": 0.6566336154937744,
+      "relation": 0.42657649517059326,
+      "step": 173
+    },
+    {
+      "cardinality": 0.6742276549339294,
+      "contrastive": 0.2699594497680664,
+      "loss": 0.6547183394432068,
+      "relation": 0.4253869652748108,
+      "step": 174
+    },
+    {
+      "cardinality": 0.6703526377677917,
+      "contrastive": 0.27010679244995117,
+      "loss": 0.6528130173683167,
+      "relation": 0.42420512437820435,
+      "step": 175
+    },
+    {
+      "cardinality": 0.6665158867835999,
+      "contrastive": 0.2702391445636749,
+      "loss": 0.6509177088737488,
+      "relation": 0.423030823469162,
+      "step": 176
+    },
+    {
+      "cardinality": 0.6627166271209717,
+      "contrastive": 0.2703569829463959,
+      "loss": 0.6490321755409241,
+      "relation": 0.4218639135360718,
+      "step": 177
+    },
+    {
+      "cardinality": 0.6589547991752625,
+      "contrastive": 0.2704605758190155,
+      "loss": 0.6471566557884216,
+      "relation": 0.42070454359054565,
+      "step": 178
+    },
+    {
+      "cardinality": 0.6552297472953796,
+      "contrastive": 0.2705502510070801,
+      "loss": 0.6452909111976624,
+      "relation": 0.41955238580703735,
+      "step": 179
+    },
+    {
+      "cardinality": 0.6515410542488098,
+      "contrastive": 0.2706264555454254,
+      "loss": 0.6434348821640015,
+      "relation": 0.4184074401855469,
+      "step": 180
+    },
+    {
+      "cardinality": 0.6478884220123291,
+      "contrastive": 0.27068954706192017,
+      "loss": 0.6415888667106628,
+      "relation": 0.41726982593536377,
+      "step": 181
+    },
+    {
+      "cardinality": 0.6442713737487793,
+      "contrastive": 0.2707398533821106,
+      "loss": 0.6397523880004883,
+      "relation": 0.4161391854286194,
+      "step": 182
+    },
+    {
+      "cardinality": 0.6406894326210022,
+      "contrastive": 0.2707776427268982,
+      "loss": 0.6379256844520569,
+      "relation": 0.41501566767692566,
+      "step": 183
+    },
+    {
+      "cardinality": 0.6371421217918396,
+      "contrastive": 0.2708033323287964,
+      "loss": 0.6361086368560791,
+      "relation": 0.4138990640640259,
+      "step": 184
+    },
+    {
+      "cardinality": 0.6336290240287781,
+      "contrastive": 0.27081725001335144,
+      "loss": 0.6343012452125549,
+      "relation": 0.41278937458992004,
+      "step": 185
+    },
+    {
+      "cardinality": 0.6301497220993042,
+      "contrastive": 0.27081966400146484,
+      "loss": 0.6325033903121948,
+      "relation": 0.4116865396499634,
+      "step": 186
+    },
+    {
+      "cardinality": 0.6267037391662598,
+      "contrastive": 0.27081099152565,
+      "loss": 0.6307150721549988,
+      "relation": 0.4105904698371887,
+      "step": 187
+    },
+    {
+      "cardinality": 0.6232906579971313,
+      "contrastive": 0.2707914113998413,
+      "loss": 0.628936231136322,
+      "relation": 0.4095011055469513,
+      "step": 188
+    },
+    {
+      "cardinality": 0.619909942150116,
+      "contrastive": 0.2707614004611969,
+      "loss": 0.6271668672561646,
+      "relation": 0.40841835737228394,
+      "step": 189
+    },
+    {
+      "cardinality": 0.616561233997345,
+      "contrastive": 0.2707211971282959,
+      "loss": 0.6254069209098816,
+      "relation": 0.40734222531318665,
+      "step": 190
+    },
+    {
+      "cardinality": 0.6132441163063049,
+      "contrastive": 0.27067115902900696,
+      "loss": 0.6236562728881836,
+      "relation": 0.4062725603580475,
+      "step": 191
+    },
+    {
+      "cardinality": 0.6099580526351929,
+      "contrastive": 0.2706115245819092,
+      "loss": 0.6219149827957153,
+      "relation": 0.40520933270454407,
+      "step": 192
+    },
+    {
+      "cardinality": 0.6067026853561401,
+      "contrastive": 0.2705426514148712,
+      "loss": 0.6201828718185425,
+      "relation": 0.40415242314338684,
+      "step": 193
+    },
+    {
+      "cardinality": 0.6034775376319885,
+      "contrastive": 0.27046480774879456,
+      "loss": 0.6184600591659546,
+      "relation": 0.4031018614768982,
+      "step": 194
+    },
+    {
+      "cardinality": 0.6002822518348694,
+      "contrastive": 0.2703784108161926,
+      "loss": 0.6167463660240173,
+      "relation": 0.4020574986934662,
+      "step": 195
+    },
+    {
+      "cardinality": 0.5971164107322693,
+      "contrastive": 0.2702835202217102,
+      "loss": 0.6150417923927307,
+      "relation": 0.40101927518844604,
+      "step": 196
+    },
+    {
+      "cardinality": 0.5939795970916748,
+      "contrastive": 0.2701806128025055,
+      "loss": 0.6133463382720947,
+      "relation": 0.3999871611595154,
+      "step": 197
+    },
+    {
+      "cardinality": 0.5908713340759277,
+      "contrastive": 0.27006977796554565,
+      "loss": 0.6116597652435303,
+      "relation": 0.39896103739738464,
+      "step": 198
+    },
+    {
+      "cardinality": 0.5877915024757385,
+      "contrastive": 0.26995134353637695,
+      "loss": 0.6099821925163269,
+      "relation": 0.39794090390205383,
+      "step": 199
+    },
+    {
+      "cardinality": 0.5847395658493042,
+      "contrastive": 0.26982545852661133,
+      "loss": 0.6083134412765503,
+      "relation": 0.396926611661911,
+      "step": 200
+    },
+    {
+      "cardinality": 0.5817152261734009,
+      "contrastive": 0.2696925103664398,
+      "loss": 0.6066535711288452,
+      "relation": 0.39591819047927856,
+      "step": 201
+    },
+    {
+      "cardinality": 0.5787180662155151,
+      "contrastive": 0.269552618265152,
+      "loss": 0.6050025820732117,
+      "relation": 0.39491555094718933,
+      "step": 202
+    },
+    {
+      "cardinality": 0.5757477283477783,
+      "contrastive": 0.26940593123435974,
+      "loss": 0.6033601760864258,
+      "relation": 0.39391857385635376,
+      "step": 203
+    },
+    {
+      "cardinality": 0.5728040337562561,
+      "contrastive": 0.26925280690193176,
+      "loss": 0.6017265915870667,
+      "relation": 0.3929273188114166,
+      "step": 204
+    },
+    {
+      "cardinality": 0.5698864459991455,
+      "contrastive": 0.2690933346748352,
+      "loss": 0.6001016497612,
+      "relation": 0.3919416666030884,
+      "step": 205
+    },
+    {
+      "cardinality": 0.5669946670532227,
+      "contrastive": 0.26892775297164917,
+      "loss": 0.5984851121902466,
+      "relation": 0.3909614682197571,
+      "step": 206
+    },
+    {
+      "cardinality": 0.564128577709198,
+      "contrastive": 0.26875627040863037,
+      "loss": 0.5968772172927856,
+      "relation": 0.3899867832660675,
+      "step": 207
+    },
+    {
+      "cardinality": 0.561287522315979,
+      "contrastive": 0.26857900619506836,
+      "loss": 0.5952776670455933,
+      "relation": 0.3890175223350525,
+      "step": 208
+    },
+    {
+      "cardinality": 0.5584715604782104,
+      "contrastive": 0.26839613914489746,
+      "loss": 0.593686580657959,
+      "relation": 0.38805362582206726,
+      "step": 209
+    },
+    {
+      "cardinality": 0.5556801557540894,
+      "contrastive": 0.268207848072052,
+      "loss": 0.5921038389205933,
+      "relation": 0.3870950937271118,
+      "step": 210
+    },
+    {
+      "cardinality": 0.5529130101203918,
+      "contrastive": 0.26801425218582153,
+      "loss": 0.5905293226242065,
+      "relation": 0.38614174723625183,
+      "step": 211
+    },
+    {
+      "cardinality": 0.5501700639724731,
+      "contrastive": 0.26781558990478516,
+      "loss": 0.5889631509780884,
+      "relation": 0.38519370555877686,
+      "step": 212
+    },
+    {
+      "cardinality": 0.5474507808685303,
+      "contrastive": 0.2676119804382324,
+      "loss": 0.5874050259590149,
+      "relation": 0.3842507004737854,
+      "step": 213
+    },
+    {
+      "cardinality": 0.5447549819946289,
+      "contrastive": 0.2674035429954529,
+      "loss": 0.5858551859855652,
+      "relation": 0.38331297039985657,
+      "step": 214
+    },
+    {
+      "cardinality": 0.5420823097229004,
+      "contrastive": 0.26719042658805847,
+      "loss": 0.5843132734298706,
+      "relation": 0.3823801875114441,
+      "step": 215
+    },
+    {
+      "cardinality": 0.5394325852394104,
+      "contrastive": 0.2669728398323059,
+      "loss": 0.5827794075012207,
+      "relation": 0.38145241141319275,
+      "step": 216
+    },
+    {
+      "cardinality": 0.5368056297302246,
+      "contrastive": 0.2667507231235504,
+      "loss": 0.5812535285949707,
+      "relation": 0.3805296719074249,
+      "step": 217
+    },
+    {
+      "cardinality": 0.5342010855674744,
+      "contrastive": 0.26652440428733826,
+      "loss": 0.5797354578971863,
+      "relation": 0.37961170077323914,
+      "step": 218
+    },
+    {
+      "cardinality": 0.5316185355186462,
+      "contrastive": 0.2662939429283142,
+      "loss": 0.5782253742218018,
+      "relation": 0.37869876623153687,
+      "step": 219
+    },
+    {
+      "cardinality": 0.529058039188385,
+      "contrastive": 0.26605939865112305,
+      "loss": 0.5767229199409485,
+      "relation": 0.3777904808521271,
+      "step": 220
+    },
+    {
+      "cardinality": 0.5265191793441772,
+      "contrastive": 0.2658209204673767,
+      "loss": 0.575228214263916,
+      "relation": 0.3768870532512665,
+      "step": 221
+    },
+    {
+      "cardinality": 0.5240017771720886,
+      "contrastive": 0.26557865738868713,
+      "loss": 0.5737412571907043,
+      "relation": 0.3759883642196655,
+      "step": 222
+    },
+    {
+      "cardinality": 0.5215054750442505,
+      "contrastive": 0.2653326392173767,
+      "loss": 0.5722618103027344,
+      "relation": 0.37509429454803467,
+      "step": 223
+    },
+    {
+      "cardinality": 0.5190302133560181,
+      "contrastive": 0.2650830149650574,
+      "loss": 0.5707899332046509,
+      "relation": 0.3742048442363739,
+      "step": 224
+    },
+    {
+      "cardinality": 0.5165755748748779,
+      "contrastive": 0.26482996344566345,
+      "loss": 0.5693256258964539,
+      "relation": 0.3733200430870056,
+      "step": 225
+    },
+    {
+      "cardinality": 0.5141413807868958,
+      "contrastive": 0.26457345485687256,
+      "loss": 0.5678688287734985,
+      "relation": 0.37243983149528503,
+      "step": 226
+    },
+    {
+      "cardinality": 0.5117276310920715,
+      "contrastive": 0.264313668012619,
+      "loss": 0.5664193630218506,
+      "relation": 0.37156403064727783,
+      "step": 227
+    },
+    {
+      "cardinality": 0.5093337297439575,
+      "contrastive": 0.2640506625175476,
+      "loss": 0.5649771690368652,
+      "relation": 0.3706927001476288,
+      "step": 228
+    },
+    {
+      "cardinality": 0.5069597363471985,
+      "contrastive": 0.2637845575809479,
+      "loss": 0.563542366027832,
+      "relation": 0.3698258101940155,
+      "step": 229
+    },
+    {
+      "cardinality": 0.5046054124832153,
+      "contrastive": 0.2635154128074646,
+      "loss": 0.5621147155761719,
+      "relation": 0.36896321177482605,
+      "step": 230
+    },
+    {
+      "cardinality": 0.5022704005241394,
+      "contrastive": 0.26324328780174255,
+      "loss": 0.5606942176818848,
+      "relation": 0.3681049942970276,
+      "step": 231
+    },
+    {
+      "cardinality": 0.4999546408653259,
+      "contrastive": 0.2629683017730713,
+      "loss": 0.5592809319496155,
+      "relation": 0.36725109815597534,
+      "step": 232
+    },
+    {
+      "cardinality": 0.49765780568122864,
+      "contrastive": 0.26269057393074036,
+      "loss": 0.5578747391700745,
+      "relation": 0.36640146374702454,
+      "step": 233
+    },
+    {
+      "cardinality": 0.4953797459602356,
+      "contrastive": 0.26241013407707214,
+      "loss": 0.5564754605293274,
+      "relation": 0.3655559718608856,
+      "step": 234
+    },
+    {
+      "cardinality": 0.49312031269073486,
+      "contrastive": 0.2621271014213562,
+      "loss": 0.5550832748413086,
+      "relation": 0.36471474170684814,
+      "step": 235
+    },
+    {
+      "cardinality": 0.49087923765182495,
+      "contrastive": 0.2618415057659149,
+      "loss": 0.5536978840827942,
+      "relation": 0.3638775050640106,
+      "step": 236
+    },
+    {
+      "cardinality": 0.4886563718318939,
+      "contrastive": 0.26155349612236023,
+      "loss": 0.5523194670677185,
+      "relation": 0.3630444407463074,
+      "step": 237
+    },
+    {
+      "cardinality": 0.4864514172077179,
+      "contrastive": 0.26126304268836975,
+      "loss": 0.5509477257728577,
+      "relation": 0.36221539974212646,
+      "step": 238
+    },
+    {
+      "cardinality": 0.4842642843723297,
+      "contrastive": 0.2609703242778778,
+      "loss": 0.5495828986167908,
+      "relation": 0.3613904118537903,
+      "step": 239
+    },
+    {
+      "cardinality": 0.4820947051048279,
+      "contrastive": 0.2606753706932068,
+      "loss": 0.548224687576294,
+      "relation": 0.3605693578720093,
+      "step": 240
+    },
+    {
+      "cardinality": 0.4799424707889557,
+      "contrastive": 0.26037827134132385,
+      "loss": 0.5468732118606567,
+      "relation": 0.3597522974014282,
+      "step": 241
+    },
+    {
+      "cardinality": 0.47780752182006836,
+      "contrastive": 0.2600790858268738,
+      "loss": 0.5455282926559448,
+      "relation": 0.35893911123275757,
+      "step": 242
+    },
+    {
+      "cardinality": 0.47568953037261963,
+      "contrastive": 0.25977784395217896,
+      "loss": 0.544189989566803,
+      "relation": 0.3581298291683197,
+      "step": 243
+    },
+    {
+      "cardinality": 0.47358840703964233,
+      "contrastive": 0.2594747245311737,
+      "loss": 0.5428581833839417,
+      "relation": 0.3573243319988251,
+      "step": 244
+    },
+    {
+      "cardinality": 0.4715039134025574,
+      "contrastive": 0.25916969776153564,
+      "loss": 0.5415328145027161,
+      "relation": 0.3565226197242737,
+      "step": 245
+    },
+    {
+      "cardinality": 0.46943584084510803,
+      "contrastive": 0.25886279344558716,
+      "loss": 0.5402138233184814,
+      "relation": 0.35572466254234314,
+      "step": 246
+    },
+    {
+      "cardinality": 0.46738409996032715,
+      "contrastive": 0.2585541903972626,
+      "loss": 0.5389012694358826,
+      "relation": 0.35493046045303345,
+      "step": 247
+    },
+    {
+      "cardinality": 0.4653484523296356,
+      "contrastive": 0.2582438588142395,
+      "loss": 0.5375950336456299,
+      "relation": 0.35413995385169983,
+      "step": 248
+    },
+    {
+      "cardinality": 0.4633288085460663,
+      "contrastive": 0.2579319179058075,
+      "loss": 0.5362949967384338,
+      "relation": 0.3533530533313751,
+      "step": 249
+    },
+    {
+      "cardinality": 0.4613248407840729,
+      "contrastive": 0.25761842727661133,
+      "loss": 0.535001277923584,
+      "relation": 0.3525698482990265,
+      "step": 250
+    },
+    {
+      "cardinality": 0.459336519241333,
+      "contrastive": 0.2573034167289734,
+      "loss": 0.533713698387146,
+      "relation": 0.3517902195453644,
+      "step": 251
+    },
+    {
+      "cardinality": 0.4573635756969452,
+      "contrastive": 0.25698697566986084,
+      "loss": 0.5324322581291199,
+      "relation": 0.351014107465744,
+      "step": 252
+    },
+    {
+      "cardinality": 0.45540595054626465,
+      "contrastive": 0.2566691040992737,
+      "loss": 0.5311568975448608,
+      "relation": 0.3502415418624878,
+      "step": 253
+    },
+    {
+      "cardinality": 0.45346343517303467,
+      "contrastive": 0.25634992122650146,
+      "loss": 0.5298876762390137,
+      "relation": 0.3494724929332733,
+      "step": 254
+    },
+    {
+      "cardinality": 0.45153579115867615,
+      "contrastive": 0.2560293972492218,
+      "loss": 0.5286242961883545,
+      "relation": 0.34870684146881104,
+      "step": 255
+    },
+    {
+      "cardinality": 0.4496229290962219,
+      "contrastive": 0.2557077705860138,
+      "loss": 0.5273669958114624,
+      "relation": 0.3479447066783905,
+      "step": 256
+    },
+    {
+      "cardinality": 0.44772472977638245,
+      "contrastive": 0.2553848326206207,
+      "loss": 0.5261155366897583,
+      "relation": 0.3471859097480774,
+      "step": 257
+    },
+    {
+      "cardinality": 0.44584089517593384,
+      "contrastive": 0.2550608515739441,
+      "loss": 0.524869978427887,
+      "relation": 0.3464305102825165,
+      "step": 258
+    },
+    {
+      "cardinality": 0.4439714252948761,
+      "contrastive": 0.2547357678413391,
+      "loss": 0.5236302614212036,
+      "relation": 0.345678448677063,
+      "step": 259
+    },
+    {
+      "cardinality": 0.44211605191230774,
+      "contrastive": 0.25440964102745056,
+      "loss": 0.5223962664604187,
+      "relation": 0.34492969512939453,
+      "step": 260
+    },
+    {
+      "cardinality": 0.44027474522590637,
+      "contrastive": 0.2540825605392456,
+      "loss": 0.521168053150177,
+      "relation": 0.3441842198371887,
+      "step": 261
+    },
+    {
+      "cardinality": 0.43844732642173767,
+      "contrastive": 0.25375452637672424,
+      "loss": 0.519945502281189,
+      "relation": 0.34344199299812317,
+      "step": 262
+    },
+    {
+      "cardinality": 0.43663349747657776,
+      "contrastive": 0.25342556834220886,
+      "loss": 0.5187286734580994,
+      "relation": 0.3427030146121979,
+      "step": 263
+    },
+    {
+      "cardinality": 0.4348333477973938,
+      "contrastive": 0.253095805644989,
+      "loss": 0.5175173282623291,
+      "relation": 0.3419671654701233,
+      "step": 264
+    },
+    {
+      "cardinality": 0.4330466091632843,
+      "contrastive": 0.2527652084827423,
+      "loss": 0.5163117051124573,
+      "relation": 0.3412345349788666,
+      "step": 265
+    },
+    {
+      "cardinality": 0.43127313256263733,
+      "contrastive": 0.2524338364601135,
+      "loss": 0.5151115655899048,
+      "relation": 0.34050509333610535,
+      "step": 266
+    },
+    {
+      "cardinality": 0.4295128285884857,
+      "contrastive": 0.25210174918174744,
+      "loss": 0.5139168500900269,
+      "relation": 0.33977869153022766,
+      "step": 267
+    },
+    {
+      "cardinality": 0.4277655780315399,
+      "contrastive": 0.25176894664764404,
+      "loss": 0.512727677822113,
+      "relation": 0.3390554189682007,
+      "step": 268
+    },
+    {
+      "cardinality": 0.4260311722755432,
+      "contrastive": 0.2514354884624481,
+      "loss": 0.511543869972229,
+      "relation": 0.33833518624305725,
+      "step": 269
+    },
+    {
+      "cardinality": 0.42430955171585083,
+      "contrastive": 0.25110143423080444,
+      "loss": 0.5103654265403748,
+      "relation": 0.33761802315711975,
+      "step": 270
+    },
+    {
+      "cardinality": 0.42260050773620605,
+      "contrastive": 0.2507667541503906,
+      "loss": 0.5091923475265503,
+      "relation": 0.3369038701057434,
+      "step": 271
+    },
+    {
+      "cardinality": 0.4209039807319641,
+      "contrastive": 0.2504315674304962,
+      "loss": 0.5080245137214661,
+      "relation": 0.33619266748428345,
+      "step": 272
+    },
+    {
+      "cardinality": 0.41921982169151306,
+      "contrastive": 0.25009581446647644,
+      "loss": 0.5068620443344116,
+      "relation": 0.33548450469970703,
+      "step": 273
+    },
+    {
+      "cardinality": 0.41754794120788574,
+      "contrastive": 0.24975958466529846,
+      "loss": 0.5057045817375183,
+      "relation": 0.33477914333343506,
+      "step": 274
+    },
+    {
+      "cardinality": 0.4158881604671478,
+      "contrastive": 0.24942292273044586,
+      "loss": 0.5045524835586548,
+      "relation": 0.33407682180404663,
+      "step": 275
+    },
+    {
+      "cardinality": 0.41424039006233215,
+      "contrastive": 0.24908582866191864,
+      "loss": 0.5034055113792419,
+      "relation": 0.3333773910999298,
+      "step": 276
+    },
+    {
+      "cardinality": 0.41260451078414917,
+      "contrastive": 0.248748317360878,
+      "loss": 0.5022635459899902,
+      "relation": 0.33268076181411743,
+      "step": 277
+    },
+    {
+      "cardinality": 0.41098037362098694,
+      "contrastive": 0.2484104484319687,
+      "loss": 0.501126766204834,
+      "relation": 0.33198705315589905,
+      "step": 278
+    },
+    {
+      "cardinality": 0.4093678593635559,
+      "contrastive": 0.24807223677635193,
+      "loss": 0.4999949336051941,
+      "relation": 0.33129608631134033,
+      "step": 279
+    },
+    {
+      "cardinality": 0.4077668786048889,
+      "contrastive": 0.24773377180099487,
+      "loss": 0.4988681375980377,
+      "relation": 0.33060795068740845,
+      "step": 280
+    },
+    {
+      "cardinality": 0.4061773419380188,
+      "contrastive": 0.24739496409893036,
+      "loss": 0.4977463185787201,
+      "relation": 0.329922616481781,
+      "step": 281
+    },
+    {
+      "cardinality": 0.4045991003513336,
+      "contrastive": 0.24705593287944794,
+      "loss": 0.49662941694259644,
+      "relation": 0.32923999428749084,
+      "step": 282
+    },
+    {
+      "cardinality": 0.40303197503089905,
+      "contrastive": 0.24671670794487,
+      "loss": 0.495517373085022,
+      "relation": 0.32856014370918274,
+      "step": 283
+    },
+    {
+      "cardinality": 0.4014759361743927,
+      "contrastive": 0.24637724459171295,
+      "loss": 0.4944101870059967,
+      "relation": 0.3278829753398895,
+      "step": 284
+    },
+    {
+      "cardinality": 0.3999309241771698,
+      "contrastive": 0.2460375875234604,
+      "loss": 0.49330785870552063,
+      "relation": 0.3272085189819336,
+      "step": 285
+    },
+    {
+      "cardinality": 0.3983967900276184,
+      "contrastive": 0.24569781124591827,
+      "loss": 0.4922102987766266,
+      "relation": 0.3265366852283478,
+      "step": 286
+    },
+    {
+      "cardinality": 0.3968732953071594,
+      "contrastive": 0.24535790085792542,
+      "loss": 0.49111753702163696,
+      "relation": 0.32586759328842163,
+      "step": 287
+    },
+    {
+      "cardinality": 0.3953605890274048,
+      "contrastive": 0.2450179159641266,
+      "loss": 0.49002939462661743,
+      "relation": 0.32520100474357605,
+      "step": 288
+    },
+    {
+      "cardinality": 0.39385828375816345,
+      "contrastive": 0.2446778267621994,
+      "loss": 0.48894596099853516,
+      "relation": 0.324537068605423,
+      "step": 289
+    },
+    {
+      "cardinality": 0.39236652851104736,
+      "contrastive": 0.24433766305446625,
+      "loss": 0.48786720633506775,
+      "relation": 0.3238757252693176,
+      "step": 290
+    },
+    {
+      "cardinality": 0.3908850848674774,
+      "contrastive": 0.2439974695444107,
+      "loss": 0.4867931306362152,
+      "relation": 0.32321697473526,
+      "step": 291
+    },
+    {
+      "cardinality": 0.3894138038158417,
+      "contrastive": 0.24365727603435516,
+      "loss": 0.4857235550880432,
+      "relation": 0.32256075739860535,
+      "step": 292
+    },
+    {
+      "cardinality": 0.3879527449607849,
+      "contrastive": 0.24331706762313843,
+      "loss": 0.4846585690975189,
+      "relation": 0.32190704345703125,
+      "step": 293
+    },
+    {
+      "cardinality": 0.386501669883728,
+      "contrastive": 0.24297687411308289,
+      "loss": 0.48359808325767517,
+      "relation": 0.3212558329105377,
+      "step": 294
+    },
+    {
+      "cardinality": 0.38506051898002625,
+      "contrastive": 0.24263674020767212,
+      "loss": 0.48254209756851196,
+      "relation": 0.32060715556144714,
+      "step": 295
+    },
+    {
+      "cardinality": 0.38362929224967957,
+      "contrastive": 0.24229666590690613,
+      "loss": 0.4814906120300293,
+      "relation": 0.31996092200279236,
+      "step": 296
+    },
+    {
+      "cardinality": 0.3822077512741089,
+      "contrastive": 0.2419566810131073,
+      "loss": 0.48044353723526,
+      "relation": 0.31931713223457336,
+      "step": 297
+    },
+    {
+      "cardinality": 0.3807959258556366,
+      "contrastive": 0.24161675572395325,
+      "loss": 0.47940075397491455,
+      "relation": 0.3186757266521454,
+      "step": 298
+    },
+    {
+      "cardinality": 0.37939366698265076,
+      "contrastive": 0.24127699434757233,
+      "loss": 0.478362500667572,
+      "relation": 0.318036824464798,
+      "step": 299
+    },
+    {
+      "cardinality": 0.3780008554458618,
+      "contrastive": 0.24093729257583618,
+      "loss": 0.47732850909233093,
+      "relation": 0.3174002766609192,
+      "step": 300
+    },
+    {
+      "cardinality": 0.3766174614429474,
+      "contrastive": 0.24059772491455078,
+      "loss": 0.4762987792491913,
+      "relation": 0.31676608324050903,
+      "step": 301
+    },
+    {
+      "cardinality": 0.3752433657646179,
+      "contrastive": 0.2402583360671997,
+      "loss": 0.47527337074279785,
+      "relation": 0.3161342740058899,
+      "step": 302
+    },
+    {
+      "cardinality": 0.37387850880622864,
+      "contrastive": 0.23991908133029938,
+      "loss": 0.47425219416618347,
+      "relation": 0.3155048191547394,
+      "step": 303
+    },
+    {
+      "cardinality": 0.37252277135849,
+      "contrastive": 0.23958002030849457,
+      "loss": 0.47323521971702576,
+      "relation": 0.3148776590824127,
+      "step": 304
+    },
+    {
+      "cardinality": 0.3711761236190796,
+      "contrastive": 0.23924116790294647,
+      "loss": 0.4722225069999695,
+      "relation": 0.3142528533935547,
+      "step": 305
+    },
+    {
+      "cardinality": 0.3698384165763855,
+      "contrastive": 0.2389024794101715,
+      "loss": 0.4712138772010803,
+      "relation": 0.3136303126811981,
+      "step": 306
+    },
+    {
+      "cardinality": 0.3685096204280853,
+      "contrastive": 0.23856402933597565,
+      "loss": 0.47020938992500305,
+      "relation": 0.3130100667476654,
+      "step": 307
+    },
+    {
+      "cardinality": 0.3671896159648895,
+      "contrastive": 0.23822583258152008,
+      "loss": 0.46920904517173767,
+      "relation": 0.31239208579063416,
+      "step": 308
+    },
+    {
+      "cardinality": 0.36587831377983093,
+      "contrastive": 0.23788782954216003,
+      "loss": 0.46821272373199463,
+      "relation": 0.3117763102054596,
+      "step": 309
+    },
+    {
+      "cardinality": 0.36457568407058716,
+      "contrastive": 0.2375500500202179,
+      "loss": 0.4672204554080963,
+      "relation": 0.3111627995967865,
+      "step": 310
+    },
+    {
+      "cardinality": 0.36328160762786865,
+      "contrastive": 0.23721255362033844,
+      "loss": 0.46623221039772034,
+      "relation": 0.3105514943599701,
+      "step": 311
+    },
+    {
+      "cardinality": 0.36199599504470825,
+      "contrastive": 0.23687532544136047,
+      "loss": 0.4652479588985443,
+      "relation": 0.3099423944950104,
+      "step": 312
+    },
+    {
+      "cardinality": 0.36071887612342834,
+      "contrastive": 0.2365383803844452,
+      "loss": 0.46426764130592346,
+      "relation": 0.3093354403972626,
+      "step": 313
+    },
+    {
+      "cardinality": 0.35945001244544983,
+      "contrastive": 0.2362016886472702,
+      "loss": 0.4632912576198578,
+      "relation": 0.3087306618690491,
+      "step": 314
+    },
+    {
+      "cardinality": 0.35818949341773987,
+      "contrastive": 0.2358652949333191,
+      "loss": 0.4623188078403473,
+      "relation": 0.3081280589103699,
+      "step": 315
+    },
+    {
+      "cardinality": 0.35693714022636414,
+      "contrastive": 0.23552925884723663,
+      "loss": 0.46135029196739197,
+      "relation": 0.3075276017189026,
+      "step": 316
+    },
+    {
+      "cardinality": 0.35569292306900024,
+      "contrastive": 0.23519346117973328,
+      "loss": 0.46038559079170227,
+      "relation": 0.3069292902946472,
+      "step": 317
+    },
+    {
+      "cardinality": 0.35445666313171387,
+      "contrastive": 0.23485802114009857,
+      "loss": 0.4594246745109558,
+      "relation": 0.306333065032959,
+      "step": 318
+    },
+    {
+      "cardinality": 0.35322847962379456,
+      "contrastive": 0.23452290892601013,
+      "loss": 0.45846760272979736,
+      "relation": 0.3057388961315155,
+      "step": 319
+    },
+    {
+      "cardinality": 0.3520081341266632,
+      "contrastive": 0.23418813943862915,
+      "loss": 0.45751428604125977,
+      "relation": 0.30514681339263916,
+      "step": 320
+    },
+    {
+      "cardinality": 0.35079559683799744,
+      "contrastive": 0.23385366797447205,
+      "loss": 0.456564724445343,
+      "relation": 0.30455681681632996,
+      "step": 321
+    },
+    {
+      "cardinality": 0.349590927362442,
+      "contrastive": 0.23351958394050598,
+      "loss": 0.4556189179420471,
+      "relation": 0.3039688766002655,
+      "step": 322
+    },
+    {
+      "cardinality": 0.34839382767677307,
+      "contrastive": 0.23318585753440857,
+      "loss": 0.4546767473220825,
+      "relation": 0.303382933139801,
+      "step": 323
+    },
+    {
+      "cardinality": 0.34720438718795776,
+      "contrastive": 0.232852503657341,
+      "loss": 0.4537383019924164,
+      "relation": 0.3027990460395813,
+      "step": 324
+    },
+    {
+      "cardinality": 0.3460225760936737,
+      "contrastive": 0.2325194925069809,
+      "loss": 0.45280352234840393,
+      "relation": 0.30221718549728394,
+      "step": 325
+    },
+    {
+      "cardinality": 0.3448481857776642,
+      "contrastive": 0.23218688368797302,
+      "loss": 0.4518723487854004,
+      "relation": 0.30163732171058655,
+      "step": 326
+    },
+    {
+      "cardinality": 0.3436812162399292,
+      "contrastive": 0.2318546324968338,
+      "loss": 0.45094478130340576,
+      "relation": 0.30105939507484436,
+      "step": 327
+    },
+    {
+      "cardinality": 0.342521607875824,
+      "contrastive": 0.23152276873588562,
+      "loss": 0.45002076029777527,
+      "relation": 0.30048346519470215,
+      "step": 328
+    },
+    {
+      "cardinality": 0.3413693904876709,
+      "contrastive": 0.23119129240512848,
+      "loss": 0.4491003155708313,
+      "relation": 0.2999095022678375,
+      "step": 329
+    },
+    {
+      "cardinality": 0.3402242362499237,
+      "contrastive": 0.23086024820804596,
+      "loss": 0.44818341732025146,
+      "relation": 0.2993375062942505,
+      "step": 330
+    },
+    {
+      "cardinality": 0.3390863537788391,
+      "contrastive": 0.23052962124347687,
+      "loss": 0.4472700357437134,
+      "relation": 0.2987673878669739,
+      "step": 331
+    },
+    {
+      "cardinality": 0.3379555642604828,
+      "contrastive": 0.23019938170909882,
+      "loss": 0.4463600814342499,
+      "relation": 0.29819920659065247,
+      "step": 332
+    },
+    {
+      "cardinality": 0.33683180809020996,
+      "contrastive": 0.22986957430839539,
+      "loss": 0.4454536437988281,
+      "relation": 0.29763293266296387,
+      "step": 333
+    },
+    {
+      "cardinality": 0.33571505546569824,
+      "contrastive": 0.22954021394252777,
+      "loss": 0.44455066323280334,
+      "relation": 0.2970685660839081,
+      "step": 334
+    },
+    {
+      "cardinality": 0.33460521697998047,
+      "contrastive": 0.2292112410068512,
+      "loss": 0.44365108013153076,
+      "relation": 0.2965060770511627,
+      "step": 335
+    },
+    {
+      "cardinality": 0.3335022032260895,
+      "contrastive": 0.22888270020484924,
+      "loss": 0.4427548050880432,
+      "relation": 0.2959454357624054,
+      "step": 336
+    },
+    {
+      "cardinality": 0.33240607380867004,
+      "contrastive": 0.22855469584465027,
+      "loss": 0.4418620467185974,
+      "relation": 0.2953866720199585,
+      "step": 337
+    },
+    {
+      "cardinality": 0.3313165307044983,
+      "contrastive": 0.22822700440883636,
+      "loss": 0.4409725069999695,
+      "relation": 0.29482975602149963,
+      "step": 338
+    },
+    {
+      "cardinality": 0.3302338719367981,
+      "contrastive": 0.22789984941482544,
+      "loss": 0.4400864243507385,
+      "relation": 0.2942746877670288,
+      "step": 339
+    },
+    {
+      "cardinality": 0.3291577100753784,
+      "contrastive": 0.22757308185100555,
+      "loss": 0.43920353055000305,
+      "relation": 0.29372140765190125,
+      "step": 340
+    },
+    {
+      "cardinality": 0.32808810472488403,
+      "contrastive": 0.22724682092666626,
+      "loss": 0.4383239448070526,
+      "relation": 0.29316994547843933,
+      "step": 341
+    },
+    {
+      "cardinality": 0.32702508568763733,
+      "contrastive": 0.2269209921360016,
+      "loss": 0.4374476671218872,
+      "relation": 0.29262030124664307,
+      "step": 342
+    },
+    {
+      "cardinality": 0.32596850395202637,
+      "contrastive": 0.22659562528133392,
+      "loss": 0.43657463788986206,
+      "relation": 0.29207247495651245,
+      "step": 343
+    },
+    {
+      "cardinality": 0.32491829991340637,
+      "contrastive": 0.22627075016498566,
+      "loss": 0.43570476770401,
+      "relation": 0.29152634739875793,
+      "step": 344
+    },
+    {
+      "cardinality": 0.32387447357177734,
+      "contrastive": 0.2259463518857956,
+      "loss": 0.4348381757736206,
+      "relation": 0.29098206758499146,
+      "step": 345
+    },
+    {
+      "cardinality": 0.32283690571784973,
+      "contrastive": 0.22562243044376373,
+      "loss": 0.4339747428894043,
+      "relation": 0.29043951630592346,
+      "step": 346
+    },
+    {
+      "cardinality": 0.32180559635162354,
+      "contrastive": 0.22529897093772888,
+      "loss": 0.4331144690513611,
+      "relation": 0.28989869356155396,
+      "step": 347
+    },
+    {
+      "cardinality": 0.320780485868454,
+      "contrastive": 0.22497600317001343,
+      "loss": 0.4322572946548462,
+      "relation": 0.28935959935188293,
+      "step": 348
+    },
+    {
+      "cardinality": 0.3197614848613739,
+      "contrastive": 0.22465355694293976,
+      "loss": 0.4314032793045044,
+      "relation": 0.2888222336769104,
+      "step": 349
+    },
+    {
+      "cardinality": 0.3187485337257385,
+      "contrastive": 0.22433160245418549,
+      "loss": 0.4305523931980133,
+      "relation": 0.28828662633895874,
+      "step": 350
+    },
+    {
+      "cardinality": 0.31774166226387024,
+      "contrastive": 0.22401010990142822,
+      "loss": 0.4297045171260834,
+      "relation": 0.2877526581287384,
+      "step": 351
+    },
+    {
+      "cardinality": 0.3167407512664795,
+      "contrastive": 0.22368915379047394,
+      "loss": 0.42885977029800415,
+      "relation": 0.28722041845321655,
+      "step": 352
+    },
+    {
+      "cardinality": 0.3157457709312439,
+      "contrastive": 0.22336870431900024,
+      "loss": 0.4280180335044861,
+      "relation": 0.2866898477077484,
+      "step": 353
+    },
+    {
+      "cardinality": 0.3147566020488739,
+      "contrastive": 0.22304873168468475,
+      "loss": 0.42717936635017395,
+      "relation": 0.28616097569465637,
+      "step": 354
+    },
+    {
+      "cardinality": 0.31377336382865906,
+      "contrastive": 0.22272929549217224,
+      "loss": 0.4263436198234558,
+      "relation": 0.28563371300697327,
+      "step": 355
+    },
+    {
+      "cardinality": 0.31279581785202026,
+      "contrastive": 0.22241035103797913,
+      "loss": 0.42551088333129883,
+      "relation": 0.28510811924934387,
+      "step": 356
+    },
+    {
+      "cardinality": 0.3118240535259247,
+      "contrastive": 0.2220919281244278,
+      "loss": 0.4246811866760254,
+      "relation": 0.2845841944217682,
+      "step": 357
+    },
+    {
+      "cardinality": 0.31085795164108276,
+      "contrastive": 0.22177404165267944,
+      "loss": 0.42385441064834595,
+      "relation": 0.28406190872192383,
+      "step": 358
+    },
+    {
+      "cardinality": 0.30989742279052734,
+      "contrastive": 0.22145669162273407,
+      "loss": 0.4230305254459381,
+      "relation": 0.283541202545166,
+      "step": 359
+    },
+    {
+      "cardinality": 0.3089425265789032,
+      "contrastive": 0.2211398482322693,
+      "loss": 0.42220962047576904,
+      "relation": 0.2830221652984619,
+      "step": 360
+    },
+    {
+      "cardinality": 0.3079931437969208,
+      "contrastive": 0.2208235263824463,
+      "loss": 0.4213915467262268,
+      "relation": 0.282504677772522,
+      "step": 361
+    },
+    {
+      "cardinality": 0.3070492744445801,
+      "contrastive": 0.22050774097442627,
+      "loss": 0.4205763638019562,
+      "relation": 0.28198879957199097,
+      "step": 362
+    },
+    {
+      "cardinality": 0.30611085891723633,
+      "contrastive": 0.2201925367116928,
+      "loss": 0.41976410150527954,
+      "relation": 0.2814745306968689,
+      "step": 363
+    },
+    {
+      "cardinality": 0.30517780780792236,
+      "contrastive": 0.21987783908843994,
+      "loss": 0.41895461082458496,
+      "relation": 0.280961811542511,
+      "step": 364
+    },
+    {
+      "cardinality": 0.3042501211166382,
+      "contrastive": 0.21956366300582886,
+      "loss": 0.4181479811668396,
+      "relation": 0.2804506719112396,
+      "step": 365
+    },
+    {
+      "cardinality": 0.3033277690410614,
+      "contrastive": 0.21925003826618195,
+      "loss": 0.4173441231250763,
+      "relation": 0.27994105219841003,
+      "step": 366
+    },
+    {
+      "cardinality": 0.30241069197654724,
+      "contrastive": 0.2189370095729828,
+      "loss": 0.4165431261062622,
+      "relation": 0.2794330418109894,
+      "step": 367
+    },
+    {
+      "cardinality": 0.30149874091148376,
+      "contrastive": 0.21862447261810303,
+      "loss": 0.4157448410987854,
+      "relation": 0.2789265215396881,
+      "step": 368
+    },
+    {
+      "cardinality": 0.3005920350551605,
+      "contrastive": 0.21831245720386505,
+      "loss": 0.41494935750961304,
+      "relation": 0.2784215807914734,
+      "step": 369
+    },
+    {
+      "cardinality": 0.29969048500061035,
+      "contrastive": 0.2180010825395584,
+      "loss": 0.41415661573410034,
+      "relation": 0.27791813015937805,
+      "step": 370
+    },
+    {
+      "cardinality": 0.2987939417362213,
+      "contrastive": 0.21769022941589355,
+      "loss": 0.41336655616760254,
+      "relation": 0.2774161994457245,
+      "step": 371
+    },
+    {
+      "cardinality": 0.29790255427360535,
+      "contrastive": 0.21737992763519287,
+      "loss": 0.4125792384147644,
+      "relation": 0.2769157588481903,
+      "step": 372
+    },
+    {
+      "cardinality": 0.29701608419418335,
+      "contrastive": 0.21707017719745636,
+      "loss": 0.41179460287094116,
+      "relation": 0.2764168381690979,
+      "step": 373
+    },
+    {
+      "cardinality": 0.29613468050956726,
+      "contrastive": 0.21676099300384521,
+      "loss": 0.4110126793384552,
+      "relation": 0.2759194076061249,
+      "step": 374
+    },
+    {
+      "cardinality": 0.295258104801178,
+      "contrastive": 0.21645241975784302,
+      "loss": 0.41023343801498413,
+      "relation": 0.27542346715927124,
+      "step": 375
+    },
+    {
+      "cardinality": 0.29438644647598267,
+      "contrastive": 0.2161443680524826,
+      "loss": 0.4094567894935608,
+      "relation": 0.2749289870262146,
+      "step": 376
+    },
+    {
+      "cardinality": 0.29351964592933655,
+      "contrastive": 0.21583686769008636,
+      "loss": 0.40868276357650757,
+      "relation": 0.27443593740463257,
+      "step": 377
+    },
+    {
+      "cardinality": 0.29265764355659485,
+      "contrastive": 0.21552997827529907,
+      "loss": 0.40791141986846924,
+      "relation": 0.2739444077014923,
+      "step": 378
+    },
+    {
+      "cardinality": 0.2918004095554352,
+      "contrastive": 0.21522365510463715,
+      "loss": 0.4071425795555115,
+      "relation": 0.2734542489051819,
+      "step": 379
+    },
+    {
+      "cardinality": 0.29094788432121277,
+      "contrastive": 0.2149178832769394,
+      "loss": 0.4063764214515686,
+      "relation": 0.27296558022499084,
+      "step": 380
+    },
+    {
+      "cardinality": 0.29010009765625,
+      "contrastive": 0.2146126627922058,
+      "loss": 0.4056127667427063,
+      "relation": 0.272478312253952,
+      "step": 381
+    },
+    {
+      "cardinality": 0.2892569303512573,
+      "contrastive": 0.21430809795856476,
+      "loss": 0.40485167503356934,
+      "relation": 0.2719924747943878,
+      "step": 382
+    },
+    {
+      "cardinality": 0.28841835260391235,
+      "contrastive": 0.2140040546655655,
+      "loss": 0.4040932059288025,
+      "relation": 0.2715080976486206,
+      "step": 383
+    },
+    {
+      "cardinality": 0.28758442401885986,
+      "contrastive": 0.21370059251785278,
+      "loss": 0.40333718061447144,
+      "relation": 0.2710250914096832,
+      "step": 384
+    },
+    {
+      "cardinality": 0.28675493597984314,
+      "contrastive": 0.21339772641658783,
+      "loss": 0.4025837182998657,
+      "relation": 0.27054351568222046,
+      "step": 385
+    },
+    {
+      "cardinality": 0.28592997789382935,
+      "contrastive": 0.21309545636177063,
+      "loss": 0.4018326997756958,
+      "relation": 0.27006328105926514,
+      "step": 386
+    },
+    {
+      "cardinality": 0.2851095199584961,
+      "contrastive": 0.2127937376499176,
+      "loss": 0.40108418464660645,
+      "relation": 0.2695844769477844,
+      "step": 387
+    },
+    {
+      "cardinality": 0.2842935025691986,
+      "contrastive": 0.21249264478683472,
+      "loss": 0.40033817291259766,
+      "relation": 0.26910707354545593,
+      "step": 388
+    },
+    {
+      "cardinality": 0.2834818661212921,
+      "contrastive": 0.21219207346439362,
+      "loss": 0.39959460496902466,
+      "relation": 0.2686310112476349,
+      "step": 389
+    },
+    {
+      "cardinality": 0.2826745808124542,
+      "contrastive": 0.21189215779304504,
+      "loss": 0.39885348081588745,
+      "relation": 0.2681563198566437,
+      "step": 390
+    },
+    {
+      "cardinality": 0.28187161684036255,
+      "contrastive": 0.21159279346466064,
+      "loss": 0.39811474084854126,
+      "relation": 0.2676829695701599,
+      "step": 391
+    },
+    {
+      "cardinality": 0.2810729444026947,
+      "contrastive": 0.2112940400838852,
+      "loss": 0.39737850427627563,
+      "relation": 0.267210990190506,
+      "step": 392
+    },
+    {
+      "cardinality": 0.2802785336971283,
+      "contrastive": 0.2109958529472351,
+      "loss": 0.39664459228515625,
+      "relation": 0.2667403519153595,
+      "step": 393
+    },
+    {
+      "cardinality": 0.27948835492134094,
+      "contrastive": 0.21069829165935516,
+      "loss": 0.39591312408447266,
+      "relation": 0.26627105474472046,
+      "step": 394
+    },
+    {
+      "cardinality": 0.2787023186683655,
+      "contrastive": 0.2104012817144394,
+      "loss": 0.3951839804649353,
+      "relation": 0.2658030688762665,
+      "step": 395
+    },
+    {
+      "cardinality": 0.27792051434516907,
+      "contrastive": 0.21010489761829376,
+      "loss": 0.39445722103118896,
+      "relation": 0.26533639430999756,
+      "step": 396
+    },
+    {
+      "cardinality": 0.27714282274246216,
+      "contrastive": 0.2098091095685959,
+      "loss": 0.39373284578323364,
+      "relation": 0.26487109065055847,
+      "step": 397
+    },
+    {
+      "cardinality": 0.2763691842556,
+      "contrastive": 0.20951387286186218,
+      "loss": 0.3930107355117798,
+      "relation": 0.26440706849098206,
+      "step": 398
+    },
+    {
+      "cardinality": 0.2755995988845825,
+      "contrastive": 0.20921926200389862,
+      "loss": 0.39229100942611694,
+      "relation": 0.2639443278312683,
+      "step": 399
+    },
+    {
+      "cardinality": 0.2748340666294098,
+      "contrastive": 0.2089252471923828,
+      "loss": 0.39157357811927795,
+      "relation": 0.263482928276062,
+      "step": 400
+    }
+  ],
+  "model_family": "FROZEN_SENTENCE_ENCODER_PROPOSAL",
+  "objective": "L_relation + 0.20 L_cardinality + 0.35 L_contrastive",
+  "optimizer": {
+    "gradient_norm_clip": 1.0,
+    "learning_rate": 0.0005,
+    "name": "AdamW",
+    "weight_decay": 0.0002
+  },
+  "parameter_scope": {
+    "checkpoint": 32420,
+    "frozen": 22713216,
+    "total": 22745636,
+    "trainable": 32420
+  },
+  "paraphrase_groups": [
+    {
+      "group": "local-CONSTRAINT-decode-delay-17",
+      "group_sha256": "dbb3d64e3f5df4658e1b0e50d79426c39961c107afb8e29745fd1cfca6d396ba",
+      "lesson_ids": [
+        "local-CONSTRAINT-decode-delay-17-0",
+        "local-CONSTRAINT-decode-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "ad86aa45806339c276ecb10fc0978d020cdf63e6f708e687e258efcfe575af84"
+    },
+    {
+      "group": "local-CONSTRAINT-decode-delay-29",
+      "group_sha256": "8c2dc2ff5ac7c2e1e183acf20c26d20f1c1e30ab086d47f98d3708291e8e370b",
+      "lesson_ids": [
+        "local-CONSTRAINT-decode-delay-29-0",
+        "local-CONSTRAINT-decode-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "2c8906cf7afce67235e543af70110486c7ebae9f1cd99aafa2f6f91f68b7612b"
+    },
+    {
+      "group": "local-CONSTRAINT-decode-delay-43",
+      "group_sha256": "95ec93f3aee8f7effdd4954b1718c5312cdc10fd869da5a8a87fd27760a390cc",
+      "lesson_ids": [
+        "local-CONSTRAINT-decode-delay-43-0",
+        "local-CONSTRAINT-decode-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "3fb86fb9dbfccb91aad6963ead252228502ba2353c523e7d0ef392d733557162"
+    },
+    {
+      "group": "local-CONSTRAINT-decode-delay-61",
+      "group_sha256": "30eb4504fcb6bc5a8d6df55620bfc259ef218c645838466c2c63fd326f7cb2bf",
+      "lesson_ids": [
+        "local-CONSTRAINT-decode-delay-61-0",
+        "local-CONSTRAINT-decode-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "c33193dd45c5c8ec4add7296abff028b57439991a7e42f9e92455d88b08f9cc6"
+    },
+    {
+      "group": "local-CONSTRAINT-processing-delay-17",
+      "group_sha256": "cbaa5af3fe64fd20e8f2f24421e99955ba764c455b02e9e38def6408d3a19b37",
+      "lesson_ids": [
+        "local-CONSTRAINT-processing-delay-17-0",
+        "local-CONSTRAINT-processing-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "e28db38f6f8ef32edad23b6cb525aa524f7a354218b93384adf1b1bea7e0a269"
+    },
+    {
+      "group": "local-CONSTRAINT-processing-delay-29",
+      "group_sha256": "89cba5ef52d0284c7e6284391b60fa018c21d7062121bcc33e23b978300e9b37",
+      "lesson_ids": [
+        "local-CONSTRAINT-processing-delay-29-0",
+        "local-CONSTRAINT-processing-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "090b74d79924090dd0cf60f76fad5dc276c92ae497d5c51a9872a314614fe14f"
+    },
+    {
+      "group": "local-CONSTRAINT-processing-delay-43",
+      "group_sha256": "142104e3c4045e3589abe1d939a789d98141bcf3d60195300e24b6775ca4e46f",
+      "lesson_ids": [
+        "local-CONSTRAINT-processing-delay-43-0",
+        "local-CONSTRAINT-processing-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "a8f03e17783546f010df37f78b668c7acaab0727bf9a0e102026cfc2a3b774c1"
+    },
+    {
+      "group": "local-CONSTRAINT-processing-delay-61",
+      "group_sha256": "011d3b28d1e0490bd1810d82b71c82b5c733dbc492b16e2dd697837cc78b7acf",
+      "lesson_ids": [
+        "local-CONSTRAINT-processing-delay-61-0",
+        "local-CONSTRAINT-processing-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "85368beb3b88168030a968f128c5437477c7bfb755a9d07c9110063a92cb8207"
+    },
+    {
+      "group": "local-CONSTRAINT-render-delay-17",
+      "group_sha256": "40b5a962ecc26ef98834e7fd424782f15f47706972b6a6dc87113c7d6ae11e4f",
+      "lesson_ids": [
+        "local-CONSTRAINT-render-delay-17-0",
+        "local-CONSTRAINT-render-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "8dcd97712930f49d360b7a0e76ae814e6199229e585a746bafff77c8385b5ee7"
+    },
+    {
+      "group": "local-CONSTRAINT-render-delay-29",
+      "group_sha256": "95b64bc903c590c0181a1299ec4a6420397c0f62a6717dc01ee2663f0c8f2b2b",
+      "lesson_ids": [
+        "local-CONSTRAINT-render-delay-29-0",
+        "local-CONSTRAINT-render-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "d4479eef8610b62af3708386206500014cbef70d1bc5bbf9169e6e1c77b5be84"
+    },
+    {
+      "group": "local-CONSTRAINT-render-delay-43",
+      "group_sha256": "5d83fa93dd67d4446f14cde16d25effa6ec6f9e3e44838c8daeb7aac96851bc4",
+      "lesson_ids": [
+        "local-CONSTRAINT-render-delay-43-0",
+        "local-CONSTRAINT-render-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "f54080dba2c346dc22b4f1c25213b3d44069159f5fc9c8a0b854c2692f4a6f46"
+    },
+    {
+      "group": "local-CONSTRAINT-render-delay-61",
+      "group_sha256": "02f26df3f0e82ecedacba69cb3b795a8de119e7d03af3a07791c857a814db95d",
+      "lesson_ids": [
+        "local-CONSTRAINT-render-delay-61-0",
+        "local-CONSTRAINT-render-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "35a85525560c899ddda5c04536fddbc2bb834939c3d001c6bd11358f236cdcdb"
+    },
+    {
+      "group": "local-CONSTRAINT-transfer-delay-17",
+      "group_sha256": "d1daccbac45f77fcf96ce9aff65597ac4a34a7de7ede6ecbb38a332893d10d1a",
+      "lesson_ids": [
+        "local-CONSTRAINT-transfer-delay-17-0",
+        "local-CONSTRAINT-transfer-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "aad6e93983861f2802a84970a41ce11554dbda31549d3e4fb226602605c2413a"
+    },
+    {
+      "group": "local-CONSTRAINT-transfer-delay-29",
+      "group_sha256": "74d4d3ffe1c46845c2e2d2212531f58fb5f1d38b11e65ed0c2a7c8cfeb8cf587",
+      "lesson_ids": [
+        "local-CONSTRAINT-transfer-delay-29-0",
+        "local-CONSTRAINT-transfer-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "4284c441700c3700c5bba114bd6b2e5e13f291b277812f0ed0ed4760898c7018"
+    },
+    {
+      "group": "local-CONSTRAINT-transfer-delay-43",
+      "group_sha256": "ef10c851c9ed4a0764e7e0ccda106c0e70f6d9d618fdcfe43707394ba302612e",
+      "lesson_ids": [
+        "local-CONSTRAINT-transfer-delay-43-0",
+        "local-CONSTRAINT-transfer-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "9e08f590551cedad4d9c58dc2b591f634c9ac7c212e91165ea3cec984afdc047"
+    },
+    {
+      "group": "local-CONSTRAINT-transfer-delay-61",
+      "group_sha256": "ed933d377663c2281a37377b6a7821dd580964a468748cbdc1126c2eb4d710bf",
+      "lesson_ids": [
+        "local-CONSTRAINT-transfer-delay-61-0",
+        "local-CONSTRAINT-transfer-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "1c038b6a679342fb5fef910561538e85870c7c602fd9747a610493c9557c6c51"
+    },
+    {
+      "group": "local-GOAL-decode-delay-17",
+      "group_sha256": "72916f9855c24c6f5ed3bd587fc3546da3e001b26da59af96fc0a14b918e2c7f",
+      "lesson_ids": [
+        "local-GOAL-decode-delay-17-0",
+        "local-GOAL-decode-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "8e1898919a149e349ea87c7f7dc433748c116e9a895e6dbe8458719305b48a85"
+    },
+    {
+      "group": "local-GOAL-decode-delay-29",
+      "group_sha256": "bfee0aab822272c9ecced0a1c0fb01504355724ec8153421a17d6ac3f163a728",
+      "lesson_ids": [
+        "local-GOAL-decode-delay-29-0",
+        "local-GOAL-decode-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "75169a338f872efb12818e27d711e5162d44ce4b6dded5757e71ef3d45e1d9c1"
+    },
+    {
+      "group": "local-GOAL-decode-delay-43",
+      "group_sha256": "3ff570d88e97a438706f11642933d761698cada0a7eede1f779f08aafe28eb3a",
+      "lesson_ids": [
+        "local-GOAL-decode-delay-43-0",
+        "local-GOAL-decode-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "2769ce97108b5a93c4dc465394133bb92568eb9f064b40881cba26852490e0ec"
+    },
+    {
+      "group": "local-GOAL-decode-delay-61",
+      "group_sha256": "c875649321e57416d023c0c45aa2c594de597b58b7c05b90aaeb980cd655a5cd",
+      "lesson_ids": [
+        "local-GOAL-decode-delay-61-0",
+        "local-GOAL-decode-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "a4e098a7db23a5cb0172669c2b7f7a5faa1a23c14d34bb2dc28607b58ea9db85"
+    },
+    {
+      "group": "local-GOAL-processing-delay-17",
+      "group_sha256": "a1842b61488d9e94f9153d079734cf289f8eacf5b70fe2f4e7e4b2e6fc28b129",
+      "lesson_ids": [
+        "local-GOAL-processing-delay-17-0",
+        "local-GOAL-processing-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "347f5a270f5fad2296c7f9e4762a74f39dcb8d6b1c8e4c05f26fda9099aee48e"
+    },
+    {
+      "group": "local-GOAL-processing-delay-29",
+      "group_sha256": "7447b4ddc1d4fa64c7cde6a3801b84df03a54ac43d55750a18cc16fc068e031c",
+      "lesson_ids": [
+        "local-GOAL-processing-delay-29-0",
+        "local-GOAL-processing-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "2a1df5b9ffb97813de2856282cc775fcc3871034592234264a5aec496cbf2195"
+    },
+    {
+      "group": "local-GOAL-processing-delay-43",
+      "group_sha256": "6ea456ea13c9f3fd505bae28c813a817a6ec5fbb01593cb6b1cc937d284534a2",
+      "lesson_ids": [
+        "local-GOAL-processing-delay-43-0",
+        "local-GOAL-processing-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "4406461f7f046645b1f6b025f83d5e92c9c7cf28f65b45efe33c2c07366d241c"
+    },
+    {
+      "group": "local-GOAL-processing-delay-61",
+      "group_sha256": "7735577ed30af2d4af30c7e3d41f2d8a1aad2ff467ada2f0fedbac7cd8983c89",
+      "lesson_ids": [
+        "local-GOAL-processing-delay-61-0",
+        "local-GOAL-processing-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "8fd11c519129eb1bf17e1b3027d29a2ec0adc14bccc39b7d0da8eb5fd42248c7"
+    },
+    {
+      "group": "local-GOAL-render-delay-17",
+      "group_sha256": "e32cd0d5d583c797a5933bfb88388e56228364e4294db18cd19eafcfb9af3c28",
+      "lesson_ids": [
+        "local-GOAL-render-delay-17-0",
+        "local-GOAL-render-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "c271c03bd435b9830c5aee7d142b06841a655636ca238d4e1c290c7a26cb8b74"
+    },
+    {
+      "group": "local-GOAL-render-delay-29",
+      "group_sha256": "7927da0b062f32c82476e4350d96970ef26acd6324410f709c544b108cb71f0f",
+      "lesson_ids": [
+        "local-GOAL-render-delay-29-0",
+        "local-GOAL-render-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "ac11486aa9f115540aa671ada3ff18b8664d601d04c72bceb6d593cd2985250f"
+    },
+    {
+      "group": "local-GOAL-render-delay-43",
+      "group_sha256": "2f0f23b6b9632f4a4beba7dde960464428982497187e3498e794f4838b849611",
+      "lesson_ids": [
+        "local-GOAL-render-delay-43-0",
+        "local-GOAL-render-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "6211abfbe18f38b18f17a1fbc2c07e63848f21dd0443fb4684d32df4acececee"
+    },
+    {
+      "group": "local-GOAL-render-delay-61",
+      "group_sha256": "4e925c7e2ae5783179808ef9498896f6778cb3c1cba6029b2676981d2e1d58db",
+      "lesson_ids": [
+        "local-GOAL-render-delay-61-0",
+        "local-GOAL-render-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "39fcbd7d20d143f3644f77f3546dcdbff5e11f4a44ac152665e6cd1d3feda41b"
+    },
+    {
+      "group": "local-GOAL-transfer-delay-17",
+      "group_sha256": "af1da1e1724c72887faf2ae8c5694d87a08eec74a45129991493b61b4f95f018",
+      "lesson_ids": [
+        "local-GOAL-transfer-delay-17-0",
+        "local-GOAL-transfer-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "31ead0471212c9b524b25925bcdc19b4e96f353d0f739be7b3b72cb114bf5a2d"
+    },
+    {
+      "group": "local-GOAL-transfer-delay-29",
+      "group_sha256": "83b7120a2440d4648df082709294f2cbacf7b960ef3138e0cc0c65672d8a1c2c",
+      "lesson_ids": [
+        "local-GOAL-transfer-delay-29-0",
+        "local-GOAL-transfer-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "2ea14445305d69acd2403b5c741dcb94ef06eba161032a1f04346a8acd60695d"
+    },
+    {
+      "group": "local-GOAL-transfer-delay-43",
+      "group_sha256": "2d365faa58d75fdf90e10948606e7fab19ac2d229188f4b7bcffb6ef0180ed08",
+      "lesson_ids": [
+        "local-GOAL-transfer-delay-43-0",
+        "local-GOAL-transfer-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "caa6fe8d626184a9d9fa0d45b68a9da6129078b1dbfcc7cd2b64e651646c8b40"
+    },
+    {
+      "group": "local-GOAL-transfer-delay-61",
+      "group_sha256": "e2113c6eab8e66dd221ddadb985bff15c5469f9d576be3e6e7934626aa831342",
+      "lesson_ids": [
+        "local-GOAL-transfer-delay-61-0",
+        "local-GOAL-transfer-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "bedf6249b124d11a819ca6b71648aab141571c426cdd80815824202971bb5de4"
+    },
+    {
+      "group": "local-OBSERVATION-decode-delay-17",
+      "group_sha256": "c17f1d350cdc44f06567c9f867ad1d60e0817d715111efb86f3622098a056733",
+      "lesson_ids": [
+        "local-OBSERVATION-decode-delay-17-0",
+        "local-OBSERVATION-decode-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "80ef9b664a3887c97d93a9414b580b2542289f3d0e2704583068a404e2b8746b"
+    },
+    {
+      "group": "local-OBSERVATION-decode-delay-29",
+      "group_sha256": "5a8c46ac09a6a6c077cdeb06d095ee99971f2d2029abd95ffaf8dfe0490eb040",
+      "lesson_ids": [
+        "local-OBSERVATION-decode-delay-29-0",
+        "local-OBSERVATION-decode-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "044125cf55ae1102ab8135b9b6b1a0dac43a42d44eaec2e24864f55b40cce804"
+    },
+    {
+      "group": "local-OBSERVATION-decode-delay-43",
+      "group_sha256": "cb03e69cdee67b26867e125cc28ac2b048b50f19f5b333e5d36d6cb08951a30c",
+      "lesson_ids": [
+        "local-OBSERVATION-decode-delay-43-0",
+        "local-OBSERVATION-decode-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "ccac5ad6b3ca5b0100c9cbf49e3f3743de1797863c2655825b1fa5799eb9bcc2"
+    },
+    {
+      "group": "local-OBSERVATION-decode-delay-61",
+      "group_sha256": "9a2dbd2a53c428192c95d2f8edeef92deb30705e0ac2d8e2a2cc46a157d57cb0",
+      "lesson_ids": [
+        "local-OBSERVATION-decode-delay-61-0",
+        "local-OBSERVATION-decode-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "36bbbdfb3595250149600c6dd85325736166b19e419ebc04aac8a5f4053fe9d1"
+    },
+    {
+      "group": "local-OBSERVATION-processing-delay-17",
+      "group_sha256": "dcb592342802f5a8a9260eb50976be8ca8c20257074c9c1ca6b4ff543fbdb258",
+      "lesson_ids": [
+        "local-OBSERVATION-processing-delay-17-0",
+        "local-OBSERVATION-processing-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "e4573fff4e09cf73e2e47c5db43e5089da3355466a08b467ea045fbdad4d0939"
+    },
+    {
+      "group": "local-OBSERVATION-processing-delay-29",
+      "group_sha256": "d7582f061b80067984ed2729015ad131d26cca4c59b2e171dd32ead71d5cf2d3",
+      "lesson_ids": [
+        "local-OBSERVATION-processing-delay-29-0",
+        "local-OBSERVATION-processing-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "2797cad9ad2a55de969ebd01fd504898a66dafe30ab60d440718648c5a9efe63"
+    },
+    {
+      "group": "local-OBSERVATION-processing-delay-43",
+      "group_sha256": "be951ed4cbb1e66e35139fb7825f5026d121661f3c07cc3ec33ccc47bed7e0cf",
+      "lesson_ids": [
+        "local-OBSERVATION-processing-delay-43-0",
+        "local-OBSERVATION-processing-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "f80980773f38ba321e79727423329cd20d0a1d17633f003bf60f4c1a242cafea"
+    },
+    {
+      "group": "local-OBSERVATION-processing-delay-61",
+      "group_sha256": "792267bdda1bf5dbf211ed37d56569d92c5c4b18ed1cf7e545c8c3e6c6f8a96f",
+      "lesson_ids": [
+        "local-OBSERVATION-processing-delay-61-0",
+        "local-OBSERVATION-processing-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "f756385898cb6f83cd491859cd47bc74742058985f49540374af1a4fd469e1a4"
+    },
+    {
+      "group": "local-OBSERVATION-render-delay-17",
+      "group_sha256": "37e0e8b42f47ad6f8d4f267013bee0c735212b4ad50e3c5f012955dce8d325c6",
+      "lesson_ids": [
+        "local-OBSERVATION-render-delay-17-0",
+        "local-OBSERVATION-render-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "5d7d341b9228954b70d9a3ad49fa783777af93df59b9d3be780d4e657940be9b"
+    },
+    {
+      "group": "local-OBSERVATION-render-delay-29",
+      "group_sha256": "4d8a85d526822b6db482e024212bef5cff18b2640ce5e191520967b7cebb3b6b",
+      "lesson_ids": [
+        "local-OBSERVATION-render-delay-29-0",
+        "local-OBSERVATION-render-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "746632cdfe8f0c013d87f89bc2c24052ddc53cf7a29d0ef0d850c43774c33796"
+    },
+    {
+      "group": "local-OBSERVATION-render-delay-43",
+      "group_sha256": "5b70ec0c3d26f67719f6ef76cf711227cede04092ad4fa4f1c79bbee7104a8a7",
+      "lesson_ids": [
+        "local-OBSERVATION-render-delay-43-0",
+        "local-OBSERVATION-render-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "da467ceecd8eb7870f7e61b948e910533ec601a6c860aacd41470159507ef6fc"
+    },
+    {
+      "group": "local-OBSERVATION-render-delay-61",
+      "group_sha256": "8969fc2b8ff36be07add410766be2d96ccb01ce4f52b76ccd903dfbd8fa1f237",
+      "lesson_ids": [
+        "local-OBSERVATION-render-delay-61-0",
+        "local-OBSERVATION-render-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "ded82451e4fa5de384489800db0f00173209da21418d6c918df47bf2037633a1"
+    },
+    {
+      "group": "local-OBSERVATION-transfer-delay-17",
+      "group_sha256": "e62817ad679e2d7f47aa7a814c742e5d420dd1b9cb66f5e932cd8162aeca2ad1",
+      "lesson_ids": [
+        "local-OBSERVATION-transfer-delay-17-0",
+        "local-OBSERVATION-transfer-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "0d9ddec7116ff40df86659b4831bda14575bb69ed7a2b7139ac73df730c8ee53"
+    },
+    {
+      "group": "local-OBSERVATION-transfer-delay-29",
+      "group_sha256": "cbef70e04033ccd5c220592e995f6825cafdc51746dc33cca981652f03c3d84a",
+      "lesson_ids": [
+        "local-OBSERVATION-transfer-delay-29-0",
+        "local-OBSERVATION-transfer-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "5170fa7ab251f2d5993ac261aeb2247a5cc4ee1e7849d61eb70a04d36d8ff199"
+    },
+    {
+      "group": "local-OBSERVATION-transfer-delay-43",
+      "group_sha256": "347569829880df982e011eca3c6d7a6a532a5d17623e755f0a31beab250d32ff",
+      "lesson_ids": [
+        "local-OBSERVATION-transfer-delay-43-0",
+        "local-OBSERVATION-transfer-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "e63bef866829196cc495616c5bafeee701bb6cc2762f29985da5cffa84901f51"
+    },
+    {
+      "group": "local-OBSERVATION-transfer-delay-61",
+      "group_sha256": "c8cefe9cba38d2b6f81b2dab549a1dbf755a36658d1aaaabac84d7a7d61bb875",
+      "lesson_ids": [
+        "local-OBSERVATION-transfer-delay-61-0",
+        "local-OBSERVATION-transfer-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "ef1adbad9dedfa7df421c6fd72fa85cfce0c3c7aa991e4e3e777408b820f4b5c"
+    },
+    {
+      "group": "local-PREDICTION-decode-delay-17",
+      "group_sha256": "d11fbd1a1a7de50db99ad9194474208fd7f353cd5c5424b3566d4e89553922d9",
+      "lesson_ids": [
+        "local-PREDICTION-decode-delay-17-0",
+        "local-PREDICTION-decode-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "9835c26c88bf29f157d0841888e288dd083e828c5723068ea2d2e9b34a28d0df"
+    },
+    {
+      "group": "local-PREDICTION-decode-delay-29",
+      "group_sha256": "79bc44dec33d8e5592af9769d8ec9622f7df2eb658ecfd84ae276d15809460b1",
+      "lesson_ids": [
+        "local-PREDICTION-decode-delay-29-0",
+        "local-PREDICTION-decode-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "c638e707c7c97f4b88beb91386fbede2365a6fe0a5d8b6818b479f4170b6c7e5"
+    },
+    {
+      "group": "local-PREDICTION-decode-delay-43",
+      "group_sha256": "cccf329301bc70d3e32dd2fef6633d6ee0527c98bf898e98fd26abd8766c5419",
+      "lesson_ids": [
+        "local-PREDICTION-decode-delay-43-0",
+        "local-PREDICTION-decode-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "4177476fe983392ce32be2cd69fd6e365313c8a6435dcd3f8e9c7fe29c2dd50e"
+    },
+    {
+      "group": "local-PREDICTION-decode-delay-61",
+      "group_sha256": "30dd36af056718cae6737945b5b0eaebd4079d05ad129af45adbc6881a0a76dd",
+      "lesson_ids": [
+        "local-PREDICTION-decode-delay-61-0",
+        "local-PREDICTION-decode-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "93e6f0eed47de4f8d6a48d3c88ca1cb106c861618950b27f3796f275219b939b"
+    },
+    {
+      "group": "local-PREDICTION-processing-delay-17",
+      "group_sha256": "45837e81c663fea2aa11f5551a2ace611acc06ea7805eff20bf1954e96a46afd",
+      "lesson_ids": [
+        "local-PREDICTION-processing-delay-17-0",
+        "local-PREDICTION-processing-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "f38bf32ebd7051b1902fced4e032d5bd7d887df491b96f26febd1d74ddb4804f"
+    },
+    {
+      "group": "local-PREDICTION-processing-delay-29",
+      "group_sha256": "c3fb3962b711253b9efc542fc6eb3ce20383afde678803bbecc4a94995d3360e",
+      "lesson_ids": [
+        "local-PREDICTION-processing-delay-29-0",
+        "local-PREDICTION-processing-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "de1a6d4b8d99bd52b326ae11d7b61369af97c9d944420e3f2e213baf6873fcf4"
+    },
+    {
+      "group": "local-PREDICTION-processing-delay-43",
+      "group_sha256": "ac3ea2c7d74175a2781fb6df7f5a7a76e690afc22daf1477e1c660d17d89fb7c",
+      "lesson_ids": [
+        "local-PREDICTION-processing-delay-43-0",
+        "local-PREDICTION-processing-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "9a29834a8c49e5f53097bf138dacd4debf6df305b69104fa7ad8d490f742a942"
+    },
+    {
+      "group": "local-PREDICTION-processing-delay-61",
+      "group_sha256": "d7048fa8485b9af6dbc320851e2e9c6b2a12bad48fed2ee62bde4f5f73f29c94",
+      "lesson_ids": [
+        "local-PREDICTION-processing-delay-61-0",
+        "local-PREDICTION-processing-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "ab50b60084d6fd613f16c63bda0c87a81f3e7734a4e1f3cffdbf8a92c1185408"
+    },
+    {
+      "group": "local-PREDICTION-render-delay-17",
+      "group_sha256": "ff60dd1fe09d34e481bb9ef1b8a6b45cda6f15ebfef56ebfac4366f840c609a2",
+      "lesson_ids": [
+        "local-PREDICTION-render-delay-17-0",
+        "local-PREDICTION-render-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "033bb75320ae1f3dba4e7af19c1f76a1c34cdd03fb944befb7f83cdb96e333c8"
+    },
+    {
+      "group": "local-PREDICTION-render-delay-29",
+      "group_sha256": "45e5d647fdc8b5eb80ba026102ffaaab8aa4a686d3664e0f46632e99f981f5c3",
+      "lesson_ids": [
+        "local-PREDICTION-render-delay-29-0",
+        "local-PREDICTION-render-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "0225d1e88f7075808cc9283aaf7402268f63abddf9549f5b19c22dee8413f130"
+    },
+    {
+      "group": "local-PREDICTION-render-delay-43",
+      "group_sha256": "d161945513ec73b14aa00adf80ed84a9075950f2a3e1f2023e9ccae861f5e29b",
+      "lesson_ids": [
+        "local-PREDICTION-render-delay-43-0",
+        "local-PREDICTION-render-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "0f18a1eaf770a2d39e800e15d3775d313ebd16013ea5ba0ae8a668c1fa0f1ffd"
+    },
+    {
+      "group": "local-PREDICTION-render-delay-61",
+      "group_sha256": "442d5b393eb56225d69c360c272a32eb48a498fb06f5d21e83ac63f523507d26",
+      "lesson_ids": [
+        "local-PREDICTION-render-delay-61-0",
+        "local-PREDICTION-render-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "5bc0a9f5499a089d3fff6b6ebe37201c246131c5e42bc19f87f89a6a117b2d2d"
+    },
+    {
+      "group": "local-PREDICTION-transfer-delay-17",
+      "group_sha256": "b63ce1c6ef22b7c7adc06074cd21467a87ac4539e59480d808e434ab6d779cd6",
+      "lesson_ids": [
+        "local-PREDICTION-transfer-delay-17-0",
+        "local-PREDICTION-transfer-delay-17-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "4a22840b825fa64f64bfb35c642adb86fa2d59fee9b3e63494ee1ae39f2ccd19"
+    },
+    {
+      "group": "local-PREDICTION-transfer-delay-29",
+      "group_sha256": "4a17fdb20ad72626e8e123539cfc6cb65bd816f9998cde9969f46424efc17ee4",
+      "lesson_ids": [
+        "local-PREDICTION-transfer-delay-29-0",
+        "local-PREDICTION-transfer-delay-29-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "6f5f78b98b7e97644bfda19604210626a22f97e0670dc78e3a2c7f7767fd8053"
+    },
+    {
+      "group": "local-PREDICTION-transfer-delay-43",
+      "group_sha256": "69c7c4292bc8b9e1e721ae7c5470c4a0f6b9503a1e08a3119ce41d5e9058c16e",
+      "lesson_ids": [
+        "local-PREDICTION-transfer-delay-43-0",
+        "local-PREDICTION-transfer-delay-43-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "cb6b11b56c6d7f58fe9da03233ba3adb8e3bb96c55521574f3d699b3b97d3395"
+    },
+    {
+      "group": "local-PREDICTION-transfer-delay-61",
+      "group_sha256": "33c98455b675a0899e94b04ddbd2dd448628ae666e8275dabd52eaf095d722d8",
+      "lesson_ids": [
+        "local-PREDICTION-transfer-delay-61-0",
+        "local-PREDICTION-transfer-delay-61-1"
+      ],
+      "rows": 2,
+      "semantic_target_sha256": "318821758898d107ee7d01c48b26eb0b41b756aef8a70257d6df3d713d48cf61"
+    }
+  ],
+  "paraphrase_groups_sha256": "d79c9255525bf6813cd8c9e83fdac71724801fd0d1b8d02e9a7642470facef14",
+  "parent_path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\models\\public\\semantic-breadth-genesis-sha256-8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6.pt",
+  "parent_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+  "pinned_held_out_vocabulary_expected_file_sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+  "pinned_held_out_vocabulary_file_sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+  "pinned_held_out_vocabulary_path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\held-out-vocabulary-v1.txt",
+  "promotion_features": [],
+  "required_held_out_vocabulary": [
+    "ameliorate",
+    "antedescedes",
+    "antipode",
+    "attested",
+    "celerity",
+    "citation",
+    "concordant",
+    "contrapose",
+    "displaces",
+    "dormant",
+    "empirically",
+    "inviolable",
+    "modulus",
+    "norm",
+    "portend",
+    "presage",
+    "quiescent",
+    "sacrosanct"
+  ],
+  "required_held_out_vocabulary_artifacts": [
+    {
+      "declared_by": [
+        {
+          "path": "evals/frozen/manifest-v7.json",
+          "role": "preserved_held_out_vocabulary_v1",
+          "sha256": "f8784d55629f86377ca80aadf52c838e40b20c497c28653b8605d5e505f6a036"
+        }
+      ],
+      "path": "evals/frozen/held-out-vocabulary-v1.txt",
+      "sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+      "size_bytes": 82,
+      "terms": [
+        "antedescedes",
+        "celerity",
+        "contrapose",
+        "empirically",
+        "inviolable",
+        "modulus",
+        "portend",
+        "quiescent"
+      ],
+      "terms_sha256": "ecf44ec6b67135dfe9c6ad5bf21c42a449d40c22af5af80c8ce3ecc546cc4c8e"
+    },
+    {
+      "declared_by": [
+        {
+          "path": "evals/frozen/manifest-v7.json",
+          "role": "held_out_vocabulary",
+          "sha256": "f8784d55629f86377ca80aadf52c838e40b20c497c28653b8605d5e505f6a036"
+        }
+      ],
+      "path": "evals/frozen/held-out-vocabulary-v2.txt",
+      "sha256": "087da62e8129dd259c1b2662f0439eb7d6387714528af14444a4575c66e76798",
+      "size_bytes": 91,
+      "terms": [
+        "ameliorate",
+        "antipode",
+        "attested",
+        "citation",
+        "concordant",
+        "displaces",
+        "dormant",
+        "norm",
+        "presage",
+        "sacrosanct"
+      ],
+      "terms_sha256": "be40d9c9499f1b7e7774102837137fea66d6ffbbb7bc5e8b5cfb2f12de5ded3f"
+    }
+  ],
+  "required_held_out_vocabulary_artifacts_sha256": "26ead7d4b2cfbfa5ca32fe3f48e1eaaf4205260e2679800bd56e2bdb7ff46bb5",
+  "required_held_out_vocabulary_terms_sha256": "e79ae8dace9a7c8bb3cfae86621146e1250a0ed10896061eea8deaa1ce4dc8ba",
+  "schema": "kev.training-receipt.v1",
+  "score_status": "UNCALIBRATED",
+  "seed": 52103,
+  "steps": 400,
+  "torch_num_threads": 2,
+  "trainer_source_sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59",
+  "training_contract_source_sha256": "dec06491bc5bbfadf9c501929614ae3ea21cfb4d2b0c0edf94dce58b273eda12",
+  "training_exclusion_artifacts": [
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\manifest-v7.json",
+      "role": "FROZEN_EVALUATION_MANIFEST",
+      "sha256": "f8784d55629f86377ca80aadf52c838e40b20c497c28653b8605d5e505f6a036"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v1-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "1c5889428acb0920786f813331f5188b63393d63ec64986c123350218c8b58f0"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v2-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "ef9ff61967f8716e541ccdef3adea887da99dc988799098a9faf47e2ea3dd3c4"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v3-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "1bce1b6c1123336e30531b3cf54c1d01ff4aa420cfec0cb078eaca7f40f3b2d8"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v4-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "6e3ef02d4abc1101ee95d069e80e51963baa911b0ebd4305e9ec536ba0c57322"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v5-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "e913f483bdce2e3ea1a435f0c139a846874a73660665c69b8723a9670348451c"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v6-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "a91454be7c86bfa5e95ae873e3b618e4468961e00a1f9b8aaf206edf605ee029"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\public-audit-v7-260.json",
+      "role": "FROZEN_PROMOTION_SUITE_TRAINING_EXCLUSION",
+      "sha256": "e22bdbea5f07c8b44cf5a1684a2b8433be6b252d74ddf86ef0252b736dbe9c76"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\calibration-fit-v1.jsonl",
+      "role": "CALIBRATION_FIT_TRAINING_EXCLUSION",
+      "sha256": "5734adb2045fa9d192888a2932c2821842833f6a17d9bc27db8bd5defe37e94c"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\calibration-fit-v2.jsonl",
+      "role": "CALIBRATION_FIT_TRAINING_EXCLUSION",
+      "sha256": "d0e7d4fcffef2c3ccd376acb2c77a1fb90289224caa046cddc88c9656ace101c"
+    },
+    {
+      "path": "C:\\Users\\jacks\\Documents\\Codex\\2026-09-28\\https-github-com-jacksonjp0311-gif-kev\\evals\\frozen\\frame-parser-known-failures-v1.json",
+      "role": "DEVELOPMENT_INFLUENCED_AUDIT_TRAINING_EXCLUSION",
+      "sha256": "1aa0d4b519bfdd96e1874f25a0f814149a3b48f51dc8e38274f3847a46a6a901"
+    }
+  ],
+  "training_exclusions_sha256": "f6d81aab4240e46dbcae35166d7af05074adc29d22dd6f8deae7f2fca5a97cf3",
+  "training_inputs": {
+    "encoder_manifest_sha256": "cfd8f8bc3413f31ab927ad7d78eb380c3359fdb2893061075d2369dfec81ea57",
+    "encoder_runtime_source_sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9",
+    "frozen_embedding_values_sha256": "78530a9866331a4185cc32be0c3e4d889d0d0b2ead8e987cbd9ce07087d0316d",
+    "held_out_vocabulary_sha256": "50b401da963d7abc61e2d2d5001129c22087b74b9a41da4c14b40337ff3de9ba",
+    "lessons_sha256": "d4b4eb48ef35866e077b69a8aa00e3be6bdd7112e6fd8917e48ea700274329cb",
+    "objective": "L_relation + 0.20 L_cardinality + 0.35 L_contrastive",
+    "optimizer": {
+      "gradient_norm_clip": 1.0,
+      "learning_rate": 0.0005,
+      "name": "AdamW",
+      "weight_decay": 0.0002
+    },
+    "paraphrase_groups_sha256": "d79c9255525bf6813cd8c9e83fdac71724801fd0d1b8d02e9a7642470facef14",
+    "parent_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+    "pinned_held_out_vocabulary_file_sha256": "e7b7c7ec703e378a9d3ff419b00f9b67e370c07ff2c773d8f6262ec83f2dba3a",
+    "required_held_out_vocabulary_artifacts_sha256": "26ead7d4b2cfbfa5ca32fe3f48e1eaaf4205260e2679800bd56e2bdb7ff46bb5",
+    "required_held_out_vocabulary_terms_sha256": "e79ae8dace9a7c8bb3cfae86621146e1250a0ed10896061eea8deaa1ce4dc8ba",
+    "seed": 52103,
+    "steps": 400,
+    "torch_num_threads": 2,
+    "trainer_source_sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59",
+    "training_contract_source_sha256": "dec06491bc5bbfadf9c501929614ae3ea21cfb4d2b0c0edf94dce58b273eda12",
+    "training_exclusions_sha256": "f6d81aab4240e46dbcae35166d7af05074adc29d22dd6f8deae7f2fca5a97cf3",
+    "training_source_manifest": [
+      {
+        "path": "kev/sentence_training.py",
+        "role": "FROZEN_ENCODER_TRAINER",
+        "sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59"
+      },
+      {
+        "path": "kev/encoders.py",
+        "role": "ENCODER_RUNTIME",
+        "sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9"
+      },
+      {
+        "path": "kev/uc51a2/semantic_breadth.py",
+        "role": "SHARED_SEMANTIC_TRAINING",
+        "sha256": "dec06491bc5bbfadf9c501929614ae3ea21cfb4d2b0c0edf94dce58b273eda12"
+      }
+    ],
+    "training_source_manifest_sha256": "999b560fc734133e144311b2b5f520971ba07cb6de70f4dfc3ac554127e6ee08"
+  },
+  "training_inputs_sha256": "f2911d0da5a85173953d0bf11cb252a3ec3c23f732d452c5c2ffe51e52aca81d",
+  "training_scope": "projection_frame_and_cardinality_heads_only",
+  "training_source_manifest": [
+    {
+      "path": "kev/sentence_training.py",
+      "role": "FROZEN_ENCODER_TRAINER",
+      "sha256": "3632c342c2ef9f468ae341213e0958e37f506eb9f1995de3d27b86a2ec91cc59"
+    },
+    {
+      "path": "kev/encoders.py",
+      "role": "ENCODER_RUNTIME",
+      "sha256": "9cc0e367da1f02d6629bbe187ebda344ca137f2fbd02ffd9c3d48602467c54c9"
+    },
+    {
+      "path": "kev/uc51a2/semantic_breadth.py",
+      "role": "SHARED_SEMANTIC_TRAINING",
+      "sha256": "dec06491bc5bbfadf9c501929614ae3ea21cfb4d2b0c0edf94dce58b273eda12"
+    }
+  ],
+  "training_source_manifest_sha256": "999b560fc734133e144311b2b5f520971ba07cb6de70f4dfc3ac554127e6ee08"
+}
