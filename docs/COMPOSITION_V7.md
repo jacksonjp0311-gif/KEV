@@ -127,6 +127,12 @@ observed replays do not establish universal bitwise portability.
 The final local suite, including ten additional replay-contract tests, passed
 all 290 tests. The 58 original experiment-plan artifact hashes remain unchanged.
 
+The subsequent [hosted source-identity check](https://github.com/jacksonjp0311-gif/KEV/actions/runs/36435715297)
+caught four legacy files whose old Git index entries were still LF despite
+the new byte-preserving attributes. Publication explicitly restaged their
+already-frozen CRLF bytes; no local runtime bytes or experiment artifacts were
+changed. Verification compares the actual staged blobs, not just Git filters.
+
 ## Artifacts and replay
 
 | Artifact | SHA-256 |
