@@ -1,0 +1,3957 @@
+{
+  "activation": "NONE",
+  "families": {
+    "ambiguous_reference": {
+      "correct": 3,
+      "missing_frames": 0,
+      "total": 4,
+      "unsupported_frames": 1
+    },
+    "explicit_controls": {
+      "correct": 4,
+      "missing_frames": 0,
+      "total": 4,
+      "unsupported_frames": 0
+    },
+    "interacting_constraints": {
+      "correct": 2,
+      "missing_frames": 4,
+      "total": 4,
+      "unsupported_frames": 1
+    },
+    "minimal_pairs": {
+      "correct": 4,
+      "missing_frames": 0,
+      "total": 4,
+      "unsupported_frames": 0
+    },
+    "resolved_reference": {
+      "correct": 0,
+      "missing_frames": 4,
+      "total": 4,
+      "unsupported_frames": 2
+    },
+    "retention": {
+      "correct": 40,
+      "missing_frames": 0,
+      "total": 40,
+      "unsupported_frames": 0
+    },
+    "unfamiliar_phrasing": {
+      "correct": 0,
+      "missing_frames": 4,
+      "total": 4,
+      "unsupported_frames": 2
+    }
+  },
+  "raw_failures": [
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-000",
+      "input": "Our desired outcome is for checkout latency to fall below 47 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.52820525,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            58,
+            60
+          ],
+          "subject": [
+            27,
+            43
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-001",
+      "input": "For cache delay, 53 ms is an upper bound that must not be exceeded.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.52373775,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            17,
+            19
+          ],
+          "subject": [
+            4,
+            15
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-002",
+      "input": "The latest reading puts dispatch latency at 71 ms.",
+      "missing": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.5186726666666667,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "latest_reading_puts_dispatch_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            44,
+            46
+          ],
+          "subject": [
+            24,
+            40
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "latest_reading_puts_dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-003",
+      "input": "A successful run would bring render delay down to less than 39 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.539404,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "render_delay_down",
+              "unit": "ms",
+              "value": 39
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            60,
+            62
+          ],
+          "subject": [
+            29,
+            41
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay_down",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-004",
+      "input": "Observed checkout latency is 71 ms. Keep it below 47 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.539964,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Only one named measured entity; 'it' resolves to that entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            50,
+            52
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-005",
+      "input": "Observed checkout latency is 71 ms. That same checkout latency must remain below 47 ms.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.5197595,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit same-entity reference; the requirement is not a new entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            81,
+            83
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-006",
+      "input": "Observed cache delay is 83 ms. Keep it below 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.523484,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 83
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Only one named measured entity; 'it' resolves to that entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        },
+        {
+          "number": [
+            45,
+            47
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-007",
+      "input": "Observed cache delay is 83 ms. That same cache delay must remain below 53 ms.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.51248575,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 83
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit same-entity reference; the requirement is not a new entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        },
+        {
+          "number": [
+            71,
+            73
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [],
+      "family": "ambiguous_reference",
+      "id": "language-v1-009",
+      "input": "Keep it below 43 ms. I have not identified what it refers to.",
+      "missing": [],
+      "output": {
+        "confidence": 0.548005,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 43
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "No grounded referent. Abstain from a concrete threshold frame and request clarification; this benchmark scores abstention, not a clarification UI.",
+      "target_support_spans": [],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 43
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-012",
+      "input": "Please aim for checkout latency below 47 ms; cache delay must stay at most 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.51828825,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "for_checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            38,
+            40
+          ],
+          "subject": [
+            15,
+            31
+          ]
+        },
+        {
+          "number": [
+            75,
+            77
+          ],
+          "subject": [
+            45,
+            56
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "for_checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-015",
+      "input": "I would appreciate checkout latency below 47 ms; one nonnegotiable requirement is cache delay below 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.51866675,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            42,
+            44
+          ],
+          "subject": [
+            19,
+            35
+          ]
+        },
+        {
+          "number": [
+            100,
+            102
+          ],
+          "subject": [
+            82,
+            93
+          ]
+        }
+      ],
+      "unsupported": []
+    }
+  ],
+  "records": [
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-000",
+      "input": "Our desired outcome is for checkout latency to fall below 47 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.52820525,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            58,
+            60
+          ],
+          "subject": [
+            27,
+            43
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-001",
+      "input": "For cache delay, 53 ms is an upper bound that must not be exceeded.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.52373775,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            17,
+            19
+          ],
+          "subject": [
+            4,
+            15
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-002",
+      "input": "The latest reading puts dispatch latency at 71 ms.",
+      "missing": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.5186726666666667,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "EQ",
+              "subject": "latest_reading_puts_dispatch_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            44,
+            46
+          ],
+          "subject": [
+            24,
+            40
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "EQ",
+            "subject": "latest_reading_puts_dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-003",
+      "input": "A successful run would bring render delay down to less than 39 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.539404,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "render_delay_down",
+              "unit": "ms",
+              "value": 39
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            60,
+            62
+          ],
+          "subject": [
+            29,
+            41
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay_down",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-004",
+      "input": "Observed checkout latency is 71 ms. Keep it below 47 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.539964,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Only one named measured entity; 'it' resolves to that entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            50,
+            52
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-005",
+      "input": "Observed checkout latency is 71 ms. That same checkout latency must remain below 47 ms.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.5197595,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit same-entity reference; the requirement is not a new entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            81,
+            83
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-006",
+      "input": "Observed cache delay is 83 ms. Keep it below 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.523484,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 83
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Only one named measured entity; 'it' resolves to that entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        },
+        {
+          "number": [
+            45,
+            47
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-007",
+      "input": "Observed cache delay is 83 ms. That same cache delay must remain below 53 ms.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.51248575,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 83
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Explicit same-entity reference; the requirement is not a new entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        },
+        {
+          "number": [
+            71,
+            73
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 59
+          }
+        }
+      ],
+      "family": "ambiguous_reference",
+      "id": "language-v1-008",
+      "input": "Observed checkout latency is 71 ms; observed cache delay is 59 ms. One of these must stay below 43 ms, but I have not specified which.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5186455,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 59
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Preserve both observations. Do not bind the unassigned threshold to either entity; clarification is required.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            60,
+            62
+          ],
+          "subject": [
+            45,
+            56
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [],
+      "family": "ambiguous_reference",
+      "id": "language-v1-009",
+      "input": "Keep it below 43 ms. I have not identified what it refers to.",
+      "missing": [],
+      "output": {
+        "confidence": 0.548005,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 43
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "No grounded referent. Abstain from a concrete threshold frame and request clarification; this benchmark scores abstention, not a clarification UI.",
+      "target_support_spans": [],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 43
+          }
+        }
+      ]
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 59
+          }
+        }
+      ],
+      "family": "ambiguous_reference",
+      "id": "language-v1-010",
+      "input": "Observed dispatch latency is 83 ms; observed cache delay is 59 ms. One of these must stay below 43 ms, but I have not specified which.",
+      "missing": [],
+      "output": {
+        "confidence": 0.52010225,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 83
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 59
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Preserve both observations. Do not bind the unassigned threshold to either entity; clarification is required.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            60,
+            62
+          ],
+          "subject": [
+            45,
+            56
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [],
+      "family": "ambiguous_reference",
+      "id": "language-v1-011",
+      "input": "It must remain below 43 ms. The subject has not been identified.",
+      "missing": [],
+      "output": {
+        "confidence": 0.52328675,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "No grounded referent. Abstain from a concrete threshold frame and request clarification; this benchmark scores abstention, not a clarification UI.",
+      "target_support_spans": [],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-012",
+      "input": "Please aim for checkout latency below 47 ms; cache delay must stay at most 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.51828825,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "for_checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            38,
+            40
+          ],
+          "subject": [
+            15,
+            31
+          ]
+        },
+        {
+          "number": [
+            75,
+            77
+          ],
+          "subject": [
+            45,
+            56
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "for_checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ]
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 61
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-013",
+      "input": "Checkout latency must be below 47 ms; checkout latency must be above 61 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5161455,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "GT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 61
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            31,
+            33
+          ],
+          "subject": [
+            0,
+            16
+          ]
+        },
+        {
+          "number": [
+            69,
+            71
+          ],
+          "subject": [
+            0,
+            16
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GTE",
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-014",
+      "input": "Observed render delay is 71 ms; keep render delay below 39 ms; dispatch latency must be at least 53 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5144075,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "render_delay",
+              "unit": "ms",
+              "value": 71
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "render_delay",
+              "unit": "ms",
+              "value": 39
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "GTE",
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            25,
+            27
+          ],
+          "subject": [
+            9,
+            21
+          ]
+        },
+        {
+          "number": [
+            56,
+            58
+          ],
+          "subject": [
+            9,
+            21
+          ]
+        },
+        {
+          "number": [
+            97,
+            99
+          ],
+          "subject": [
+            63,
+            79
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-015",
+      "input": "I would appreciate checkout latency below 47 ms; one nonnegotiable requirement is cache delay below 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "confidence": 0.51866675,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            42,
+            44
+          ],
+          "subject": [
+            19,
+            35
+          ]
+        },
+        {
+          "number": [
+            100,
+            102
+          ],
+          "subject": [
+            82,
+            93
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "minimal_pairs",
+      "id": "language-v1-016",
+      "input": "Keep checkout latency below 47 ms; keep cache delay below 53 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.531347,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": "order",
+      "rationale": "Order does not change the frame multiset; swapping the asserted and negated numbers changes the sole observation.",
+      "target_support_spans": [
+        {
+          "number": [
+            28,
+            30
+          ],
+          "subject": [
+            5,
+            21
+          ]
+        },
+        {
+          "number": [
+            58,
+            60
+          ],
+          "subject": [
+            40,
+            51
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "minimal_pairs",
+      "id": "language-v1-017",
+      "input": "Keep cache delay below 53 ms; keep checkout latency below 47 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.531347,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 53
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": "order",
+      "rationale": "Order does not change the frame multiset; swapping the asserted and negated numbers changes the sole observation.",
+      "target_support_spans": [
+        {
+          "number": [
+            58,
+            60
+          ],
+          "subject": [
+            35,
+            51
+          ]
+        },
+        {
+          "number": [
+            23,
+            25
+          ],
+          "subject": [
+            5,
+            16
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "family": "minimal_pairs",
+      "id": "language-v1-018",
+      "input": "Observed dispatch latency is 71 ms. It is not true that dispatch latency is 83 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.52601075,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": "negation-number",
+      "rationale": "Order does not change the frame multiset; swapping the asserted and negated numbers changes the sole observation.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 83
+          }
+        }
+      ],
+      "family": "minimal_pairs",
+      "id": "language-v1-019",
+      "input": "Observed dispatch latency is 83 ms. It is not true that dispatch latency is 71 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.52601075,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 83
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": "negation-number",
+      "rationale": "Order does not change the frame multiset; swapping the asserted and negated numbers changes the sole observation.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "explicit_controls",
+      "id": "language-v1-020",
+      "input": "Keep checkout latency below 47 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.546047,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Ordinary explicit entity/value control; report separately from challenge items.",
+      "target_support_spans": [
+        {
+          "number": [
+            28,
+            30
+          ],
+          "subject": [
+            5,
+            21
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "explicit_controls",
+      "id": "language-v1-021",
+      "input": "Cache delay must be below 53 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.516919,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Ordinary explicit entity/value control; report separately from challenge items.",
+      "target_support_spans": [
+        {
+          "number": [
+            26,
+            28
+          ],
+          "subject": [
+            0,
+            11
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "family": "explicit_controls",
+      "id": "language-v1-022",
+      "input": "Observed dispatch latency is 71 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5294535,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Ordinary explicit entity/value control; report separately from challenge items.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "family": "explicit_controls",
+      "id": "language-v1-023",
+      "input": "Keep render delay below 39 ms.",
+      "missing": [],
+      "output": {
+        "confidence": 0.532117,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "render_delay",
+              "unit": "ms",
+              "value": 39
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "pair_id": null,
+      "rationale": "Ordinary explicit entity/value control; report separately from challenge items.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            5,
+            17
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_310",
+            "source": "archive_310"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-000",
+      "input": "Copy archive-310 into replica-310.",
+      "missing": [],
+      "output": {
+        "confidence": 0.547872,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "COPY_VALUE",
+            "relation": "COPY_VALUE",
+            "slots": {
+              "destination": "replica_310",
+              "source": "archive_310"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_311",
+            "source": "archive_311"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-001",
+      "input": "Copy archive-311 into replica-311.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5158008333333334,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "COPY_VALUE",
+            "relation": "COPY_VALUE",
+            "slots": {
+              "destination": "replica_311",
+              "source": "archive_311"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_312",
+            "source": "archive_312"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-002",
+      "input": "Copy archive-312 into replica-312.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5140186666666667,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "COPY_VALUE",
+            "relation": "COPY_VALUE",
+            "slots": {
+              "destination": "replica_312",
+              "source": "archive_312"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_313",
+            "old_value": "release_312"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-003",
+      "input": "Release-313 replaces release-312.",
+      "missing": [],
+      "output": {
+        "confidence": 0.545474,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "release_313",
+              "old_value": "release_312"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_314",
+            "old_value": "release_313"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-004",
+      "input": "Release-314 replaces release-313.",
+      "missing": [],
+      "output": {
+        "confidence": 0.55009,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "release_314",
+              "old_value": "release_313"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_315",
+            "old_value": "release_314"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-005",
+      "input": "Release-315 replaces release-314.",
+      "missing": [],
+      "output": {
+        "confidence": 0.553415,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "release_315",
+              "old_value": "release_314"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -316
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-006",
+      "input": "Distance from zero of -316.",
+      "missing": [],
+      "output": {
+        "confidence": 0.542918,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -316
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -317
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-007",
+      "input": "Distance from zero of -317.",
+      "missing": [],
+      "output": {
+        "confidence": 0.542918,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -317
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -318
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-008",
+      "input": "Distance from zero of -318.",
+      "missing": [],
+      "output": {
+        "confidence": 0.542918,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -318
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 319
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-009",
+      "input": "Opposite of 319.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5112295,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "NEGATE",
+            "relation": "NEGATE",
+            "slots": {
+              "input": 319
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 320
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-010",
+      "input": "Opposite of 320.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5112295,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "NEGATE",
+            "relation": "NEGATE",
+            "slots": {
+              "input": 320
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 321
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-011",
+      "input": "Opposite of 321.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5112295,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "NEGATE",
+            "relation": "NEGATE",
+            "slots": {
+              "input": 321
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_322"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-012",
+      "input": "Refer to ticket-322.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5120816666666667,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_322"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_323"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-013",
+      "input": "Refer to ticket-323.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5071938333333333,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_323"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_324"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-014",
+      "input": "Refer to ticket-324.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5032591666666667,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_324"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_325"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-015",
+      "input": "candidate-325 is live.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5134641666666667,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "candidate_325"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_326"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-016",
+      "input": "candidate-326 is live.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5137280000000001,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "candidate_326"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_327"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-017",
+      "input": "candidate-327 is live.",
+      "missing": [],
+      "output": {
+        "confidence": 0.527547,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "candidate_327"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-328",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-018",
+      "input": "Run batch-328 status is completed.",
+      "missing": [],
+      "output": {
+        "confidence": 0.530336,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-328",
+              "status": "COMPLETED"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-329",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-019",
+      "input": "Run batch-329 status is completed.",
+      "missing": [],
+      "output": {
+        "confidence": 0.542965,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-329",
+              "status": "COMPLETED"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-330",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-020",
+      "input": "Run batch-330 status is completed.",
+      "missing": [],
+      "output": {
+        "confidence": 0.53815,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-330",
+              "status": "COMPLETED"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-331",
+            "value": 831
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-021",
+      "input": "Receipt rec-331 returned 831.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5156764,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-331",
+              "value": 831
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-332",
+            "value": 832
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-022",
+      "input": "Receipt rec-332 returned 832.",
+      "missing": [],
+      "output": {
+        "confidence": 0.519744,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-332",
+              "value": 832
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-333",
+            "value": 833
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-023",
+      "input": "Receipt rec-333 returned 833.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5065973333333333,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-333",
+              "value": 833
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONSISTENT"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-024",
+      "input": "The evidence is consistent.",
+      "missing": [],
+      "output": {
+        "confidence": 0.523046,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "EVIDENCE_CONSISTENCY",
+            "relation": "EVIDENCE_CONSISTENCY",
+            "slots": {
+              "status": "CONSISTENT"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONFLICT"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-025",
+      "input": "The evidence is conflicting.",
+      "missing": [],
+      "output": {
+        "confidence": 0.547253,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "EVIDENCE_CONSISTENCY",
+            "relation": "EVIDENCE_CONSISTENCY",
+            "slots": {
+              "status": "CONFLICT"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONSISTENT"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-026",
+      "input": "The evidence is in agreement.",
+      "missing": [],
+      "output": {
+        "confidence": 0.546711,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "EVIDENCE_CONSISTENCY",
+            "relation": "EVIDENCE_CONSISTENCY",
+            "slots": {
+              "status": "CONSISTENT"
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 337
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-027",
+      "input": "Maintain queue depth under 337 requests.",
+      "missing": [],
+      "output": {
+        "confidence": 0.51524675,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 337
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 338
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-028",
+      "input": "Maintain queue depth under 338 requests.",
+      "missing": [],
+      "output": {
+        "confidence": 0.51524675,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 338
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 339
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-029",
+      "input": "Maintain queue depth under 339 requests.",
+      "missing": [],
+      "output": {
+        "confidence": 0.51524675,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 339
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_340",
+            "polarity": false
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-030",
+      "input": "Never update archive-340.",
+      "missing": [],
+      "output": {
+        "confidence": 0.536585,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_340",
+              "polarity": false
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_341",
+            "polarity": false
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-031",
+      "input": "Never update archive-341.",
+      "missing": [],
+      "output": {
+        "confidence": 0.562867,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_341",
+              "polarity": false
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_342",
+            "polarity": false
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-032",
+      "input": "Never update archive-342.",
+      "missing": [],
+      "output": {
+        "confidence": 0.54935,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_342",
+              "polarity": false
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 343
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-033",
+      "input": "Recorded throughput was 343 rps.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5157522,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 343
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 344
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-034",
+      "input": "Recorded throughput was 344 rps.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5157522,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 344
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 345
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-035",
+      "input": "Recorded throughput was 345 rps.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5157522,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 345
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 346
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-036",
+      "input": "Throughput will remain above 346 rps.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5187914,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 346
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 347
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-037",
+      "input": "Throughput will remain above 347 rps.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5187914,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 347
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 348
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-038",
+      "input": "Throughput will remain above 348 rps.",
+      "missing": [],
+      "output": {
+        "confidence": 0.5187914,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 348
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 399
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-039",
+      "input": "Maintain queue depth under 399 requests.",
+      "missing": [],
+      "output": {
+        "confidence": 0.51524675,
+        "model_sha256": "8f85375adcb63debafe3a9b34f095e066520ebb02585d5dbc6fb447c68bd3af6",
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 399
+            }
+          }
+        ],
+        "score_status": "UNCALIBRATED",
+        "temperature": null
+      },
+      "unsupported": []
+    }
+  ],
+  "score_status": "UNCALIBRATED"
+}

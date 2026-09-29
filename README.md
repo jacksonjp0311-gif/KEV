@@ -6,6 +6,10 @@
 
 ## Why KEV exists
 
+Newest measurement: [language challenge v1](docs/LANGUAGE_CHALLENGE_V1.md).
+Five unchanged approaches tied at 13/24 new language cases and 40/40 retention.
+Reference resolution and unfamiliar phrasing remain gaps; no model was promoted.
+
 Latest research: [clause-local v1 and attribution controls](docs/CLAUSE_LOCAL_V1.md).
 Learned local proposals reached 55/56 composition cases, but a stronger no-model
 parser control reached 56/56. No checkpoint was promoted; all evidence is retained.

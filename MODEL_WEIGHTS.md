@@ -6,6 +6,17 @@ creates a challenger; it never overwrites or activates the parent.
 
 ## Active public reference incumbent
 
+Latest evaluation-only pack: [language challenge v1](docs/LANGUAGE_CHALLENGE_V1.md).
+No checkpoint was created, modified, or promoted. Its 64-case suite is
+`experiments/language-challenge-v1-boundary/suite.json`, SHA-256
+`0fc1a03e07cfdaeb93d265d19ebe97592a36fdef67560ff7ce3346ea4f2ff52e`.
+Its protocol SHA-256 is
+`8c777a15aaefefab25a416746ce43c96d3c139e4419761437f9b1f3a19a9878e`;
+evidence inventory SHA-256 is
+`bc4060dd8ef283f77700754b75bf3cd3429fd6d6e6855b5758c3524d73c0b138`.
+The protocol pins the unchanged genesis and retained clause-local-v1 candidate,
+runtime sources, registry, encoder manifest and retained lesson corpora.
+
 Latest non-activating experiment: [clause-local v1](docs/CLAUSE_LOCAL_V1.md).
 Its checkpoint is **not an incumbent**; the primary hypothesis was NOT_SUPPORTED,
 and the post-hoc no-model control outperformed the learned local head.

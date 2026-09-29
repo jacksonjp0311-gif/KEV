@@ -1,0 +1,6560 @@
+{
+  "activation": "NONE",
+  "families": {
+    "ambiguous_reference": {
+      "correct": 3,
+      "missing_frames": 0,
+      "total": 4,
+      "unsupported_frames": 1
+    },
+    "explicit_controls": {
+      "correct": 4,
+      "missing_frames": 0,
+      "total": 4,
+      "unsupported_frames": 0
+    },
+    "interacting_constraints": {
+      "correct": 2,
+      "missing_frames": 4,
+      "total": 4,
+      "unsupported_frames": 1
+    },
+    "minimal_pairs": {
+      "correct": 4,
+      "missing_frames": 0,
+      "total": 4,
+      "unsupported_frames": 0
+    },
+    "resolved_reference": {
+      "correct": 0,
+      "missing_frames": 4,
+      "total": 4,
+      "unsupported_frames": 2
+    },
+    "retention": {
+      "correct": 40,
+      "missing_frames": 0,
+      "total": 40,
+      "unsupported_frames": 0
+    },
+    "unfamiliar_phrasing": {
+      "correct": 0,
+      "missing_frames": 4,
+      "total": 4,
+      "unsupported_frames": 1
+    }
+  },
+  "raw_failures": [
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-000",
+      "input": "Our desired outcome is for checkout latency to fall below 47 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "frames": [],
+        "predicted": []
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            58,
+            60
+          ],
+          "subject": [
+            27,
+            43
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-001",
+      "input": "For cache delay, 53 ms is an upper bound that must not be exceeded.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [],
+        "predicted": []
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            17,
+            19
+          ],
+          "subject": [
+            4,
+            15
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-002",
+      "input": "The latest reading puts dispatch latency at 71 ms.",
+      "missing": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "output": {
+        "frames": [],
+        "predicted": []
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            44,
+            46
+          ],
+          "subject": [
+            24,
+            40
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-003",
+      "input": "A successful run would bring render delay down to less than 39 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 65,
+              "start": 23,
+              "text": "bring render delay down to less than 39 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-f138c85c8a99704377fabae98b87ed2c7126ed8e01e4a0e3942f5b8cb3d2e347",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-003",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "287c8d17f7faf5920bb3d9bce35189bc1154fe85bd2ec40ff17ef182e0e5799e"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "less than",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "render delay down",
+                "type": "entity",
+                "value": "render_delay_down"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "39",
+                "type": "number",
+                "value": 39
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "render_delay_down",
+              "unit": "ms",
+              "value": 39
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            60,
+            62
+          ],
+          "subject": [
+            29,
+            41
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay_down",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-004",
+      "input": "Observed checkout latency is 71 ms. Keep it below 47 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 34,
+              "start": 0,
+              "text": "Observed checkout latency is 71 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-d7e83fc8806cdda8691c9d5a1810bf9670194f13a6db40bfb0a803f8e5f6d48e",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-004",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "af1a942141fbd88a46f6418511954afce03f6c402dee922864d11091c548eb8c"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "71",
+                "type": "number",
+                "value": 71
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 55,
+              "start": 36,
+              "text": "Keep it below 47 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-97897e414dbbe56b87762599acc2f3e392630c6951034660eeb1dc520c75d802",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-004",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "af1a942141fbd88a46f6418511954afce03f6c402dee922864d11091c548eb8c"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "it",
+                "type": "entity",
+                "value": "it"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "47",
+                "type": "number",
+                "value": 47
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Only one named measured entity; 'it' resolves to that entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            50,
+            52
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-005",
+      "input": "Observed checkout latency is 71 ms. That same checkout latency must remain below 47 ms.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 34,
+              "start": 0,
+              "text": "Observed checkout latency is 71 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-32226643d4f7432c70a6511f8862f2a30c2ad9ecdace58bbd7ea3e3f9716af07",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-005",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "e17b84328ea6b8359f0f98fae1cd80c46ce718a5fa56bdf4e7c24ebcfb6b247b"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "71",
+                "type": "number",
+                "value": 71
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Explicit same-entity reference; the requirement is not a new entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            81,
+            83
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-006",
+      "input": "Observed cache delay is 83 ms. Keep it below 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 29,
+              "start": 0,
+              "text": "Observed cache delay is 83 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-082e4b15b421e5a9f61cc9716f14901fa6531a130746bf246ee04f768b4f0534",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-006",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "671c0935bc2c464f67b42a34a4cd270c3613641320f5a0efab9668849a9b50d9"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "cache delay",
+                "type": "entity",
+                "value": "cache_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "83",
+                "type": "number",
+                "value": 83
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 50,
+              "start": 31,
+              "text": "Keep it below 53 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-9d9f9a0affb7a8c0baab411368742c682ad35d54c3eb677672447bf914633cde",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-006",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "671c0935bc2c464f67b42a34a4cd270c3613641320f5a0efab9668849a9b50d9"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "it",
+                "type": "entity",
+                "value": "it"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "53",
+                "type": "number",
+                "value": 53
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 83
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Only one named measured entity; 'it' resolves to that entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        },
+        {
+          "number": [
+            45,
+            47
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-007",
+      "input": "Observed cache delay is 83 ms. That same cache delay must remain below 53 ms.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 29,
+              "start": 0,
+              "text": "Observed cache delay is 83 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-4ee96b69e8b6ea944da04373ccf01088a8ea5045460efa3f127834f30df445a1",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-007",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "a279794518324c9d62084b5c1a161989f1e57b0dde0f8b0ad4c8f46198f59a5e"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "cache delay",
+                "type": "entity",
+                "value": "cache_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "83",
+                "type": "number",
+                "value": 83
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 83
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Explicit same-entity reference; the requirement is not a new entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        },
+        {
+          "number": [
+            71,
+            73
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [],
+      "family": "ambiguous_reference",
+      "id": "language-v1-009",
+      "input": "Keep it below 43 ms. I have not identified what it refers to.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 19,
+              "start": 0,
+              "text": "Keep it below 43 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-92433ade45e9956cd930288da40186a7f21d7dc40e76e7523d3901da3ae902d8",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-009",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "1376b408c20b6d4c1f4d0a96686c13c0b980d46c9fd262a9f3b3204ffd0527d5"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "it",
+                "type": "entity",
+                "value": "it"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "43",
+                "type": "number",
+                "value": 43
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 43
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "No grounded referent. Abstain from a concrete threshold frame and request clarification; this benchmark scores abstention, not a clarification UI.",
+      "target_support_spans": [],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 43
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-012",
+      "input": "Please aim for checkout latency below 47 ms; cache delay must stay at most 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 43,
+              "start": 7,
+              "text": "aim for checkout latency below 47 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-c93ecfdb168ce81f285eb7f9e48c013c2f3d06901eae8f3d1175b9787ba07f91",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-012",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "cc95744d387bde49f585b329b23436e77cbd0eac2fdeb682099c510e5c9bf6ca"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "for checkout latency",
+                "type": "entity",
+                "value": "for_checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "47",
+                "type": "number",
+                "value": 47
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "for_checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            38,
+            40
+          ],
+          "subject": [
+            15,
+            31
+          ]
+        },
+        {
+          "number": [
+            75,
+            77
+          ],
+          "subject": [
+            45,
+            56
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "for_checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-015",
+      "input": "I would appreciate checkout latency below 47 ms; one nonnegotiable requirement is cache delay below 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [],
+        "predicted": []
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            42,
+            44
+          ],
+          "subject": [
+            19,
+            35
+          ]
+        },
+        {
+          "number": [
+            100,
+            102
+          ],
+          "subject": [
+            82,
+            93
+          ]
+        }
+      ],
+      "unsupported": []
+    }
+  ],
+  "records": [
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-000",
+      "input": "Our desired outcome is for checkout latency to fall below 47 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "frames": [],
+        "predicted": []
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            58,
+            60
+          ],
+          "subject": [
+            27,
+            43
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-001",
+      "input": "For cache delay, 53 ms is an upper bound that must not be exceeded.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [],
+        "predicted": []
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            17,
+            19
+          ],
+          "subject": [
+            4,
+            15
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-002",
+      "input": "The latest reading puts dispatch latency at 71 ms.",
+      "missing": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "output": {
+        "frames": [],
+        "predicted": []
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            44,
+            46
+          ],
+          "subject": [
+            24,
+            40
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "family": "unfamiliar_phrasing",
+      "id": "language-v1-003",
+      "input": "A successful run would bring render delay down to less than 39 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 65,
+              "start": 23,
+              "text": "bring render delay down to less than 39 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-f138c85c8a99704377fabae98b87ed2c7126ed8e01e4a0e3942f5b8cb3d2e347",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-003",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "287c8d17f7faf5920bb3d9bce35189bc1154fe85bd2ec40ff17ef182e0e5799e"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "less than",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "render delay down",
+                "type": "entity",
+                "value": "render_delay_down"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "39",
+                "type": "number",
+                "value": 39
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "render_delay_down",
+              "unit": "ms",
+              "value": 39
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Explicit entity and number; unfamiliar wording preserves the stated kind and comparator.",
+      "target_support_spans": [
+        {
+          "number": [
+            60,
+            62
+          ],
+          "subject": [
+            29,
+            41
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay_down",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-004",
+      "input": "Observed checkout latency is 71 ms. Keep it below 47 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 34,
+              "start": 0,
+              "text": "Observed checkout latency is 71 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-d7e83fc8806cdda8691c9d5a1810bf9670194f13a6db40bfb0a803f8e5f6d48e",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-004",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "af1a942141fbd88a46f6418511954afce03f6c402dee922864d11091c548eb8c"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "71",
+                "type": "number",
+                "value": 71
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 55,
+              "start": 36,
+              "text": "Keep it below 47 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-97897e414dbbe56b87762599acc2f3e392630c6951034660eeb1dc520c75d802",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-004",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "af1a942141fbd88a46f6418511954afce03f6c402dee922864d11091c548eb8c"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "it",
+                "type": "entity",
+                "value": "it"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "47",
+                "type": "number",
+                "value": 47
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Only one named measured entity; 'it' resolves to that entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            50,
+            52
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-005",
+      "input": "Observed checkout latency is 71 ms. That same checkout latency must remain below 47 ms.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 34,
+              "start": 0,
+              "text": "Observed checkout latency is 71 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-32226643d4f7432c70a6511f8862f2a30c2ad9ecdace58bbd7ea3e3f9716af07",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-005",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "e17b84328ea6b8359f0f98fae1cd80c46ce718a5fa56bdf4e7c24ebcfb6b247b"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "71",
+                "type": "number",
+                "value": 71
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Explicit same-entity reference; the requirement is not a new entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            81,
+            83
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-006",
+      "input": "Observed cache delay is 83 ms. Keep it below 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 29,
+              "start": 0,
+              "text": "Observed cache delay is 83 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-082e4b15b421e5a9f61cc9716f14901fa6531a130746bf246ee04f768b4f0534",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-006",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "671c0935bc2c464f67b42a34a4cd270c3613641320f5a0efab9668849a9b50d9"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "cache delay",
+                "type": "entity",
+                "value": "cache_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "83",
+                "type": "number",
+                "value": 83
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 50,
+              "start": 31,
+              "text": "Keep it below 53 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-9d9f9a0affb7a8c0baab411368742c682ad35d54c3eb677672447bf914633cde",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-006",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "671c0935bc2c464f67b42a34a4cd270c3613641320f5a0efab9668849a9b50d9"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "it",
+                "type": "entity",
+                "value": "it"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "53",
+                "type": "number",
+                "value": 53
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 83
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Only one named measured entity; 'it' resolves to that entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        },
+        {
+          "number": [
+            45,
+            47
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ]
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "resolved_reference",
+      "id": "language-v1-007",
+      "input": "Observed cache delay is 83 ms. That same cache delay must remain below 53 ms.",
+      "missing": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 29,
+              "start": 0,
+              "text": "Observed cache delay is 83 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-4ee96b69e8b6ea944da04373ccf01088a8ea5045460efa3f127834f30df445a1",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-007",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "a279794518324c9d62084b5c1a161989f1e57b0dde0f8b0ad4c8f46198f59a5e"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "cache delay",
+                "type": "entity",
+                "value": "cache_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "83",
+                "type": "number",
+                "value": 83
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 83
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Explicit same-entity reference; the requirement is not a new entity.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        },
+        {
+          "number": [
+            71,
+            73
+          ],
+          "subject": [
+            9,
+            20
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 59
+          }
+        }
+      ],
+      "family": "ambiguous_reference",
+      "id": "language-v1-008",
+      "input": "Observed checkout latency is 71 ms; observed cache delay is 59 ms. One of these must stay below 43 ms, but I have not specified which.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 34,
+              "start": 0,
+              "text": "Observed checkout latency is 71 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-210f74df4097320483d5f9be8d063ee15954480e90a792c5e134d0472d8cc1b3",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-008",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "d005cedd50a175bf1f89f01fe39c2886be95be8e8ae0301ec94cbc94f7abba6f"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "71",
+                "type": "number",
+                "value": 71
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 65,
+              "start": 36,
+              "text": "observed cache delay is 59 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-342ef80fac203f4884c5c8065b92eea7e6ab2d5f04720281ecc8800ab40395d5",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-008",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "d005cedd50a175bf1f89f01fe39c2886be95be8e8ae0301ec94cbc94f7abba6f"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "cache delay",
+                "type": "entity",
+                "value": "cache_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "59",
+                "type": "number",
+                "value": 59
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 59
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Preserve both observations. Do not bind the unassigned threshold to either entity; clarification is required.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            60,
+            62
+          ],
+          "subject": [
+            45,
+            56
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [],
+      "family": "ambiguous_reference",
+      "id": "language-v1-009",
+      "input": "Keep it below 43 ms. I have not identified what it refers to.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 19,
+              "start": 0,
+              "text": "Keep it below 43 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-92433ade45e9956cd930288da40186a7f21d7dc40e76e7523d3901da3ae902d8",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-009",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "1376b408c20b6d4c1f4d0a96686c13c0b980d46c9fd262a9f3b3204ffd0527d5"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "it",
+                "type": "entity",
+                "value": "it"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "43",
+                "type": "number",
+                "value": 43
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "it",
+              "unit": "ms",
+              "value": 43
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "No grounded referent. Abstain from a concrete threshold frame and request clarification; this benchmark scores abstention, not a clarification UI.",
+      "target_support_spans": [],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "it",
+            "unit": "ms",
+            "value": 43
+          }
+        }
+      ]
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 83
+          }
+        },
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 59
+          }
+        }
+      ],
+      "family": "ambiguous_reference",
+      "id": "language-v1-010",
+      "input": "Observed dispatch latency is 83 ms; observed cache delay is 59 ms. One of these must stay below 43 ms, but I have not specified which.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 34,
+              "start": 0,
+              "text": "Observed dispatch latency is 83 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-62e7a161ecd9ce464131639d940a54c61be3d67d3668513c433eb1f638ab2e16",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-010",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "d32242545047f31409e7bd0b8bd5a93c6aa7ed1d7e52e3b23cd03ce9da9f2dde"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "dispatch latency",
+                "type": "entity",
+                "value": "dispatch_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "83",
+                "type": "number",
+                "value": 83
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 65,
+              "start": 36,
+              "text": "observed cache delay is 59 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-015022da134d7dc464c51f6c4a9aded3ce4bc8481ad0d8f7803ae0ffda129c5a",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-010",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "d32242545047f31409e7bd0b8bd5a93c6aa7ed1d7e52e3b23cd03ce9da9f2dde"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "cache delay",
+                "type": "entity",
+                "value": "cache_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "59",
+                "type": "number",
+                "value": 59
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 83
+            }
+          },
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 59
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Preserve both observations. Do not bind the unassigned threshold to either entity; clarification is required.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        },
+        {
+          "number": [
+            60,
+            62
+          ],
+          "subject": [
+            45,
+            56
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [],
+      "family": "ambiguous_reference",
+      "id": "language-v1-011",
+      "input": "It must remain below 43 ms. The subject has not been identified.",
+      "missing": [],
+      "output": {
+        "frames": [],
+        "predicted": []
+      },
+      "pair_id": null,
+      "rationale": "No grounded referent. Abstain from a concrete threshold frame and request clarification; this benchmark scores abstention, not a clarification UI.",
+      "target_support_spans": [],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-012",
+      "input": "Please aim for checkout latency below 47 ms; cache delay must stay at most 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LTE",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 43,
+              "start": 7,
+              "text": "aim for checkout latency below 47 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-c93ecfdb168ce81f285eb7f9e48c013c2f3d06901eae8f3d1175b9787ba07f91",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-012",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "cc95744d387bde49f585b329b23436e77cbd0eac2fdeb682099c510e5c9bf6ca"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "for checkout latency",
+                "type": "entity",
+                "value": "for_checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "47",
+                "type": "number",
+                "value": 47
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "for_checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            38,
+            40
+          ],
+          "subject": [
+            15,
+            31
+          ]
+        },
+        {
+          "number": [
+            75,
+            77
+          ],
+          "subject": [
+            45,
+            56
+          ]
+        }
+      ],
+      "unsupported": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "for_checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ]
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 61
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-013",
+      "input": "Checkout latency must be below 47 ms; checkout latency must be above 61 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 36,
+              "start": 0,
+              "text": "Checkout latency must be below 47 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-64b80ea7bbf97c7927d31efbc3523cd970cbdcc3b64a758301504a41e9350a80",
+            "kind": "CONSTRAINT",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-013",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "e717cc4793ca69ea8ae4caa6c7d5c121d455a61e3436c36f8e46a05e28a3ec5e"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "Checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "47",
+                "type": "number",
+                "value": 47
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 74,
+              "start": 38,
+              "text": "checkout latency must be above 61 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-dfe01bde74ee26aad0464cdbde43f1eb9f3cac4b83b055eb5f8dac6df05f97df",
+            "kind": "CONSTRAINT",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-013",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "e717cc4793ca69ea8ae4caa6c7d5c121d455a61e3436c36f8e46a05e28a3ec5e"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "above",
+                "type": "operator",
+                "value": "GT"
+              },
+              "subject": {
+                "raw": "checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "61",
+                "type": "number",
+                "value": 61
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "GT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 61
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            31,
+            33
+          ],
+          "subject": [
+            0,
+            16
+          ]
+        },
+        {
+          "number": [
+            69,
+            71
+          ],
+          "subject": [
+            0,
+            16
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 71
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "GTE",
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-014",
+      "input": "Observed render delay is 71 ms; keep render delay below 39 ms; dispatch latency must be at least 53 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 30,
+              "start": 0,
+              "text": "Observed render delay is 71 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-bf26b26d83bfe4dcc3ed6a2b55476dd47011e00bb3ea6415fbed1fc2dd9670a0",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-014",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "51b635fa80d7af52cc3423fbd0cf0afd7f634704139ebad10ee01865431c007a"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "render delay",
+                "type": "entity",
+                "value": "render_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "71",
+                "type": "number",
+                "value": 71
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 61,
+              "start": 32,
+              "text": "keep render delay below 39 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-406dcdebcd291d9ec7b13c2e63c829eb308326cec094e4ce3fdbff7bbdb12cb3",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-014",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "51b635fa80d7af52cc3423fbd0cf0afd7f634704139ebad10ee01865431c007a"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "render delay",
+                "type": "entity",
+                "value": "render_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "39",
+                "type": "number",
+                "value": 39
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 102,
+              "start": 63,
+              "text": "dispatch latency must be at least 53 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-5644998004ada526143b4b7aef52f69685ec1930659802bc8000ae7311f9d2d5",
+            "kind": "CONSTRAINT",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-014",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "51b635fa80d7af52cc3423fbd0cf0afd7f634704139ebad10ee01865431c007a"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "at least",
+                "type": "operator",
+                "value": "GTE"
+              },
+              "subject": {
+                "raw": "dispatch latency",
+                "type": "entity",
+                "value": "dispatch_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "53",
+                "type": "number",
+                "value": 53
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "render_delay",
+              "unit": "ms",
+              "value": 71
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "render_delay",
+              "unit": "ms",
+              "value": 39
+            }
+          },
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "GTE",
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            25,
+            27
+          ],
+          "subject": [
+            9,
+            21
+          ]
+        },
+        {
+          "number": [
+            56,
+            58
+          ],
+          "subject": [
+            9,
+            21
+          ]
+        },
+        {
+          "number": [
+            97,
+            99
+          ],
+          "subject": [
+            63,
+            79
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": false,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "interacting_constraints",
+      "id": "language-v1-015",
+      "input": "I would appreciate checkout latency below 47 ms; one nonnegotiable requirement is cache delay below 53 ms.",
+      "missing": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "output": {
+        "frames": [],
+        "predicted": []
+      },
+      "pair_id": null,
+      "rationale": "Keep separate kinds, subjects and bounds. Preserve conflicting requirements rather than resolving them by deletion.",
+      "target_support_spans": [
+        {
+          "number": [
+            42,
+            44
+          ],
+          "subject": [
+            19,
+            35
+          ]
+        },
+        {
+          "number": [
+            100,
+            102
+          ],
+          "subject": [
+            82,
+            93
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "minimal_pairs",
+      "id": "language-v1-016",
+      "input": "Keep checkout latency below 47 ms; keep cache delay below 53 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 33,
+              "start": 0,
+              "text": "Keep checkout latency below 47 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-58ebacfffee552e650a71cbb76842f7af0a043caec48dff748347b9f59563044",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-016",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "cf2a6cb104185402d843a573b961cc08410c43f066f2af24222e1cad93c9b06e"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "47",
+                "type": "number",
+                "value": 47
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 63,
+              "start": 35,
+              "text": "keep cache delay below 53 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-25d4b89ea39aa8c47421b320366e2425bb93ce2be1e8c9f9039a34cd5b1bcd59",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-016",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "cf2a6cb104185402d843a573b961cc08410c43f066f2af24222e1cad93c9b06e"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "cache delay",
+                "type": "entity",
+                "value": "cache_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "53",
+                "type": "number",
+                "value": 53
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ]
+      },
+      "pair_id": "order",
+      "rationale": "Order does not change the frame multiset; swapping the asserted and negated numbers changes the sole observation.",
+      "target_support_spans": [
+        {
+          "number": [
+            28,
+            30
+          ],
+          "subject": [
+            5,
+            21
+          ]
+        },
+        {
+          "number": [
+            58,
+            60
+          ],
+          "subject": [
+            40,
+            51
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        },
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "minimal_pairs",
+      "id": "language-v1-017",
+      "input": "Keep cache delay below 53 ms; keep checkout latency below 47 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 28,
+              "start": 0,
+              "text": "Keep cache delay below 53 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-3ced8e536e31b5bf85e4e8654b433cdeacadfbe1a7d13fe2d4744261b32d5440",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-017",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "a81d6e4862a1fc9f4ebc2b52d0f44198319873a60794bcb417844deab941bcfa"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "cache delay",
+                "type": "entity",
+                "value": "cache_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "53",
+                "type": "number",
+                "value": 53
+              }
+            },
+            "status": "REPORTED"
+          },
+          {
+            "claim": {
+              "end": 63,
+              "start": 30,
+              "text": "keep checkout latency below 47 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-9069544245a6391d41641e184ff4c51b9604a845bb613e78ad03129a1634e556",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-017",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "a81d6e4862a1fc9f4ebc2b52d0f44198319873a60794bcb417844deab941bcfa"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "47",
+                "type": "number",
+                "value": 47
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 53
+            }
+          },
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ]
+      },
+      "pair_id": "order",
+      "rationale": "Order does not change the frame multiset; swapping the asserted and negated numbers changes the sole observation.",
+      "target_support_spans": [
+        {
+          "number": [
+            58,
+            60
+          ],
+          "subject": [
+            35,
+            51
+          ]
+        },
+        {
+          "number": [
+            23,
+            25
+          ],
+          "subject": [
+            5,
+            16
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "family": "minimal_pairs",
+      "id": "language-v1-018",
+      "input": "Observed dispatch latency is 71 ms. It is not true that dispatch latency is 83 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 34,
+              "start": 0,
+              "text": "Observed dispatch latency is 71 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-ffd8b82acf066cc531f689b62e506ac272cfe5312c5f9f934947dcf9c14f1cb7",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-018",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "9c7b1c4f770d1bb18d04ec2b2de47ffa26b27928846ed0adf8b72825462a150e"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "dispatch latency",
+                "type": "entity",
+                "value": "dispatch_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "71",
+                "type": "number",
+                "value": 71
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ]
+      },
+      "pair_id": "negation-number",
+      "rationale": "Order does not change the frame multiset; swapping the asserted and negated numbers changes the sole observation.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 83
+          }
+        }
+      ],
+      "family": "minimal_pairs",
+      "id": "language-v1-019",
+      "input": "Observed dispatch latency is 83 ms. It is not true that dispatch latency is 71 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 34,
+              "start": 0,
+              "text": "Observed dispatch latency is 83 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-dc9f073b1027a95d679e62fe71f9e7eea0a2c69f3b252bece6904289b25aab30",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-019",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "2e7945869954b5439c2dfa4e1a260204aad446cff3638db83b8af4d550ecc5d6"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "dispatch latency",
+                "type": "entity",
+                "value": "dispatch_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "83",
+                "type": "number",
+                "value": 83
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 83
+            }
+          }
+        ]
+      },
+      "pair_id": "negation-number",
+      "rationale": "Order does not change the frame multiset; swapping the asserted and negated numbers changes the sole observation.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "checkout_latency",
+            "unit": "ms",
+            "value": 47
+          }
+        }
+      ],
+      "family": "explicit_controls",
+      "id": "language-v1-020",
+      "input": "Keep checkout latency below 47 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 33,
+              "start": 0,
+              "text": "Keep checkout latency below 47 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-0d08f52dcbce92dcff21cbb32561dbcd28a0940584019fa9c05e494e27930774",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-020",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "8c738768e05b7106fe1d2adef06df9f78602a726df62652b64787815d329da90"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "checkout latency",
+                "type": "entity",
+                "value": "checkout_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "47",
+                "type": "number",
+                "value": 47
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "checkout_latency",
+              "unit": "ms",
+              "value": 47
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Ordinary explicit entity/value control; report separately from challenge items.",
+      "target_support_spans": [
+        {
+          "number": [
+            28,
+            30
+          ],
+          "subject": [
+            5,
+            21
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "cache_delay",
+            "unit": "ms",
+            "value": 53
+          }
+        }
+      ],
+      "family": "explicit_controls",
+      "id": "language-v1-021",
+      "input": "Cache delay must be below 53 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 31,
+              "start": 0,
+              "text": "Cache delay must be below 53 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-51fe7c442348ddafdc540e3d8cb9cacf65c120c97046b2f2a7b55a8aa40a3487",
+            "kind": "CONSTRAINT",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-021",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "ee24a89672c472e4eb2045c437e35ceaa92915b6525b4cb9d489f86aadcd3426"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "Cache delay",
+                "type": "entity",
+                "value": "cache_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "53",
+                "type": "number",
+                "value": 53
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "cache_delay",
+              "unit": "ms",
+              "value": 53
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Ordinary explicit entity/value control; report separately from challenge items.",
+      "target_support_spans": [
+        {
+          "number": [
+            26,
+            28
+          ],
+          "subject": [
+            0,
+            11
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "dispatch_latency",
+            "unit": "ms",
+            "value": 71
+          }
+        }
+      ],
+      "family": "explicit_controls",
+      "id": "language-v1-022",
+      "input": "Observed dispatch latency is 71 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 34,
+              "start": 0,
+              "text": "Observed dispatch latency is 71 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-e72f734f6b815b7ea0fc4f88857d7ddacc546fa72efb1a45e562d5a8865d8f9c",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-022",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "48ff736922f6c5135e3bbdd6c41534a069b131afee13d0b3ca2a6d9648f561be"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "dispatch latency",
+                "type": "entity",
+                "value": "dispatch_latency"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "71",
+                "type": "number",
+                "value": 71
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "dispatch_latency",
+              "unit": "ms",
+              "value": 71
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Ordinary explicit entity/value control; report separately from challenge items.",
+      "target_support_spans": [
+        {
+          "number": [
+            29,
+            31
+          ],
+          "subject": [
+            9,
+            25
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "render_delay",
+            "unit": "ms",
+            "value": 39
+          }
+        }
+      ],
+      "family": "explicit_controls",
+      "id": "language-v1-023",
+      "input": "Keep render delay below 39 ms.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 29,
+              "start": 0,
+              "text": "Keep render delay below 39 ms"
+            },
+            "derivation": "PARSER",
+            "id": "frame-758a9896b67e7691d7b21fc4fcac03a2ba9dac2cb5c96ee99af41914b0fe908f",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "language-v1-023",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "5e8317259ad51f61d66d4f8d9c740443780ede0aeee381acdaf53de4dc97a9fb"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "below",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "render delay",
+                "type": "entity",
+                "value": "render_delay"
+              },
+              "unit": {
+                "raw": "ms",
+                "type": "unit",
+                "value": "ms"
+              },
+              "value": {
+                "raw": "39",
+                "type": "number",
+                "value": 39
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "render_delay",
+              "unit": "ms",
+              "value": 39
+            }
+          }
+        ]
+      },
+      "pair_id": null,
+      "rationale": "Ordinary explicit entity/value control; report separately from challenge items.",
+      "target_support_spans": [
+        {
+          "number": [
+            24,
+            26
+          ],
+          "subject": [
+            5,
+            17
+          ]
+        }
+      ],
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_310",
+            "source": "archive_310"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-000",
+      "input": "Copy archive-310 into replica-310.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 33,
+              "start": 0,
+              "text": "Copy archive-310 into replica-310"
+            },
+            "derivation": "PARSER",
+            "id": "frame-f342743fd162818b105ccd272e26f29d46f4b833195f84c43c10573c203a805b",
+            "kind": "COPY_VALUE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-000",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "c41c5d3487bc8020bf09d58a6b47fd8753073be5db07bdfee2a2b89f91126c31"
+            },
+            "relation": "COPY_VALUE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "destination": {
+                "raw": "replica-310",
+                "type": "reference",
+                "value": "replica_310"
+              },
+              "source": {
+                "raw": "archive-310",
+                "type": "value",
+                "value": "archive_310"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "COPY_VALUE",
+            "relation": "COPY_VALUE",
+            "slots": {
+              "destination": "replica_310",
+              "source": "archive_310"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_311",
+            "source": "archive_311"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-001",
+      "input": "Copy archive-311 into replica-311.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 33,
+              "start": 0,
+              "text": "Copy archive-311 into replica-311"
+            },
+            "derivation": "PARSER",
+            "id": "frame-14536f30904b734c045c25209ff5fafdefbef368a4a4268eb544d9b15ddd0975",
+            "kind": "COPY_VALUE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-001",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "7e79d094eee68fdbf53b8a080d5369d9974f30ac2e7918e7591025a0283f3ac6"
+            },
+            "relation": "COPY_VALUE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "destination": {
+                "raw": "replica-311",
+                "type": "reference",
+                "value": "replica_311"
+              },
+              "source": {
+                "raw": "archive-311",
+                "type": "value",
+                "value": "archive_311"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "COPY_VALUE",
+            "relation": "COPY_VALUE",
+            "slots": {
+              "destination": "replica_311",
+              "source": "archive_311"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "COPY_VALUE",
+          "relation": "COPY_VALUE",
+          "slots": {
+            "destination": "replica_312",
+            "source": "archive_312"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-002",
+      "input": "Copy archive-312 into replica-312.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 33,
+              "start": 0,
+              "text": "Copy archive-312 into replica-312"
+            },
+            "derivation": "PARSER",
+            "id": "frame-84a870802cdfe5a6b9d73077497bfb6a8d6672955feb7a6432d0e20fa7f98e4b",
+            "kind": "COPY_VALUE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-002",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "7567e72e67fccc03078fe53975b556bee4b81396738edb99a6a3674ed2003e3d"
+            },
+            "relation": "COPY_VALUE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "destination": {
+                "raw": "replica-312",
+                "type": "reference",
+                "value": "replica_312"
+              },
+              "source": {
+                "raw": "archive-312",
+                "type": "value",
+                "value": "archive_312"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "COPY_VALUE",
+            "relation": "COPY_VALUE",
+            "slots": {
+              "destination": "replica_312",
+              "source": "archive_312"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_313",
+            "old_value": "release_312"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-003",
+      "input": "Release-313 replaces release-312.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 32,
+              "start": 0,
+              "text": "Release-313 replaces release-312"
+            },
+            "derivation": "PARSER",
+            "id": "frame-b1d58bba621d791d06ab4c14d506102a43703d6bb5489e88d81f25471fe2b553",
+            "kind": "SUPERSEDES",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-003",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "1c7485da7c11a01645114c17b6d794e96f419f53fe1a2c6762bc0563b81b506c"
+            },
+            "relation": "SUPERSEDES",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "current_value": {
+                "raw": "Release-313",
+                "type": "value",
+                "value": "release_313"
+              },
+              "old_value": {
+                "raw": "release-312",
+                "type": "value",
+                "value": "release_312"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "release_313",
+              "old_value": "release_312"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_314",
+            "old_value": "release_313"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-004",
+      "input": "Release-314 replaces release-313.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 32,
+              "start": 0,
+              "text": "Release-314 replaces release-313"
+            },
+            "derivation": "PARSER",
+            "id": "frame-4b63746e0e98f8dfbf717f15fb669834aa78bd80fee7be6cba98abb7c0b92ccf",
+            "kind": "SUPERSEDES",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-004",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "009abce8064914a442918e47584145809638e79a18e727e8cb92b5f059f6d0d5"
+            },
+            "relation": "SUPERSEDES",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "current_value": {
+                "raw": "Release-314",
+                "type": "value",
+                "value": "release_314"
+              },
+              "old_value": {
+                "raw": "release-313",
+                "type": "value",
+                "value": "release_313"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "release_314",
+              "old_value": "release_313"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "SUPERSEDES",
+          "relation": "SUPERSEDES",
+          "slots": {
+            "current_value": "release_315",
+            "old_value": "release_314"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-005",
+      "input": "Release-315 replaces release-314.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 32,
+              "start": 0,
+              "text": "Release-315 replaces release-314"
+            },
+            "derivation": "PARSER",
+            "id": "frame-e78f5eff8776d5c01ad39faa3d90914896b105e16ec4c9e5420ed14ed23f8a10",
+            "kind": "SUPERSEDES",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-005",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "47efcd37f17c74f024660114bed9d48b4eaf0dcfe0d2795ae5a7b33b82bc804a"
+            },
+            "relation": "SUPERSEDES",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "current_value": {
+                "raw": "Release-315",
+                "type": "value",
+                "value": "release_315"
+              },
+              "old_value": {
+                "raw": "release-314",
+                "type": "value",
+                "value": "release_314"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "SUPERSEDES",
+            "relation": "SUPERSEDES",
+            "slots": {
+              "current_value": "release_315",
+              "old_value": "release_314"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -316
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-006",
+      "input": "Distance from zero of -316.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 26,
+              "start": 0,
+              "text": "Distance from zero of -316"
+            },
+            "derivation": "PARSER",
+            "id": "frame-6e92b5f282fd48788c63631cd8b6d6cf7aa25f1820573d4029d0577baea6903f",
+            "kind": "MAGNITUDE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-006",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "7741f5a6a369d32cfe52baf52c8ec631a50a01df7eddc38dd7f57201d2e33b45"
+            },
+            "relation": "MAGNITUDE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "input": {
+                "raw": "-316",
+                "type": "number",
+                "value": -316
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -316
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -317
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-007",
+      "input": "Distance from zero of -317.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 26,
+              "start": 0,
+              "text": "Distance from zero of -317"
+            },
+            "derivation": "PARSER",
+            "id": "frame-79a9d1ac6c87200b4e7cb39a93a232bd5d267653512469419c6774da4c16e943",
+            "kind": "MAGNITUDE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-007",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "9ef7a255762a4d1aad30f8983d4bd40fbe5cf5e059cd17c7d5f5a29e33ab6019"
+            },
+            "relation": "MAGNITUDE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "input": {
+                "raw": "-317",
+                "type": "number",
+                "value": -317
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -317
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "MAGNITUDE",
+          "relation": "MAGNITUDE",
+          "slots": {
+            "input": -318
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-008",
+      "input": "Distance from zero of -318.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 26,
+              "start": 0,
+              "text": "Distance from zero of -318"
+            },
+            "derivation": "PARSER",
+            "id": "frame-3ec6b4bc000bc6fcc740b1a76d90002e4a75e771d7359c18305a7eede473c375",
+            "kind": "MAGNITUDE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-008",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "2700d634bd0bc5bdd6e241b125f4fb3300fa4a15b0e511f9e51859f0d44d6f3e"
+            },
+            "relation": "MAGNITUDE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "input": {
+                "raw": "-318",
+                "type": "number",
+                "value": -318
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "MAGNITUDE",
+            "relation": "MAGNITUDE",
+            "slots": {
+              "input": -318
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 319
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-009",
+      "input": "Opposite of 319.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 15,
+              "start": 0,
+              "text": "Opposite of 319"
+            },
+            "derivation": "PARSER",
+            "id": "frame-c648c96440a80324c91131e43cb7d4fa0a10430035e22ba687aee693224c12b5",
+            "kind": "NEGATE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-009",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "ec305ba7ba5b1f100771817b23e4628f1979637de92e25f6ead997863a5992e5"
+            },
+            "relation": "NEGATE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "input": {
+                "raw": "319",
+                "type": "number",
+                "value": 319
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "NEGATE",
+            "relation": "NEGATE",
+            "slots": {
+              "input": 319
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 320
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-010",
+      "input": "Opposite of 320.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 15,
+              "start": 0,
+              "text": "Opposite of 320"
+            },
+            "derivation": "PARSER",
+            "id": "frame-8d0dd36a43a758e68b6dd59366680bcaaef202b6dffe50c56ccfa372c815c11d",
+            "kind": "NEGATE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-010",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "145739c3506815776cfd5924111fedf31140d5a56c2e049703094d6cd36a8bdd"
+            },
+            "relation": "NEGATE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "input": {
+                "raw": "320",
+                "type": "number",
+                "value": 320
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "NEGATE",
+            "relation": "NEGATE",
+            "slots": {
+              "input": 320
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "NEGATE",
+          "relation": "NEGATE",
+          "slots": {
+            "input": 321
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-011",
+      "input": "Opposite of 321.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 15,
+              "start": 0,
+              "text": "Opposite of 321"
+            },
+            "derivation": "PARSER",
+            "id": "frame-fe57dc9e8edab3ef0880b9f4a0a4fa3d2d6656c0b88c23ca782b9d359c4b4695",
+            "kind": "NEGATE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-011",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "047b209a01fd3a2d32e176c5f5b4f86087c3b0f8f1f13cb764b4c46d357339ca"
+            },
+            "relation": "NEGATE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "input": {
+                "raw": "321",
+                "type": "number",
+                "value": 321
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "NEGATE",
+            "relation": "NEGATE",
+            "slots": {
+              "input": 321
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_322"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-012",
+      "input": "Refer to ticket-322.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 19,
+              "start": 0,
+              "text": "Refer to ticket-322"
+            },
+            "derivation": "PARSER",
+            "id": "frame-1429052982848e4ec934e806bb5d2d69ee301d29b3bfa28b8e51256c668c4849",
+            "kind": "REFERENCE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-012",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "be8bb2e6744ab6cf91f57d3cd79cf9ec81990c8c564d54c70bf20953b6538b96"
+            },
+            "relation": "REFERENCE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "target": {
+                "raw": "ticket-322",
+                "type": "reference",
+                "value": "ticket_322"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_322"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_323"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-013",
+      "input": "Refer to ticket-323.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 19,
+              "start": 0,
+              "text": "Refer to ticket-323"
+            },
+            "derivation": "PARSER",
+            "id": "frame-eefb10052ab189ddbeaf2c0fddf261377018205b069667fe64bafac4334eadbe",
+            "kind": "REFERENCE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-013",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "8e7460a9bb630a834fbea82fb0c6e2e146e951cea354a3813cda8b34f840b985"
+            },
+            "relation": "REFERENCE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "target": {
+                "raw": "ticket-323",
+                "type": "reference",
+                "value": "ticket_323"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_323"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "REFERENCE",
+          "relation": "REFERENCE",
+          "slots": {
+            "target": "ticket_324"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-014",
+      "input": "Refer to ticket-324.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 19,
+              "start": 0,
+              "text": "Refer to ticket-324"
+            },
+            "derivation": "PARSER",
+            "id": "frame-13cc22428915e1d11ceeb62527d01d5aed1cc1f94d8af59bd9dba3bc3081f63b",
+            "kind": "REFERENCE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-014",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "d443803bf893f885609a86a10fe44f37cfaa29dc3c45d1d0df814b8ccab07302"
+            },
+            "relation": "REFERENCE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "target": {
+                "raw": "ticket-324",
+                "type": "reference",
+                "value": "ticket_324"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "REFERENCE",
+            "relation": "REFERENCE",
+            "slots": {
+              "target": "ticket_324"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_325"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-015",
+      "input": "candidate-325 is live.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 21,
+              "start": 0,
+              "text": "candidate-325 is live"
+            },
+            "derivation": "PARSER",
+            "id": "frame-e847da97318829039cba53caa3af086a69cb282d73458570037e619fe8cd9be8",
+            "kind": "ACTIVE_SELECTION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-015",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "9695962cb13ef50d32b280dae57a62b7561a19d108eff68be7cb6e25b2d91de6"
+            },
+            "relation": "ACTIVE_SELECTION",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "active": {
+                "raw": "live",
+                "type": "boolean",
+                "value": true
+              },
+              "selection": {
+                "raw": "candidate-325",
+                "type": "identifier",
+                "value": "candidate_325"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "candidate_325"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_326"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-016",
+      "input": "candidate-326 is live.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 21,
+              "start": 0,
+              "text": "candidate-326 is live"
+            },
+            "derivation": "PARSER",
+            "id": "frame-6970ae64ab4ffe7ffcdfdad6dbce7182a9b37fe48e4f9dc6c80400758e891404",
+            "kind": "ACTIVE_SELECTION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-016",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "debc923fe74dfbdd6eca706e32fa39888f80654e11e3347c0d299899acf2acd7"
+            },
+            "relation": "ACTIVE_SELECTION",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "active": {
+                "raw": "live",
+                "type": "boolean",
+                "value": true
+              },
+              "selection": {
+                "raw": "candidate-326",
+                "type": "identifier",
+                "value": "candidate_326"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "candidate_326"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "ACTIVE_SELECTION",
+          "relation": "ACTIVE_SELECTION",
+          "slots": {
+            "active": true,
+            "selection": "candidate_327"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-017",
+      "input": "candidate-327 is live.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 21,
+              "start": 0,
+              "text": "candidate-327 is live"
+            },
+            "derivation": "PARSER",
+            "id": "frame-8026a217122faf44017c313cb029fc9a30fefe6e6965d79b95e4c63c521928e0",
+            "kind": "ACTIVE_SELECTION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-017",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "b23ac6d5d784f38ea453d1de54596c47f7292fc2085f0e73e5ab5f0632e32e92"
+            },
+            "relation": "ACTIVE_SELECTION",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "active": {
+                "raw": "live",
+                "type": "boolean",
+                "value": true
+              },
+              "selection": {
+                "raw": "candidate-327",
+                "type": "identifier",
+                "value": "candidate_327"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "ACTIVE_SELECTION",
+            "relation": "ACTIVE_SELECTION",
+            "slots": {
+              "active": true,
+              "selection": "candidate_327"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-328",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-018",
+      "input": "Run batch-328 status is completed.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 33,
+              "start": 0,
+              "text": "Run batch-328 status is completed"
+            },
+            "derivation": "PARSER",
+            "id": "frame-bce6c31165c75167ad7717da7b855fd3c570ae42abc74359c3c5ed834e8aedb1",
+            "kind": "RUN_STATUS",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-018",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "5a7cdec6c6daf7b5c2339c152f050604781de8c0b1e32b6645c5b5fe27e5aa2e"
+            },
+            "relation": "RUN_STATUS",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "run_id": {
+                "raw": "batch-328",
+                "type": "identifier",
+                "value": "batch-328"
+              },
+              "status": {
+                "raw": "completed",
+                "type": "status",
+                "value": "COMPLETED"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-328",
+              "status": "COMPLETED"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-329",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-019",
+      "input": "Run batch-329 status is completed.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 33,
+              "start": 0,
+              "text": "Run batch-329 status is completed"
+            },
+            "derivation": "PARSER",
+            "id": "frame-0edcd9e4742a830f8b412b8c349cfeb14c03bd6f5079607dcf0584f96413a7d9",
+            "kind": "RUN_STATUS",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-019",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "d206048f9322162d8746ddca6a6b1b6c5b13188ce3a05c81fe4af25e7bf209bb"
+            },
+            "relation": "RUN_STATUS",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "run_id": {
+                "raw": "batch-329",
+                "type": "identifier",
+                "value": "batch-329"
+              },
+              "status": {
+                "raw": "completed",
+                "type": "status",
+                "value": "COMPLETED"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-329",
+              "status": "COMPLETED"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RUN_STATUS",
+          "relation": "RUN_STATUS",
+          "slots": {
+            "run_id": "batch-330",
+            "status": "COMPLETED"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-020",
+      "input": "Run batch-330 status is completed.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 33,
+              "start": 0,
+              "text": "Run batch-330 status is completed"
+            },
+            "derivation": "PARSER",
+            "id": "frame-49d7e4f881b50e0da2ad097a29116f180e69776ed587029afdee4a6006deeee5",
+            "kind": "RUN_STATUS",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-020",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "fc6d20c201a2e055a7aad5554a1701341ed1ca69f539b91401076620d1a2cca2"
+            },
+            "relation": "RUN_STATUS",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "run_id": {
+                "raw": "batch-330",
+                "type": "identifier",
+                "value": "batch-330"
+              },
+              "status": {
+                "raw": "completed",
+                "type": "status",
+                "value": "COMPLETED"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "RUN_STATUS",
+            "relation": "RUN_STATUS",
+            "slots": {
+              "run_id": "batch-330",
+              "status": "COMPLETED"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-331",
+            "value": 831
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-021",
+      "input": "Receipt rec-331 returned 831.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 28,
+              "start": 0,
+              "text": "Receipt rec-331 returned 831"
+            },
+            "derivation": "PARSER",
+            "id": "frame-f299bf8a0338a194385fb7f9b61ae2bbfa91783ab016443299b79b2c41275623",
+            "kind": "RECEIPT_VALUE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-021",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "5ea6a51a4bb72665347561c7bb5d248362b5dfd37ff5d2dda480e0c0119b49f4"
+            },
+            "relation": "RECEIPT_VALUE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "receipt_id": {
+                "raw": "rec-331",
+                "type": "identifier",
+                "value": "rec-331"
+              },
+              "value": {
+                "raw": "831",
+                "type": "number",
+                "value": 831
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-331",
+              "value": 831
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-332",
+            "value": 832
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-022",
+      "input": "Receipt rec-332 returned 832.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 28,
+              "start": 0,
+              "text": "Receipt rec-332 returned 832"
+            },
+            "derivation": "PARSER",
+            "id": "frame-8b2f1aea8681396e7dc5e9aba6aa2affcbd2a773ddb17856f6d79651c2ca268d",
+            "kind": "RECEIPT_VALUE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-022",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "7d37b29f5be0804a420b75b5cf3a724a77e7a585450b0b761a13e5d290cc07ec"
+            },
+            "relation": "RECEIPT_VALUE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "receipt_id": {
+                "raw": "rec-332",
+                "type": "identifier",
+                "value": "rec-332"
+              },
+              "value": {
+                "raw": "832",
+                "type": "number",
+                "value": 832
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-332",
+              "value": 832
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "RECEIPT_VALUE",
+          "relation": "RECEIPT_VALUE",
+          "slots": {
+            "receipt_id": "rec-333",
+            "value": 833
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-023",
+      "input": "Receipt rec-333 returned 833.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 28,
+              "start": 0,
+              "text": "Receipt rec-333 returned 833"
+            },
+            "derivation": "PARSER",
+            "id": "frame-1c40c62274c6759facc6861c315f089886a71b6ed741c99830cfd0308c7987a5",
+            "kind": "RECEIPT_VALUE",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-023",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "f7ed5646de40b39059e73bb3e90d8ac81ba998be9645a1a683b1a098fa5c0c49"
+            },
+            "relation": "RECEIPT_VALUE",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "receipt_id": {
+                "raw": "rec-333",
+                "type": "identifier",
+                "value": "rec-333"
+              },
+              "value": {
+                "raw": "833",
+                "type": "number",
+                "value": 833
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "RECEIPT_VALUE",
+            "relation": "RECEIPT_VALUE",
+            "slots": {
+              "receipt_id": "rec-333",
+              "value": 833
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONSISTENT"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-024",
+      "input": "The evidence is consistent.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 26,
+              "start": 0,
+              "text": "The evidence is consistent"
+            },
+            "derivation": "PARSER",
+            "id": "frame-23dc45350554628f14de8ac66c95c501642e1111d1b20df101fe471cbfb012fd",
+            "kind": "EVIDENCE_CONSISTENCY",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-024",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "7f4cde9246256cbd34f57ea01bd856983afcc93ccfe8b57a4dcdc318bbf42cbb"
+            },
+            "relation": "EVIDENCE_CONSISTENCY",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "status": {
+                "raw": "consistent",
+                "type": "status",
+                "value": "CONSISTENT"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "EVIDENCE_CONSISTENCY",
+            "relation": "EVIDENCE_CONSISTENCY",
+            "slots": {
+              "status": "CONSISTENT"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONFLICT"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-025",
+      "input": "The evidence is conflicting.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 27,
+              "start": 0,
+              "text": "The evidence is conflicting"
+            },
+            "derivation": "PARSER",
+            "id": "frame-6333a0018561d6ad114310e3d9bdb4a20f158ece8eef0f7ac4a56d7ed487353b",
+            "kind": "EVIDENCE_CONSISTENCY",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-025",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "741adab19aef7ae4b5b1a134b3f0bc90105506687474708c5d3b52fc87d98f82"
+            },
+            "relation": "EVIDENCE_CONSISTENCY",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "status": {
+                "raw": "conflicting",
+                "type": "status",
+                "value": "CONFLICT"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "EVIDENCE_CONSISTENCY",
+            "relation": "EVIDENCE_CONSISTENCY",
+            "slots": {
+              "status": "CONFLICT"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "EVIDENCE_CONSISTENCY",
+          "relation": "EVIDENCE_CONSISTENCY",
+          "slots": {
+            "status": "CONSISTENT"
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-026",
+      "input": "The evidence is in agreement.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 28,
+              "start": 0,
+              "text": "The evidence is in agreement"
+            },
+            "derivation": "PARSER",
+            "id": "frame-eb33fd1599ad22640f6f0afda86b94052c9a018e3ce115a2559875df329966ff",
+            "kind": "EVIDENCE_CONSISTENCY",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-026",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "451794ce430e35f85cea001af49ef75232fb0ac4c243c4c8d86fd137646f7189"
+            },
+            "relation": "EVIDENCE_CONSISTENCY",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "status": {
+                "raw": "in agreement",
+                "type": "status",
+                "value": "CONSISTENT"
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "EVIDENCE_CONSISTENCY",
+            "relation": "EVIDENCE_CONSISTENCY",
+            "slots": {
+              "status": "CONSISTENT"
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 337
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-027",
+      "input": "Maintain queue depth under 337 requests.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 39,
+              "start": 0,
+              "text": "Maintain queue depth under 337 requests"
+            },
+            "derivation": "PARSER",
+            "id": "frame-d3bfe3ed87751d545ac9a62ee73371186746d2974d7ed3753d2aa3e96691d3fb",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-027",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "d7e00acade70e2196756b408df81b40912d3845e23c2fa9e4c25b8a4ef98f0d4"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "under",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "queue depth",
+                "type": "entity",
+                "value": "queue_depth"
+              },
+              "unit": {
+                "raw": "requests",
+                "type": "unit",
+                "value": "requests"
+              },
+              "value": {
+                "raw": "337",
+                "type": "number",
+                "value": 337
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 337
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 338
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-028",
+      "input": "Maintain queue depth under 338 requests.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 39,
+              "start": 0,
+              "text": "Maintain queue depth under 338 requests"
+            },
+            "derivation": "PARSER",
+            "id": "frame-da4c812beceba07baef9675b5c973cbc1f1f82306a98d09c41a73e1d8ebd0fce",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-028",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "b892ccf385fcf0a15ca2ea5e8ead713a507e3bd7b762b02ed7ee5089807ea18e"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "under",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "queue depth",
+                "type": "entity",
+                "value": "queue_depth"
+              },
+              "unit": {
+                "raw": "requests",
+                "type": "unit",
+                "value": "requests"
+              },
+              "value": {
+                "raw": "338",
+                "type": "number",
+                "value": 338
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 338
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 339
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-029",
+      "input": "Maintain queue depth under 339 requests.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 39,
+              "start": 0,
+              "text": "Maintain queue depth under 339 requests"
+            },
+            "derivation": "PARSER",
+            "id": "frame-3ce17fbe7406cf41138bda9358c3295139cd4a6ce83fdb6dbf2ecc795c7fad34",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-029",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "8199f4320dc08b25875b3b65c30266719065507a87d63cbff71b903d98f5752b"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "under",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "queue depth",
+                "type": "entity",
+                "value": "queue_depth"
+              },
+              "unit": {
+                "raw": "requests",
+                "type": "unit",
+                "value": "requests"
+              },
+              "value": {
+                "raw": "339",
+                "type": "number",
+                "value": 339
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 339
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_340",
+            "polarity": false
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-030",
+      "input": "Never update archive-340.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 24,
+              "start": 0,
+              "text": "Never update archive-340"
+            },
+            "derivation": "PARSER",
+            "id": "frame-520ed28206943c16610173952bef8edae6bc4ac7ffe57c298db59694607026fc",
+            "kind": "CONSTRAINT",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-030",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "1c10c54efe58cc6bbf813ef2ecf9efce81fd22ab7315e06799cbc9b9d534e2dc"
+            },
+            "relation": "ACTION_POLICY",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "action": {
+                "raw": "update",
+                "type": "action",
+                "value": "update"
+              },
+              "modality": {
+                "type": "modality",
+                "value": "FORBIDDEN"
+              },
+              "object": {
+                "raw": "archive-340",
+                "type": "entity",
+                "value": "archive_340"
+              },
+              "polarity": {
+                "raw": "false",
+                "type": "boolean",
+                "value": false
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_340",
+              "polarity": false
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_341",
+            "polarity": false
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-031",
+      "input": "Never update archive-341.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 24,
+              "start": 0,
+              "text": "Never update archive-341"
+            },
+            "derivation": "PARSER",
+            "id": "frame-8b56fa1b28c2000b26932518f8d11a09e2345b12b87962540125f48cbe843088",
+            "kind": "CONSTRAINT",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-031",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "5d39311b6b25b686b3d03de013a5e2df3c818d0b50db28ad3675f569421d6345"
+            },
+            "relation": "ACTION_POLICY",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "action": {
+                "raw": "update",
+                "type": "action",
+                "value": "update"
+              },
+              "modality": {
+                "type": "modality",
+                "value": "FORBIDDEN"
+              },
+              "object": {
+                "raw": "archive-341",
+                "type": "entity",
+                "value": "archive_341"
+              },
+              "polarity": {
+                "raw": "false",
+                "type": "boolean",
+                "value": false
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_341",
+              "polarity": false
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "CONSTRAINT",
+          "relation": "ACTION_POLICY",
+          "slots": {
+            "action": "update",
+            "modality": "FORBIDDEN",
+            "object": "archive_342",
+            "polarity": false
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-032",
+      "input": "Never update archive-342.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 24,
+              "start": 0,
+              "text": "Never update archive-342"
+            },
+            "derivation": "PARSER",
+            "id": "frame-a23dd51d21649705c05c66c2cb1f7f987500032165735151d14d256f1976323c",
+            "kind": "CONSTRAINT",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-032",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "b0f7d0ac020d259a7e8684ec1dca29d730c7f8de36155198b7ce617fdca28dec"
+            },
+            "relation": "ACTION_POLICY",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "action": {
+                "raw": "update",
+                "type": "action",
+                "value": "update"
+              },
+              "modality": {
+                "type": "modality",
+                "value": "FORBIDDEN"
+              },
+              "object": {
+                "raw": "archive-342",
+                "type": "entity",
+                "value": "archive_342"
+              },
+              "polarity": {
+                "raw": "false",
+                "type": "boolean",
+                "value": false
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "CONSTRAINT",
+            "relation": "ACTION_POLICY",
+            "slots": {
+              "action": "update",
+              "modality": "FORBIDDEN",
+              "object": "archive_342",
+              "polarity": false
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 343
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-033",
+      "input": "Recorded throughput was 343 rps.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 31,
+              "start": 0,
+              "text": "Recorded throughput was 343 rps"
+            },
+            "derivation": "PARSER",
+            "id": "frame-af6b4d1eff502723365340ca52a3e499837310f73a8c36b648b16d19f1d5786c",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-033",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "8359e99ae832200b45e5021115ecaa6c98db4ebbdc6d98b306bc836bd752044b"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "throughput",
+                "type": "entity",
+                "value": "throughput"
+              },
+              "unit": {
+                "raw": "rps",
+                "type": "unit",
+                "value": "rps"
+              },
+              "value": {
+                "raw": "343",
+                "type": "number",
+                "value": 343
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 343
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 344
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-034",
+      "input": "Recorded throughput was 344 rps.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 31,
+              "start": 0,
+              "text": "Recorded throughput was 344 rps"
+            },
+            "derivation": "PARSER",
+            "id": "frame-02faa5dcab4178701c9e784165b168260eb9de0dcf3193b5c3ce26797f468141",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-034",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "ed92929b9ddebd63ec119e35640ae847b7e6a399fe3a6c6459ac6d81a0e48c6b"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "throughput",
+                "type": "entity",
+                "value": "throughput"
+              },
+              "unit": {
+                "raw": "rps",
+                "type": "unit",
+                "value": "rps"
+              },
+              "value": {
+                "raw": "344",
+                "type": "number",
+                "value": 344
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 344
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "OBSERVATION",
+          "relation": "MEASUREMENT",
+          "slots": {
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 345
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-035",
+      "input": "Recorded throughput was 345 rps.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 31,
+              "start": 0,
+              "text": "Recorded throughput was 345 rps"
+            },
+            "derivation": "PARSER",
+            "id": "frame-e775c8ba3e3b121405d1582f0448bd7e6bb77955117e5aba78a37fed1ee04dad",
+            "kind": "OBSERVATION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-035",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "5bc7dd07163906a89f02f9566d21252f137ccf7d3d8d8438089fffc3b5cd5b01"
+            },
+            "relation": "MEASUREMENT",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "subject": {
+                "raw": "throughput",
+                "type": "entity",
+                "value": "throughput"
+              },
+              "unit": {
+                "raw": "rps",
+                "type": "unit",
+                "value": "rps"
+              },
+              "value": {
+                "raw": "345",
+                "type": "number",
+                "value": 345
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "OBSERVATION",
+            "relation": "MEASUREMENT",
+            "slots": {
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 345
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 346
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-036",
+      "input": "Throughput will remain above 346 rps.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 36,
+              "start": 0,
+              "text": "Throughput will remain above 346 rps"
+            },
+            "derivation": "PARSER",
+            "id": "frame-c071fa6cadc29968648b8f451201815e86515a51221024dcd92b59eca7ba068d",
+            "kind": "PREDICTION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-036",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "c5a79e1d77a66e01700a0c4ccef864438fc2751ebf99c668566a90d6cea0d8f3"
+            },
+            "relation": "FORECAST",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "above",
+                "type": "operator",
+                "value": "GT"
+              },
+              "subject": {
+                "raw": "Throughput",
+                "type": "entity",
+                "value": "throughput"
+              },
+              "unit": {
+                "raw": "rps",
+                "type": "unit",
+                "value": "rps"
+              },
+              "value": {
+                "raw": "346",
+                "type": "number",
+                "value": 346
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 346
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 347
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-037",
+      "input": "Throughput will remain above 347 rps.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 36,
+              "start": 0,
+              "text": "Throughput will remain above 347 rps"
+            },
+            "derivation": "PARSER",
+            "id": "frame-adbb45980ac16348157081e5b1b271da71c6c620d26493c7f69c87708f1f7d1a",
+            "kind": "PREDICTION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-037",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "4b99b9eb0680ad37dbfcfdb2c0381305172c63e2c1252c063f5a3d72454fc80d"
+            },
+            "relation": "FORECAST",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "above",
+                "type": "operator",
+                "value": "GT"
+              },
+              "subject": {
+                "raw": "Throughput",
+                "type": "entity",
+                "value": "throughput"
+              },
+              "unit": {
+                "raw": "rps",
+                "type": "unit",
+                "value": "rps"
+              },
+              "value": {
+                "raw": "347",
+                "type": "number",
+                "value": 347
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 347
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "PREDICTION",
+          "relation": "FORECAST",
+          "slots": {
+            "operator": "GT",
+            "subject": "throughput",
+            "unit": "rps",
+            "value": 348
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-038",
+      "input": "Throughput will remain above 348 rps.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 36,
+              "start": 0,
+              "text": "Throughput will remain above 348 rps"
+            },
+            "derivation": "PARSER",
+            "id": "frame-6f595efffaa384e68ebf0e172820872e7e9bf5f5dec5b0450452dac57407e50d",
+            "kind": "PREDICTION",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-038",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "b3759f4f5905a3b4f828bd6a906f5ebdb251023be08b92986310b6e13e1c919a"
+            },
+            "relation": "FORECAST",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "above",
+                "type": "operator",
+                "value": "GT"
+              },
+              "subject": {
+                "raw": "Throughput",
+                "type": "entity",
+                "value": "throughput"
+              },
+              "unit": {
+                "raw": "rps",
+                "type": "unit",
+                "value": "rps"
+              },
+              "value": {
+                "raw": "348",
+                "type": "number",
+                "value": 348
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "PREDICTION",
+            "relation": "FORECAST",
+            "slots": {
+              "operator": "GT",
+              "subject": "throughput",
+              "unit": "rps",
+              "value": 348
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    },
+    {
+      "correct": true,
+      "expected": [
+        {
+          "kind": "GOAL",
+          "relation": "THRESHOLD",
+          "slots": {
+            "operator": "LT",
+            "subject": "queue_depth",
+            "unit": "requests",
+            "value": 399
+          }
+        }
+      ],
+      "family": "retention",
+      "id": "v7-retention-039",
+      "input": "Maintain queue depth under 399 requests.",
+      "missing": [],
+      "output": {
+        "frames": [
+          {
+            "claim": {
+              "end": 39,
+              "start": 0,
+              "text": "Maintain queue depth under 399 requests"
+            },
+            "derivation": "PARSER",
+            "id": "frame-9f3ca9b7500f3c0b326f70ff62126d520ec3f307ce8a7deadb11beb5b1f3de2a",
+            "kind": "GOAL",
+            "provenance": {
+              "actor": "user",
+              "source_id": "v7-retention-039",
+              "source_type": "EVALUATION",
+              "timestamp": "1970-01-01T00:00:00Z",
+              "utterance_sha256": "c8c4878b9336738b46614235adf661f18a156fa8bca1fe06b3b6c36ff1b0d1f6"
+            },
+            "relation": "THRESHOLD",
+            "schema": "kev.frame.v1",
+            "slots": {
+              "operator": {
+                "raw": "under",
+                "type": "operator",
+                "value": "LT"
+              },
+              "subject": {
+                "raw": "queue depth",
+                "type": "entity",
+                "value": "queue_depth"
+              },
+              "unit": {
+                "raw": "requests",
+                "type": "unit",
+                "value": "requests"
+              },
+              "value": {
+                "raw": "399",
+                "type": "number",
+                "value": 399
+              }
+            },
+            "status": "REPORTED"
+          }
+        ],
+        "predicted": [
+          {
+            "kind": "GOAL",
+            "relation": "THRESHOLD",
+            "slots": {
+              "operator": "LT",
+              "subject": "queue_depth",
+              "unit": "requests",
+              "value": 399
+            }
+          }
+        ]
+      },
+      "unsupported": []
+    }
+  ],
+  "score_status": "UNCALIBRATED"
+}

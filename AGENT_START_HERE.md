@@ -17,6 +17,11 @@ Read, in order:
 ## Non-negotiable invariants
 
 Latest research-only boundary: `experiments/clause-local-v1-boundary/`.
+Newer evaluation-only boundary: `experiments/language-challenge-v1-boundary/`.
+Read `docs/LANGUAGE_CHALLENGE_V1.md` for its exposed failures: no learned
+advantage, unresolved literal `it` subjects, and missed unfamiliar phrasing.
+Exclude both research packs from future training. Neither replaces v7 in the
+production trainer's automatic manifest.
 Read `docs/CLAUSE_LOCAL_V1.md` before further model work. This exposed suite and
 its reserved vocabulary must be excluded from future training; the production
 v7 manifest does not yet automatically include this separate research pack.

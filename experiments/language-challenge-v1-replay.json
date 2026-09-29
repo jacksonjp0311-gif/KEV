@@ -1,0 +1,7 @@
+{
+  "activation": "NONE",
+  "inference_replayed": true,
+  "inventory_sha256": "bc4060dd8ef283f77700754b75bf3cd3429fd6d6e6855b5758c3524d73c0b138",
+  "protocol_sha256": "8c777a15aaefefab25a416746ce43c96d3c139e4419761437f9b1f3a19a9878e",
+  "status": "PASS"
+}

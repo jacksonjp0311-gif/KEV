@@ -1,0 +1,227 @@
+{
+  "activation": "NONE",
+  "families": {
+    "genesis_global": {
+      "ambiguous_reference": {
+        "correct": 3,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "explicit_controls": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "interacting_constraints": {
+        "correct": 2,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "minimal_pairs": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "resolved_reference": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 2
+      },
+      "retention": {
+        "correct": 40,
+        "missing_frames": 0,
+        "total": 40,
+        "unsupported_frames": 0
+      },
+      "unfamiliar_phrasing": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 2
+      }
+    },
+    "parser": {
+      "ambiguous_reference": {
+        "correct": 3,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "explicit_controls": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "interacting_constraints": {
+        "correct": 2,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "minimal_pairs": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "resolved_reference": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 2
+      },
+      "retention": {
+        "correct": 40,
+        "missing_frames": 0,
+        "total": 40,
+        "unsupported_frames": 0
+      },
+      "unfamiliar_phrasing": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 1
+      }
+    },
+    "symbolic_all_kinds": {
+      "ambiguous_reference": {
+        "correct": 3,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "explicit_controls": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "interacting_constraints": {
+        "correct": 2,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "minimal_pairs": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "resolved_reference": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 2
+      },
+      "retention": {
+        "correct": 40,
+        "missing_frames": 0,
+        "total": 40,
+        "unsupported_frames": 0
+      },
+      "unfamiliar_phrasing": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 1
+      }
+    },
+    "trained_global": {
+      "ambiguous_reference": {
+        "correct": 3,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "explicit_controls": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "interacting_constraints": {
+        "correct": 2,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "minimal_pairs": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "resolved_reference": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 2
+      },
+      "retention": {
+        "correct": 40,
+        "missing_frames": 0,
+        "total": 40,
+        "unsupported_frames": 0
+      },
+      "unfamiliar_phrasing": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 2
+      }
+    },
+    "trained_local": {
+      "ambiguous_reference": {
+        "correct": 3,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "explicit_controls": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "interacting_constraints": {
+        "correct": 2,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 1
+      },
+      "minimal_pairs": {
+        "correct": 4,
+        "missing_frames": 0,
+        "total": 4,
+        "unsupported_frames": 0
+      },
+      "resolved_reference": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 2
+      },
+      "retention": {
+        "correct": 40,
+        "missing_frames": 0,
+        "total": 40,
+        "unsupported_frames": 0
+      },
+      "unfamiliar_phrasing": {
+        "correct": 0,
+        "missing_frames": 4,
+        "total": 4,
+        "unsupported_frames": 2
+      }
+    }
+  },
+  "schema": "kev.language-challenge-summary.v1",
+  "training": "NONE"
+}

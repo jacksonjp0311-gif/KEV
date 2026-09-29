@@ -1,0 +1,17 @@
+{
+  "schema": "kev.local-validation-summary.v1",
+  "scope": "Language challenge v1 evaluation-only update",
+  "frozen_before_inference_commit": "71bfd4ab829897cf641edc99ec4bb30bd689235a",
+  "checks": [
+    {"command": "python -m pytest -q -p no:cacheprovider tests_public", "exit_code": 0, "result": "313 passed in 85.92s"},
+    {"command": "python -m ruff check kev scripts tests_public", "exit_code": 0, "result": "All checks passed"},
+    {"command": "python -m compileall -q kev scripts tests_public", "result": "completed without reported errors"},
+    {"command": "python -m mypy --platform win32 kev", "result": "Success: no issues found in 23 source files"},
+    {"command": "python -m kev.cli doctor", "exit_code": 0, "result": "ok: true; incumbent and v7 manifest unchanged"},
+    {"command": "python -m scripts.language_challenge_v1 replay --receipt experiments/language-challenge-v1-replay.json", "exit_code": 0, "result": "PASS; all five raw reports reproduced exactly"},
+    {"command": "staged Git blob SHA-256 audit against protocol and inventory", "exit_code": 0, "checked_staged_blobs": 44, "mismatches": []}
+  ],
+  "training": "NONE",
+  "activation": "NONE",
+  "ci": "GitHub Actions records cross-platform validation for the published commit"
+}

@@ -11,6 +11,11 @@ production inference path. See `docs/CLAUSE_LOCAL_V1.md`: the stronger no-model
 control scored better. Preserve the negative attribution conclusion and carry
 the exposed research pack into exclusions before any later training campaign.
 
+The later `language-challenge-v1` evaluation changed no runtime or weights.
+All five approaches scored 13/24 new cases with 40/40 retention; read
+`docs/LANGUAGE_CHALLENGE_V1.md`. Its cases are now exposed and also forbidden
+training inputs. Do not treat a literal pronoun slot as a resolved entity.
+
 - Neural output may propose frame kinds and cardinality; parser-bound exact
   slots decide what can enter state.
 - A frozen encoder supplies a fixed feature interface. It is not cognition, and
@@ -67,7 +72,7 @@ require a new evaluation boundary; never patch those frozen items.
 
 Use `models/public/incumbent-evidence-v10.json`,
 `evals/frozen/manifest-v6.json`, `evals/frozen/public-audit-v6-260.json`, and
-`evals/evidence/v6-genesis-baseline.json` as the current public chain. Their
+`evals/evidence/v6-genesis-baseline.json` as the preserved v6 public chain. Their
 file SHA-256 values are, respectively,
 `69dc2c3c9bffac32c4c8d78929ccb25e70b51c47a2760d3b0f44783e545acd21`,
 `07f4e226773e8c68f58e0d6bbede97d4b34ffed40fc17f3b3e77ba695b69acce`,

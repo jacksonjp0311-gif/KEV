@@ -1,0 +1,14 @@
+{
+  "files": {
+    "genesis_global.json": "94d5326261b531f92f46605a1e2875ab1637805af190aab0b985ecef118b41a9",
+    "ledger/ledger-head.json": "7af8582d44bbe2e07d4e465f9f20f7593646ef77d8646f1800495e253fc7466d",
+    "ledger/ledger.jsonl": "289f6a110baef09676645ec80899b7022e9a888d38be1bd81019e68dae261954",
+    "ledger/state.json": "edcdb8e92d58288ea124e384df030b4339b3fe1e14754e5611ae9710c2041891",
+    "parser.json": "efb4bb99a566af56474bfac6a102f23093e8463b549e25e4528c05f7e956d473",
+    "summary.json": "7c5dce9be57d0d88bb997a9f3c37af0d0bb6494a271823b4aefb2de896e4b07e",
+    "symbolic_all_kinds.json": "efb4bb99a566af56474bfac6a102f23093e8463b549e25e4528c05f7e956d473",
+    "trained_global.json": "fb61635a015b3c44366fe4baab4176854643f9a0dbeb514daa9e2882fa62885e",
+    "trained_local.json": "05330a5abab936fd0c07dc9014501a86517664ef7bf3365dcbb07662a0d7df1b"
+  },
+  "protocol_sha256": "8c777a15aaefefab25a416746ce43c96d3c139e4419761437f9b1f3a19a9878e"
+}

@@ -4,6 +4,13 @@ KEV is experimental research software, not AGI or superintelligence. This roadma
 
 ## Current — v0.52 research alpha
 
+[Language challenge v1](LANGUAGE_CHALLENGE_V1.md) measured five unchanged
+approaches on a publicly frozen-before-inference boundary. All tied at 13/24
+new cases and 40/40 retention; reference resolution and unfamiliar phrasing each
+scored 0/4. Next: typed unresolved references and explicit entity grounding,
+not additional head training alone. Preserve the exposed failures and evaluate
+future changes on a separate boundary.
+
 The [clause-local v1 experiment](CLAUSE_LOCAL_V1.md) is complete and non-activating.
 Its learned local head improved over the same-weight global head but did not beat
 the post-hoc no-model kind control. Next: establish a genuine learned contribution
