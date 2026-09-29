@@ -17,6 +17,7 @@ state/
 !experiments/clause-local-v1-evidence/**/*.pt
 experiments/clause-local-v1-evidence/research-ledger/.state.lock
 experiments/clause-local-v1-controls/ledger/.state.lock
+experiments/language-challenge-v1-evidence/ledger/.state.lock
 models/**
 !models/public/
 !models/public/**
